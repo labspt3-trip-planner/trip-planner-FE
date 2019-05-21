@@ -3,6 +3,7 @@ import Trip from "./components/TripListComponents/Trip";
 import TripForm from "./components/TripListComponents/TripForm";
 import './App.css';
 
+
 function App() {
 // trips = state, setTrips = change state 
   const [trips, setTrips] = useState([ 
