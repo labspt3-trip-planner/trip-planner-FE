@@ -4,16 +4,12 @@ import TripDetails from './TripDetails';
 import CheckListContainer from './CheckListComponents/CheckListContainer';
 
 const TripInfoContainer = () => {
-    return ( <
-        div >
-        <
-        TripName / >
-        <
-        TripDetails / >
-        <
-        CheckListContainer / >
-        <
-        /div>
+    return ( 
+        <div>
+        <TripName />
+        <TripDetails />
+        <CheckListContainer />
+        </div>
     )
 };
 
