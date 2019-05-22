@@ -1,10 +1,9 @@
 import React from 'react';
 import TextField from '@material-ui/core/TextField';
 import useInputState from './useInputState';
-import { reset } from 'ansi-colors';
 
 const ListForm = ({ saveList }) => {
-    const { value, rest, onChange } = useInputState('');
+    const { value, reset, onChange } = useInputState('');
 
     return (
         <form
