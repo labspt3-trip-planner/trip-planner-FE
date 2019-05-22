@@ -1,14 +1,14 @@
 import React from "react";
 //import React, { useState, useEffect } from 'react';
-import Login from '../Login/Login';
-import TripList from '../TripList/TripList';
-import Signup from '../Login/Signup';
+import Login from './components/Login/Login';
+import TripList from './components/TripList/TripList';
+import Signup from './components/Login/Signup';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-//import authenticate from '../auth/authenticate';
-//import firebase from '../firebase'
+//import authenticate from './component/auth/authenticate';
+//import firebase from './firebase'
 
 
-export default function App() {
+function App() {
 	//const [sessionInitialized, setSessionInitialized] = useState(false)
 
 	return (
@@ -21,3 +21,5 @@ export default function App() {
 		</Router>
 	)
 }
+
+export default App;
