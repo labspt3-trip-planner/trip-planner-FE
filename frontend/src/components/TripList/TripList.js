@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import Trip from "./components/TripListComponents/Trip";
-import TripForm from "./components/TripListComponents/TripForm";
-import './App.css';
+import Trip from "./Trip";
+import TripForm from "./TripForm";
+import './TripList.css';
 
-function App() {
+function TripList() {
 // trips = state, setTrips = change state 
   const [trips, setTrips] = useState([ 
     {
@@ -38,7 +38,7 @@ function App() {
   }
   
   return (
-    <div className="App">
+    <div className="trip-list-container">
       <h1>•  Trip Planner  •</h1>
       <div className="trip-list">
         {trips.map((trips, index) => (
@@ -49,5 +49,6 @@ function App() {
     </div>
   );
 }
+export default TripList;
 
-export default App;
+//export default authenticate(App)(Login);

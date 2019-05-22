@@ -1,4 +1,4 @@
-.App {
+.trip-list-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -19,7 +19,7 @@ h1 {
     background: #e8e8e8;
     border-radius: 4px;
     padding: 5px;
-    width: 400px;
+    width: 600px;
 }
 
 .trip {
