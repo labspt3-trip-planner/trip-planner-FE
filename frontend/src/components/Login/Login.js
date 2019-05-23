@@ -12,7 +12,7 @@ const [password, setPassword] = useState('')
 
 return (
   <form className="login-form-container" onSubmit={e => e.preventDefault() && false}>
-    <h1>•  Trip Planner  •</h1>
+    <h1 className="h1Login">•  Trip Planner  •</h1>
     <div className="login-form">
       <label>Email Address</label>
       <input 

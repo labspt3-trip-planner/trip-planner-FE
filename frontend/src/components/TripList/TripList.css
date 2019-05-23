@@ -9,6 +9,39 @@
 
 }
 
+.header-wrapper { 
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    width: 100%;
+    
+}
+
+.navbar { 
+    display: flex;
+    width: 100%;
+}
+
+
+
+.navbar-start {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    justify-content: flex-start;
+    align-items: center;
+
+
+}
+
+.navbar-end {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    justify-content: flex-end;
+}
+
+
 h1 {
     background: #fff;
     border-radius: 4px;
