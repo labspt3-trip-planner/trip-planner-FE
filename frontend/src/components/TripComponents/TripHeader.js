@@ -1,14 +1,16 @@
 import React from 'react';
-import Menu from '@material-ui/core/Menu';
+import './TripList.css';
+
+
 
 const TripHeader = () => {
     return (
-        <div>
-            <div>
+        <div class="trips-header-wrapper">
+            <div class="trips-title">
                 <h1>My Trips</h1>
             </div>
-            <div>
-                // code for "Sort by" dropdown 
+            <div class="sort-dropdown">
+               <p>Placeholder for dropdown code</p>
             </div>
         </div>
     )

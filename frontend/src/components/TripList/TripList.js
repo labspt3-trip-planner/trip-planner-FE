@@ -32,11 +32,11 @@ function TripList() {
     setTrips(newTrips);
   };
 
-  const deleteTrip = index => {
-    const newTrips = [...trips];
-    newTrips.splice(index, 1);
-    setTrips(newTrips);
-  }
+  //const deleteTrip = index => {
+  //  const newTrips = [...trips];
+  //  newTrips.splice(index, 1);
+  //  setTrips(newTrips);
+ // }
   
   return (
     <div className="trip-list-container">
@@ -50,7 +50,7 @@ function TripList() {
           <p>End</p>
         </div>
         {trips.map((trips, index) => (
-          <Trip key={index} index={index} trip={trips} deleteTrip={deleteTrip}/>
+          <Trip key={index} index={index} trip={trips} />
         ))}
         <TripForm addTrip={addTrip}/>
       </div>

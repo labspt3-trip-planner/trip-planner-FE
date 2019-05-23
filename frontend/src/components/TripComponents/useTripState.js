@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 export default initialValue => {
-    const [value, setValue] = useState([ 
+    const [trips, setTrips] = useState([ 
         {
           name: 'Honeymoon',
           destination: 'Maui HI',
@@ -23,10 +23,10 @@ export default initialValue => {
       ]);
 
     return {
-        value,
+        trips,
         onChange: event => {
-            setValue(event.target.value);
+            setValue(event.target.trips);
         },
-        reset: () => setValue('')
+        reset: () => setTrips('')
     };
 };

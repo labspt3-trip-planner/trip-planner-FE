@@ -1,12 +1,14 @@
 import React from 'react';
-import Navigation from '../HeaderComponents/Navigation';
+import HeaderContainer from '../HeaderComponents/HeaderContainer';
 import TripHeader from './TripHeader';
+import TripTable from './TripTable';
 
 const TripContainer = () => {
     return (
         <div>
-            <Navigation />
+            <HeaderContainer />
             <TripHeader />
+            <TripTable />
         </div>
     )
 };
