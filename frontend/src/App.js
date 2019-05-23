@@ -1,7 +1,6 @@
 import React from "react";
 //import React, { useState, useEffect } from 'react';
 import Login from './components/Login/Login';
-//import TripList from './components/TripList/TripList';
 import TripContainer from './components/TripComponents/TripContainer'
 import Signup from './components/Login/Signup';
 import Billing from './components/Billing/Billing';
