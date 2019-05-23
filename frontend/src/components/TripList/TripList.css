@@ -9,6 +9,22 @@
 
 }
 
+.trip-labels {
+    display: flex;
+    flex-direction: row;
+    width: 660px;
+    padding-left: 10px;
+    justify-content: space-between;
+
+}
+
+.trip-labels p {
+    width: 185px;
+    text-align: left;
+    font-size: 18px;
+
+}
+
 .header-wrapper { 
     display: flex;
     flex-direction: row;
@@ -21,8 +37,6 @@
     display: flex;
     width: 100%;
 }
-
-
 
 .navbar-start {
     display: flex;
@@ -52,7 +66,7 @@ h1 {
     background: #e8e8e8;
     border-radius: 4px;
     padding: 5px;
-    width: 600px;
+    width: 800px;
 }
 
 .trip {
@@ -65,6 +79,11 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: space-between;
+  }
+
+  .trip p {
+    width: 185px;
+    text-align: left;
   }
   
   .trip:hover {

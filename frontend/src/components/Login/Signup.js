@@ -22,6 +22,7 @@ return (
         name="name" 
         onChange={e => setName(e.target.value)}
         value={name} 
+        required
       />
       <label>Email Address</label>
       <input 
@@ -30,6 +31,7 @@ return (
         name="email" 
         onChange={e => setEmail(e.target.value)}
         value={email} 
+        required
       />
       <label className="passLabel">Password</label>
       <input 
@@ -38,12 +40,14 @@ return (
         name="password1" 
         onChange={e => setPassword(e.target.value)} 
         value={password}  
+        required
       />
       <label className="passLabel">Re-Enter Password</label>
       <input 
         className="input-login"
         type="password" 
         name="password1" 
+        required
       />
     </div>
     <div className="button">

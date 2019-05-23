@@ -43,6 +43,12 @@ function TripList() {
       <HeaderContainer />
       <h1>•  Trip Planner  •</h1>
       <div className="trip-list">
+        <div className="trip-labels">
+          <p>Name</p>
+          <p>Destination</p>
+          <p>Start</p>
+          <p>End</p>
+        </div>
         {trips.map((trips, index) => (
           <Trip key={index} index={index} trip={trips} deleteTrip={deleteTrip}/>
         ))}
