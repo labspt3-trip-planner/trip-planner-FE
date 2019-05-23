@@ -8,7 +8,8 @@ const TripHeader = () => {
                 <h1>My Trips</h1>
             </div>
             <div>
-                // code for "Sort by" dropdown 
+                {// code for "Sort by" dropdown
+                }
             </div>
         </div>
     )
