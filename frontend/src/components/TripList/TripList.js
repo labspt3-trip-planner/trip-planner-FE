@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import HeaderContainer from "../HeaderComponents/HeaderContainer"
 import Trip from "./Trip";
 import TripForm from "./TripForm";
 import './TripList.css';
@@ -39,6 +40,7 @@ function TripList() {
   
   return (
     <div className="trip-list-container">
+      <HeaderContainer />
       <h1>•  Trip Planner  •</h1>
       <div className="trip-list">
         {trips.map((trips, index) => (
