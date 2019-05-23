@@ -91,6 +91,12 @@ h1 {
       
   }
 
+  .billing {
+      margin-top: 50px;
+      background: #fff;
+      width: 500px;
+  }
+
   .input {
       width: 100%;
       box-sizing: border-box;
