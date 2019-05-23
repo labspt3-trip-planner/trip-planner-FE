@@ -1,54 +1,23 @@
-import React, { useState } from 'react';
-import Trip from "./components/TripListComponents/Trip";
-import TripForm from "./components/TripListComponents/TripForm";
-import './App.css';
+import React from "react";
+//import React, { useState, useEffect } from 'react';
+import Login from './components/Login/Login';
+import TripList from './components/TripList/TripList';
+import Signup from './components/Login/Signup';
+import { BrowserRouter as Switch, Route } from 'react-router-dom';
+//import authenticate from './component/auth/authenticate';
+//import firebase from './firebase'
 
 
 function App() {
-// trips = state, setTrips = change state 
-  const [trips, setTrips] = useState([ 
-    {
-      name: 'Honeymoon',
-      destination: 'Maui HI',
-      start: '12/13/19',
-      end: '12/20/19'
-    },
-    {
-      name: 'Girls Trip',
-      destination: 'Las Vegas Tahoe',
-      start: '2/3/20',
-      end: '2/10/20'
-    },
-    {
-      name: 'Spring Break',
-      destination: 'Cancun Cozumel',
-      start: '4/14',
-      end: '4/21'
-    }
-  ]);
+	//const [sessionInitialized, setSessionInitialized] = useState(false)
 
-  const addTrip = name => {
-    const newTrips = [...trips, {name}]; // use the spread operator to copy things already there + add text
-    setTrips(newTrips);
-  };
-
-  const deleteTrip = index => {
-    const newTrips = [...trips];
-    newTrips.splice(index, 1);
-    setTrips(newTrips);
-  }
-  
-  return (
-    <div className="App">
-      <h1>•  Trip Planner  •</h1>
-      <div className="trip-list">
-        {trips.map((trips, index) => (
-          <Trip key={index} index={index} trip={trips} deleteTrip={deleteTrip}/>
-        ))}
-        <TripForm addTrip={addTrip}/>
-      </div>
-    </div>
-  );
+	return (
+		<Switch>
+			<Route exact path="/" component={Login} />
+			<Route path="/triplist" component={TripList} />
+			<Route path="/signup" component={Signup} />
+		</Switch>
+	)
 }
 
 export default App;
