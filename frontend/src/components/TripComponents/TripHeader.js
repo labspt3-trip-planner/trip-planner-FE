@@ -8,7 +8,7 @@ const TripHeader = () => {
     return (
         <div class="trips-header-wrapper">
             <div class="trips-title">
-                <h1>My Trips</h1>
+                <h1>•  My Trips  •</h1>
             </div>
             <div class="sort-dropdown">
                <SortBy />

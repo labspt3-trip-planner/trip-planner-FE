@@ -4,15 +4,62 @@
     align-items: center;
     text-align: center;
     background: #64b5eb;
-    padding: 30px;
     height: 100vh;
 
+}
+
+.header-wrapper {
+    background: #64b5eb;
+}
+
+
+
+.trips-header-wrapper {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    background: #64b5eb;
+    flex-direction: column;
+    width: 100%;
+}
+
+.trips-header-wrapper div{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    width: 100%;
+}
+
+.trips-header-wrapper div h1 {
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+
+.trips-header-wrapper div p {
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+
+.trips-title {
+    padding-top: 30px;
 }
 
 .trip-labels {
     display: flex;
     flex-direction: row;
-    width: 800pxpx;
+    width: 800px;
     padding-left: 10px;
     justify-content: space-between;
 
@@ -97,6 +144,10 @@ h1 {
       width: 500px;
   }
 
+  .space {
+      margin-top: 52px;
+  }
+
   .input {
       width: 100%;
       box-sizing: border-box;
@@ -107,19 +158,11 @@ h1 {
       height: 2.25em;
   }
 
-  .trips-header-wrapper {
-        width: 912px;
-        display: flex;
-        justify-content: center;
-        padding: 30px;
-        margin-left: 5%;
-  }
 
   .trips-title {
     display: flex;
     justify-content: flex-start;
     width: 50%;
-    padding-left: 12%;
   }
 
   .sort-dropdown {
