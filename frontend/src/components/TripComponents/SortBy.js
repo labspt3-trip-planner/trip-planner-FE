@@ -1,20 +1,20 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Button from '@material-ui/core/Button';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 
 function SimpleMenu() {
-  const [anchorEl, setAnchorEl] = React.useState(null);
+  const [anchorEl, setAnchorEl] = useState(null);
 
   function handleClick(event) {
     setAnchorEl(event.currentTarget);
   }
 
   function handleClose() {
-    setAnchorEl(null);
+   setAnchorEl(null);
   }
-
-  return (
+  
+   return (
     <div>
       <Button
         aria-owns={anchorEl ? 'simple-menu' : undefined}
