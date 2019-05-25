@@ -1,5 +1,4 @@
 import React from 'react';
-import SortBy from './SortBy';
 import './TripList.css';
 
 
@@ -11,7 +10,7 @@ const TripHeader = () => {
                 <h1>•  My Trips  •</h1>
             </div>
             <div class="sort-dropdown">
-               <SortBy />
+               <p>Sort By:</p>
             </div>
         </div>
     )
