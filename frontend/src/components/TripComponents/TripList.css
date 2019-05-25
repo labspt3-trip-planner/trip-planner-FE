@@ -165,6 +165,24 @@ h1 {
     width: 50%;
   }
 
+  .react-table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 80vh;
+    background: #64b5eb;
+  }
+
+  .table {
+    background: white;
+    width: 80%;
+    margin-bottom: 200px;
+    border-radius: 3px;
+
+
+  }
+
   .sort-dropdown {
     width: 50%;
     display: flex;
