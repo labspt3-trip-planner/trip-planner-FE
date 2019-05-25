@@ -1,0 +1,94 @@
+* {
+    outline: 0;
+    text-decoration: none;
+    color: black;
+}
+
+.login-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: #64b5eb;
+    padding: 30px;
+    height: 100vh;
+
+}
+
+.h1Login {
+    margin-top: 71px;
+}
+
+.login-form {
+    display: flex;
+    background: white;
+    max-width: 500px;
+    max-height: 300px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 35px 50px;
+    margin: 10px 0 5px 0;
+
+}
+
+.signup-form {
+    display: flex;
+    background: white;
+    max-width: 500px;
+    max-height: 350px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 35px 50px;
+    margin: 10px 0 5px 0;
+
+}
+
+label {
+    text-align: left;
+    width: 95%;
+}
+
+.passLabel{
+    padding-top: 20px;
+}
+  
+.input-login {
+    display: block;
+    min-width: 90%;
+    margin: 1em;
+    padding: 1em;
+    width: 35em;
+    border-radius: 8px;
+    border-style: none;
+    border: 1px solid #e4e6e8;
+    transition: 0.1s ease;
+}
+
+input:hover {
+    border-color: palevioletred;
+}
+
+button {
+    margin: 0.8em;
+    padding: 1em;
+    border: 1px solid #e4e6e8;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.1s ease-in;
+    width: 100px;
+}
+
+.button {
+    display: flex;
+    flex-direction: row;
+}
+
+button:hover {
+    background-color: palevioletred;
+    color: white;
+}
+  
