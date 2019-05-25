@@ -49,7 +49,8 @@ class TableTest extends Component {
             columns={columns}
             showPagination={false}
             defaultPageSize={5}
-        />
+            />      
+          
     }
 }
 
