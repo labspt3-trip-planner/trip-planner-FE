@@ -139,9 +139,28 @@ h1 {
   }
 
   .billing {
+      display: flex;
+      flex-direction: row;
+      text-align: left;
       margin-top: 50px;
+      width: 1000px;
+  }
+
+  .billing div {
+      padding: 10px;
+      margin: 15px;
+  }
+
+  .billing-option {
       background: #fff;
-      width: 500px;
+      word-wrap: break-word;
+      width: 50%;
+      border-radius: 3px;
+
+  }
+
+  .billing-option:hover {
+    border: 1px solid palevioletred;
   }
 
   .space {
