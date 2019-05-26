@@ -44,14 +44,18 @@ class TableTest extends Component {
             Cell: props => <span className='number'>{props.value}</span>
         }]
 
-        return <ReactTable 
+        return (
+        <div className="react-table">
+            <ReactTable className="table"
             data={data}
             columns={columns}
             showPagination={false}
             defaultPageSize={5}
-            />      
-          
-    }
+            /> 
+
+        </div>     
+    
+        )}
 }
 
 export default TableTest;
