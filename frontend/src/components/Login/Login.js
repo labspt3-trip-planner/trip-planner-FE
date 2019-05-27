@@ -15,6 +15,7 @@ const LoginBase = props => {
       password
     );
     console.log(test);
+    await props.firebase.getUserToken();
   };
 
   //const {functions go here} = authenticate();
@@ -43,7 +44,7 @@ const LoginBase = props => {
         />
       </div>
       <div className="button">
-          <button type="submit">Login</button>
+        <button type="submit">Login</button>
         <Link to="/signup">
           <button>Sign Up</button>
         </Link>
