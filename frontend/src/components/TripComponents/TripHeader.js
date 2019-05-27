@@ -9,9 +9,6 @@ const TripHeader = () => {
             <div class="trips-title">
                 <h1>•  My Trips  •</h1>
             </div>
-            <div class="sort-dropdown">
-               <p>Sort By:</p>
-            </div>
         </div>
     )
 };

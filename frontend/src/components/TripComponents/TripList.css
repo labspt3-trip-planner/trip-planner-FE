@@ -139,9 +139,28 @@ h1 {
   }
 
   .billing {
+      display: flex;
+      flex-direction: row;
+      text-align: left;
       margin-top: 50px;
+      width: 1000px;
+  }
+
+  .billing div {
+      padding: 10px;
+      margin: 15px;
+  }
+
+  .billing-option {
       background: #fff;
-      width: 500px;
+      word-wrap: break-word;
+      width: 50%;
+      border-radius: 3px;
+
+  }
+
+  .billing-option:hover {
+    border: 1px solid palevioletred;
   }
 
   .space {
@@ -163,6 +182,24 @@ h1 {
     display: flex;
     justify-content: flex-start;
     width: 50%;
+  }
+
+  .react-table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 80vh;
+    background: #64b5eb;
+  }
+
+  .table {
+    background: white;
+    width: 80%;
+    margin-bottom: 200px;
+    border-radius: 3px;
+
+
   }
 
   .sort-dropdown {
