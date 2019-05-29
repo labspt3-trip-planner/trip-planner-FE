@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, withRouter } from "react-router-dom";
-import { withFirebase } from "../Firebase";
+import { withFirebase } from "../Firebase"; //HOC to provide Firebase to component
 import "./Login.css";
 //import authenticate from '../auth/authenticate';
 
@@ -53,6 +53,6 @@ const LoginBase = props => {
   );
 };
 
-const Login = withFirebase(LoginBase);
+const Login = withFirebase(LoginBase); //give component Firebase functionality
 
 export default withRouter(Login);
