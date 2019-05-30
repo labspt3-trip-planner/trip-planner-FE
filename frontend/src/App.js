@@ -1,7 +1,15 @@
+<<<<<<< HEAD
 import React, { Component, useState, useEffect } from 'react';
 import Login from './components/Login/Welcome';
 import TripList from './components/TripList/TripList';
+=======
+import React from "react";
+//import React, { useState, useEffect } from 'react';
+import Login from './components/Login/Login';
+import TripContainer from './components/TripComponents/TripContainer'
+>>>>>>> 8cac8747b2146e69090741dffff683917bc58169
 import Signup from './components/Login/Signup';
+import Billing from './components/Billing/Billing';
 import { BrowserRouter as Switch, Route } from 'react-router-dom';
 import fire from '../src/config/fire';
 //import authenticate from './component/auth/authenticate';
@@ -17,6 +25,7 @@ class App extends Component {
 		}
 	}
 
+<<<<<<< HEAD
 	componentDidMount() {
 		this.authListener()
 	}
@@ -40,6 +49,16 @@ class App extends Component {
 			</Switch>
 		);
 	}
+=======
+	return (
+		<Switch>
+			<Route exact path="/" component={Login} />
+			<Route path="/triplist" component={TripContainer} />
+			<Route path="/signup" component={Signup} />
+			<Route path="/billing" component={Billing} />
+		</Switch>
+	)
+>>>>>>> 8cac8747b2146e69090741dffff683917bc58169
 }
 
 export default App;

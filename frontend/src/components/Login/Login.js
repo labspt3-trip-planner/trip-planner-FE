@@ -1,31 +1,29 @@
 import React, { useState } from "react";
 import { Link, withRouter } from "react-router-dom";
+import { withFirebase } from "../Firebase"; //HOC to provide Firebase to component
 import "./Login.css";
 //import authenticate from '../auth/authenticate';
 
-const Signup = () => {
-  const [name, setName] = useState("");
+const LoginBase = props => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  const logIn = async e => {
+    e.preventDefault();
+    const test = await props.firebase.doSignInWithEmailAndPassword(
+      email,
+      password
+    );
+    console.log(test);
+    await props.firebase.getUserToken();
+  };
 
   //const {functions go here} = authenticate();
 
   return (
-    <form
-      className="login-form-container"
-      onSubmit={e => e.preventDefault() && false}
-    >
-      <h1>• Trip Planner •</h1>
-      <div className="signup-form">
-        <label>Full Name</label>
-        <input
-          className="input-login"
-          type="name"
-          name="name"
-          onChange={e => setName(e.target.value)}
-          value={name}
-          required
-        />
+    <form className="login-form-container" onSubmit={logIn}>
+      <h1 className="h1Login">• Trip Planner •</h1>
+      <div className="login-form">
         <label>Email Address</label>
         <input
           className="input-login"
@@ -44,21 +42,17 @@ const Signup = () => {
           value={password}
           required
         />
-        <label className="passLabel">Re-Enter Password</label>
-        <input
-          className="input-login"
-          type="password"
-          name="password1"
-          required
-        />
       </div>
       <div className="button">
-        <Link to="/triplist">
-          <button type="submit">Register</button>
+        <button type="submit">Login</button>
+        <Link to="/signup">
+          <button>Sign Up</button>
         </Link>
       </div>
     </form>
   );
 };
 
-export default withRouter(Signup);
+const Login = withFirebase(LoginBase); //give component Firebase functionality
+
+export default withRouter(Login);
