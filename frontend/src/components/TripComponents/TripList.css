@@ -156,11 +156,12 @@ h1 {
       word-wrap: break-word;
       width: 50%;
       border-radius: 3px;
+      border: 2px solid white;
 
   }
 
   .billing-option:hover {
-    border: 1px solid palevioletred;
+    border: 2px solid palevioletred;
   }
 
   .space {

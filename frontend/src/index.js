@@ -6,6 +6,8 @@ import Firebase, { FirebaseContext } from "./components/Firebase";
 
 ReactDOM.render(
   <FirebaseContext.Provider value={new Firebase()}>
+    {" "}
+    {/* Provides a Firebase instance to the entire app*/}
     <Router>
       <App />
     </Router>
