@@ -23,6 +23,4 @@ function TripForm({ addTrip }){
     )
 }
 
-
-
 export default TripForm;
