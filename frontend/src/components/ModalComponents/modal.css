@@ -1,3 +1,15 @@
+.modal {
+  position: fixed;
+  padding: 20px;
+  top: 225px;
+  width: 33%;
+  right: 33%;
+  left: 33%;
+  background-color: white;
+  border: 1px solid grey;
+
+}
+
 /*html,
 body {
   height: 100%;
