@@ -6,8 +6,10 @@ import TripTable from './TripTable';
 const TripContainer = () => {
     return (
         <div>
-            <HeaderContainer />
-            <TripHeader />
+            <div className="my-trip-page">
+                <HeaderContainer />
+                <TripHeader />
+            </div>  
             <TripTable />
         </div>
     )
