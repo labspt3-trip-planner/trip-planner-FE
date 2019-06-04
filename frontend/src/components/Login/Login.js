@@ -10,12 +10,12 @@ const LoginBase = props => {
 
   const logIn = async e => {
     e.preventDefault();
-    const test = await props.firebase.doSignInWithEmailAndPassword(
-      email,
-      password
-    );
-    console.log(test);
+    await props.firebase.doSignInWithEmailAndPassword(email, password);
     await props.firebase.getUserToken();
+    const tokenCheck = localStorage.getItem("user");
+    if (tokenCheck) {
+      props.history.push("/triplist");
+    } else return;
   };
 
   //const {functions go here} = authenticate();
