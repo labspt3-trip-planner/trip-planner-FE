@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Modal from "../ModalComponents/Modal";
 import TextInput from "../ModalComponents/TextInput";
-//import DateInput from "../ModalComponents/DateInput";
+import DateInput from "../ModalComponents/DateInput";
 
 class NewTripModal extends Component {
     state = {
@@ -26,7 +26,9 @@ class NewTripModal extends Component {
                </button>
                <Modal onClose={this.showModal} show={this.state.show}>
                    <TextInput />
-               </Modal>
+                   <DateInput />
+
+               </Modal> 
             </div>
         );
     }

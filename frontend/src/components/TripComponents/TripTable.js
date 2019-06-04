@@ -47,7 +47,8 @@ class TableTest extends Component {
 
         return (
         <div className="react-table">
-            <ReactTable className="table"
+            <ReactTable 
+            className="table"
             data={data}
             columns={columns}
             showPagination={false}
