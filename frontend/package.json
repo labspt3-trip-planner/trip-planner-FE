@@ -8,12 +8,8 @@
     "@material-ui/icons": "^3.0.2",
     "@material-ui/pickers": "^3.0.0",
     "@material-ui/styles": "^4.0.1",
-<<<<<<< HEAD
-    "date-fns": "^2.0.0-alpha.27",
-=======
     "axios": "^0.19.0",
     "date-fns": "^1.30.1",
->>>>>>> 768494e8e7310f60ef3bcfb32a8614d2f8a33723
     "dotenv": "^8.0.0",
     "firebase": "^6.0.4",
     "prop-types": "^15.7.2",
