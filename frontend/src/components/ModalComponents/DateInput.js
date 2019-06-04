@@ -17,6 +17,8 @@ function InlineDatePickerDemo(props) {
         onChange={date => handleDateChange(date)}
       />
 
+
+
       <KeyboardDatePicker
         autoOk
         variant="inline"
