@@ -10,7 +10,7 @@ const Checklists = () => {
     return (
         <div className="lists-wrapper">
             <div className="packing-wrapper">
-                <Typography component="h3" variant="h4">
+                <Typography component="h4" variant="h5">
                     Packing List
                 </Typography>
 
@@ -30,7 +30,7 @@ const Checklists = () => {
                 />
             </div>
             <div>
-                <Typography component="h3" variant="h4">
+                <Typography component="h4" variant="h5">
                     To Do List
                 </Typography>
 
