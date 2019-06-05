@@ -1,36 +1,63 @@
+//import React, { useState } from "react";
+//import { KeyboardDatePicker } from "@material-ui/pickers";
+
+//function InlineDatePickerDemo(props) {
+  //const [selectedDate, handleDateChange] = useState(new Date());
+
+  //return (
+   // <div>
+   //   <KeyboardDatePicker
+   //     autoOk
+    //    variant="inline"
+    //    inputVariant="outlined"
+    //    label="Start date"
+    //    format="MM/dd/yyyy"
+    //    value={selectedDate}
+    //    onChange={date => handleDateChange(date)}
+     // />
+
+     // <KeyboardDatePicker
+     //   autoOk
+//variant="inline"
+      //  inputVariant="outlined"
+      //  label="End date"
+      //  format="MM/dd/yyyy"
+      //  value={selectedDate}
+      //  onChange={date => handleDateChange(date)}
+      ///>
+    //</div>
+      
+   
+  //);
+//}
+
 import React, { Fragment, useState } from "react";
 import { KeyboardDatePicker } from "@material-ui/pickers";
 
-function InlineDatePickerDemo(props) {
+function KeyboardDatePickerExample(props) {
   const [selectedDate, handleDateChange] = useState(new Date());
 
   return (
     <Fragment>
       <KeyboardDatePicker
-        autoOk
-        variant="inline"
-        inputVariant="outlined"
-        label="Start date"
-        format="MM/dd/yyyy"
+        clearable
         value={selectedDate}
-        InputAdornmentProps={{ position: "start" }}
         onChange={date => handleDateChange(date)}
+        minDate={new Date()}
+        format="MM/dd/yyyy"
       />
 
-
-
       <KeyboardDatePicker
-        autoOk
-        variant="inline"
-        inputVariant="outlined"
-        label="End date"
-        format="MM/dd/yyyy"
+        placeholder="10/10/2018"
         value={selectedDate}
-        InputAdornmentProps={{ position: "start" }}
         onChange={date => handleDateChange(date)}
+        format="MM/dd/yyyy"
       />
     </Fragment>
   );
 }
 
-export default InlineDatePickerDemo;
+export default KeyboardDatePickerExample;
+
+
+//export default InlineDatePickerDemo;
