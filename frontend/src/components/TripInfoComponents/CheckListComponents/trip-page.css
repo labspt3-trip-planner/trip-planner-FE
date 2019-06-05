@@ -1,0 +1,15 @@
+.lists-wrapper {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid black;
+    margin-top: 65px;
+    background: #fff;
+    padding: 10px;
+}
+
+.list-wrapper {
+    margin-right: 15px;
+    border: 1px solid black;
+
+
+}

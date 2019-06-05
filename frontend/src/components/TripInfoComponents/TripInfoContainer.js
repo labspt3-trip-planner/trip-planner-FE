@@ -1,24 +1,14 @@
 import React from 'react';
-<<<<<<< HEAD
 import HeaderContainer from '../HeaderComponents/HeaderContainer'
-import TripName from './TripName';
-import TripDetails from './TripDetails';
-=======
-//import TripName from './TripName';
-//import TripDetails from './TripDetails';
->>>>>>> a86b9ed4c628fa57a66351413fad849d3f85db5d
+import '../TripComponents/Page.css';
 import CheckListContainer from './CheckListComponents/CheckListContainer';
 
 const TripInfoContainer = () => {
     return ( 
-        <div>
-<<<<<<< HEAD
-        <HeaderContainer />
-        <TripName />
-        <TripDetails />
-=======
->>>>>>> a86b9ed4c628fa57a66351413fad849d3f85db5d
-        <CheckListContainer />
+        <div className="page-container">
+            <HeaderContainer />
+            <h1 className="space">•  Trip  •</h1>
+            <CheckListContainer />
         </div>
     )
 };

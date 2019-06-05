@@ -2,7 +2,7 @@ import React from "react";
 //import React, { useState, useEffect } from 'react';
 import Login from './components/Login/Login';
 import TripContainer from './components/TripComponents/TripContainer';
-import TripInfo from './components/TripInfoComponents/TripInfoContainer';
+import TripInfoContainer from './components/TripInfoComponents/TripInfoContainer';
 import Signup from './components/Login/Signup';
 import Billing from './components/Billing/Billing';
 import { BrowserRouter as Switch, Route } from 'react-router-dom';
@@ -17,7 +17,7 @@ function App() {
 		<Switch>
 			<Route exact path="/" component={Login} />
 			<Route path="/triplist" component={TripContainer} />
-			<Route path="/trip" component={TripInfo} />
+			<Route path="/trip" component={TripInfoContainer} />
 			<Route path="/signup" component={Signup} />
 			<Route path="/billing" component={Billing} />
 		</Switch>
