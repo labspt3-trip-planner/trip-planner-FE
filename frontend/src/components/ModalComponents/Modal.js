@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import './modal.css';
 import PropTypes from 'prop-types';
 
@@ -14,7 +15,7 @@ export default class Modal extends Component {
             <div className="modal" >
                 <div className="content">{this.props.children}</div>
                 <div className="actions">
-                    <button className="toggle-button" onClick={this.onClose}>Add Trip</button>
+                    <Link to="/trip"><button className="toggle-button">Add Trip</button></Link>
                 </div>
             </div>
         );
