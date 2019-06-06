@@ -8,7 +8,7 @@
     font-family: sans-serif;
 }
   
-.cover-photo {
+  .cover-photo {
     padding-bottom: 5rem;
     display: flex;
     flex-direction: column;
@@ -26,7 +26,7 @@
     font-weight: bold;
 }
   
-  /* ----------------- */
+/* ----------------- */
   
 .cover-photo h1 {
     font-size: 8rem;
@@ -38,16 +38,16 @@
     color: black;
 }
   
-.cover-photo h3 {
+  .cover-photo h3 {
     font-size: 4rem;
     width: 90%;
     color: #0078b3;
     margin-left: 5%;
     margin-top: -3rem;
     font-style: italic;
-}
+  }
   
-.login-screen {
+  .login-screen {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -59,9 +59,9 @@
     color: white;
     color: #4e4e4e;
     font-family: "Roboto Condensed", sans-serif;
-}
+  }
   
-.login-screen h2 {
+  .login-screen h2 {
     font-size: 4.5rem;
     /* margin: 0 5% 0 5%; */
     margin-left: 5%;
@@ -69,17 +69,17 @@
     color: #4e4e4e;
     font-weight: 900;
     font-family: Overpass;
-}
+  }
   
-.login-screen p {
+  .login-screen p {
     font-size: 1rem;
     margin: 1rem 5% 5% 5%;
     margin-bottom: 1.5rem;
     color: #4e4e4e;
     font-weight: 900;
-}
+  }
   
-.input {
+  .input {
     color: black;
     color: #0078b3;
     margin-left: 2rem;
@@ -92,7 +92,7 @@
     margin: 0 5% 0 5%;
     border-bottom: 1px solid #4e4e4e;
     width: 80%;
-}
+  }
   
   .input::placeholder {
     color: #4e4e4e;
@@ -234,16 +234,16 @@
     outline: none;
   }
   
-  .modal-login h2 {
+.modal-login h2 {
     font-size: 4.5rem;
     margin: 0 5% 0 5%;
     margin-bottom: 1.5rem;
     color: white;
     font-weight: 900;
     font-family: Overpass;
-  }
+}
   
-  .modal-login h3 {
+.modal-login h3 {
     font-size: 2.5rem;
     /* margin: 0 5% 0 5%; */
     margin-top: 0;
@@ -254,11 +254,11 @@
     font-weight: 900;
     font-family: Overpass;
     margin-left: 5%;
-  }
+}
   
   /* -----------------  */
   
-  .modal-login {
+.modal-login {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -269,9 +269,9 @@
     background-color: #0078b3;
     color: #4e4e4e;
     font-family: "Roboto Condensed", sans-serif;
-  }
+}
   
-  .modal-hero {
+.modal-hero {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -286,11 +286,11 @@
     background-size: cover;
     font-family: "Overpass", sans-serif;
     font-weight: bold;
-  }
+}
   
   /* -----------------  */
   
-  .modal-login .input {
+.modal-login .input {
     color: #f7b94c;
     margin-left: 2rem;
     border: none;
@@ -302,37 +302,37 @@
     margin: 0 5% 0 5%;
     border-bottom: 1px solid white;
     width: 80%;
-  }
+}
   
-  .modal-login .input::placeholder {
+.modal-login .input::placeholder {
     color: white;
     opacity: 0.7;
     text-transform: lowercase;
-  }
+}
   
-  .modal-input .input:focus {
+.modal-input .input:focus {
     outline: none;
     border-bottom: 2.5px solid orange;
-  }
+}
   
   /* --------------  */
   
-  .ReactModal__Overlay {
+.ReactModal__Overlay {
     opacity: 0;
     transition: opacity 500ms ease-in-out;
-  }
+}
   
-  .ReactModal__Overlay--after-open {
+.ReactModal__Overlay--after-open {
     opacity: 1;
-  }
+}
   
-  .ReactModal__Overlay--before-close {
+.ReactModal__Overlay--before-close {
     opacity: 0;
-  }
+}
   
-  .disabled {
+.disabled {
     border: 1px solid #999999;
     background-color: #cccccc;
     color: #666666;
-  }
+}
   

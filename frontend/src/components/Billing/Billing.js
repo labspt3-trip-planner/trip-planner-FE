@@ -1,12 +1,12 @@
 import React from 'react';
 import HeaderContainer from "../HeaderComponents/HeaderContainer";
-import '../TripComponents/TripList.css';
+import '../TripComponents/Page.css';
 
 function Billing() {
   
   
   return (
-    <div className="billing-container">
+    <div className="page-container">
       <HeaderContainer />
       <h1 className="space">•  Billing  •</h1>
       <section className="billing">

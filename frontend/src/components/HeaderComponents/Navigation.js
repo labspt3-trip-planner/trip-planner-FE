@@ -6,7 +6,7 @@ const Navigation = () => {
         <div className="navbar">
             <div className="navbar-start">
                 <Link to="/triplist"><button>My Trips</button></Link>
-                <button>New Trip</button>
+                <Link to="/trip"><button>New Trip</button></Link>
                 <Link to="/billing"><button>Billing</button></Link>
             </div>
             <div className="navbar-end">

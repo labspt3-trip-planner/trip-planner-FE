@@ -1,14 +1,16 @@
 import React from 'react';
-import TripName from './TripName';
-import TripDetails from './TripDetails';
+import HeaderContainer from '../HeaderComponents/HeaderContainer'
+import '../TripComponents/Page.css';
 import CheckListContainer from './CheckListComponents/CheckListContainer';
+import Title from './TripName';
 
 const TripInfoContainer = () => {
     return ( 
-        <div>
-        <TripName />
-        <TripDetails />
-        <CheckListContainer />
+        <div className="page-container">
+            <HeaderContainer />
+            <Title />
+            <br/>
+            <CheckListContainer />
         </div>
     )
 };

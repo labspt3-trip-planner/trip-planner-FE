@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, withRouter } from "react-router-dom";
-import "./Welcome.css";
+// import "./Welcome.css";
 //import authenticate from '../auth/authenticate';
 
 const Signup = () => {
