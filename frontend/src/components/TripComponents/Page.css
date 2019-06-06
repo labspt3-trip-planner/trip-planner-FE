@@ -119,6 +119,9 @@ h1 {
 
 .space {
     margin-top: 52px;
+    background: #fff;
+    border-radius: 4px;
+    padding: 5px 30px;
 }
 
 .input {

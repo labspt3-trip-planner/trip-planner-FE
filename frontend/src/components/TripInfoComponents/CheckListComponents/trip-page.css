@@ -8,8 +8,9 @@
 }
 
 .list-wrapper {
-    margin-right: 15px;
+    margin: 15px;
+    padding: 15px;
     border: 1px solid black;
-
+    width: 300px;
 
 }
