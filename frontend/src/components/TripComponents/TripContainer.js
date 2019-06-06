@@ -2,15 +2,15 @@ import React from 'react';
 import HeaderContainer from '../HeaderComponents/HeaderContainer';
 import TripHeader from './TripHeader';
 import TripTable from './TripTable';
-import NewTripModal from './NewTripModal';
 
 const TripContainer = () => {
     return (
         <div>
-            <HeaderContainer />
-            <TripHeader />
+            <div className="my-trip-page">
+                <HeaderContainer />
+                <TripHeader />
+            </div>  
             <TripTable />
-            <NewTripModal />
         </div>
     )
 };

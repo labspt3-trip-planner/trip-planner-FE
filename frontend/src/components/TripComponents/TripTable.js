@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReactTable from 'react-table';
 import 'react-table/react-table.css';
+import NewTripModal from "./NewTripModal";
 
 class TableTest extends Component {
     render() {
@@ -46,13 +47,14 @@ class TableTest extends Component {
 
         return (
         <div className="react-table">
-            <ReactTable className="table"
+            <ReactTable 
+            className="table"
             data={data}
             columns={columns}
             showPagination={false}
             defaultPageSize={5}
             /> 
-
+            <NewTripModal/>
         </div>     
     
         )}

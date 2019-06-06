@@ -6,7 +6,7 @@ function Billing() {
   
   
   return (
-    <div className="trip-list-container">
+    <div className="billing-container">
       <HeaderContainer />
       <h1 className="space">•  Billing  •</h1>
       <section className="billing">
