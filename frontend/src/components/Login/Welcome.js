@@ -78,7 +78,7 @@ class Welcome extends Component {
       <div className="welcome-container">
         <Modal
           isOpen={this.state.modalIsOpen}
-          onAfterClose={this.afterOpenModal}
+          // onAfterClose={this.afterOpenModal}
           onRequestClose={this.closeModal}
           className="modal"
           overlayClassName="overlay"

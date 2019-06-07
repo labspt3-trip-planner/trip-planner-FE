@@ -21,6 +21,7 @@ const LoginBase = props => {
   //const {functions go here} = authenticate();
 
   return (
+    
     <form className="login-form-container" onSubmit={logIn}>
       <h1 className="h1Login">• Trip Planner •</h1>
       <div className="login-form">
