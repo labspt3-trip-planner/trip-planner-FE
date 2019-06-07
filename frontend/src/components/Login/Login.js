@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, withRouter } from "react-router-dom";
 import { withFirebase } from "../Firebase"; //HOC to provide Firebase to component
-import "./Login.css";
+import "./Welcome.css";
 //import authenticate from '../auth/authenticate';
 
 const LoginBase = props => {
@@ -21,6 +21,7 @@ const LoginBase = props => {
   //const {functions go here} = authenticate();
 
   return (
+    
     <form className="login-form-container" onSubmit={logIn}>
       <h1 className="h1Login">• Trip Planner •</h1>
       <div className="login-form">
