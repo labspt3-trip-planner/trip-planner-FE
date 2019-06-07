@@ -5,6 +5,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import Firebase, { FirebaseContext } from "./components/Firebase";
 import { MuiPickersUtilsProvider } from '@material-ui/pickers';
 import DateFnsUtils from '@date-io/date-fns';
+import "./styles.css";
 
 ReactDOM.render(
   <FirebaseContext.Provider value={new Firebase()}>
@@ -18,4 +19,3 @@ ReactDOM.render(
   </FirebaseContext.Provider>,
   document.getElementById("root")
 );
- 
