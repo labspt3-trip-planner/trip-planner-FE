@@ -3,13 +3,14 @@ import Typography from '@material-ui/core/Typography';
 import CheckListForm from './CheckListForm';
 import Checklist from './Checklist';
 import useChecklistState from './useChecklistState';
+import './trip-page.css';
 
 const Checklists = () => {
     const { lists, addList, deleteList } = useChecklistState([]);
 
     return (
         <div className="lists-wrapper">
-            <div className="packing-wrapper">
+            <div className="list-wrapper">
                 <Typography component="h4" variant="h5">
                     Packing List
                 </Typography>
@@ -29,7 +30,7 @@ const Checklists = () => {
                     deleteList={deleteList}
                 />
             </div>
-            <div>
+            <div className="list-wrapper">
                 <Typography component="h4" variant="h5">
                     To Do List
                 </Typography>
