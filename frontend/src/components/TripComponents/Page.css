@@ -1,4 +1,4 @@
-/* .page-container {
+.page-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -77,6 +77,31 @@
 
 }
 
+#header-buttons, #modal-button {
+    text-decoration: none;
+    color: black;
+    margin: 5px 5px;
+}
+
+#header-buttons:hover, #modal-button:hover {
+    text-decoration: none;
+    background: palevioletred;
+    color: white;
+}
+
+#modal-button {
+    margin-top: 25px;
+}
+
+a:hover, a:visited, a:link, a:active {
+    text-decoration: none;
+}
+
+button:hover, a:visited, a:link, a:active {
+    text-decoration: none;
+}
+
+
 .navbar-end {
     display: flex;
     flex-direction: row;
@@ -153,7 +178,7 @@ h1 {
     text-align: center;
     height: 80vh;
     background: #64b5eb;
-    padding-top: 70px;
+    padding: 70px;
 
 }
 
@@ -170,4 +195,4 @@ h1 {
     align-items: center;
 }
 
-   */
+  
