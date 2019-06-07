@@ -81,12 +81,14 @@
     text-decoration: none;
     color: black;
     margin: 5px 5px;
+    border:1px solid white; 
 }
 
 #header-buttons:hover, #modal-button:hover {
     text-decoration: none;
     background: palevioletred;
     color: white;
+    border:1px solid white;
 }
 
 #modal-button {
