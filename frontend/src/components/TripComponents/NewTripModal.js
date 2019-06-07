@@ -16,8 +16,8 @@ class NewTripModal extends Component {
         return (
             <div className="new-modal">
                <button 
-                    class="toggle-button"
-                    id="centered-toggle-button"
+                    className="modal-button"
+                    id="modal-button"
                     onClick={e => {
                         this.showModal(e);
                     }}
