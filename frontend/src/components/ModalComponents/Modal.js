@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './modal.css';
+import '../TripComponents/Page.css';
 import PropTypes from 'prop-types';
 
 export default class Modal extends Component {
@@ -12,10 +13,10 @@ export default class Modal extends Component {
             return null;
         }
         return (
-            <div className="modal" >
+            <div className="modal-container" >
                 <div className="content">{this.props.children}</div>
                 <div className="actions">
-                    <Link to="/trip"><button className="toggle-button">Add Trip</button></Link>
+                    <Link to="/trip"><button id="modal-button">Add Trip</button></Link>
                 </div>
             </div>
         );

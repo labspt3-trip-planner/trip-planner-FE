@@ -8,7 +8,7 @@ function Billing() {
   return (
     <div className="page-container">
       <HeaderContainer />
-      <h1 className="space">•  Billing  •</h1>
+      <h1 className="title space">•  Billing  •</h1>
       <section className="billing">
         <div className="billing-option">
           <h1>Trip Planner Standard</h1>

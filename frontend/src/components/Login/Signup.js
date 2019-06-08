@@ -15,7 +15,7 @@ const Signup = () => {
       className="login-form-container"
       onSubmit={e => e.preventDefault() && false}
     >
-      <h1>• Trip Planner •</h1>
+      <h1 className="title">• Trip Planner •</h1>
       <div className="signup-form">
         <label>Full Name</label>
         <input

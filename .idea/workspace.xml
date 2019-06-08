@@ -2,19 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d361c892-c6b9-4c43-a371-f2a3aa84dc33" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/trip-planner-FE.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/actions/tripActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/actions/userActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/actions/userActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/HeaderComponents/Navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/HeaderComponents/Navigation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Billing/Billing.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Billing/Billing.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Login/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Login/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Login/Signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Login/Signup.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/Login/Welcome.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Login/Welcome.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/ModalComponents/DateInput.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ModalComponents/DateInput.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/ModalComponents/Modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ModalComponents/Modal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/ModalComponents/modal.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ModalComponents/modal.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/TripComponents/NewTripModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/TripComponents/NewTripModal.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/TripComponents/Page.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/TripComponents/Page.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/TripInfoComponents/TripName.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/TripInfoComponents/TripName.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/TripComponents/TripHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/TripComponents/TripHeader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/yarn.lock" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -27,15 +24,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/frontend/src/components/Login/Welcome.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="386">
-              <caret line="54" column="30" lean-forward="true" selection-start-line="54" selection-start-column="30" selection-end-line="54" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/src/components/Login/Welcome.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -43,6 +31,15 @@
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/frontend/src/components/Login/Welcome.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1585">
+              <caret line="205" column="44" selection-start-line="205" selection-start-column="44" selection-end-line="205" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -149,16 +146,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1560015234536</updated>
-      <workItem from="1560015235748" duration="946000" />
+      <workItem from="1560015235748" duration="1545000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="946000" />
+    <option name="totallyTimeSpent" value="1545000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="357" y="1080" width="1280" height="800" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2494043" />
@@ -194,8 +190,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/components/Login/Welcome.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="54" column="30" lean-forward="true" selection-start-line="54" selection-start-column="30" selection-end-line="54" selection-end-column="30" />
+        <state relative-caret-position="-1585">
+          <caret line="205" column="44" selection-start-line="205" selection-start-column="44" selection-end-line="205" selection-end-column="44" />
         </state>
       </provider>
     </entry>
