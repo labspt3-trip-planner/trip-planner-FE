@@ -1,4 +1,7 @@
 .modal-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   position: fixed;
   padding: 20px;
   top: 225px;

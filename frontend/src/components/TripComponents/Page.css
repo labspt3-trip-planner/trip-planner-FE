@@ -81,7 +81,7 @@
     text-decoration: none;
     color: black;
     margin: 5px 5px;
-    border:1px solid white; 
+    border:1px solid rgba(133, 133, 133, 0.295); 
 }
 
 #header-buttons:hover, #modal-button:hover {
@@ -94,6 +94,7 @@
 #modal-button {
     margin-top: 25px;
 }
+
 
 a:hover, a:visited, a:link, a:active {
     text-decoration: none;
