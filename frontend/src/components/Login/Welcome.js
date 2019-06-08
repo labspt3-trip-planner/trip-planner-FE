@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { Link, withRouter } from "react-router-dom";
+import { withFirebase } from "../Firebase";
+
 import "./Welcome.css";
 import Modal from "react-modal";
 import * as Year from "moment";
@@ -16,7 +18,7 @@ const INITIAL_STATE = {
   error: null
 };
 
-class Welcome extends Component {
+class WelcomeBase extends Component {
   constructor(props) {
     super(props);
 
@@ -30,7 +32,26 @@ class Welcome extends Component {
     this.openModal = this.openModal.bind(this);
     this.afterOpenModal = this.afterOpenModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
+    this.logIn = this.logIn.bind(this);
   }
+  componentDidMount() {
+    if (localStorage.getItem("user")) {
+      this.props.history.push("/triplist");
+    }
+  }
+
+  logIn = async event => {
+    event.preventDefault();
+    await this.props.firebase.doSignInWithEmailAndPassword(
+      this.state.emailAddress,
+      this.state.password
+    );
+    await this.props.firebase.getUserToken();
+    const tokenCheck = localStorage.getItem("user");
+    if (tokenCheck) {
+      this.props.history.push("/triplist");
+    } else return;
+  };
 
   onChange = event => {
     this.setState({ [event.target.name]: event.target.value });
@@ -64,7 +85,7 @@ class Welcome extends Component {
       username,
       emailAddress,
       passwordOne,
-      passwordTwo,
+      passwordTwo
       // error
     } = this.state;
 
@@ -86,7 +107,7 @@ class Welcome extends Component {
           <div className="modal-login">
             <h2>Log In</h2>
             <h3>Welcome back!</h3>
-            <form>
+            <form onSubmit={this.logIn}>
               <input
                 className="input"
                 type="text"
@@ -105,13 +126,19 @@ class Welcome extends Component {
                 value={this.passwordOne}
                 onChange={this.onChange}
               />
+              <div className="button-area">
+                <button
+                  className="btnLearn"
+                  type="button"
+                  onClick={this.closeModal}
+                >
+                  Close
+                </button>
+                <button type="submit" className="btnLogin">
+                  Login
+                </button>
+              </div>
             </form>
-            <div className="button-area">
-              <button className="btnLearn" onClick={this.closeModal}>
-                Close
-              </button>
-              <button className="btnLogin">Login</button>
-            </div>
           </div>
           <div className="modal-hero">Hero Image</div>
         </Modal>
@@ -193,5 +220,7 @@ class Welcome extends Component {
     );
   }
 }
+
+const Welcome = withFirebase(WelcomeBase);
 
 export default withRouter(Welcome);
