@@ -18,7 +18,7 @@ const INITIAL_STATE = {
   error: null
 };
 
-class WelcomeBase extends Component {
+class Welcome extends Component {
   constructor(props) {
     super(props);
 
@@ -221,6 +221,4 @@ class WelcomeBase extends Component {
   }
 }
 
-const Welcome = withFirebase(WelcomeBase);
-
-export default withRouter(Welcome);
+export default withRouter(withFirebase(Welcome));
