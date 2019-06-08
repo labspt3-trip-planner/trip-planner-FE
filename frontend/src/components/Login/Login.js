@@ -23,7 +23,7 @@ const LoginBase = props => {
   return (
     
     <form className="login-form-container" onSubmit={logIn}>
-      <h1 className="h1Login">• Trip Planner •</h1>
+      <h1 className="title h1Login">• Trip Planner •</h1>
       <div className="login-form">
         <label>Email Address</label>
         <input

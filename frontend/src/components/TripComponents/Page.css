@@ -112,7 +112,7 @@ button:hover, a:visited, a:link, a:active {
 }
 
 
-h1 {
+.title {
     background: #fff;
     border-radius: 4px;
     padding: 5px 30px;
@@ -156,7 +156,7 @@ h1 {
     flex-direction: row;
 }
 
-.input {
+/* .input {
     width: 100%;
     box-sizing: border-box;
     border: 0;
@@ -164,7 +164,7 @@ h1 {
     box-shadow:  none;
     padding: 1rem;
     height: 2.25em;
-}
+} */
 
 
 .trips-title {

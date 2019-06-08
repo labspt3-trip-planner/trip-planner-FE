@@ -12,7 +12,7 @@ export default class Modal extends Component {
             return null;
         }
         return (
-            <div className="modal" >
+            <div className="modal-container" >
                 <div className="content">{this.props.children}</div>
                 <div className="actions">
                     <Link to="/trip"><button className="toggle-button">Add Trip</button></Link>
