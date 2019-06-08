@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link, withRouter } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./Welcome.css";
 import Modal from "react-modal";
 import * as Year from "moment";
@@ -25,11 +25,16 @@ class Welcome extends Component {
       ...INITIAL_STATE
     };
 
+    this.onsignup = this.onsignup.bind(this); 
     this.onChange = this.onChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.openModal = this.openModal.bind(this);
     this.afterOpenModal = this.afterOpenModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
+  }
+
+  onsignup = event => {
+    this.props.history.push("/triplist")
   }
 
   onChange = event => {
@@ -75,20 +80,20 @@ class Welcome extends Component {
       username === "";
 
     return (
-      <div className="welcome-container">
+      <div id="welcome-container">
         <Modal
           isOpen={this.state.modalIsOpen}
           // onAfterClose={this.afterOpenModal}
           onRequestClose={this.closeModal}
-          className="modal"
-          overlayClassName="overlay"
+          id="modal"
+          overlayid="overlay"
         >
-          <div className="modal-login">
+          <div id="modal-login">
             <h2>Log In</h2>
             <h3>Welcome back!</h3>
             <form>
               <input
-                className="input"
+                id="input"
                 type="text"
                 name="emailAddress"
                 maxLength="35"
@@ -97,7 +102,7 @@ class Welcome extends Component {
                 onChange={this.onChange}
               />
               <input
-                className="input"
+                id="input"
                 type="password"
                 name="password"
                 maxLength="35"
@@ -106,25 +111,25 @@ class Welcome extends Component {
                 onChange={this.onChange}
               />
             </form>
-            <div className="button-area">
-              <button className="btnLearn" onClick={this.closeModal}>
+            <div id="button-area">
+              <button id="btnLearn" onClick={this.closeModal}>
                 Close
               </button>
-              <button className="btnLogin">Login</button>
+              <button id="btnLogin">Login</button>
             </div>
           </div>
-          <div className="modal-hero">Hero Image</div>
+          <div id="modal-hero">Hero Image</div>
         </Modal>
 
-        <div className="cover-photo sliding-background">
+        <div id="cover-photo sliding-background">
           <h1>Trip Planner</h1>
           <h3>Smarter travel preparation</h3>
         </div>
-        <div className="login-screen">
+        <div id="login-screen">
           <h2>Register</h2>
           <form>
             <input
-              className="input"
+              id="input"
               type="text"
               name="username"
               value={this.username}
@@ -133,7 +138,7 @@ class Welcome extends Component {
               onChange={this.onChange}
             />
             <input
-              className="input"
+              id="input"
               type="text"
               name="emailAddress"
               value={this.emailAddress}
@@ -142,7 +147,7 @@ class Welcome extends Component {
               onChange={this.onChange}
             />
             <input
-              className="input"
+              id="input"
               type="password"
               name="passwordOne"
               value={this.passwordOne}
@@ -151,7 +156,7 @@ class Welcome extends Component {
               onChange={this.onChange}
             />
             <input
-              className="input"
+              id="input"
               type="password"
               name="passwordTwo"
               value={this.passwordTwo}
@@ -161,31 +166,33 @@ class Welcome extends Component {
             />
           </form>
           {/* {error && <p>{error.message}</p>} */}
-          <div className="policy">
-            <input type="radio" className="selector" />
+          <div id="policy">
+            <input type="radio" id="selector" />
             <p>I accept the terms and conditions and privacy policy</p>
           </div>
-          <div className="button-area">
-            <button className="btnLearn">
-              <Link to="/billing" className="link">
+          <div id="button-area">
+            <button id="btnLearn">
+              <Link to="/billing" id="link">
                 Learn More
               </Link>
             </button>
             <button
-              className="btnLogin"
+              id="btnLogin"
               disabled={isInvalid}
               onClick={this.signup}
             >
-              Submit
+              <Link to="/triplist" id="link">
+                Submit
+              </Link>
             </button>
           </div>
-          <div className="login">
+          <div id="login">
             <p>
               Already have a Trip Planner account?{" "}
-              <a onClick={this.openModal}>Login</a>
+              <a href="#" onClick={this.openModal}>Login</a>
             </p>
           </div>
-          <p className="legal-blurb">
+          <p id="legal-blurb">
             Copyright © {year} TripPlanner, LLC. All rights reserved.
           </p>
         </div>
@@ -194,4 +201,4 @@ class Welcome extends Component {
   }
 }
 
-export default withRouter(Welcome);
+export default Welcome;
