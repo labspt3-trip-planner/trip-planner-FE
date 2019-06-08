@@ -77,6 +77,33 @@
 
 }
 
+#header-buttons, #modal-button {
+    text-decoration: none;
+    color: black;
+    margin: 5px 5px;
+    border:1px solid white; 
+}
+
+#header-buttons:hover, #modal-button:hover {
+    text-decoration: none;
+    background: palevioletred;
+    color: white;
+    border:1px solid white;
+}
+
+#modal-button {
+    margin-top: 25px;
+}
+
+a:hover, a:visited, a:link, a:active {
+    text-decoration: none;
+}
+
+button:hover, a:visited, a:link, a:active {
+    text-decoration: none;
+}
+
+
 .navbar-end {
     display: flex;
     flex-direction: row;
@@ -124,6 +151,11 @@ h1 {
     padding: 5px 30px;
 }
 
+.trip-list-top {
+    display: flex;
+    flex-direction: row;
+}
+
 .input {
     width: 100%;
     box-sizing: border-box;
@@ -148,7 +180,7 @@ h1 {
     text-align: center;
     height: 80vh;
     background: #64b5eb;
-    padding-top: 70px;
+    padding: 70px;
 
 }
 
