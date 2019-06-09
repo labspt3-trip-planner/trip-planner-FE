@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import { Link, withRouter } from "react-router-dom";
+import { withFirebase } from "../Firebase";
+import { axios } from "../Axios";
+
 import "./Welcome.css";
 import Modal from "react-modal";
 import * as Year from "moment";
@@ -30,7 +33,41 @@ class Welcome extends Component {
     this.openModal = this.openModal.bind(this);
     this.afterOpenModal = this.afterOpenModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
+    this.logIn = this.logIn.bind(this);
   }
+  componentDidMount() {
+    if (localStorage.getItem("user")) {
+      this.props.history.push("/triplist");
+    }
+  }
+
+  logIn = async event => {
+    event.preventDefault();
+    await this.props.firebase.doSignInWithEmailAndPassword(
+      this.state.emailAddress,
+      this.state.password
+    );
+    await this.props.firebase.getUserToken();
+    const tokenCheck = localStorage.getItem("user");
+    if (tokenCheck) {
+      this.props.history.push("/triplist");
+    } else return;
+  };
+
+  register = e => {
+    e.preventDefault();
+    axios
+      .post(`/auth/register`, {
+        email: this.state.emailAddress,
+        password: this.state.passwordOne,
+        displayName: this.state.username
+      })
+      .then(async res => {
+        this.setState({ password: this.state.passwordOne });
+        await this.logIn(e);
+      })
+      .catch(err => console.log(err));
+  };
 
   onChange = event => {
     this.setState({ [event.target.name]: event.target.value });
@@ -64,7 +101,7 @@ class Welcome extends Component {
       username,
       emailAddress,
       passwordOne,
-      passwordTwo,
+      passwordTwo
       // error
     } = this.state;
 
@@ -86,7 +123,7 @@ class Welcome extends Component {
           <div className="modal-login">
             <h2>Log In</h2>
             <h3>Welcome back!</h3>
-            <form>
+            <form onSubmit={this.logIn}>
               <input
                 className="input"
                 type="text"
@@ -105,13 +142,19 @@ class Welcome extends Component {
                 value={this.passwordOne}
                 onChange={this.onChange}
               />
+              <div className="button-area">
+                <button
+                  className="btnLearn"
+                  type="button"
+                  onClick={this.closeModal}
+                >
+                  Close
+                </button>
+                <button type="submit" className="btnLogin">
+                  Login
+                </button>
+              </div>
             </form>
-            <div className="button-area">
-              <button className="btnLearn" onClick={this.closeModal}>
-                Close
-              </button>
-              <button className="btnLogin">Login</button>
-            </div>
           </div>
           <div className="modal-hero">Hero Image</div>
         </Modal>
@@ -122,7 +165,7 @@ class Welcome extends Component {
         </div>
         <div className="login-screen">
           <h2>Register</h2>
-          <form>
+          <form onSubmit={this.register}>
             <input
               className="input"
               type="text"
@@ -159,26 +202,27 @@ class Welcome extends Component {
               placeholder="confirm Password"
               onChange={this.onChange}
             />
+            <div className="policy">
+              <input type="radio" className="selector" />
+              <p>I accept the terms and conditions and privacy policy</p>
+            </div>
+            <div className="button-area">
+              <button className="btnLearn">
+                <Link to="/billing" className="link">
+                  Learn More
+                </Link>
+              </button>
+              <button
+                className="btnLogin"
+                disabled={isInvalid}
+                onClick={this.signup}
+                type="submit"
+              >
+                Submit
+              </button>
+            </div>
           </form>
           {/* {error && <p>{error.message}</p>} */}
-          <div className="policy">
-            <input type="radio" className="selector" />
-            <p>I accept the terms and conditions and privacy policy</p>
-          </div>
-          <div className="button-area">
-            <button className="btnLearn">
-              <Link to="/billing" className="link">
-                Learn More
-              </Link>
-            </button>
-            <button
-              className="btnLogin"
-              disabled={isInvalid}
-              onClick={this.signup}
-            >
-              Submit
-            </button>
-          </div>
           <div className="login">
             <p>
               Already have a Trip Planner account?{" "}
@@ -194,4 +238,4 @@ class Welcome extends Component {
   }
 }
 
-export default withRouter(Welcome);
+export default withRouter(withFirebase(Welcome));
