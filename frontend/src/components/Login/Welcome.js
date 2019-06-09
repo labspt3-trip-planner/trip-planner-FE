@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link, withRouter } from "react-router-dom";
 import { withFirebase } from "../Firebase";
+import { axios } from "../Axios";
 
 import "./Welcome.css";
 import Modal from "react-modal";
@@ -51,6 +52,21 @@ class Welcome extends Component {
     if (tokenCheck) {
       this.props.history.push("/triplist");
     } else return;
+  };
+
+  register = e => {
+    e.preventDefault();
+    axios
+      .post(`/auth/register`, {
+        email: this.state.emailAddress,
+        password: this.state.passwordOne,
+        displayName: this.state.username
+      })
+      .then(async res => {
+        this.setState({ password: this.state.passwordOne });
+        await this.logIn(e);
+      })
+      .catch(err => console.log(err));
   };
 
   onChange = event => {
@@ -149,7 +165,7 @@ class Welcome extends Component {
         </div>
         <div className="login-screen">
           <h2>Register</h2>
-          <form>
+          <form onSubmit={this.register}>
             <input
               className="input"
               type="text"
@@ -186,26 +202,27 @@ class Welcome extends Component {
               placeholder="confirm Password"
               onChange={this.onChange}
             />
+            <div className="policy">
+              <input type="radio" className="selector" />
+              <p>I accept the terms and conditions and privacy policy</p>
+            </div>
+            <div className="button-area">
+              <button className="btnLearn">
+                <Link to="/billing" className="link">
+                  Learn More
+                </Link>
+              </button>
+              <button
+                className="btnLogin"
+                disabled={isInvalid}
+                onClick={this.signup}
+                type="submit"
+              >
+                Submit
+              </button>
+            </div>
           </form>
           {/* {error && <p>{error.message}</p>} */}
-          <div className="policy">
-            <input type="radio" className="selector" />
-            <p>I accept the terms and conditions and privacy policy</p>
-          </div>
-          <div className="button-area">
-            <button className="btnLearn">
-              <Link to="/billing" className="link">
-                Learn More
-              </Link>
-            </button>
-            <button
-              className="btnLogin"
-              disabled={isInvalid}
-              onClick={this.signup}
-            >
-              Submit
-            </button>
-          </div>
           <div className="login">
             <p>
               Already have a Trip Planner account?{" "}
