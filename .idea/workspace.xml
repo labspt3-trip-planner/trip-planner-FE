@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d361c892-c6b9-4c43-a371-f2a3aa84dc33" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Billing/Billing.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Billing/Billing.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Login/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Login/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Login/Signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Login/Signup.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/Login/Welcome.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Login/Welcome.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/ModalComponents/Modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ModalComponents/Modal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/ModalComponents/modal.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ModalComponents/modal.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/TripComponents/NewTripModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/TripComponents/NewTripModal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/TripComponents/Page.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/TripComponents/Page.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/TripComponents/TripHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/TripComponents/TripHeader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Login/Welcome.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Login/Welcome.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,23 +15,15 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/frontend/src/components/Login/Welcome.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="168">
+              <caret line="29" column="47" selection-start-line="29" selection-start-column="47" selection-end-line="29" selection-end-column="47" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/frontend/src/components/Login/Welcome.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1585">
-              <caret line="205" column="44" selection-start-line="205" selection-start-column="44" selection-end-line="205" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -53,6 +37,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/frontend/src/components/Login/Welcome.css" />
+        <option value="$PROJECT_DIR$/frontend/src/components/Login/Welcome.js" />
       </list>
     </option>
   </component>
@@ -66,18 +51,16 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="357" />
-    <option name="y" value="1080" />
-    <option name="width" value="1280" />
-    <option name="height" value="800" />
+  <component name="ProjectFrameBounds">
+    <option name="y" value="763" />
+    <option name="width" value="1080" />
+    <option name="height" value="1019" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -103,18 +86,11 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="trip-planner-FE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="trip-planner-FE" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Login" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -147,22 +123,20 @@
       <option name="presentableId" value="Default" />
       <updated>1560015234536</updated>
       <workItem from="1560015235748" duration="1545000" />
+      <workItem from="1560020415398" duration="2553000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1545000" />
+    <option name="totallyTimeSpent" value="4098000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="357" y="1080" width="1280" height="800" extended-state="0" />
+    <frame x="0" y="763" width="1080" height="1019" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2494043" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28611898" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.32876712" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -170,6 +144,10 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.48172757" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -179,19 +157,27 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/Login/Welcome.js">
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/Login/Welcome.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="120">
+          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/Login/Welcome.css">
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/ModalComponents/modal.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1585">
-          <caret line="205" column="44" selection-start-line="205" selection-start-column="44" selection-end-line="205" selection-end-column="44" />
+        <state relative-caret-position="525">
+          <caret line="35" column="13" lean-forward="true" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/Login/Welcome.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="29" column="47" selection-start-line="29" selection-start-column="47" selection-end-line="29" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
