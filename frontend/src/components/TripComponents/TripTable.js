@@ -5,7 +5,7 @@ import NewTripModal from "./NewTripModal";
 
 class TableTest extends Component {
     render() {
-        const data =[
+        const data = [
         {
             name: 'Honeymoon',
             destination: 'Maui HI',
