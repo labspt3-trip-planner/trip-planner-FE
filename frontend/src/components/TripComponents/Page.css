@@ -124,7 +124,8 @@ button:hover, a:visited, a:link, a:active {
     flex-direction: row;
     text-align: left;
     margin-top: 50px;
-    width: 1000px;
+    /*width: 1000px;*/
+    width: 85%;
 }
 
 .billing div {
@@ -142,7 +143,7 @@ button:hover, a:visited, a:link, a:active {
 }
 
 .billing-option:hover {
-    border: 2px solid palevioletred;
+    /*border: 2px solid palevioletred;*/
 }
 
 .space {
@@ -198,4 +199,55 @@ button:hover, a:visited, a:link, a:active {
     align-items: center;
 }
 
+/* ---- MODAL ---- */
+
+.overlay {
+    background-color: rgba(207, 207, 207, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#modal {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /*width: 70%;*/
+    /*height: 60%;*/
+    z-index: 10;
+    position: absolute;
+    float: left;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 2.5%;
+}
+
+#modal:focus {
+    outline: none;
+}
+
+/* --------------  */
+
+.ReactModal__Overlay {
+    opacity: 0;
+    transition: opacity 500ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open {
+    opacity: 1;
+}
+
+.ReactModal__Overlay--before-close {
+    opacity: 0;
+}
+
+.disabled {
+    border: 1px solid #999999;
+    background-color: #cccccc;
+    color: #666666;
+}
   

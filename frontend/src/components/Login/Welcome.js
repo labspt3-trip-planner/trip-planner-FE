@@ -33,17 +33,12 @@ class Welcome extends Component {
 
   onChange = event => {
     this.setState({ [event.target.name]: event.target.value });
-    console.log(event);
   };
 
   handleSubmit = event => {
     event.preventDefault();
-    // const { emailAddress, passwordOne } = this.state;
   };
 
-  afterOpenModal() {
-    this.subtitle.style.color = "#f00";
-  }
 
   openModal = event => {
     event.preventDefault();
