@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d361c892-c6b9-4c43-a371-f2a3aa84dc33" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/Billing/styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/Map/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/Map/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Billing/Billing.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Billing/Billing.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Login/Welcome.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Login/Welcome.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/TripComponents/NewTripModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/TripComponents/NewTripModal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/TripComponents/Page.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/TripComponents/Page.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Welcome/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Welcome/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/yarn.lock" afterDir="false" />
-    </list>
+    <list default="true" id="d361c892-c6b9-4c43-a371-f2a3aa84dc33" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -29,7 +17,7 @@
         <entry file="file://$PROJECT_DIR$/frontend/src/components/TripComponents/Page.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="337">
-              <caret line="207" column="12" lean-forward="true" selection-start-line="207" selection-start-column="12" selection-end-line="207" selection-end-column="12" />
+              <caret line="207" column="12" selection-start-line="207" selection-start-column="12" selection-end-line="207" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -38,7 +26,7 @@
         <entry file="file://$PROJECT_DIR$/frontend/src/components/Map/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="555">
-              <caret line="37" column="35" lean-forward="true" selection-start-line="37" selection-start-column="35" selection-end-line="37" selection-end-column="35" />
+              <caret line="37" column="35" selection-start-line="37" selection-start-column="35" selection-end-line="37" selection-end-column="35" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
@@ -77,7 +65,7 @@
         <entry file="file://$PROJECT_DIR$/frontend/src/components/TripInfoComponents/CheckListComponents/Checklist.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="450">
-              <caret line="30" column="25" lean-forward="true" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
+              <caret line="30" column="25" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -85,13 +73,18 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/src/components/TripInfoComponents/CheckListComponents/useChecklistState.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
               <caret line="15" column="2" lean-forward="true" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/frontend/.gitignore">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -112,15 +105,6 @@
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/src/components/TripComponents/NewTripModal.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -266,16 +250,15 @@
       <option name="presentableId" value="Default" />
       <updated>1560015234536</updated>
       <workItem from="1560015235748" duration="1545000" />
-      <workItem from="1560020415398" duration="11481000" />
+      <workItem from="1560020415398" duration="11584000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13026000" />
+    <option name="totallyTimeSpent" value="13129000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="1008" width="1080" height="912" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28611898" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -290,7 +273,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.4811219" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.4804878" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -396,14 +379,14 @@
     <entry file="file://$PROJECT_DIR$/frontend/src/components/TripComponents/Page.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="337">
-          <caret line="207" column="12" lean-forward="true" selection-start-line="207" selection-start-column="12" selection-end-line="207" selection-end-column="12" />
+          <caret line="207" column="12" selection-start-line="207" selection-start-column="12" selection-end-line="207" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/components/Map/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="555">
-          <caret line="37" column="35" lean-forward="true" selection-start-line="37" selection-start-column="35" selection-end-line="37" selection-end-column="35" />
+          <caret line="37" column="35" selection-start-line="37" selection-start-column="35" selection-end-line="37" selection-end-column="35" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
@@ -452,7 +435,7 @@
     <entry file="file://$PROJECT_DIR$/frontend/src/components/TripInfoComponents/CheckListComponents/Checklist.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
-          <caret line="30" column="25" lean-forward="true" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
+          <caret line="30" column="25" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -465,6 +448,9 @@
           <caret line="15" column="2" lean-forward="true" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
