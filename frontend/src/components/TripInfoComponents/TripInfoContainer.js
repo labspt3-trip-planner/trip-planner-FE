@@ -1,9 +1,9 @@
 import React from "react";
 import HeaderContainer from "../HeaderComponents/HeaderContainer";
-import MapDisplay from "../Map/MapDisplay";
 import "../TripComponents/Page.css";
 import CheckListContainer from "./CheckListComponents/CheckListContainer";
 import Title from "./TripName";
+import GMap from "../Map/GMap";
 
 const TripInfoContainer = () => {
   return (
@@ -12,7 +12,9 @@ const TripInfoContainer = () => {
       <Title />
       <br />
       <CheckListContainer />
-      <MapDisplay />
+      <div className="map-container">
+        <GMap isMarkerShown />
+      </div>
     </div>
   );
 };
