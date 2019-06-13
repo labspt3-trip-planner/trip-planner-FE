@@ -1,31 +1,36 @@
 import React from "react";
-import { compose, withProps } from "recompose";
 import {
   withScriptjs,
   withGoogleMap,
   GoogleMap,
   Marker
 } from "react-google-maps";
+import SearchBox from "react-google-maps/lib/components/places/SearchBox";
+import "./GMap.css";
 
-const GMap = compose(
-  withProps({
-    googleMapURL: `https://maps.googleapis.com/maps/api/js?key=${
-      process.env.REACT_APP_GOOGLE_MAPS_API_KEY
-    }&v=3.exp&libraries=geometry,drawing,places`,
-    loadingElement: <div style={{ height: `100%` }} />,
-    containerElement: <div style={{ height: `400px` }} />,
-    mapElement: <div style={{ height: `100%` }} />
-  }),
-  withScriptjs,
-  withGoogleMap
-)(props => (
+const Map = props => (
   <div>
-    <GoogleMap defaultZoom={8} defaultCenter={{ lat: -34.397, lng: 150.644 }}>
-      {props.isMarkerShown && (
-        <Marker position={{ lat: -34.397, lng: 150.644 }} />
-      )}
+    <GoogleMap defaultZoom={10} center={{ lng: -81.656761, lat: 30.32597 }}>
+      {/* {props.markers.map((marker, index) => (
+        <Marker key={index} position={marker.position} />
+      ))}{" "} */}
     </GoogleMap>
   </div>
-));
+);
 
-export default GMap;
+const WrappedMap = withScriptjs(withGoogleMap(Map));
+
+export default function GMap() {
+  return (
+    <div className="map-wrapper">
+      <WrappedMap
+        googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${
+          process.env.REACT_APP_GOOGLE_MAPS_API_KEY
+        }&v=3.exp&libraries=geometry,drawing,places`}
+        loadingElement={<div style={{ height: `100%` }} />}
+        containerElement={<div style={{ height: `100%` }} />}
+        mapElement={<div style={{ height: `100%` }} />}
+      />
+    </div>
+  );
+}
