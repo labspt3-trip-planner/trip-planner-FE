@@ -1,11 +1,22 @@
-import React from 'react';
+import React from "react";
+import Welcome from "./components/Login/Welcome";
+import TripContainer from './components/TripComponents/TripContainer';
+import TripInfoContainer from './components/TripInfoComponents/TripInfoContainer';
+import Signup from './components/Login/Signup';
+import Billing from './components/Billing/Billing';
+import { BrowserRouter as Switch, Route } from 'react-router-dom';
+
 
 function App() {
-  return (
-    <div className="App">
-      <h1>Trip Planner</h1>
-    </div>
-  );
+	return (
+		<Switch>
+			<Route exact path="/" component={Welcome} />
+			<Route path="/triplist" component={TripContainer} />
+			<Route path="/trip" component={TripInfoContainer} />
+			<Route path="/signup" component={Signup} />
+			<Route path="/billing" component={Billing} />
+		</Switch>
+	)
 }
 
 export default App;
