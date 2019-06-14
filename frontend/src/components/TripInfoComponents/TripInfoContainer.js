@@ -23,7 +23,12 @@ class TripInfoContainer extends React.Component {
   componentDidMount() {
     axios
       .get(`/trip/${this.state.tripId}`)
-      .then(res => this.setState({ ...res.data }))
+      .then(res =>
+        this.setState({
+          ...res.data,
+          currentDestination: res.data.destinations[0]
+        })
+      )
       .catch(err => console.log(err));
   }
 
@@ -35,7 +40,7 @@ class TripInfoContainer extends React.Component {
         <br />
         <CheckListContainer />
         <div className="map-container">
-          <GMap isMarkerShown />
+          <GMap defaultCenter={this.state.currentDestination.geo} />
         </div>
       </div>
     );
