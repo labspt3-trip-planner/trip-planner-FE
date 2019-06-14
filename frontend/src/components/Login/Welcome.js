@@ -203,7 +203,7 @@ class Welcome extends Component {
               onChange={this.onChange}
             />
             <div className="policy">
-              <input type="radio" className="selector" />
+              <input type="checkbox" className="selector" />
               <p>I accept the terms and conditions and privacy policy</p>
             </div>
             <div className="button-area">
