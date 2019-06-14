@@ -3,13 +3,13 @@ import "firebase/auth";
 
 //this is the configuration for Firebase to interface with the web app
 const firebaseConfig = {
-  apiKey: process.env.REACT_APP_API_KEY,
-  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
-  databaseURL: process.env.REACT_APP_DB_URL,
-  projectId: process.env.REACT_APP_PROJECT_ID,
-  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
-  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
-  appId: process.env.REACT_APP_APP_ID
+  apiKey: "AIzaSyDa-aHc80KiveuLiwop6e02atc4HREb7MY",
+  authDomain: "ll-trip-planner.firebaseapp.com",
+  databaseURL: "https://ll-trip-planner.firebaseio.com",
+  projectId: "ll-trip-planner",
+  storageBucket: "ll-trip-planner.appspot.com",
+  messagingSenderId: "528830403763",
+  appId: "1:528830403763:web:7112194cf47d64a6"
 };
 // We'll need to set these variable within Netflify
 
