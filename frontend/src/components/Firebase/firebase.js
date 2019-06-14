@@ -1,6 +1,9 @@
 import app from "firebase/app";
 import "firebase/auth";
 
+
+
+
 //this is the configuration for Firebase to interface with the web app
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_API_KEY,

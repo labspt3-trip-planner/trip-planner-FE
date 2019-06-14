@@ -3,6 +3,9 @@ import Modal from "../ModalComponents/Modal";
 import TextInput from "../ModalComponents/TextInput";
 import DateInput from "../ModalComponents/DateInput";
 
+import { axios } from 'axios';
+
+
 class NewTripModal extends Component {
     state = {
         show: false
@@ -12,6 +15,16 @@ class NewTripModal extends Component {
             show: !this.state.show
         });
     };
+
+    componentDidMount(e) {
+        axios.get('http://localhost:9090/')
+         .then(response => {
+             this.setState({
+                 addNewTrip: Response.data
+             })
+         })
+         .catch(e > console.log(e))
+    }
     render() {
         return (
             <div className="new-modal">
