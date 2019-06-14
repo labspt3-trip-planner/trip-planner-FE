@@ -3,25 +3,25 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    background: #64b5eb;
+    background: #0078b3;
     height: 100vh;
 }
 
 @media (max-width: 500px) {
     .page-container {
-        height: 800px;
+        height: 100vh;
     }
 }
 
 @media (max-width: 500px) {
     .page-containers {
-        min-width: 500px;
+        min-width: 100%;
         flex-direction: column;
     }
 }
 
 .header-wrapper {
-    background: #64b5eb;
+    background: #0078b3;
 }
 
 .trips-header-wrapper {
@@ -31,7 +31,8 @@
     align-items: center;
     align-content: center;
     text-align: center;
-    background: #64b5eb;
+    /*background: #64b5eb;*/
+    background: #0078b3;
     flex-direction: column;
     width: 100%;
 }
@@ -83,7 +84,7 @@
 
 @media (max-width: 500px) {
     .navbar {
-        min-width: 500px;
+        width: 390px;
         flex-direction: row;
         margin-bottom: 10px;
 
@@ -100,7 +101,7 @@
 
 @media (max-width: 500px) {
     .navbar-start {
-        min-width: 75%;
+        width: 300px;
         flex-direction: row;
     }
 }
@@ -115,9 +116,8 @@
 
 @media (max-width: 500px) {
     .navbar-end {
-        width: 25%;
-        flex-direction: row;
-        align-items: center;
+        width: 100px;
+        justify-content: right;
     }
 }
 
@@ -125,14 +125,14 @@
     text-decoration: none;
     color: black;
     margin: 5px 5px;
-    border:1px solid rgba(133, 133, 133, 0.295); 
+    border: 1px solid rgba(133, 133, 133, 0.295); 
 }
 
 @media (max-width: 500px) {
     #header-buttons {
-        min-width: 125px;
+        width: 100px;
         flex-direction: row;
-        align-items: center;
+        align-items: flex-start;
         margin: 0;
         background: rgba(255, 255, 255, 0.733);
         border-radius: 0;
@@ -140,11 +140,9 @@
     }
 }
 
-
-
 #header-buttons:hover, #modal-button:hover {
     text-decoration: none;
-    background: palevioletred;
+    background: #cfa04d;
     color: white;
     border:1px solid white;
 }
@@ -204,7 +202,7 @@ button:hover, a:visited, a:link, a:active {
 }
 
 .billing-option:hover {
-    border: 2px solid palevioletred;
+    border: 2px solid /*palevioletred*/ #f7b94c;
 }
 
 .space {
@@ -252,7 +250,7 @@ button:hover, a:visited, a:link, a:active {
     align-items: center;
     text-align: center;
     height: 80vh;
-    background: #64b5eb;
+    background: #0078b3 /*#f7b94c*/;
     padding: 70px;
 
 }
