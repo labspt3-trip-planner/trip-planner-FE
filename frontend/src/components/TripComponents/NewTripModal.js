@@ -17,7 +17,7 @@ class NewTripModal extends Component {
     };
 
     componentDidMount(e) {
-        axios.get('http://localhost:9090/')
+        axios.post('/')
          .then(response => {
              this.setState({
                  addNewTrip: Response.data
