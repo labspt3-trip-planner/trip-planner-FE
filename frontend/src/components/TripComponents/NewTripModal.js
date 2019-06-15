@@ -9,6 +9,7 @@ class NewTripModal extends Component {
     state = {
         show: false
     };
+
     showModal = e => {
         this.setState({
             show: !this.state.show

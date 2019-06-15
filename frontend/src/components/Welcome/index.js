@@ -2,11 +2,9 @@ import React, { Component } from "react";
 import { Link, withRouter } from "react-router-dom";
 import "./styles.css";
 import Modal from "react-modal";
-import * as Year from "moment";
+import moment from "moment";
 
-let date = require("moment");
-
-const year = date().format("YYYY");
+const year = moment().format("YYYY");
 
 const INITIAL_STATE = {
 username: "",
@@ -186,7 +184,7 @@ render() {
           </p>
         </div>
         <p className="legal-blurb">
-          Copyright © {year} TripPlanner, LLC. All rights reserved.
+          Copyright © 2018 - {year} TripPlanner, LLC. All rights reserved.
         </p>
       </div>
     </div>

@@ -2,11 +2,10 @@ import React, { Component } from "react";
 import { Link, withRouter } from "react-router-dom";
 import "./Welcome.css";
 import Modal from "react-modal";
-import * as Year from "moment";
+import moment from "moment";
 
-let date = require("moment");
 
-const year = date().format("YYYY");
+const year = moment().format("YYYY");
 
 const INITIAL_STATE = {
   username: "",
@@ -153,7 +152,6 @@ class Welcome extends Component {
                   onChange={this.onChange}
               />
             </form>
-            {/* {error && <p>{error.message}</p>} */}
             <div className="policy">
               <input type="radio" className="selector" />
               <p>I accept the terms and conditions and privacy policy</p>
@@ -179,7 +177,7 @@ class Welcome extends Component {
               </p>
             </div>
             <p className="legal-blurb">
-              Copyright © {year} TripPlanner, LLC. All rights reserved.
+              Copyright © 2018 - {year} TripPlanner, LLC. All rights reserved.
             </p>
           </div>
         </div>
