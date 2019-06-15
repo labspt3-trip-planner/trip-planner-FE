@@ -22,6 +22,9 @@ class NewTripModal extends Component {
             show: !this.state.show
         });
     };
+    handleSubmit = e => {
+        e.preventDefault();
+    }
 
     render() {
         return (
