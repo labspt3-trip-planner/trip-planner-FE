@@ -5,10 +5,17 @@ import DateInput from "../ModalComponents/DateInput";
 
 import { axios } from 'axios';
 
+const INITIAL_STATE = {
+    name: "",
+    destination: "",
+    planner: "",
+    error: null
+  };
+
 
 class NewTripModal extends Component {
     state = {
-        show: false
+        INITIAL_STATE
     };
     showModal = e => {
         this.setState({
@@ -16,15 +23,6 @@ class NewTripModal extends Component {
         });
     };
 
-    componentDidMount(e) {
-        axios.post('/')
-         .then(response => {
-             this.setState({
-                 addNewTrip: Response.data
-             })
-         })
-         .catch(e > console.log(e))
-    }
     render() {
         return (
             <div className="new-modal">
