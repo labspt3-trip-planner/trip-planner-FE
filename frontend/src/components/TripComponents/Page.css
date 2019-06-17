@@ -273,6 +273,14 @@ a:active {
     border: 2px solid /*palevioletred*/ #f7b94c;
 }
 
+@media (max-width: 600px) {
+    .billing-option {
+        width: 70%;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+}
+
 .space {
   margin-top: 52px;
   background: #fff;
