@@ -317,10 +317,11 @@ a:active {
 @media (max-width: 600px) {
   .react-table {
     flex-direction: column;
-    align-items: center;
-    min-width: 500px;
+    text-align: center;
+    align-self: center;
+    text-align: center;     
+     min-width: 500px;
     padding: 0;
-    flex-direction: column;
     align-items: center;
   }
 }
