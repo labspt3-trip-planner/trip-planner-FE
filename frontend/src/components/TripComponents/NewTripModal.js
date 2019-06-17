@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Modal from "../ModalComponents/Modal";
 import TextInput from "../ModalComponents/TextInput";
 import DateInput from "../ModalComponents/DateInput";
+import "./Page.css";
 
 class NewTripModal extends Component {
     state = {
@@ -15,14 +16,14 @@ class NewTripModal extends Component {
     render() {
         return (
             <div className="new-modal">
-               <button 
+               <a 
                     id="modal-button"
                     onClick={e => {
                         this.showModal(e);
                     }}
                 >
                     {" "}Add New Trip{" "}
-               </button>
+               </a>
                <Modal onClose={this.showModal} show={this.state.show}>
                    <TextInput />
                    <DateInput />
