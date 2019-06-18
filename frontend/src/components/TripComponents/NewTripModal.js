@@ -7,9 +7,8 @@ import { axios } from 'axios';
 
 const INITIAL_STATE = {
     name: "",
-    destination: "",
+    destination: {},
     planner: "",
-    error: null
   };
 
 
