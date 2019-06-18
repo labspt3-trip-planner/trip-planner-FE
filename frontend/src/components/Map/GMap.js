@@ -42,6 +42,8 @@ const GMap = compose(
         },
         onPlacesChanged: () => {
           const places = refs.searchBox.getPlaces();
+          console.log(places[0].geometry.location.lat());
+          console.log(places[0].geometry.location.lng());
           const bounds = new google.maps.LatLngBounds();
 
           places.forEach(place => {
@@ -86,7 +88,7 @@ const GMap = compose(
     >
       <input
         type="text"
-        placeholder="Customized your placeholder"
+        placeholder="Destination!"
         style={{
           boxSizing: `border-box`,
           border: `1px solid transparent`,
