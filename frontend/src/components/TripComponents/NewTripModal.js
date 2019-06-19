@@ -4,7 +4,7 @@ import TextInput from "../ModalComponents/TextInput";
 import DateInput from "../ModalComponents/DateInput";
 import "./Page.css";
 
-import { axios } from 'axios';
+import { axios } from '../Axios/index';
 
 const INITIAL_STATE = {
     tripName: "",
@@ -26,7 +26,7 @@ class NewTripModal extends Component {
         e.preventDefault();
     axios({
         method: 'POST',
-        url: '/'
+        url: '/trip'
     })
     .then(res => {
         this.setState({
