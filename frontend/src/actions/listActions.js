@@ -25,22 +25,50 @@ export const DELETE_LIST = 'DELETE_LIST';
 export const LIST_DELETED = 'LIST_DELETED';
 export const DELETE_ERROR = 'DELETE_ERROR';
 
-
-
 // GET LIST
-export const getLists = () => (dispatch) => {
-    dispatch({ type: FETCH_LISTS });
-axios({
-    method: 'GET',
-    url: '/:tripId/lists',
-    headers: { token: localStorage.getItem('userToken')}
-})
-.then((res) => {
-    dispatch({ type: LISTS, payload: res.data });
-})
-.catch((err) => {
-    dispatch({ type: LISTS_ERROR, payload: err })
-})
+export const getLists = () => dispatch => {
+	dispatch({ type: FETCH_LISTS });
+	axios({
+		method: 'GET',
+		url: '/:tripId/lists',
+		headers: { token: localStorage.getItem('userToken') }
+	})
+		.then(res => {
+			dispatch({ type: LISTS, payload: res.data });
+		})
+		.catch(err => {
+			dispatch({ type: LISTS_ERROR, payload: err });
+		});
 };
 
-//GET SINGLE LIST
+//ADD NEW LIST
+export const addList = newList => dispatch => {
+	dispatch({ type: CREATE_LIST });
+	return axios
+		.post('/:tripId/lists', newList, {
+			headers: { token: localStorage.getItem('userToken') }
+		})
+		.then(res => {
+			dispatch({ type: LIST_CREATED, payload: res.data });
+		})
+		.catch(err => {
+			dispatch({ type: LIST_ERROR, payload: err });
+		});
+};
+
+//UPDATE LIST
+export const updateList = list => dispatch => {
+	dispatch({ type: EDIT_LIST });
+	return axios
+		.put('/:tripId/lists', list, {
+			headers: { token: localStorage.getItem('userToken') }
+		})
+		.then(res => {
+			dispatch({ type: LIST_EDITED, payload: res.data });
+		})
+		.catch(err => {
+			dispatch({ type: EDIT_ERROR, payload: err });
+		});
+};
+
+//DELETE LIST
