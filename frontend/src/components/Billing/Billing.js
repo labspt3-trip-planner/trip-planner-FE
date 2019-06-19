@@ -10,7 +10,7 @@ function Billing() {
       <HeaderContainer />
       <h1 className="title space">•  Billing  •</h1>
       <section className="billing">
-        <div className="billing-option">
+        <div className="billing-option left">
           <h1>Trip Planner Standard</h1>
           <ul>
             <li>Save multiple trips with option for multiple destinations</li>
@@ -20,7 +20,7 @@ function Billing() {
             <li>Upgrade/billing feature, subscription gives user unlimited trips to save</li>
           </ul>
           </div>   
-        <div className="billing-option">
+        <div className="billing-option right">
           <h1>Trip Planner Pro</h1>
           <ul>
             <li>Save multiple trips with option for multiple destinations</li>
