@@ -6,9 +6,9 @@ import DateInput from "../ModalComponents/DateInput";
 import { axios } from 'axios';
 
 const INITIAL_STATE = {
-    name: "",
-    destination: {},
-    planner: "",
+    tripName: "",
+    destinations: [],
+    tripPlanner: ""
   };
 
 
@@ -23,6 +23,15 @@ class NewTripModal extends Component {
     };
     handleSubmit = e => {
         e.preventDefault();
+    axios
+    .post('/trip')
+    .then(res => {
+        this.setState({
+            ...res.data,
+            destinations: res.data.destinations[0]
+        })
+        .catch(err => console.log(err));
+    })
     }
 
     render() {
