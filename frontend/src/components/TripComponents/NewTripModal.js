@@ -24,8 +24,10 @@ class NewTripModal extends Component {
     };
     handleSubmit = e => {
         e.preventDefault();
-    axios
-    .post('/trip')
+    axios({
+        method: 'POST',
+        url: '/'
+    })
     .then(res => {
         this.setState({
             ...res.data,
