@@ -26,11 +26,11 @@ export const LIST_DELETED = 'LIST_DELETED';
 export const DELETE_ERROR = 'DELETE_ERROR';
 
 // GET LIST
-export const getLists = () => dispatch => {
+export const getList = () => dispatch => {
 	dispatch({ type: FETCH_LISTS });
 	axios({
 		method: 'GET',
-		url: '/:tripId/lists',
+		url: '/tripId/lists/:listName',
 		headers: { token: localStorage.getItem('userToken') }
 	})
 		.then(res => {
@@ -60,7 +60,7 @@ export const addList = newList => dispatch => {
 export const updateList = list => dispatch => {
 	dispatch({ type: EDIT_LIST });
 	return axios
-		.put('/:tripId/lists', list, {
+		.put('tripId/lists/:itemId', list, {
 			headers: { token: localStorage.getItem('userToken') }
 		})
 		.then(res => {
