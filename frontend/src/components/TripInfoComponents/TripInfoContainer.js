@@ -22,13 +22,14 @@ class TripInfoContainer extends React.Component {
 
   addFavorites = async favorite => {
     try {
-      console.log(favorite);
+      await axios.post(`/favorites/${this.state.tripId}`, favorite);
+      this.getTrip();
     } catch (err) {
       console.log(err);
     }
   };
 
-  componentDidMount() {
+  getTrip = () => {
     axios
       .get(`/trip/${this.state.tripId}`)
       .then(res =>
@@ -38,6 +39,10 @@ class TripInfoContainer extends React.Component {
         })
       )
       .catch(err => console.log(err));
+  };
+
+  componentDidMount() {
+    this.getTrip();
   }
 
   render() {
@@ -52,7 +57,7 @@ class TripInfoContainer extends React.Component {
             isMarkerShown
             addFavorite={this.addFavorites}
             defaultCenter={this.state.currentDestination.geo}
-            markers={this.state.favorites}
+            favorites={this.state.favorites}
           />
         </div>
       </div>

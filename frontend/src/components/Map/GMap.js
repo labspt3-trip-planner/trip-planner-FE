@@ -111,10 +111,13 @@ const GMap = compose(
           }}
         />
       </SearchBox>
-      <button onClick={faveHandler}>+</button>
       {props.markers.map((marker, index) => (
         <Marker key={index} position={marker.position} />
       ))}
+      {props.favorites.map((favorite, index) => (
+        <Marker key={index} position={favorite.geometry.location} />
+      ))}
+      <button onClick={faveHandler}>+</button>
     </GoogleMap>
   );
 });
