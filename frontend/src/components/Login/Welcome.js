@@ -5,7 +5,7 @@ import { axios } from "../Axios";
 
 import "./Welcome.css";
 import Modal from "react-modal";
-import * as Year from "moment";
+// import * as Year from "moment";
 
 let date = require("moment");
 
@@ -226,7 +226,7 @@ class Welcome extends Component {
           <div className="login">
             <p>
               Already have a Trip Planner account?{" "}
-              <a onClick={this.openModal}>Login</a>
+              <a href="x" onClick={this.openModal}>Login</a>
             </p>
           </div>
           <p className="legal-blurb">
