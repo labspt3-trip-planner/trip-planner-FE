@@ -225,7 +225,7 @@ class Welcome extends Component {
           <div className="login">
             <p>
               Already have a Trip Planner account?{" "}
-              <a onClick={this.openModal}>Login</a>
+              <a href="x" onClick={this.openModal}>Login</a>
             </p>
           </div>
           <p className="legal-blurb">
