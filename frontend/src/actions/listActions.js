@@ -72,21 +72,16 @@ export const updateList = list => dispatch => {
 };
 
 //DELETE LIST
-export const deleteList = tripId => (dispatch) => {
+export const deleteList = tripId => dispatch => {
 	dispatch({ type: DELETE_LIST });
- return (
-	 axios
-	 	.delete('/:tripId/lists/:itemId' + tripId, {
-
-		 })
-		 .then((res) => {
-			 dispatch({ type: LIST_DELETED, payload: res.data})
-		 })
-		 .catch((err) => {
-			 dispatch({ type: DELETE_ERROR, payload: err});
-		 })
- );
+	return axios
+		.delete('/:tripId/lists/:itemId' + tripId, {})
+		.then(res => {
+			dispatch({ type: LIST_DELETED, payload: res.data });
+		})
+		.catch(err => {
+			dispatch({ type: DELETE_ERROR, payload: err });
+		});
 };
-
 
 //can't test until reducers are done
