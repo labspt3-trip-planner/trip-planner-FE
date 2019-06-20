@@ -28,6 +28,7 @@ const GMap = compose(
       this.setState({
         bounds: null,
         markers: [],
+        currentLocation: {},
         onMapMounted: ref => {
           refs.map = ref;
         },
@@ -42,9 +43,11 @@ const GMap = compose(
         },
         onPlacesChanged: () => {
           const places = refs.searchBox.getPlaces();
+          console.log(places[0]);
           console.log(places[0].geometry.location.lat());
           console.log(places[0].geometry.location.lng());
           const bounds = new google.maps.LatLngBounds();
+          this.setState({ currentLocation: places[0] });
 
           places.forEach(place => {
             if (place.geometry.viewport) {
@@ -61,53 +64,59 @@ const GMap = compose(
             "0.position",
             this.state.center
           );
-
           this.setState({
             center: nextCenter,
             markers: nextMarkers
           });
-          //refs.map.fitBounds(bounds);
+          refs.map.fitBounds(bounds);
         }
       });
     }
   }),
   withScriptjs,
   withGoogleMap
-)(props => (
-  <GoogleMap
-    ref={props.onMapMounted}
-    defaultZoom={15}
-    center={props.defaultCenter}
-    onBoundsChanged={props.onBoundsChanged}
-  >
-    <SearchBox
-      ref={props.onSearchBoxMounted}
-      bounds={props.bounds}
-      controlPosition={google.maps.ControlPosition.TOP_LEFT}
-      onPlacesChanged={props.onPlacesChanged}
+)(props => {
+  const faveHandler = () => {
+    props.addFavorite(props.currentLocation);
+  };
+
+  return (
+    <GoogleMap
+      ref={props.onMapMounted}
+      defaultZoom={15}
+      center={props.defaultCenter}
+      onBoundsChanged={props.onBoundsChanged}
     >
-      <input
-        type="text"
-        placeholder="Destination!"
-        style={{
-          boxSizing: `border-box`,
-          border: `1px solid transparent`,
-          width: `240px`,
-          height: `32px`,
-          marginTop: `27px`,
-          padding: `0 12px`,
-          borderRadius: `3px`,
-          boxShadow: `0 2px 6px rgba(0, 0, 0, 0.3)`,
-          fontSize: `14px`,
-          outline: `none`,
-          textOverflow: `ellipses`
-        }}
-      />
-    </SearchBox>
-    {props.markers.map((marker, index) => (
-      <Marker key={index} position={marker.position} />
-    ))}
-  </GoogleMap>
-));
+      <SearchBox
+        ref={props.onSearchBoxMounted}
+        bounds={props.bounds}
+        controlPosition={google.maps.ControlPosition.TOP_LEFT}
+        onPlacesChanged={props.onPlacesChanged}
+      >
+        <input
+          type="text"
+          placeholder="Destination!"
+          style={{
+            boxSizing: `border-box`,
+            border: `1px solid transparent`,
+            width: `240px`,
+            height: `32px`,
+            marginTop: `27px`,
+            padding: `0 12px`,
+            borderRadius: `3px`,
+            boxShadow: `0 2px 6px rgba(0, 0, 0, 0.3)`,
+            fontSize: `14px`,
+            outline: `none`,
+            textOverflow: `ellipses`
+          }}
+        />
+      </SearchBox>
+      <button onClick={faveHandler}>+</button>
+      {props.markers.map((marker, index) => (
+        <Marker key={index} position={marker.position} />
+      ))}
+    </GoogleMap>
+  );
+});
 
 export default GMap;
