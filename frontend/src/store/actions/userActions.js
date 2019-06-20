@@ -1,4 +1,4 @@
-import axios from 'axios';
+import { axios } from '../components/Axios';
 
 // LOGGING IN
 export const LOGGING_IN = 'LOGGING_IN';
@@ -19,7 +19,7 @@ export const login = user => (dispatch) => {
     dispatch ({ type: LOGGING_IN });
     return (
         axios
-        .post('https://labspt3-trip-planner.herokuapp.com/auth/login', user)
+        .post('/auth/login', user)
         .then((res) => {
             localStorage.setItem('userToken', res.data.userToken);
             localStorage.setItem('username', user.username);
@@ -35,7 +35,7 @@ export const createUser = user => (dispatch) => {
     dispatch({ type: CREATING_ACCOUNT });
     return (
         axios
-        .post('https://labspt3-trip-planner.herokuapp.com/auth/register', user)
+        .post('/auth/register', user)
         .then((res) => {
             dispatch({ type: ACCOUNT_CREATED, payload: res.data });
         })
