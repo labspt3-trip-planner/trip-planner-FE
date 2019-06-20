@@ -28,8 +28,8 @@ class NewTripModal extends Component {
         </a>
         <Modal onClose={this.showModal} show={this.state.show}>
           <TextInput />
-          <DateInput />
-          <GMap defaultCenter={{ lat: 37.7577961, lng: -122.38807209999999 }} />
+          <DateInput className="datePicker"/>
+          <GMap className="gMap" defaultCenter={{ lat: 37.7577961, lng: -122.38807209999999 }} />
         </Modal>
       </div>
     );
