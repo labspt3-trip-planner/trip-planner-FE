@@ -1,5 +1,6 @@
 import app from "firebase/app";
 import "firebase/auth";
+import { datePickerDefaultProps } from "@material-ui/pickers/constants/prop-types";
 
 
 
@@ -27,6 +28,7 @@ class Firebase {
   doSignInWithEmailAndPassword = (email, password) =>
     this.auth.signInWithEmailAndPassword(email, password);
   // Gets token upon successful login.
+
   getUserToken = () =>
     this.auth.currentUser
       .getIdToken(/* forceRefresh */ true)
@@ -39,6 +41,14 @@ class Firebase {
       .catch(function(error) {
         // Handle error
       });
+
+  signOut = () =>
+    this.auth
+      .signOut()
+      .then(() => {
+        localStorage.removeItem("user");
+      })
+      .catch(error => console.log(error));
 }
 
 export default Firebase;
