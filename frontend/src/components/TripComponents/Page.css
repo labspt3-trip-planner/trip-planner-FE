@@ -288,6 +288,15 @@ a:active {
   padding: 5px 30px;
 }
 
+@media (max-width: 600px) {
+    .space {
+        margin: 10% 0 0.07%;
+        background: #fff;
+        border-radius: 4px;
+        padding: 1% 2%;
+      }
+}
+
 .trip-list-top {
   display: flex;
   flex-direction: row;
@@ -328,7 +337,7 @@ a:active {
     text-align: center;
     align-self: center;
     text-align: center;     
-     min-width: 500px;
+    width: 100%;
     padding: 0;
     align-items: center;
   }
@@ -336,16 +345,10 @@ a:active {
 
 .table {
   background: white;
-  width: 80%;
+  width: 85%;
   border-radius: 3px;
 }
 
-.sort-dropdown {
-  width: 50%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
 
 .map-container {
   max-width: 900px;
