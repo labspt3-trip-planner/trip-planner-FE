@@ -5,7 +5,6 @@ import { axios } from "../Axios";
 
 import "./Welcome.css";
 import Modal from "react-modal";
-import * as Year from "moment";
 
 let date = require("moment");
 
