@@ -20,6 +20,14 @@ class TripInfoContainer extends React.Component {
     };
   }
 
+  addFavorites = async favorite => {
+    try {
+      console.log(favorite);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   componentDidMount() {
     axios
       .get(`/trip/${this.state.tripId}`)
@@ -40,7 +48,12 @@ class TripInfoContainer extends React.Component {
         <br />
         <CheckListContainer />
         <div className="map-container">
-          <GMap defaultCenter={this.state.currentDestination.geo} />
+          <GMap
+            isMarkerShown
+            addFavorite={this.addFavorites}
+            defaultCenter={this.state.currentDestination.geo}
+            markers={this.state.favorites}
+          />
         </div>
       </div>
     );
