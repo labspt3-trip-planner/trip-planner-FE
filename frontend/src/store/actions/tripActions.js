@@ -1,4 +1,4 @@
-import { axios } from '../components/Axios';
+import { axios } from '../../components/Axios';
 
 // GET TRIPS
 export const FETCH_TRIPS = 'FETCH_TRIPS';
@@ -11,7 +11,7 @@ export const SINGLE_FETCHED = 'SINGLE_FETCHED';
 export const SINGLE_ERROR = 'SINGLE_ERROR';
 
 // CREATE TRIPS
-export const CREATING_TRIP = 'CREATING_TRIP';
+export const CREATE_TRIP = 'CREATING_TRIP';
 export const TRIP_CREATED = 'TRIP_CREATED';
 export const CREATE_ERROR = 'CREATE_ERROR';
 
@@ -72,11 +72,11 @@ export const addTrip = newTrip => (dispatch) => {
     );
 };
 
-export const updateTrip = trip => (dispatch) => {
+export const updateTrip = tripID => (dispatch) => {
     dispatch({ type: EDIT_TRIP });
     return (
         axios
-            .put('/trip' + tripId, {
+            .put('/trip' + tripID, {
                 headers: { token: localStorage.getItem('userToken') },
             })
             .then((res) => {
