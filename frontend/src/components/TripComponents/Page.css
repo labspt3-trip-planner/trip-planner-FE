@@ -145,6 +145,11 @@
 #header-buttons, #modal-button, #signout-buttons {
     display: flex;
     text-decoration: none;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
     color: rgba(0, 0, 0, 0.673);
     margin: 5px 5px;
     border: 1px solid rgba(133, 133, 133, 0.476); 
@@ -155,6 +160,11 @@
     overflow: hidden;
     white-space: nowrap;
 
+}
+
+.actions {
+    display: flex;
+    flex-direction: row;
 }
 
 @media (max-width: 600px) {

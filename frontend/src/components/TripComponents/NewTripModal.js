@@ -5,6 +5,7 @@ import DateInput from "../ModalComponents/DateInput";
 import GMap from "../Map/GMap";
 import "./Page.css";
 
+
 class NewTripModal extends Component {
   state = {
     show: false
@@ -17,19 +18,12 @@ class NewTripModal extends Component {
   render() {
     return (
       <div className="new-modal">
-        <a
-          id="modal-button"
-          onClick={e => {
-            this.showModal(e);
-          }}
-        >
-          {" "}
-          Add New Trip{" "}
-        </a>
+        <a id="modal-button" onClick={e => this.showModal(e)}>Add New Trip</a>
+
         <Modal onClose={this.showModal} show={this.state.show}>
           <TextInput />
           <DateInput className="datePicker"/>
-          <GMap className="gMap" defaultCenter={{ lat: 37.7577961, lng: -122.38807209999999 }} />
+          <GMap id="gMap" defaultCenter={{ lat: 37.7577961, lng: -122.38807209999999 }} />
         </Modal>
       </div>
     );

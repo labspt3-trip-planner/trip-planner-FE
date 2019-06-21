@@ -17,6 +17,7 @@ export default class Modal extends Component {
                 <div className="content">{this.props.children}</div>
                 <div className="actions">
                     <Link to="/trip"><a id="modal-button">Add Trip</a></Link>
+                    <a id="modal-button" onClick={e => this.onClose(e)}>Close</a>
                 </div>
             </div>
         );
