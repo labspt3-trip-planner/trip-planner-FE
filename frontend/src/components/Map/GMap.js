@@ -1,5 +1,7 @@
 /*global google*/
 import React from "react";
+import "./GMap.css";
+
 const _ = require("lodash");
 const { compose, withProps, lifecycle } = require("recompose");
 const {
