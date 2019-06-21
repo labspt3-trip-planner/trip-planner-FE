@@ -116,10 +116,15 @@ const GMap = compose(
       {props.markers.map((marker, index) => (
         <Marker key={index} position={marker.position} />
       ))}
-      {props.favorites.map(favorite => (
-        <Marker key={favorite.place_id} position={favorite.geometry.location} />
-      ))}
-      <button onClick={faveHandler}>+</button>
+      {props.favorites &&
+        props.favorites.map(favorite => (
+          <Marker
+            key={favorite.place_id}
+            position={favorite.geometry.location}
+          />
+        ))}
+      {props.favorites && <button onClick={faveHandler}>+</button>}
+      {props.addDest && <button>Add Destination</button>}
     </GoogleMap>
   );
 });
