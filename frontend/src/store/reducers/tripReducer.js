@@ -14,8 +14,6 @@ import {
     DELETE_TRIP,
     TRIP_DELETED,
     DELETE_ERROR
-
-
   } from '../actions/tripActions';
   
   const initialState = {
