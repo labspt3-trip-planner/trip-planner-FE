@@ -9,13 +9,24 @@ class NewTripModal extends Component {
   state = {
     show: false,
     tripName: "",
-    destinations: []
+    destinations: [],
+    startDate: "",
+    endDate: ""
   };
   showModal = e => {
     this.setState({
       show: !this.state.show
     });
   };
+
+  changeHandler = e => {
+    this.setState({ [e.target.name]: e.target.value });
+  };
+
+  startHandler = date => this.setState({ startDate: date });
+
+  endHandler = date => this.setState({ endDate: date });
+
   render() {
     return (
       <div className="new-modal">
@@ -24,8 +35,15 @@ class NewTripModal extends Component {
         </a>
 
         <Modal onClose={this.showModal} show={this.state.show}>
-          <TextInput />
-          <DateInput className="datePicker" />
+          <TextInput
+            nameHandler={this.changeHandler}
+            nameValue={this.state.tripName}
+          />
+          <DateInput
+            className="datePicker"
+            startHandler={this.startHandler}
+            endHandler={this.endHandler}
+          />
           <GMap
             id="gMap"
             addDest
