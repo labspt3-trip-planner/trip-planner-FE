@@ -4,6 +4,7 @@ import TextInput from "../ModalComponents/TextInput";
 import DateInput from "../ModalComponents/DateInput";
 import GMap from "../Map/GMap";
 import { withFirebase } from "../Firebase";
+import { axios } from "../Axios";
 import "./Page.css";
 
 class NewTripModal extends Component {
@@ -23,6 +24,18 @@ class NewTripModal extends Component {
     this.setState({
       show: !this.state.show
     });
+  };
+
+  addTrip = () => {
+    const trip = {
+      tripName: this.state.tripName,
+      destinations: this.state.destinations,
+      startDate: this.state.startDate,
+      endDate: this.state.endDate,
+      planner: this.state.planner,
+      participants: this.state.participants,
+      favorites: []
+    };
   };
 
   changeHandler = e => {
