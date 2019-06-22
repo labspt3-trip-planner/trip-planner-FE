@@ -3,16 +3,22 @@ import Modal from "../ModalComponents/Modal";
 import TextInput from "../ModalComponents/TextInput";
 import DateInput from "../ModalComponents/DateInput";
 import GMap from "../Map/GMap";
+import { withFirebase } from "../Firebase";
 import "./Page.css";
 
 class NewTripModal extends Component {
-  state = {
-    show: false,
-    tripName: "",
-    destinations: [],
-    startDate: "",
-    endDate: ""
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      show: false,
+      tripName: "",
+      destinations: [],
+      startDate: "",
+      endDate: "",
+      planner: this.props.firebase.auth.currentUser.uid,
+      participants: []
+    };
+  }
   showModal = e => {
     this.setState({
       show: !this.state.show
@@ -64,4 +70,4 @@ class NewTripModal extends Component {
   }
 }
 
-export default NewTripModal;
+export default withFirebase(NewTripModal);

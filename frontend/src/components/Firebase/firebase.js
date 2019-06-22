@@ -1,9 +1,5 @@
 import app from "firebase/app";
 import "firebase/auth";
-import { datePickerDefaultProps } from "@material-ui/pickers/constants/prop-types";
-
-
-
 
 //this is the configuration for Firebase to interface with the web app
 const firebaseConfig = {
