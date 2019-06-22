@@ -23,6 +23,10 @@ class NewTripModal extends Component {
     this.setState({ [e.target.name]: e.target.value });
   };
 
+  addDest = destination => {
+    this.setState({ destinations: [...this.state.destinations, destination] });
+  };
+
   startHandler = date => this.setState({ startDate: date });
 
   endHandler = date => this.setState({ endDate: date });
@@ -39,6 +43,11 @@ class NewTripModal extends Component {
             nameHandler={this.changeHandler}
             nameValue={this.state.tripName}
           />
+          <ul>
+            {this.state.destinations.map(dest => (
+              <li>{dest.name}</li>
+            ))}
+          </ul>
           <DateInput
             className="datePicker"
             startHandler={this.startHandler}
@@ -46,7 +55,7 @@ class NewTripModal extends Component {
           />
           <GMap
             id="gMap"
-            addDest
+            addDest={this.addDest}
             defaultCenter={{ lat: 37.7577961, lng: -122.38807209999999 }}
           />
         </Modal>

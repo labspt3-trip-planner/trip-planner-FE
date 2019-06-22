@@ -82,6 +82,10 @@ const GMap = compose(
     props.addFavorite(props.currentLocation);
   };
 
+  const destHandler = () => {
+    props.addDest(props.currentLocation);
+  };
+
   return (
     <GoogleMap
       ref={props.onMapMounted}
@@ -124,7 +128,7 @@ const GMap = compose(
           />
         ))}
       {props.favorites && <button onClick={faveHandler}>+</button>}
-      {props.addDest && <button>Add Destination</button>}
+      {props.addDest && <button onClick={destHandler}>Add Destination</button>}
     </GoogleMap>
   );
 });
