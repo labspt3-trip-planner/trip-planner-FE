@@ -14,7 +14,7 @@ function KeyboardDatePickerExample(props) {
         value={startDate}
         onChange={date => {
           handleStartChange(date);
-          props.startHandler(startDate);
+          props.startHandler(date);
         }}
         minDate={new Date()}
         format="MM/dd/yyyy"
@@ -26,7 +26,7 @@ function KeyboardDatePickerExample(props) {
         value={endDate}
         onChange={date => {
           handleEndChange(date);
-          props.endHandler(endDate);
+          props.endHandler(date);
         }}
         minDate={startDate}
         format="MM/dd/yyyy"
