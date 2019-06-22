@@ -44,7 +44,7 @@ import {
         return {
           ...state,
           isFetchingTrip: false,
-          postError: action.payload,
+          tripError: action.payload,
         };
       case CREATE_TRIP:
         return {
@@ -72,7 +72,7 @@ import {
         return {
           ...state,
           isEditingTrip: false,
-          trips: this.state.trips.map(trip => (trip.id === action.payload.id ? { ...action.payload } : trip),),
+          trips: this.state.trips.map(trip => (trip.id === action.payload.id ? { ...action.payload } : trip)),
         };
       case EDIT_ERROR:
         return {
