@@ -57,7 +57,7 @@ import {
           isCreatingList: false,
           lists: [...this.state.lists, action.payload],
         };
-      case CREATE_ERROR:
+      case LIST_ERROR:
         return {
           ...state,
           isCreatingList: false,
