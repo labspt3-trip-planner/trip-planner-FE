@@ -16,7 +16,7 @@ class NewTripModal extends Component {
       destinations: [],
       startDate: "",
       endDate: "",
-      planner: this.props.firebase.auth.currentUser.uid,
+      //planner: this.props.firebase.auth.currentUser.uid,
       participants: []
     };
   }
@@ -36,6 +36,12 @@ class NewTripModal extends Component {
       participants: this.state.participants,
       favorites: []
     };
+    axios
+      .post("/trip", trip)
+      .then(res => console.log(res))
+      .catch(err => console.log(err));
+
+    this.showModal();
   };
 
   changeHandler = e => {
@@ -57,7 +63,11 @@ class NewTripModal extends Component {
           Add New Trip
         </a>
 
-        <Modal onClose={this.showModal} show={this.state.show}>
+        <Modal
+          onClose={this.showModal}
+          show={this.state.show}
+          addTrip={this.addTrip}
+        >
           <TextInput
             nameHandler={this.changeHandler}
             nameValue={this.state.tripName}
