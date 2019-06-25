@@ -20,6 +20,19 @@ class Firebase {
     this.auth = app.auth();
   }
 
+  getUser = () => {
+    this.auth.onAuthStateChanged(function(user) {
+      if (user) {
+        // User is signed in.
+        console.log("User!: ", user);
+        return user;
+      } else {
+        // No user is signed in.
+        console.log("Please sign in");
+        return null;
+      }
+    });
+  };
   // Creates a signInWithEmailAndPassword function that is accessible wherever this class is provided
   doSignInWithEmailAndPassword = (email, password) =>
     this.auth.signInWithEmailAndPassword(email, password);
