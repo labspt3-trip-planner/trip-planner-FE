@@ -16,14 +16,36 @@ class NewTripModal extends Component {
       destinations: [],
       startDate: "",
       endDate: "",
-      //planner: this.props.firebase.auth.currentUser.uid,
+      planner: "",
       participants: []
     };
   }
+
+  componentDidUpdate() {
+    this.props.firebase.getUser();
+  }
+
+  componentDidMount() {
+    // console.log("FB props: ", this.props.firebase);
+    // const u = this.props.firebase.auth;
+    // console.log("u: ", u);
+    // console.log("uid: ", this.props.firebase.auth.currentUser);
+  }
+
+  getUser = async () => {
+    await this.props.firebase.getUser();
+  };
+
   showModal = e => {
-    this.setState({
-      show: !this.state.show
-    });
+    if (this.state.planner) {
+      this.setState({
+        show: !this.state.show
+      });
+    } else
+      this.setState({
+        show: !this.state.show,
+        planner: this.props.firebase.auth.currentUser.uid
+      });
   };
 
   addTrip = () => {
