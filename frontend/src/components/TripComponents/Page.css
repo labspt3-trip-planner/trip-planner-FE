@@ -75,13 +75,13 @@
   display: flex;
   flex-direction: row;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  height: 50px;
   width: 100%;
 }
 
 .navbar {
   display: flex;
   width: 100%;
+  background: white;
 
 }
 
@@ -99,7 +99,7 @@
 .navbar-start {
   display: flex;
   flex-direction: row;
-  width: 50%;
+  width: 75%;
   justify-content: flex-start;
 
 }
@@ -117,10 +117,9 @@
 .navbar-end {
   display: flex;
   flex-direction: row;
-  width: 50%;
+  width: 25%;
   text-align: center;
   justify-content: flex-end;
-
 }
 
 @media (max-width: 600px) {
@@ -145,21 +144,24 @@
 #header-buttons, #modal-button, #signout-buttons {
     display: flex;
     text-decoration: none;
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
-    align-content: center;
-    text-align: center;
     color: rgba(0, 0, 0, 0.673);
-    margin: 5px 5px;
-    border: 1px solid rgba(133, 133, 133, 0.476); 
+    border-right: 1px solid rgba(133, 133, 133, 0.476); 
     background: #fff;
     padding: 10px 40px;
     max-height: 20px;
-    border-radius: 5px;
     overflow: hidden;
     white-space: nowrap;
 
+}
+
+#signout-buttons {
+    border-left: 1px solid rgba(133, 133, 133, 0.476);
+} 
+
+#modal-button {
+    border: 1px solid rgba(133, 133, 133, 0.476); 
+    border-radius: 5px;
+    margin-right: 10px;
 }
 
 .actions {
@@ -168,20 +170,7 @@
 }
 
 @media (max-width: 600px) {
-    #header-buttons {
-        flex-direction: row;
-        text-align: center;
-        justify-content: center;
-        flex-direction: row;
-        justify-content: center;
-        align-self: center;
-        text-align: center;       
-        margin: 0;
-        padding: 10px 0;
-        border-radius: 0;
-        width: 100%;
-    }
-    #signout-buttons {
+    #header-buttons, #signout-buttons {
         flex-direction: row;
         text-align: center;
         justify-content: center;
@@ -189,6 +178,8 @@
         justify-content: center;
         align-self: center;
         text-align: center;  
+        border-left: 1px solid rgba(133, 133, 133, 0.476);
+        border-right: 1px solid rgba(133, 133, 133, 0.476);
         margin: 0;
         padding: 10px 0;
         border-radius: 0;
@@ -207,10 +198,8 @@
 }
 
 #header-buttons:hover, #modal-button:hover, #signout-buttons:hover {
-    text-decoration: none;
     background: #cfa04d;
     color: white;
-    border: 1px solid white;
 }
 
 #modal-button {
@@ -236,62 +225,89 @@ a:active {
   background: #fff;
   border-radius: 4px;
   padding: 5px 30px;
+  width: 200px;
 }
 
 @media (max-width: 600px) {
     .title {
       flex-direction: column;
-      align-items: center;
-      text-align: center;
       background: #fff /*#f7b94c*/;
     }
   }
 
-.billing {
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  flex-direction: row;
-  text-align: left;
-  margin-top: 50px;
-  width: 100%;
-
-}
-
-@media (max-width: 600px) {
-  .billing {
+.plan-details {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 100%;
-    margin-top: 10px;
-    padding: 0;
-  }
-}
-
-.billing-option {
-  background: #fff;
-  word-wrap: break-word;
-  padding: 10px;
-  margin: 15px;
-  width: 350px;
-  border: 2px solid white;
-}
-
-.billing-option:hover {
-    border: 2px solid /*palevioletred*/ #f7b94c;
+    background: #fff;
+    border: 1px solid rgba(133, 133, 133, 0.476);
+    width: 90%;
+    margin: 20px;
+    /* max-width: 770px; */
 }
 
 @media (max-width: 600px) {
-    .billing-option {
-        width: 70%;
-        padding: 10px;
-        margin-bottom: 10px;
+    .plan-details {
+        width: 85%;
     }
 }
 
+.plan-details-label {
+    text-align: left;
+    padding: 10px;
+    background: rgba(208, 208, 208, 0.83);
+    align-self: top;
+    margin: 0;
+}
+
+.plan-details-description {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid rgba(133, 133, 133, 0.476);
+
+}
+
+@media (max-width: 600px) {
+    .plan-details-description {
+        flex-direction: column;
+    }
+}
+
+.plan-details-description-left {
+    padding: 15px 0 0 15px;
+    width: 33%;
+    border-right: 1px solid rgba(133, 133, 133, 0.476);
+}
+
+@media (max-width: 600px) {
+    .plan-details-description-left {
+        width: 100%;
+    }
+}
+
+.plan-details-description-right {
+    text-align: left;
+    padding: 15px 15px 0 15px;
+    width: 66%;
+}
+
+@media (max-width: 600px) {
+    .plan-details-description-right {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.plan-details-description:hover {
+    background: #f7b94c;
+    color: white;
+}
+
+
+
 .space {
-  margin: 52px 0 20px 0;
+  margin: 52px 0 40px 0;
   background: #fff;
   border-radius: 4px;
   padding: 5px 30px;
@@ -326,8 +342,6 @@ a:active {
   justify-content: flex-start;
   width: 50%;
 }
-
-
 
 .react-table {
   display: flex;

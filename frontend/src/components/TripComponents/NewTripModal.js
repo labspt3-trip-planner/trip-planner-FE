@@ -16,7 +16,7 @@ class NewTripModal extends Component {
       destinations: [],
       startDate: "",
       endDate: "",
-      planner: this.props.firebase.auth.currentUser.uid,
+      //planner: this.props.firebase.auth.currentUser.uid,
       participants: []
     };
   }
