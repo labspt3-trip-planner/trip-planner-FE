@@ -12,7 +12,14 @@ class TripInfoContainer extends React.Component {
     this.state = {
       tripName: "",
       destinations: [],
-      currentDestination: {},
+      currentDestination: {
+        geometry: {
+          location: {
+            lat: 0.0,
+            lng: 0.0
+          }
+        }
+      },
       tripId: this.props.match.params.tripId,
       favorites: [],
       participants: [],
@@ -32,12 +39,13 @@ class TripInfoContainer extends React.Component {
   getTrip = () => {
     axios
       .get(`/trip/${this.state.tripId}`)
-      .then(res =>
+      .then(res => {
+        console.log(res);
         this.setState({
           ...res.data,
           currentDestination: res.data.destinations[0]
-        })
-      )
+        });
+      })
       .catch(err => console.log(err));
   };
 
@@ -56,7 +64,7 @@ class TripInfoContainer extends React.Component {
           <GMap
             isMarkerShown
             addFavorite={this.addFavorites}
-            defaultCenter={this.state.currentDestination.geo}
+            defaultCenter={this.state.currentDestination.geometry.location}
             favorites={this.state.favorites}
           />
         </div>
