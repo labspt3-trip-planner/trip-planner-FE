@@ -96,7 +96,7 @@ class NewTripModal extends Component {
           />
           <ul>
             {this.state.destinations.map(dest => (
-              <li>{dest.name}</li>
+              <li key={dest.place_id}>{dest.name}</li>
             ))}
           </ul>
           <DateInput
