@@ -6,8 +6,8 @@ import { datePickerDefaultProps } from "@material-ui/pickers/constants/prop-type
 
 const Navigation = props => {
   const signOut = e => {
-    props.firebase.signOut();
     props.history.push("/");
+    props.firebase.signOut();
   };
 
   return (
@@ -24,11 +24,9 @@ const Navigation = props => {
         </Link>
       </div>
       <div className="navbar-end">
-        <Link to="/">
-          <a onClick={signOut} id="signout-buttons">
-            Signout
-          </a>
-        </Link>
+        <button onClick={signOut} id="signout-buttons">
+          Signout
+        </button>
       </div>
     </div>
   );
