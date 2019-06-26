@@ -992,76 +992,6 @@
   dependencies:
     prop-types "^15.6.0"
 
-"@deck.gl/aggregation-layers@7.1.3":
-  version "7.1.3"
-  resolved "https://registry.yarnpkg.com/@deck.gl/aggregation-layers/-/aggregation-layers-7.1.3.tgz#799136d966ba1e092455cb83ab58466228b49715"
-  integrity sha512-tlDEBRMiK+hB27mHbgGcsJI7RvSslRkJUEArHXb0LIl/8X9aJBwoUuFY6xOl1miheVfxSKItD++pMhHuP5VRFw==
-  dependencies:
-    d3-hexbin "^0.2.1"
-
-"@deck.gl/core@7.1.3":
-  version "7.1.3"
-  resolved "https://registry.yarnpkg.com/@deck.gl/core/-/core-7.1.3.tgz#9b061b9756f28976cae3be2a6ac68a9c72482ae2"
-  integrity sha512-gQObof98pkkd+N98UVauFRXyLkIEZxH0tXZ2LyD0LdjDwvW7yq5kwMJ98mH6gn3xGf0StyeOKYNWx97jLal5Gw==
-  dependencies:
-    "@luma.gl/core" "^7.1.0"
-    gl-matrix "^3.0.0"
-    math.gl "^2.3.0"
-    mjolnir.js "^2.1.0"
-    probe.gl "^3.0.1"
-    seer "^0.2.4"
-    viewport-mercator-project "^6.1.0"
-
-"@deck.gl/geo-layers@7.1.3":
-  version "7.1.3"
-  resolved "https://registry.yarnpkg.com/@deck.gl/geo-layers/-/geo-layers-7.1.3.tgz#7f882a63124131b2ccb5b6669f69c6e71e5213d4"
-  integrity sha512-48+qc6EGMz503kFWjScVjKs5HkJSkxVT37I0nl3HjDgQejUyRLa1LScLkZmEyHlXYEW/O9z5pvqaHAe70ZIGKA==
-  dependencies:
-    h3-js "^3.4.3"
-    s2-geometry "^1.2.10"
-
-"@deck.gl/google-maps@7.1.3":
-  version "7.1.3"
-  resolved "https://registry.yarnpkg.com/@deck.gl/google-maps/-/google-maps-7.1.3.tgz#6f2edac078f5d35d5f05a2f0e3893ba847c420fb"
-  integrity sha512-9Q1PN6avP8tEzHEAeBocE96Z03scM6abArMfoBXpmP8g2og5KW6/lX4xsiY04oYj0THV1bMAUVf9gkzSGh0soA==
-
-"@deck.gl/json@7.1.3":
-  version "7.1.3"
-  resolved "https://registry.yarnpkg.com/@deck.gl/json/-/json-7.1.3.tgz#dc8d75dd92db8841ecec1899a64b1492cef209d1"
-  integrity sha512-parZd9sdZfvYJo9mFpfoi86U0OFygPWSftmeAhlIZAStB8vbTlnEeNbhR1hLyH8gLoDj1JM0Nb/nu846fmOJSg==
-  dependencies:
-    d3-dsv "^1.0.8"
-
-"@deck.gl/layers@7.1.3":
-  version "7.1.3"
-  resolved "https://registry.yarnpkg.com/@deck.gl/layers/-/layers-7.1.3.tgz#375d953dd18932cb3ed708922013db4a269db9e3"
-  integrity sha512-DsLv4E8c7vwpV0nG6/Pjyc8Iij0/0BsCD2/KUyjRVLMBvkjCOzeeEiu3lDX7v39LhQZsJZ9s2C2BlDXlYqbl2A==
-  dependencies:
-    "@loaders.gl/core" "^1.0.3"
-    "@loaders.gl/images" "^1.0.3"
-    "@mapbox/tiny-sdf" "^1.1.0"
-    earcut "^2.0.6"
-
-"@deck.gl/mapbox@7.1.3":
-  version "7.1.3"
-  resolved "https://registry.yarnpkg.com/@deck.gl/mapbox/-/mapbox-7.1.3.tgz#53bd310c56cda5ba62e7cd66f4e0453863119f1e"
-  integrity sha512-QfCauYHfWDkQa0CBArL8WWdGr99RS8Y7eRyja/rNLlEIYoufHLSKq0Iat6SfgEPesJJKWNuw9TUaTQmQzISq5w==
-
-"@deck.gl/mesh-layers@7.1.3":
-  version "7.1.3"
-  resolved "https://registry.yarnpkg.com/@deck.gl/mesh-layers/-/mesh-layers-7.1.3.tgz#ac363aa71abbb92aa9ab3268de5a65f2b5c5113f"
-  integrity sha512-JYINg9G/pdg0nCY5HAWSyvPSOB/W8k12K3xGHFFAyDfbA4zsBCmHSWE95fAMVURQfAcaH+pbQgx2amV9FnFIdQ==
-  dependencies:
-    "@loaders.gl/core" "^1.0.3"
-    "@loaders.gl/images" "^1.0.3"
-
-"@deck.gl/react@7.1.3":
-  version "7.1.3"
-  resolved "https://registry.yarnpkg.com/@deck.gl/react/-/react-7.1.3.tgz#b5e0e898cf3c9bf9204d3429c032c188f765d05e"
-  integrity sha512-xTxCsw3V8WJ02Vsz9Z3jyLf8glY/iRfTwdGTR2YYNwnZcTQCdKxZnFOja/YFaDTTJZEkxNEWQ7kF0CXAKKu9NQ==
-  dependencies:
-    prop-types "^15.6.0"
-
 "@emotion/hash@^0.7.1":
   version "0.7.1"
   resolved "https://registry.yarnpkg.com/@emotion/hash/-/hash-0.7.1.tgz#9833722341379fb7d67f06a4b00ab3c37913da53"
@@ -7218,11 +7148,6 @@ long@^3.2.0, long@~3:
   resolved "https://registry.yarnpkg.com/long/-/long-3.2.0.tgz#d821b7138ca1cb581c172990ef14db200b5c474b"
   integrity sha1-2CG3E4yhy1gcFymQ7xTbIAtcR0s=
 
-long@^3.2.0, long@~3:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/long/-/long-3.2.0.tgz#d821b7138ca1cb581c172990ef14db200b5c474b"
-  integrity sha1-2CG3E4yhy1gcFymQ7xTbIAtcR0s=
-
 long@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/long/-/long-4.0.0.tgz#9a7b71cfb7d361a194ea555241c92f7468d5bf28"
@@ -11596,15 +11521,6 @@ vm-browserify@^1.0.1:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/vm-browserify/-/vm-browserify-1.1.0.tgz#bd76d6a23323e2ca8ffa12028dc04559c75f9019"
   integrity sha512-iq+S7vZJE60yejDYM0ek6zg308+UZsdtPExWP9VZoCFCz1zkJoXFnAX7aZfd/ZwrkidzdUZL0C/ryW+JwAiIGw==
-
-vt-pbf@^3.1.1:
-  version "3.1.1"
-  resolved "https://registry.yarnpkg.com/vt-pbf/-/vt-pbf-3.1.1.tgz#b0f627e39a10ce91d943b898ed2363d21899fb82"
-  integrity sha512-pHjWdrIoxurpmTcbfBWXaPwSmtPAHS105253P1qyEfSTV2HJddqjM+kIHquaT/L6lVJIk9ltTGc0IxR/G47hYA==
-  dependencies:
-    "@mapbox/point-geometry" "0.1.0"
-    "@mapbox/vector-tile" "^1.3.1"
-    pbf "^3.0.5"
 
 vt-pbf@^3.1.1:
   version "3.1.1"
