@@ -23,7 +23,8 @@
     "react-modal": "^3.8.1",
     "react-router-dom": "^5.0.0",
     "react-scripts": "3.0.1",
-    "react-table": "^6.10.0"
+    "react-table": "^6.10.0",
+    "react-transition-group": "^4.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
