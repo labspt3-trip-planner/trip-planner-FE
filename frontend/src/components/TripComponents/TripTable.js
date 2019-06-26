@@ -5,6 +5,13 @@ import "react-table/react-table.css";
 import NewTripModal from "./NewTripModal";
 
 class TableTest extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      uid: {}
+    };
+  }
+
   render() {
     const data = [
       {
