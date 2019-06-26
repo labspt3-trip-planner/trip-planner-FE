@@ -17,13 +17,36 @@ class NewTripModal extends Component {
       startDate: "",
       endDate: "",
       //planner: this.props.firebase.auth.currentUser.uid,
+      planner: "",
       participants: []
     };
   }
+
+  componentDidUpdate() {
+    this.props.firebase.getUser();
+  }
+
+  componentDidMount() {
+    // console.log("FB props: ", this.props.firebase);
+    // const u = this.props.firebase.auth;
+    // console.log("u: ", u);
+    // console.log("uid: ", this.props.firebase.auth.currentUser);
+  }
+
+  getUser = async () => {
+    await this.props.firebase.getUser();
+  };
+
   showModal = e => {
-    this.setState({
-      show: !this.state.show
-    });
+    if (this.state.planner) {
+      this.setState({
+        show: !this.state.show
+      });
+    } else
+      this.setState({
+        show: !this.state.show,
+        planner: this.props.firebase.auth.currentUser.uid
+      });
   };
 
   addTrip = () => {
@@ -36,6 +59,12 @@ class NewTripModal extends Component {
       participants: this.state.participants,
       favorites: []
     };
+    axios
+      .post("/trip", trip)
+      .then(res => console.log(res))
+      .catch(err => console.log(err));
+
+    this.showModal();
   };
 
   changeHandler = e => {
@@ -57,14 +86,18 @@ class NewTripModal extends Component {
           Add New Trip
         </a>
 
-        <Modal onClose={this.showModal} show={this.state.show}>
+        <Modal
+          onClose={this.showModal}
+          show={this.state.show}
+          addTrip={this.addTrip}
+        >
           <TextInput
             nameHandler={this.changeHandler}
             nameValue={this.state.tripName}
           />
           <ul>
             {this.state.destinations.map(dest => (
-              <li>{dest.name}</li>
+              <li key={dest.place_id}>{dest.name}</li>
             ))}
           </ul>
           <DateInput
