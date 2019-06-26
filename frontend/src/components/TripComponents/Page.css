@@ -80,6 +80,7 @@
 
 .navbar {
   display: flex;
+  position: absolute;
   width: 100%;
   background: white;
 
