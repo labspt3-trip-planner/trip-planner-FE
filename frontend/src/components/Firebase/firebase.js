@@ -1,8 +1,6 @@
 import app from "firebase/app";
 import "firebase/auth";
 
-require("dotenv").config();
-
 //this is the configuration for Firebase to interface with the web app
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_API_KEY,
@@ -22,10 +20,24 @@ class Firebase {
     this.auth = app.auth();
   }
 
+  getUser = () => {
+    this.auth.onAuthStateChanged(function(user) {
+      if (user) {
+        // User is signed in.
+        console.log("User!: ", user);
+        return user;
+      } else {
+        // No user is signed in.
+        console.log("Please sign in");
+        return null;
+      }
+    });
+  };
   // Creates a signInWithEmailAndPassword function that is accessible wherever this class is provided
   doSignInWithEmailAndPassword = (email, password) =>
     this.auth.signInWithEmailAndPassword(email, password);
   // Gets token upon successful login.
+
   getUserToken = () =>
     this.auth.currentUser
       .getIdToken(/* forceRefresh */ true)
@@ -38,6 +50,14 @@ class Firebase {
       .catch(function(error) {
         // Handle error
       });
+
+  signOut = () =>
+    this.auth
+      .signOut()
+      .then(() => {
+        localStorage.removeItem("user");
+      })
+      .catch(error => console.log(error));
 }
 
 export default Firebase;

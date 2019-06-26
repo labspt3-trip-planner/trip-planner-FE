@@ -11,8 +11,8 @@ function Billing() {
       {/*<HeaderContainer />*/}
       <h1 id="title_space">Our Pricing</h1>
       <section className="billing">
-        <div className="billing-option">
-          <h2>Standard</h2>
+        <div className="billing-option left">
+          <h1>Trip Planner Standard</h1>
           <ul>
             <li>Save multiple trips with option for multiple destinations</li>
             <li>Add lists to trip (check lists, or otherwise)</li>
@@ -21,8 +21,8 @@ function Billing() {
             {/*<li>Upgrade/billing feature, subscription gives user unlimited trips to save</li>*/}
           </ul>
           </div>   
-        <div className="billing-option">
-          <h2>Plus</h2>
+        <div className="billing-option right">
+          <h1>Trip Planner Pro</h1>
           <ul>
             <li>...Everything in Standard Plan, plus: </li>
             <li>Upgrade/billing feature, subscription gives user unlimited trips to save</li>

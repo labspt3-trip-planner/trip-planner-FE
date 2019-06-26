@@ -1,19 +1,37 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
+import { withFirebase } from "../Firebase";
+import { withRouter } from "react-router-dom";
+import { datePickerDefaultProps } from "@material-ui/pickers/constants/prop-types";
 
-const Navigation = () => {
-    return (
-        <div className="navbar">
-            <div className="navbar-start">
-                <Link to="/triplist"><button id="header-buttons">My Trips</button></Link>
-                <Link to="/trip"><button id="header-buttons">New Trip</button></Link>
-                <Link to="/billing"><button id="header-buttons">Billing</button></Link>
-            </div>
-            <div className="navbar-end">
-                <Link to="/"><button id="header-buttons">Signout</button></Link>
-            </div>
-        </div>
-    )
+const Navigation = props => {
+  const signOut = e => {
+    props.firebase.signOut();
+    props.history.push("/");
+  };
+
+  return (
+    <div className="navbar">
+      <div className="navbar-start">
+        <Link to="/triplist">
+          <a id="header-buttons">My Trips</a>
+        </Link>
+        <Link to="/trip">
+          <a id="header-buttons">New Trip</a>
+        </Link>
+        <Link to="/billing">
+          <a id="header-buttons">Billing</a>
+        </Link>
+      </div>
+      <div className="navbar-end">
+        <Link to="/">
+          <a onClick={signOut} id="signout-buttons">
+            Signout
+          </a>
+        </Link>
+      </div>
+    </div>
+  );
 };
 
-export default Navigation;
+export default withFirebase(withRouter(Navigation));

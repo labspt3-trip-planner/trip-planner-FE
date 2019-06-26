@@ -1,4 +1,4 @@
-import axios from 'axios';
+import { axios } from '../../components/Axios';
 
 // GET TRIPS
 export const FETCH_TRIPS = 'FETCH_TRIPS';
@@ -8,10 +8,10 @@ export const TRIPS_ERROR = 'TRIPS_ERROR';
 // GET SINGLE TRIP
 export const FETCH_SINGLE = 'FETCH_SINGLE';
 export const SINGLE_FETCHED = 'SINGLE_FETCHED';
-export const SINGLE_ERROR = SINGLE_ERROR;
+export const SINGLE_ERROR = 'SINGLE_ERROR';
 
 // CREATE TRIPS
-export const CREATING_TRIP = 'CREATING_TRIP';
+export const CREATE_TRIP = 'CREATING_TRIP';
 export const TRIP_CREATED = 'TRIP_CREATED';
 export const CREATE_ERROR = 'CREATE_ERROR';
 
@@ -29,7 +29,7 @@ export const DELETE_ERROR = 'DELETE_ERROR';
 export const getTripsByUser = () => (dispatch) => {
     dispatch({ type: FETCH_TRIPS});
     axios
-        .get('https://labspt3-trip-planner.herokuapp.com/triplist', {
+        .get('/triplist', {
             headers: { token: localStorage.getItem('userToken') }
         })
         .then((res) => {
@@ -44,7 +44,7 @@ export const getTripById = tripID => (dispatch) => {
     dispatch({ type: FETCH_SINGLE });
     return (
         axios
-            .get('https://labspt3-trip-planner.herokuapp.com/trip/' + tripID, {
+            .get('/trip/' + tripID, {
                 headers: { token: localStorage.getItem('userToken') },
             })
             .then((res) => {
@@ -60,7 +60,7 @@ export const addTrip = newTrip => (dispatch) => {
     dispatch({ type: CREATE_TRIP });
     return (
         axios
-            .post('https://labspt3-trip-planner.herokuapp.com/trip', newTrip, {
+            .post('/trip', newTrip, {
                 headers: { token: localStorage.getItem('userToken') },
             })
             .then((res) => {
@@ -72,11 +72,11 @@ export const addTrip = newTrip => (dispatch) => {
     );
 };
 
-export const updateTrip = trip => (dispatch) => {
+export const updateTrip = tripID => (dispatch) => {
     dispatch({ type: EDIT_TRIP });
     return (
         axios
-            .put('https://labspt3-trip-planner.herokuapp.com/trip' + tripId, {
+            .put('/trip' + tripID, {
                 headers: { token: localStorage.getItem('userToken') },
             })
             .then((res) => {
@@ -92,7 +92,7 @@ export const removeTrip = tripID => (dispatch) => {
     dispatch({ type: DELETE_TRIP });
     return (
         axios
-            .delete('https://labspt3-trip-planner.herokuapp.com/trip/' + tripID, {
+            .delete('/trip/' + tripID, {
                 headers: { token: localStorage.getItem('userToken') },
             })
             .then((res) => {

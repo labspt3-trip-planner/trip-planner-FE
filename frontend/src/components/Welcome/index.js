@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link, withRouter } from "react-router-dom";
 import "./styles.css";
 import Modal from "react-modal";
-import moment from "moment";
+// import * as Year from "moment";
 
 const year = moment().format("YYYY");
 
