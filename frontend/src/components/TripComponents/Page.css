@@ -285,6 +285,7 @@ a:active {
 @media (max-width: 600px) {
     .plan-details-description-left {
         width: 100%;
+        height: auto;
     }
 }
 
