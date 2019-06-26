@@ -201,6 +201,7 @@
 
 #header-buttons:hover, #modal-button:hover, #signout-buttons:hover {
     background: #f7b94c;
+    transition: background 0.5s ease-in-out;
     color: white;
 }
 
@@ -244,7 +245,7 @@ a:active {
     border: 1px solid rgba(133, 133, 133, 0.476);
     width: 90%;
     margin: 20px;
-    /* max-width: 770px; */
+    max-width: 1070px;
 }
 
 @media (max-width: 600px) {
@@ -372,6 +373,7 @@ a:active {
 .table {
   background: white;
   width: 85%;
+  max-width: 1070px;
   border-radius: 3px;
 }
 
