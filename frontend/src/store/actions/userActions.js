@@ -1,4 +1,4 @@
-import { axios } from '../components/Axios';
+import { axios } from '../../components/Axios';
 
 // LOGGING IN
 export const LOGGING_IN = 'LOGGING_IN';
@@ -12,8 +12,6 @@ export const CREATING_ERROR = 'CREATING_ERROR';
 
 // LOGGING OUT
 export const SIGNOUT = 'SIGNOUT';
-
-//const api = 'https://labspt3-trip-planner.herokuapp.com/';
 
 export const login = user => (dispatch) => {
     dispatch ({ type: LOGGING_IN });
