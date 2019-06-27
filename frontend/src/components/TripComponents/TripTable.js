@@ -9,7 +9,7 @@ class TableTest extends Component {
   componentDidMount() {
     console.log(axios());
     axios
-      .get("users/trips")
+      .get("users/alltrips")
       .then(res => console.log("Blah blah", res))
       .catch(err => console.log(err));
   }
