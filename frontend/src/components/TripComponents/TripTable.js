@@ -3,13 +3,15 @@ import ReactTable from "react-table";
 import { withFirebase } from "../Firebase";
 import "react-table/react-table.css";
 import NewTripModal from "./NewTripModal";
+import { axios } from "../Axios";
 
 class TableTest extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      uid: {}
-    };
+  componentDidMount() {
+    console.log(axios());
+    axios
+      .get("users/trips")
+      .then(res => console.log("Blah blah", res))
+      .catch(err => console.log(err));
   }
 
   render() {
