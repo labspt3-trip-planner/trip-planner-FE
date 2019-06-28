@@ -30,8 +30,7 @@ export const getList = () => dispatch => {
 	dispatch({ type: FETCH_LISTS });
 	axios({
 		method: 'GET',
-		url: '/tripId/lists/:listName',
-		headers: { token: localStorage.getItem('userToken') }
+		url: '/tripId/lists/:listName'
 	})
 		.then(res => {
 			dispatch({ type: LISTS, payload: res.data });
@@ -45,9 +44,7 @@ export const getList = () => dispatch => {
 export const addList = newList => dispatch => {
 	dispatch({ type: CREATE_LIST });
 	return axios
-		.post('/:tripId/lists', newList, {
-			headers: { token: localStorage.getItem('userToken') }
-		})
+		.post('/:tripId/lists', newList)
 		.then(res => {
 			dispatch({ type: LIST_CREATED, payload: res.data });
 		})
@@ -60,9 +57,7 @@ export const addList = newList => dispatch => {
 export const updateList = list => dispatch => {
 	dispatch({ type: EDIT_LIST });
 	return axios
-		.put('tripId/lists/:itemId', list, {
-			headers: { token: localStorage.getItem('userToken') }
-		})
+		.put('tripId/lists/:itemId', list)
 		.then(res => {
 			dispatch({ type: LIST_EDITED, payload: res.data });
 		})

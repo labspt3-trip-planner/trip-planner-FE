@@ -29,9 +29,7 @@ export const DELETE_ERROR = 'DELETE_ERROR';
 export const getTripsByUser = () => (dispatch) => {
     dispatch({ type: FETCH_TRIPS});
     axios
-        .get('/triplist', {
-            headers: { token: localStorage.getItem('userToken') }
-        })
+        .get('/triplist')
         .then((res) => {
             dispatch({ type: TRIPS, payload: res.data });
         })
@@ -44,9 +42,7 @@ export const getTripById = tripID => (dispatch) => {
     dispatch({ type: FETCH_SINGLE });
     return (
         axios
-            .get('/trip/' + tripID, {
-                headers: { token: localStorage.getItem('userToken') },
-            })
+            .get('/trip/' + tripID )
             .then((res) => {
                 dispatch({ type: FETCH_SINGLE, payload: res.data });
             })
@@ -60,9 +56,7 @@ export const addTrip = newTrip => (dispatch) => {
     dispatch({ type: CREATE_TRIP });
     return (
         axios
-            .post('/trip', newTrip, {
-                headers: { token: localStorage.getItem('userToken') },
-            })
+            .post('/trip', newTrip )
             .then((res) => {
                 dispatch({ type: TRIP_CREATED, payload: res.data });
             })
@@ -76,9 +70,7 @@ export const updateTrip = tripID => (dispatch) => {
     dispatch({ type: EDIT_TRIP });
     return (
         axios
-            .put('/trip' + tripID, {
-                headers: { token: localStorage.getItem('userToken') },
-            })
+            .put('/trip' + tripID)
             .then((res) => {
                 dispatch({ type: TRIP_EDITED, payload: res.data });
             })
@@ -92,9 +84,7 @@ export const removeTrip = tripID => (dispatch) => {
     dispatch({ type: DELETE_TRIP });
     return (
         axios
-            .delete('/trip/' + tripID, {
-                headers: { token: localStorage.getItem('userToken') },
-            })
+            .delete('/trip/' + tripID)
             .then((res) => {
                 dispatch({ type: TRIP_DELETED, payload: res.data });
             })
