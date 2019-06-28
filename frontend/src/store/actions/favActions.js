@@ -19,9 +19,7 @@ export const DELETE_ERROR = 'DELETE_ERROR';
 export const getFaves = () => (dispatch) => {
     dispatch({ type: FETCH_FAVES });
     axios
-        .get('/favorites', {
-            headers: { token: localStorage.getItem('userToken') }
-        })
+        .get('/favorites')
         .then((res) => {
             dispatch({ type: FAVES, payload: res.data });
         })
@@ -34,9 +32,7 @@ export const addFaveToTrip = newFave => (dispatch) => {
     dispatch({ type: CREATE_FAVE });
     return (
         axios
-            .post('/favorites', newFave, {
-                headers: { token: localStorage.getItem('userToken') },
-            })
+            .post('/favorites', newFave)
             .then((res) => {
                 dispatch({ type: FAVE_CREATED, payload: res.data });
             })
@@ -50,9 +46,7 @@ export const delFaveFromTrip = tripID => (dispatch) => {
     dispatch({ type: DELETE_FAVE });
     return (
         axios
-            .delete('/favorites/' + tripID, {
-                headers: { token: localStorage.getItem('userToken') },
-            })
+            .delete('/favorites/' + tripID)
             .then((res) => {
                 dispatch({ type: FAVE_DELETED, payload: res.data });
             })
