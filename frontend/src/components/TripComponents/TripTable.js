@@ -1,6 +1,6 @@
 import React, { Component } from "react";
+import {withRouter} from "react-router-dom"
 import ReactTable from "react-table";
-import { withFirebase } from "../Firebase";
 import "react-table/react-table.css";
 import NewTripModal from "./NewTripModal";
 import { axios } from "../Axios";
@@ -26,6 +26,10 @@ class TableTest extends Component {
     })
       .catch(err => console.log(err));
 
+  }
+
+  goToTrip = (tripId) => {
+    this.props.history.push(`/trip/${tripId}`)
   }
 
   render() {
@@ -55,7 +59,8 @@ class TableTest extends Component {
         name: trip.tripName,
         destination: trip.destinations[0].name,
         start: trip.startDate,
-        end: trip.endDate
+        end: trip.endDate,
+        id: trip.tripId
       }
     })
 
@@ -83,6 +88,12 @@ class TableTest extends Component {
     return (
       <div className="react-table">
         <ReactTable
+          getTrProps={(state, rowInfo) => {
+            return {
+              onClick: () => {
+              this.goToTrip(rowInfo.row._original.id)
+            }
+          }}}
           className="table"
           data={data}
           columns={columns}
@@ -95,4 +106,4 @@ class TableTest extends Component {
   }
 }
 
-export default withFirebase(TableTest);
+export default withRouter(TableTest);
