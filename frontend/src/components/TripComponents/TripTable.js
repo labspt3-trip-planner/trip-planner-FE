@@ -1,31 +1,68 @@
 import React, { Component } from "react";
+import {withRouter} from "react-router-dom"
 import ReactTable from "react-table";
-import { withFirebase } from "../Firebase";
 import "react-table/react-table.css";
 import NewTripModal from "./NewTripModal";
+import { axios } from "../Axios";
 
 class TableTest extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      trips: []
+    }
+  }
+
+  componentDidMount() {
+    this.getTrips();
+  }
+  
+  getTrips = () => {
+    axios
+      .get("users/alltrips")
+      .then(res => {
+        console.log("Blah blah", res)
+        this.setState({trips: res.data})
+    })
+      .catch(err => console.log(err));
+
+  }
+
+  goToTrip = (tripId) => {
+    this.props.history.push(`/trip/${tripId}`)
+  }
+
   render() {
-    const data = [
-      {
-        name: "Honeymoon",
-        destination: "Maui HI",
-        start: "12/13/19",
-        end: "12/20/19"
-      },
-      {
-        name: "Girls Trip",
-        destination: "Las Vegas Tahoe",
-        start: "2/3/20",
-        end: "2/10/20"
-      },
-      {
-        name: "Spring Break",
-        destination: "Cancun Cozumel",
-        start: "4/14",
-        end: "4/21"
+    // const data = [
+    //   {
+    //     name: "Honeymoon",
+    //     destination: "Maui HI",
+    //     start: "12/13/19",
+    //     end: "12/20/19"
+    //   },
+    //   {
+    //     name: "Girls Trip",
+    //     destination: "Las Vegas Tahoe",
+    //     start: "2/3/20",
+    //     end: "2/10/20"
+    //   },
+    //   {
+    //     name: "Spring Break",
+    //     destination: "Cancun Cozumel",
+    //     start: "4/14",
+    //     end: "4/21"
+    //   }
+    // ];
+
+    const data = this.state.trips.map(trip => {
+      return {
+        name: trip.tripName,
+        destination: trip.destinations[0].name,
+        start: trip.startDate,
+        end: trip.endDate,
+        id: trip.tripId
       }
-    ];
+    })
 
     const columns = [
       {
@@ -51,6 +88,12 @@ class TableTest extends Component {
     return (
       <div className="react-table">
         <ReactTable
+          getTrProps={(state, rowInfo) => {
+            return {
+              onClick: () => {
+              this.goToTrip(rowInfo.row._original.id)
+            }
+          }}}
           className="table"
           data={data}
           columns={columns}
@@ -63,4 +106,4 @@ class TableTest extends Component {
   }
 }
 
-export default withFirebase(TableTest);
+export default withRouter(TableTest);

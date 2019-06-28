@@ -1,6 +1,7 @@
 import axios from "axios";
 
 const token = localStorage.getItem("user");
+console.log(token);
 
 let axiosConfig = axios.create({
   baseURL:
