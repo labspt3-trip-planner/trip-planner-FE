@@ -6,6 +6,14 @@
     height: 100vh;
     margin: 0 auto;
     font-family: sans-serif;
+    overflow-y: auto;
+}
+
+@media (max-width: 600px) {
+  .welcome-container {
+    flex-direction: column;
+    background: url("https://bit.ly/30J0sai") center left no-repeat;
+  }
 }
 
 .cover-photo {
@@ -26,8 +34,14 @@
     font-weight: bold;
 }
 
-/* ----------------- */
+@media (max-width: 600px) {
+  .cover-photo {
+    display: none;
+  }
+}
 
+  /* ----------------- */
+  
 .cover-photo h1 {
     font-size: 100px;
     width: 90%;
@@ -53,12 +67,21 @@
     justify-content: center;
     flex-grow: 1;
     background-color: orange;
-    background-color: #f7b94c;
     width: 100%;
     height: 100vh;
     color: white;
     color: #4e4e4e;
     font-family: "Roboto Condensed", sans-serif;
+}
+
+@media (max-width: 600px) {
+  .login-screen {
+    width: 80%;
+    height: 90%;
+    margin: 10px 20px;
+    border: 5px solid #0078b3;
+
+  }
 }
 
 .login-screen h2 {
@@ -93,6 +116,12 @@
     width: 80%;
 }
 
+/* @media (max-width: 600px) {
+
+} */
+
+
+  
 .input::placeholder {
     color: #4e4e4e;
     opacity: 0.7;
@@ -110,6 +139,9 @@
     margin: 1rem 5% 0 5%;
 }
 
+ /* @media (max-width: 600px) {
+
+} */
 .policy p {
     margin-left: -0.025rem;
 }
@@ -158,7 +190,6 @@ button:focus {
 .btnLogin:hover {
     color: white;
     background: #5bba6c;
-    /* background: #4e4e4e; */
     font: bold;
 }
 
@@ -228,9 +259,13 @@ button:focus {
     top: 50%;
     transform: translate(-50%, -50%);
     border-radius: 2.5%;
-}
+  }
+  
+  /* @media (max-width: 600px) {
 
-.modal:focus {
+} */
+
+  .modal:focus {
     outline: none;
 }
 
@@ -269,9 +304,13 @@ button:focus {
     background-color: #0078b3;
     color: #4e4e4e;
     font-family: "Roboto Condensed", sans-serif;
-}
+  }
 
-.modal-hero {
+  /* @media (max-width: 600px) {
+
+} */
+  
+  .modal-hero {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -286,15 +325,18 @@ button:focus {
     background-size: cover;
     font-family: "Overpass", sans-serif;
     font-weight: bold;
-}
+  }
 
-/* -----------------  */
+  /* @media (max-width: 600px) {
 
-.modal-login .input {
+} */
+  
+  /* -----------------  */
+  
+  .modal-login .input {
     color: #f7b94c;
     margin-left: 2rem;
     border: none;
-    /* height: 3rem; */
     height: 4rem;
     background: none;
     font-family: "Roboto Condensed", sans-serif;
