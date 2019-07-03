@@ -195,6 +195,7 @@ button {
   
   .btnLearn {
     color: black;
+    margin-right: 10px;
   }
   
   .btnLearn:hover {
