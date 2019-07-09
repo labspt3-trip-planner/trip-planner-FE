@@ -238,7 +238,6 @@ button {
   @media (max-width: 600px) {
     .legal-blurb {
       position: relative;
-      border: 2px solid red;
     }
   }
   
