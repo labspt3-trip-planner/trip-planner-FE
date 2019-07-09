@@ -230,16 +230,15 @@ button {
     font-size: 0.75rem;
     /* color: lightgrey; */
     color: #4e4e4e;
-    position: fixed;
+    position: relative;
     bottom: 10px;
-    left: 47%;
     width: 90%;
   }
 
   @media (max-width: 600px) {
     .legal-blurb {
-      position: fixed;
-      left: 100%;
+      position: relative;
+      border: 2px solid red;
     }
   }
   

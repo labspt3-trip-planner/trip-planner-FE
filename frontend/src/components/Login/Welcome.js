@@ -159,7 +159,7 @@ class Welcome extends Component {
         </Modal>
 
         <div className="cover-photo sliding-background">
-          <h1>Trip Planner</h1>
+          <h1>TripPlanner</h1>
           <h3>Smarter travel preparation</h3>
         </div>
         <div className="login-screen">
