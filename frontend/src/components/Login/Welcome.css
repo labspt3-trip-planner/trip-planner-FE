@@ -156,7 +156,15 @@
     display: flex;
     flex-direction: row;
     margin: 1.75% 5% 5% 5%;
+    padding-bottom: 10px;
+
 }
+
+/* @media (max-width: 600px) {
+  .button-area {
+    padding-bottom: 10px;
+  }
+} */
   
 button {
     display: flex;
