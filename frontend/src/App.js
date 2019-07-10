@@ -12,7 +12,7 @@ function App() {
     <Switch>
       <Route exact path="/" component={Welcome} />
       <Route path="/triplist" component={TripContainer} />
-      <Route path="/trip/:tripId" component={TripInfoContainer} />
+      <Route path="/trip" component={TripInfoContainer} />
       <Route path="/signup" component={Signup} />
       <Route path="/billing" component={Billing} />
       <Route path="/map" render={props => <GMap isMarkerShown {...props} />} />
