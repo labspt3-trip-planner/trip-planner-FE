@@ -290,7 +290,7 @@ a:active {
 @media (max-width: 600px) {
     .plan-details-description-left {
         width: 100%;
-        height: auto;
+        height: 100%;
     }
 }
 
@@ -304,7 +304,7 @@ a:active {
 @media (max-width: 600px) {
     .plan-details-description-right {
         width: 92%;
-        height: auto;
+        height: 100%;
     }
 }
 
