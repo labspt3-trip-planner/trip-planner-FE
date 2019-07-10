@@ -11,6 +11,6 @@ export default initialValue => {
         deleteList: listIndex => {
             const newList = lists.filter((_, index) => index !== listIndex);
             setLists(newList);
-        }
+        },
     };
 };
