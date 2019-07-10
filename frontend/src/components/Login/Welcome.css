@@ -274,6 +274,12 @@ button {
     transform: translate(-50%, -50%);
     border-radius: 2.5%;
   }
+
+  @media (max-width: 600px) {
+    .modal {
+      flex-direction: column;
+    }
+  }
   
   /* @media (max-width: 600px) {
 
@@ -341,9 +347,12 @@ button {
     font-weight: bold;
   }
 
-  /* @media (max-width: 600px) {
+  @media (max-width: 600px) {
+    .modal-hero {
+      display: none;
+    }
 
-} */
+}
   
   /* -----------------  */
   
