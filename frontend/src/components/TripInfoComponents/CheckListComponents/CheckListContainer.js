@@ -2,11 +2,15 @@ import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import CheckListForm from './CheckListForm';
 import Checklist from './Checklist';
+import TodoListForm from './TodoListForm';
+import TodoList from './TodoList';
 import useChecklistState from './useChecklistState';
+import useTodoState from './useTodoState';
 import './trip-page.css';
 
 const Checklists = () => {
     const { lists, addList, deleteList } = useChecklistState([]);
+    const { todos, addTodo, deleteTodo  } = useTodoState([]);
 
     return (
         <div className="lists-wrapper">
@@ -35,19 +39,19 @@ const Checklists = () => {
                     To Do List
                 </Typography>
 
-                <CheckListForm 
-                    saveList={listText => {
-                        const trimmedText = listText.trim();
+                <TodoListForm 
+                    saveTodo={todoText => {
+                        const trimmedTodoText = todoText.trim();
 
-                        if(trimmedText.length > 0) {
-                            addList(trimmedText);
+                        if(trimmedTodoText.length > 0) {
+                            addTodo(trimmedTodoText);
                         }
                     }}
                 />
 
-                <Checklist 
-                    lists={lists}
-                    deleteList={deleteList}
+                <TodoList 
+                    todos={todos}
+                    deleteTodo={deleteTodo}
                 />
             </div>
         </div>
