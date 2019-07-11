@@ -128,7 +128,7 @@ const GMap = compose(
           />
         ))}
       {props.favorites && <button className="modalButton" onClick={faveHandler}>+</button>}
-      {props.addDest && <button className="modalButton" onClick={destHandler}>Add Destination</button>}
+      {props.addDest && <button className="modalButton" onClick={destHandler}>Add Stop</button>}
     </GoogleMap>
   );
 });

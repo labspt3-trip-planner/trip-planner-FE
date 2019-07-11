@@ -143,11 +143,11 @@
     }
 }
 
-#header-buttons, #modal-button, #signout-buttons {
+#header-buttons, #modal-button, #signout-buttons, .modalButton {
     display: flex;
     text-decoration: none;
     color: rgba(0, 0, 0, 0.673);
-    border-right: 1px solid rgba(133, 133, 133, 0.476); 
+    border: 1px solid rgba(133, 133, 133, 0.476); 
     background: #fff;
     font-family: Overpass;
     transition: background 1s ease-in-out;
@@ -170,6 +170,7 @@
 
 .actions {
     display: flex;
+    margin-top: 30px;
     flex-direction: row;
 }
 
@@ -201,7 +202,7 @@
     }
 }
 
-#header-buttons:hover, #modal-button:hover, #signout-buttons:hover {
+#header-buttons:hover, #modal-button:hover, #signout-buttons:hover, .modalButton:hover {
     background: #f7b94c;
     transition: background 0.5s ease-in-out;
     color: white;

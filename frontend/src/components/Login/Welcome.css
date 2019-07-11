@@ -186,12 +186,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-size: 16px;
     height: 2.5rem;
-    width: 7.5rem;
+    width: 100%;
+    margin-top: 5px;
     border-radius: 5%;
-    -moz-border-radius: 5%;
-    -webkit-border-radius: 5%;
-    border: none;
     color: black;
     transition: all 0.5s;
   }
