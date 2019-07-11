@@ -20,7 +20,7 @@ export default class Stripe extends React.Component {
       // ...
       <StripeCheckout
         token={this.onToken}
-        stripeKey=" STRIPE_PUBLISHABLE_KEY"
+        stripeKey="STRIPE_PUBLISHABLE_KEY"
       />
     )
   }
