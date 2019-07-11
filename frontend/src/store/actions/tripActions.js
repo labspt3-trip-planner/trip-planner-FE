@@ -27,15 +27,12 @@ export const DELETE_ERROR = "DELETE_ERROR";
 
 export const getTripsByUser = () => dispatch => {
   dispatch({ type: FETCH_TRIPS });
-  console.log("getting it!");
   return axios
     .get("/users/alltrips")
     .then(res => {
-      console.log("Got it: ", res);
       dispatch({ type: TRIPS, payload: res.data });
     })
     .catch(err => {
-        console.log("Don't got it: ", err)
       dispatch({ type: TRIPS_ERROR, payload: err });
     });
 };

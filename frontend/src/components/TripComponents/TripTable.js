@@ -11,24 +11,11 @@ import { getTripsByUser } from "../../store/actions/tripActions";
 class TableTest extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      trips: []
-    };
   }
 
   componentDidMount() {
     this.props.getTrips();
   }
-
-  // getTrips = () => {
-  //   axios
-  //     .get("users/alltrips")
-  //     .then(res => {
-  //       console.log("Blah blah", res);
-  //       this.setState({ trips: res.data });
-  //     })
-  //     .catch(err => console.log(err));
-  // };
 
   goToTrip = tripId => {
     console.log("Trip id: ", tripId);
@@ -57,7 +44,7 @@ class TableTest extends Component {
     //   }
     // ];
 
-    const data = this.state.trips.map(trip => {
+    const data = this.props.trips.map(trip => {
       return {
         name: trip.tripName,
         destination: trip.destinations[0].name,
@@ -87,8 +74,6 @@ class TableTest extends Component {
         Cell: props => <span className="number">{props.value}</span>
       }
     ];
-
-    console.log(this.props.trips);
 
     return (
       <div className="react-table">
