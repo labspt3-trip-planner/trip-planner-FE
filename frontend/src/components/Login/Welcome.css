@@ -166,7 +166,22 @@
   }
 } */
   
-.landingPageButton {
+  .landingPageButton {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 2.5rem;
+      width: 7.5rem;
+      border-radius: 5%;
+      -moz-border-radius: 5%;
+      -webkit-border-radius: 5%;
+      border: none;
+      color: white;
+      transition: all 0.5s;
+  }
+
+  .modalButton {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -177,9 +192,9 @@
     -moz-border-radius: 5%;
     -webkit-border-radius: 5%;
     border: none;
-    color: white;
+    color: black;
     transition: all 0.5s;
-}
+  }
   
   button:hover {
     cursor: pointer;
