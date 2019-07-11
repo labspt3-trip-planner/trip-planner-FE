@@ -1,36 +1,39 @@
 import React, { Component } from "react";
-import {withRouter} from "react-router-dom"
+import { connect } from "react-redux";
+import { withRouter } from "react-router-dom";
 import ReactTable from "react-table";
 import "react-table/react-table.css";
 import NewTripModal from "./NewTripModal";
 import { axios } from "../Axios";
+
+import { getTripsByUser } from "../../store/actions/tripActions";
 
 class TableTest extends Component {
   constructor(props) {
     super(props);
     this.state = {
       trips: []
-    }
+    };
   }
 
   componentDidMount() {
-    this.getTrips();
-  }
-  
-  getTrips = () => {
-    axios
-      .get("users/alltrips")
-      .then(res => {
-        console.log("Blah blah", res)
-        this.setState({trips: res.data})
-    })
-      .catch(err => console.log(err));
-
+    this.props.getTrips();
   }
 
-  goToTrip = (tripId) => {
-    this.props.history.push(`/trip/${tripId}`)
-  }
+  // getTrips = () => {
+  //   axios
+  //     .get("users/alltrips")
+  //     .then(res => {
+  //       console.log("Blah blah", res);
+  //       this.setState({ trips: res.data });
+  //     })
+  //     .catch(err => console.log(err));
+  // };
+
+  goToTrip = tripId => {
+    console.log("Trip id: ", tripId);
+    this.props.history.push(`/trip/${tripId}`);
+  };
 
   render() {
     // const data = [
@@ -61,8 +64,8 @@ class TableTest extends Component {
         start: trip.startDate,
         end: trip.endDate,
         id: trip.tripId
-      }
-    })
+      };
+    });
 
     const columns = [
       {
@@ -85,15 +88,18 @@ class TableTest extends Component {
       }
     ];
 
+    console.log(this.props.trips);
+
     return (
       <div className="react-table">
         <ReactTable
           getTrProps={(state, rowInfo) => {
             return {
               onClick: () => {
-              this.goToTrip(rowInfo.row._original.id)
-            }
-          }}}
+                this.goToTrip(rowInfo.row._original.id);
+              }
+            };
+          }}
           className="table"
           data={data}
           columns={columns}
@@ -106,4 +112,13 @@ class TableTest extends Component {
   }
 }
 
-export default withRouter(TableTest);
+const mapStateToProps = state => {
+  return {
+    trips: state.trips.trips
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  { getTrips: getTripsByUser }
+)(withRouter(TableTest));
