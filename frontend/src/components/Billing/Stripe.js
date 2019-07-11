@@ -28,6 +28,5 @@ axios.post(PAYMENT_SERVER_URL,
     name={name}
     description={description}
     currency={currency}
-    stripeKey={}
    />
   ]
