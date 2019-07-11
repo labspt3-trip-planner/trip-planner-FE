@@ -20,7 +20,7 @@ export default class Modal extends Component {
             Add Trip
           </a>
           <a id="modal-button" onClick={e => this.onClose(e)}>
-            Close
+          ✖
           </a>
         </div>
       </div>
