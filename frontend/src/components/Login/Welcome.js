@@ -143,13 +143,13 @@ class Welcome extends Component {
               />
               <div className="button-area">
                 <button
-                  className="btnLearn"
+                  className="btnLearn landingPageButton"
                   type="button"
                   onClick={this.closeModal}
                 >
                   Close
                 </button>
-                <button type="submit" className="btnLogin">
+                <button type="submit" className="btnLogin landingPageButton">
                   Login
                 </button>
               </div>
@@ -206,13 +206,13 @@ class Welcome extends Component {
               <p>I accept the terms and conditions and privacy policy</p>
             </div>
             <div className="button-area">
-              <button className="btnLearn">
+              <button className="btnLearn landingPageButton">
                 <Link to="/billing" className="link">
                   Learn More
                 </Link>
               </button>
               <button
-                className="btnLogin"
+                className="btnLogin landingPageButton"
                 disabled={isInvalid}
                 onClick={this.signup}
                 type="submit"
