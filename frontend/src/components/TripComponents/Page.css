@@ -147,13 +147,17 @@
     display: flex;
     text-decoration: none;
     color: rgba(0, 0, 0, 0.673);
-    border: 1px solid rgba(133, 133, 133, 0.476); 
+    border-right: 1px solid rgba(133, 133, 133, 0.476); 
     background: #fff;
     font-family: Overpass;
     transition: background 1s ease-in-out;
     padding: 10px 40px;
     overflow: hidden;
     white-space: nowrap;
+}
+
+.modalButton {
+    border: 1px solid rgba(133, 133, 133, 0.476); 
 
 }
 
