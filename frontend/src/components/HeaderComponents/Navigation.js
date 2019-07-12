@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { withFirebase } from "../Firebase";
 import { withRouter } from "react-router-dom";
-import { datePickerDefaultProps } from "@material-ui/pickers/constants/prop-types";
+
 
 const Navigation = props => {
   const signOut = e => {
