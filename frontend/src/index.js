@@ -5,12 +5,12 @@ import { BrowserRouter as Router } from "react-router-dom";
 import Firebase, { FirebaseContext } from "./Components/Firebase";
 import { MuiPickersUtilsProvider } from "@material-ui/pickers";
 import DateFnsUtils from "@date-io/date-fns";
-// import "./styles.css";
 import { createStore, applyMiddleware } from "redux";
 import rootReducer from "./Store/reducers/rootReducer";
 import { Provider } from "react-redux";
 import thunk from "redux-thunk";
-import "./Styles/styles.css";
+
+import "./Styles/index.css";
 
 require("dotenv").config();
 
