@@ -1,101 +1,71 @@
-import React, { Component } from "react";
+import React from "react";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import ReactTable from "react-table";
 import "react-table/react-table.css";
 import NewTripModal from "./NewTripModal";
-import { axios } from "../Axios";
 
 import { getTripsByUser } from "../../store/actions/tripActions";
 
-class TableTest extends Component {
-  constructor(props) {
-    super(props);
-  }
-
-  componentDidMount() {
-    this.props.getTrips();
-  }
-
-  goToTrip = tripId => {
+const TableTest = props => {
+  const goToTrip = tripId => {
     console.log("Trip id: ", tripId);
-    this.props.history.push(`/trip/${tripId}`);
+    props.history.push(`/trip/${tripId}`);
   };
 
-  render() {
-    // const data = [
-    //   {
-    //     name: "Honeymoon",
-    //     destination: "Maui HI",
-    //     start: "12/13/19",
-    //     end: "12/20/19"
-    //   },
-    //   {
-    //     name: "Girls Trip",
-    //     destination: "Las Vegas Tahoe",
-    //     start: "2/3/20",
-    //     end: "2/10/20"
-    //   },
-    //   {
-    //     name: "Spring Break",
-    //     destination: "Cancun Cozumel",
-    //     start: "4/14",
-    //     end: "4/21"
-    //   }
-    // ];
+  const data = props.trips.map(trip => {
+    return {
+      name: trip.tripName,
+      destination: trip.destinations[0].name,
+      start: trip.startDate,
+      end: trip.endDate,
+      id: trip.tripId
+    };
+  });
 
-    const data = this.props.trips.map(trip => {
-      return {
-        name: trip.tripName,
-        destination: trip.destinations[0].name,
-        start: trip.startDate,
-        end: trip.endDate,
-        id: trip.tripId
-      };
-    });
+  const columns = [
+    {
+      Header: "Name",
+      accessor: "name"
+    },
+    {
+      Header: "Destination",
+      accessor: "destination"
+    },
+    {
+      Header: "Start",
+      accessor: "start",
+      Cell: props => <span className="number">{props.value}</span>
+    },
+    {
+      Header: "End",
+      accessor: "end",
+      Cell: props => <span className="number">{props.value}</span>
+    }
+  ];
 
-    const columns = [
-      {
-        Header: "Name",
-        accessor: "name"
-      },
-      {
-        Header: "Destination",
-        accessor: "destination"
-      },
-      {
-        Header: "Start",
-        accessor: "start",
-        Cell: props => <span className="number">{props.value}</span>
-      },
-      {
-        Header: "End",
-        accessor: "end",
-        Cell: props => <span className="number">{props.value}</span>
-      }
-    ];
+  props.getTrips();
 
-    return (
-      <div className="react-table">
-        <ReactTable
-          getTrProps={(state, rowInfo) => {
-            return {
-              onClick: () => {
-                this.goToTrip(rowInfo.row._original.id);
-              }
-            };
-          }}
-          className="table"
-          data={data}
-          columns={columns}
-          showPagination={false}
-          defaultPageSize={5}
-        />
-        <NewTripModal />
-      </div>
-    );
-  }
-}
+  return (
+    <div className="react-table">
+      <ReactTable
+        getTrProps={(state, rowInfo) => {
+          return {
+            onClick: () => {
+              goToTrip(rowInfo.row._original.id);
+            }
+          };
+        }}
+        className="table"
+        data={data}
+        columns={columns}
+        showPagination={false}
+        defaultPageSize={5}
+      />
+      <NewTripModal />
+    </div>
+  );
+};
 
 const mapStateToProps = state => {
   return {
