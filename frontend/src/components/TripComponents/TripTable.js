@@ -5,8 +5,6 @@ import ReactTable from "react-table";
 import "react-table/react-table.css";
 import NewTripModal from "./NewTripModal";
 
-import { getTripsByUser } from "../../store/actions/tripActions";
-
 const TableTest = props => {
   const goToTrip = tripId => {
     console.log("Trip id: ", tripId);
@@ -44,8 +42,6 @@ const TableTest = props => {
     }
   ];
 
-  props.getTrips();
-
   return (
     <div className="react-table">
       <ReactTable
@@ -75,5 +71,5 @@ const mapStateToProps = state => {
 
 export default connect(
   mapStateToProps,
-  { getTrips: getTripsByUser }
+  {}
 )(withRouter(TableTest));
