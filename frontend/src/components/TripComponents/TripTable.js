@@ -1,109 +1,79 @@
-import React, { Component } from "react";
-import {withRouter} from "react-router-dom"
+import React from "react";
+import { connect } from "react-redux";
+import { withRouter } from "react-router-dom";
 import ReactTable from "react-table";
 import "react-table/react-table.css";
 import NewTripModal from "./NewTripModal";
-import { axios } from "../Axios";
 
-class TableTest extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      trips: []
+import { getTripsByUser } from "../../store/actions/tripActions";
+
+const TableTest = props => {
+  const goToTrip = tripId => {
+    console.log("Trip id: ", tripId);
+    props.history.push(`/trip/${tripId}`);
+  };
+
+  const data = props.trips.map(trip => {
+    return {
+      name: trip.tripName,
+      destination: trip.destinations[0].name,
+      start: trip.startDate,
+      end: trip.endDate,
+      id: trip.tripId
+    };
+  });
+
+  const columns = [
+    {
+      Header: "Name",
+      accessor: "name"
+    },
+    {
+      Header: "Destination",
+      accessor: "destination"
+    },
+    {
+      Header: "Start",
+      accessor: "start",
+      Cell: props => <span className="number">{props.value}</span>
+    },
+    {
+      Header: "End",
+      accessor: "end",
+      Cell: props => <span className="number">{props.value}</span>
     }
-  }
+  ];
 
-  componentDidMount() {
-    this.getTrips();
-  }
-  
-  getTrips = () => {
-    axios
-      .get("users/alltrips")
-      .then(res => {
-        console.log("Blah blah", res)
-        this.setState({trips: res.data})
-    })
-      .catch(err => console.log(err));
+  props.getTrips();
 
-  }
-
-  goToTrip = (tripId) => {
-    this.props.history.push(`/trip/${tripId}`)
-  }
-
-  render() {
-    // const data = [
-    //   {
-    //     name: "Honeymoon",
-    //     destination: "Maui HI",
-    //     start: "12/13/19",
-    //     end: "12/20/19"
-    //   },
-    //   {
-    //     name: "Girls Trip",
-    //     destination: "Las Vegas Tahoe",
-    //     start: "2/3/20",
-    //     end: "2/10/20"
-    //   },
-    //   {
-    //     name: "Spring Break",
-    //     destination: "Cancun Cozumel",
-    //     start: "4/14",
-    //     end: "4/21"
-    //   }
-    // ];
-
-    const data = this.state.trips.map(trip => {
-      return {
-        name: trip.tripName,
-        destination: trip.destinations[0].name,
-        start: trip.startDate,
-        end: trip.endDate,
-        id: trip.tripId
-      }
-    })
-
-    const columns = [
-      {
-        Header: "Name",
-        accessor: "name"
-      },
-      {
-        Header: "Destination",
-        accessor: "destination"
-      },
-      {
-        Header: "Start",
-        accessor: "start",
-        Cell: props => <span className="number">{props.value}</span>
-      },
-      {
-        Header: "End",
-        accessor: "end",
-        Cell: props => <span className="number">{props.value}</span>
-      }
-    ];
-
-    return (
-      <div className="react-table">
-        <ReactTable
-          getTrProps={(state, rowInfo) => {
-            return {
-              onClick: () => {
-              this.goToTrip(rowInfo.row._original.id)
+  return (
+    <div className="react-table">
+      <ReactTable
+        getTrProps={(state, rowInfo) => {
+          return {
+            onClick: () => {
+              goToTrip(rowInfo.row._original.id);
             }
-          }}}
-          className="table"
-          data={data}
-          columns={columns}
-          showPagination={false}
-          defaultPageSize={5}
-        />
-        <NewTripModal />
-      </div>
-    );
-  }
-}
+          };
+        }}
+        className="table"
+        data={data}
+        columns={columns}
+        showPagination={false}
+        defaultPageSize={5}
+      />
+      <NewTripModal />
+    </div>
+  );
+};
 
-export default withRouter(TableTest);
+const mapStateToProps = state => {
+  return {
+    trips: state.trips.trips
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  { getTrips: getTripsByUser }
+)(withRouter(TableTest));
