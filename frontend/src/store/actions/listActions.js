@@ -1,36 +1,36 @@
-import { axios } from '../../components/Axios';
+import { axios } from "../../Components/Axios";
 
 // GET LIST
-export const FETCH_LISTS = 'FETCH_LISTS';
-export const LISTS = 'LISTS';
-export const LISTS_ERROR = 'LISTS_ERROR';
+export const FETCH_LISTS = "FETCH_LISTS";
+export const LISTS = "LISTS";
+export const LISTS_ERROR = "LISTS_ERROR";
 
 //GET SINGLE LIST
-export const FETCH_ONE = 'FETCH_ONE';
-export const ONE_FETCHED = 'ONE_FETCHED';
-export const ONE_ERROR = 'ONE_ERROR';
+export const FETCH_ONE = "FETCH_ONE";
+export const ONE_FETCHED = "ONE_FETCHED";
+export const ONE_ERROR = "ONE_ERROR";
 
 //CREATE LIST
-export const CREATE_LIST = 'CREATE_LIST';
-export const LIST_CREATED = 'LIST_CREATED';
-export const LIST_ERROR = 'LIST_ERROR';
+export const CREATE_LIST = "CREATE_LIST";
+export const LIST_CREATED = "LIST_CREATED";
+export const LIST_ERROR = "LIST_ERROR";
 
 //EDIT LIST
-export const EDIT_LIST = 'EDIT_LIST';
-export const LIST_EDITED = 'LIST_EDITED';
-export const EDIT_ERROR = 'EDIT_ERROR';
+export const EDIT_LIST = "EDIT_LIST";
+export const LIST_EDITED = "LIST_EDITED";
+export const EDIT_ERROR = "EDIT_ERROR";
 
 //DELETE LIST
-export const DELETE_LIST = 'DELETE_LIST';
-export const LIST_DELETED = 'LIST_DELETED';
-export const DELETE_ERROR = 'DELETE_ERROR';
+export const DELETE_LIST = "DELETE_LIST";
+export const LIST_DELETED = "LIST_DELETED";
+export const DELETE_ERROR = "DELETE_ERROR";
 
 // GET LIST
 export const getList = () => dispatch => {
 	dispatch({ type: FETCH_LISTS });
 	axios({
-		method: 'GET',
-		url: '/tripId/lists/:listName'
+		method: "GET",
+		url: "/tripId/lists/:listName"
 	})
 		.then(res => {
 			dispatch({ type: LISTS, payload: res.data });
@@ -44,7 +44,7 @@ export const getList = () => dispatch => {
 export const addList = newList => dispatch => {
 	dispatch({ type: CREATE_LIST });
 	return axios
-		.post('/:tripId/lists', newList)
+		.post("/:tripId/lists", newList)
 		.then(res => {
 			dispatch({ type: LIST_CREATED, payload: res.data });
 		})
@@ -57,7 +57,7 @@ export const addList = newList => dispatch => {
 export const updateList = list => dispatch => {
 	dispatch({ type: EDIT_LIST });
 	return axios
-		.put('tripId/lists/:itemId', list)
+		.put("tripId/lists/:itemId", list)
 		.then(res => {
 			dispatch({ type: LIST_EDITED, payload: res.data });
 		})
@@ -70,7 +70,7 @@ export const updateList = list => dispatch => {
 export const deleteList = tripId => dispatch => {
 	dispatch({ type: DELETE_LIST });
 	return axios
-		.delete('/:tripId/lists/:itemId' + tripId, {})
+		.delete("/:tripId/lists/:itemId" + tripId, {})
 		.then(res => {
 			dispatch({ type: LIST_DELETED, payload: res.data });
 		})
