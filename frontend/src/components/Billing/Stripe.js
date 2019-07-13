@@ -3,6 +3,9 @@ import StripeCheckout from 'react-stripe-checkout';
 import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/styles';
 
+
+// component can be moved if needed. I assumed Billing would be best
+
 const stripeButton = makeStyles(theme => ({
   button: {
     margin: theme.spacing(1),
