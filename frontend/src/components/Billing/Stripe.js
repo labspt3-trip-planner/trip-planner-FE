@@ -15,7 +15,7 @@ const stripeButton = makeStyles(theme => ({
 export default class Stripe extends React.Component {
 
   onToken = (token) => {
-    fetch('http://localhost:9090/checkout', {
+    fetch('https://labspt3-trip-planner.herokuapp.com/payments/checkout', {
       method: 'POST',
       body: JSON.stringify(token),
     }).then(response => {
