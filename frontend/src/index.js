@@ -10,12 +10,13 @@ import { createStore, applyMiddleware } from "redux";
 import rootReducer from "./store/reducers/rootReducer";
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
+import logger from "redux-logger";
 
 require("dotenv").config();
 
 const store = createStore(
   rootReducer,
-  applyMiddleware(thunk)
+  applyMiddleware(thunk, logger)
 );
 
 ReactDOM.render(
