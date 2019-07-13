@@ -393,3 +393,21 @@ a:active {
   width: 95%;
   height: 400px;
 }
+
+
+.product {
+  background-image: url("http://clipart-library.com/data_images/46219.jpg");
+  pointer-events: none;
+  -webkit-background-size: contain;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  -webkit-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  opacity: 1;
+  height: 300px;
+  width: 500px;
+}
