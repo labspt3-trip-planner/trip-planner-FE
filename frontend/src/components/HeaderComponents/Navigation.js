@@ -16,14 +16,14 @@ const Navigation = props => {
         <Link to="/triplist">
           <a id="header-buttons">My Trips</a>
         </Link>
-        <Link to="/trip">
-          <a id="header-buttons">New Trip</a>
-        </Link>
         <Link to="/billing">
           <a id="header-buttons">Billing</a>
         </Link>
       </div>
       <div className="navbar-end">
+        <Link to="/about">
+          <a id="header-buttons">Meet The Team</a>
+        </Link>
         <a onClick={signOut} id="signout-buttons">
           Signout
         </a>
