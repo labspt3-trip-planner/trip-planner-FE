@@ -50,6 +50,7 @@ class TripInfoContainer extends React.Component {
   };
 
   componentDidMount() {
+    this.setState({tripId: this.props.match.params.tripId})
     this.getTrip();
   }
 
