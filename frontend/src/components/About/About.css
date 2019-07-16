@@ -1,0 +1,29 @@
+.about-container {
+    display: block;
+    height: 100vh;
+    margin: 0 auto;
+    font-family: sans-serif;
+    overflow-y: auto;
+}
+
+.about-header-wrapper {
+    display: block;
+    margin: auto 0;
+    padding: 25px;
+    font-size: 32px;
+    text-align: center;
+}
+
+.team-container-wrapper {
+    display: flex;
+}
+
+.feature {
+    width: 19%;
+}
+
+.team-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
