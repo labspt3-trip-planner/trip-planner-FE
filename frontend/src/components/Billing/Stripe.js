@@ -1,42 +1,31 @@
 import React from 'react'
-import StripeCheckout from 'react-stripe-checkout';
-import Button from '@material-ui/core/Button';
-import { makeStyles } from '@material-ui/styles';
+import StripeCheckout from 'react-stripe-checkout'
+import axios from 'axios'
 
-
-// component can be moved if needed. I assumed Billing would be best
-
-const stripeButton = makeStyles(theme => ({
-  button: {
-    margin: theme.spacing(1),
-  },
-  input: {
-    display: 'none',
-  },
-}));
- 
-export default class Stripe extends React.Component {
-
-  onToken = (token) => {
-    fetch('https://labspt3-trip-planner.herokuapp.com/payments/checkout', {
-      method: 'POST',
-      body: JSON.stringify(token),
-    }).then(response => {
-      response.json().then(data => {
-        alert(`Thank you for your payment, ${data.email}`);
-      });
-    });
-  }
- 
+export default class Checkout extends React.Component {
+  
+onToken = (token) => {
+  const headersObject = {headers: {Accept: 'application/json', 'Content-Type': 'application/json'}, data: {stripeToken: token.id}, email:'test@testing.com' };
+  axios.post('https://labspt3-tri-planner-herokuapp.com/payments/checkout', headersObject)
+  .then(response => {
+    console.log(response);
+  }).catch(err => {
+    console.log(err)
+  })
+}
   render() {
-    const classes = stripeButton();
     return (
-      <Button variant="contained" color='primary' className={classes.button}>
       <StripeCheckout
+        amount={999}
+        billingAddress
+        description="Premium plan"
+        image="http://clipart-library.com/data_images/46219.jpg"
+        locale="auto"
+        name="Trip Planner"
+        stripeKey={process.env.STRIPE_PUBLISHABLE_KEY}
         token={this.onToken}
-        stripeKey="STRIPE_PUBLISHABLE_KEY"
+        zipCode
       />
-      </Button>
     )
   }
 }
