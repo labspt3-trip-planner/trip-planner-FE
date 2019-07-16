@@ -1,6 +1,5 @@
 import React from "react";
 import "../TripComponents/Page.css";
-// import DateInput from "../ModalComponents/DateInput";
 
 const TripTitle = props => {
 	return (
