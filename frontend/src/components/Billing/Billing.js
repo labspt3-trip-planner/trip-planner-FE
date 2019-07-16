@@ -1,6 +1,7 @@
 import React from 'react';
 import HeaderContainer from "../HeaderComponents/HeaderContainer";
 import '../TripComponents/Page.css';
+import StripeCheckout from './Stripe';
 
 function Billing() {
   
@@ -50,8 +51,8 @@ function Billing() {
 
 
         </section>
-
-
+    
+<StripeCheckout />
 
     </div>
   );
