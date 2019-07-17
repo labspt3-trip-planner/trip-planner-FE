@@ -38,7 +38,7 @@ class TripInfoContainer extends React.Component {
 
   getTrip = () => {
     axios
-      .get(`/trip/${this.state.tripId}`)
+      .get(`/trip/${this.props.match.params.tripId}`)
       .then(res => {
         console.log(res);
         this.setState({
@@ -50,7 +50,7 @@ class TripInfoContainer extends React.Component {
   };
 
   componentDidMount() {
-    this.setState({tripId: this.props.match.params.tripId})
+    this.setState({ tripId: this.props.match.params.tripId });
     this.getTrip();
   }
 
