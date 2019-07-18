@@ -7,11 +7,13 @@ import Melvin from './imgs/Melvin.jpeg'
 import Erin from './imgs/Erin.jpeg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebookSquare, faTwitterSquare, faLinkedin, fa2x} from '@fortawesome/free-brands-svg-icons'
+import Header from '../HeaderComponents/HeaderContainer'
 
 
 function About() {
   return (
     <div className="about-container" >
+      <Header />
       <div className="about-header-wrapper">
         <h2>Meet the Team</h2>
       </div>
