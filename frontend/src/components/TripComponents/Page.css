@@ -101,14 +101,13 @@
 .navbar-start {
   display: flex;
   flex-direction: row;
-  width: 75%;
+  width: 50%;
   justify-content: flex-start;
 
 }
 
 @media (max-width: 600px) {
     .navbar-start {
-        width: 75%;
         min-width: 0;
         flex-direction: row;
       
@@ -119,14 +118,13 @@
 .navbar-end {
   display: flex;
   flex-direction: row;
-  width: 25%;
+  width: 50%;
   text-align: center;
   justify-content: flex-end;
 }
 
 @media (max-width: 600px) {
     .navbar-end {
-        width: 25%;
         text-align: center;
         justify-content: center;
         flex-direction: row;
@@ -143,7 +141,7 @@
     }
 }
 
-#header-buttons, #modal-button, #signout-buttons, .modalButton {
+#header-buttons, #modal-button, #navbar-end-buttons, .modalButton {
     display: flex;
     text-decoration: none;
     color: rgba(0, 0, 0, 0.673);
@@ -156,12 +154,32 @@
     white-space: nowrap;
 }
 
+.gmap-actions {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+    width: 100%;
+}
+
 .modalButton {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
     border: 1px solid rgba(133, 133, 133, 0.476); 
+    width: 170px;
 
 }
 
-#signout-buttons {
+#navbar-end-buttons {
+    border: none;
     border-left: 1px solid rgba(133, 133, 133, 0.476);
 } 
 
@@ -179,7 +197,7 @@
 }
 
 @media (max-width: 600px) {
-    #header-buttons, #signout-buttons {
+    #header-buttons, #navbar-end-buttons {
         flex-direction: row;
         text-align: center;
         justify-content: center;
@@ -206,7 +224,7 @@
     }
 }
 
-#header-buttons:hover, #modal-button:hover, #signout-buttons:hover, .modalButton:hover {
+#header-buttons:hover, #modal-button:hover, #navbar-end-buttons:hover, .modalButton:hover {
     background: #f7b94c;
     transition: background 0.5s ease-in-out;
     color: white;
