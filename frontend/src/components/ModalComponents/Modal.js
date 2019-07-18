@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom"; // Not in use, just cleaning errors
 import "./modal.css";
 import "../TripComponents/Page.css";
 import PropTypes from "prop-types";
