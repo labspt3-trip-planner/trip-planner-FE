@@ -2,6 +2,7 @@ import React from "react";
 import HeaderContainer from "../HeaderComponents/HeaderContainer";
 import "../TripComponents/Page.css";
 import CheckListContainer from "./CheckListComponents/CheckListContainer";
+import FaveList from "../Favorites/FaveList";
 import Title from "./TripName";
 import GMap from "../Map/GMap";
 import { axios } from "../Axios";
@@ -38,7 +39,7 @@ class TripInfoContainer extends React.Component {
 
   getTrip = () => {
     axios
-      .get(`/trip/${this.state.tripId}`)
+      .get(`/trip/${this.props.match.params.tripId}`)
       .then(res => {
         console.log(res);
         this.setState({
@@ -50,7 +51,7 @@ class TripInfoContainer extends React.Component {
   };
 
   componentDidMount() {
-    this.setState({tripId: this.props.match.params.tripId})
+    this.setState({ tripId: this.props.match.params.tripId });
     this.getTrip();
   }
 
@@ -69,6 +70,7 @@ class TripInfoContainer extends React.Component {
             favorites={this.state.favorites}
           />
         </div>
+        <FaveList favorites={this.state.favorites} />
       </div>
     );
   }
