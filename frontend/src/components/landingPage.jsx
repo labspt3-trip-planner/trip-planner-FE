@@ -156,7 +156,7 @@ class Welcome extends Component {
 									</div>
 								</form>
 							</div>
-							<div className="modal-hero">Hero Image</div>
+							<div className="modal-hero" />
 						</Modal>
 
 						<div className="cover-photo sliding-background">
@@ -257,12 +257,31 @@ class Welcome extends Component {
 						<div className="cover-photo-mobile">
 							<h1>TripPlanner</h1>
 							<h3>Smarter travel preparation</h3>
-							{/* <p className="legal-blurb-mobile">
+							<div className="login-mobile">
+								<p>
+									Already have a Trip Planner account?{" "}
+									<a href="x" onClick={this.openModal}>
+										Login
+									</a>
+								</p>
+							</div>
+						</div>
+
+						<div className="login-screen-mobile">
+							<div className="button-area-mobile">
+								<button className="learnMore">
+									Learn More
+								</button>
+								<button className="registerNow">
+									Register Now
+								</button>
+								{/* <button className="signIn">Sign In</button> */}
+							</div>
+							<p className="legal-blurb-mobile">
 								Copyright © {year} TripPlanner, LLC. All rights
 								reserved.
-							</p> */}
+							</p>
 						</div>
-						<div className="login-screen-mobile">Login Screen</div>
 					</div>
 				</MediaQuery>
 			</>
