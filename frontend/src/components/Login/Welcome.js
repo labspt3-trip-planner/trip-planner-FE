@@ -35,10 +35,16 @@ class Welcome extends Component {
     this.logIn = this.logIn.bind(this);
   }
   componentDidMount() {
-    if (localStorage.getItem("user")) {
+    this.initialize();
+  }
+
+  initialize = async () => {
+    await this.props.firebase.getUser();
+    if (this.props.firebase.auth.currentUser) {
+      await this.props.firebase.getUserToken();
       this.props.history.push("/triplist");
     }
-  }
+  };
 
   logIn = async event => {
     event.preventDefault();
@@ -225,7 +231,9 @@ class Welcome extends Component {
           <div className="login">
             <p>
               Already have a Trip Planner account?{" "}
-              <a href="x" onClick={this.openModal}>Login</a>
+              <a href="x" onClick={this.openModal}>
+                Login
+              </a>
             </p>
           </div>
           <p className="legal-blurb">
