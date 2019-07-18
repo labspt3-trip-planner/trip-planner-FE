@@ -22,9 +22,9 @@ const Navigation = props => {
       </div>
       <div className="navbar-end">
         <Link to="/about">
-          <a id="header-buttons">Meet The Team</a>
+          <a id="navbar-end-buttons">Meet The Team</a>
         </Link>
-        <a onClick={signOut} id="signout-buttons">
+        <a onClick={signOut} id="navbar-end-buttons">
           Signout
         </a>
       </div>
