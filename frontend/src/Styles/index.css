@@ -209,7 +209,7 @@ button:focus {
 .cover-photo h3 {
   width: 90%;
   color: #0078b3;
-  margin-left: 2rem;
+  margin-left: 3rem;
   margin-top: -2.5rem;
   font-style: italic;
   font-size: 4vmin;
@@ -367,7 +367,6 @@ button:focus {
 
 .modal-login h3 {
   font-size: 2.5rem;
-  /* margin: 0 5% 0 5% */
   margin-top: 0;
   margin-right: 0;
   margin-bottom: 1.5rem;
@@ -375,7 +374,6 @@ button:focus {
   color: #f7b94c;
   font-weight: 900;
   font-family: Overpass;
-  margin-left: 5%;
 }
 
 .modal-login {
@@ -438,7 +436,7 @@ button:focus {
 }
 
 .ReactModal__Overlay {
-  opacity: 0;
+  opacity: rgba(78, 78, 78, 0.5);
   transition: opacity 500ms ease-in-out;
 }
 
@@ -523,14 +521,13 @@ button:focus {
   font-size: 3vmax;
   line-height: 4.5vmax;
 }
-
-#login {
-  color: #0078b3;
+.login-mobile p a #login {
+  color: #4e4e4e;
   font-family: sans-serif;
 }
 
 #login:visited {
-  color: #73b874;
+  color: #f7b94c;
 }
 
 .legal-blurb-mobile {

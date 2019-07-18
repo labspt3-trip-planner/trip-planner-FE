@@ -1,5 +1,5 @@
 import React from "react";
-import Welcome from "./Components/landingPage.jsx";
+import Landing from "./Components/landingPage.jsx";
 import TripContainer from "./Components/TripComponents/TripContainer";
 import TripInfoContainer from "./Components/TripInfoComponents/TripInfoContainer";
 import Billing from "./Components/billingPage";
@@ -9,7 +9,7 @@ import GMap from "./Components/Map/GMap";
 function App() {
 	return (
 		<Switch>
-			<Route exact path="/" component={Welcome} />
+			<Route exact path="/" component={Landing} />
 			<Route path="/triplist" component={TripContainer} />
 			<Route path="/trip/:tripId" component={TripInfoContainer} />
 			<Route path="/billing" component={Billing} />
