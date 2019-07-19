@@ -127,8 +127,10 @@ const GMap = compose(
             position={favorite.geometry.location}
           />
         ))}
-      {props.favorites && <button className="modalButton" onClick={faveHandler}>+</button>}
-      {props.addDest && <button className="modalButton" onClick={destHandler}>Add Stop</button>}
+      <div className="gmap-actions">
+        {props.favorites && <button className="modalButton" onClick={faveHandler}>+</button>}
+        {props.addDest && <button className="modalButton" onClick={destHandler}>Add Stop</button>}
+      </div>
     </GoogleMap>
   );
 });

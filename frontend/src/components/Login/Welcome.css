@@ -80,8 +80,8 @@
     width: 80%;
     height: 90%;
     margin: 10px 20px;
-    border: 5px solid #0078b3;
-
+    border: 3px solid #0078b3;
+    border-radius: .4%;
   }
 }
 
@@ -340,9 +340,14 @@
     font-family: "Roboto Condensed", sans-serif;
   }
 
-  /* @media (max-width: 600px) {
+  @media (max-width: 600px) {
+    .modal-login {
+      border: 2px solid #f7b94c;
+      padding-top: 20px;
 
-} */
+
+    }
+}
   
   .modal-hero {
     display: flex;
