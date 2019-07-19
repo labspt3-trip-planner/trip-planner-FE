@@ -38,12 +38,11 @@ class Welcome extends Component {
     this.initialize();
   }
 
-  initialize = async () => {
-    await this.props.firebase.getUser();
-    if (this.props.firebase.auth.currentUser) {
-      await this.props.firebase.getUserToken();
-      this.props.history.push("/triplist");
-    }
+  initialize = async event => {};
+
+  loginListener = e => {
+    e.persist();
+    this.props.firebase.getUser();
   };
 
   logIn = async event => {
@@ -117,7 +116,7 @@ class Welcome extends Component {
       username === "";
 
     return (
-      <div className="welcome-container">
+      <div className="welcome-container" onLoad={this.loginListener}>
         <Modal
           isOpen={this.state.modalIsOpen}
           // onAfterClose={this.afterOpenModal}
