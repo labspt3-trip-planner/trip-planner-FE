@@ -18,7 +18,6 @@ const store = createStore(rootReducer, applyMiddleware(thunk));
 
 ReactDOM.render(
 	<FirebaseContext.Provider value={new Firebase()}>
-		{" "}
 		{/* Provides a Firebase instance to the entire app*/}
 		<Provider store={store}>
 			<Router>

@@ -1,8 +1,8 @@
 import React from "react";
-import Landing from "./Components/landingPage.jsx";
+import Landing from "./Pages/landingPage";
 import TripContainer from "./Components/TripComponents/TripContainer";
 import TripInfoContainer from "./Components/TripInfoComponents/TripInfoContainer";
-import Billing from "./Components/billingPage";
+import Billing from "./Pages/billingPage";
 import { BrowserRouter as Switch, Route } from "react-router-dom";
 import GMap from "./Components/Map/GMap";
 

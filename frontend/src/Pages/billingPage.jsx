@@ -1,9 +1,9 @@
 import React from "react";
 import MediaQuery from "react-responsive";
 
-// import BillingMobilePortrait from "./BillingPage/indexMobilePortrait";
-// import BillingMobileLandscape from "./BillingPage/indexMobileLandscape";
-import BillingDesktop from "./BillingPage/indexDesktop";
+// import BillingMobilePortrait from "./BillingPage/billingMobilePortrait";
+// import BillingMobileLandscape from "./BillingPage/billingMobileLandscape";
+import BillingDesktop from "./BillingPage/billingDesktop";
 
 import "../Styles/styles.css";
 

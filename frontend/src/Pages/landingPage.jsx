@@ -2,9 +2,9 @@ import React, { Component } from "react";
 
 import MediaQuery from "react-responsive";
 
-import LandingMobilePortrait from "./LandingPage/indexMobilePortrait";
-import LandingMobileLandscape from "./LandingPage/indexMobileLandscape";
-import LandingDesktop from "./LandingPage/indexDesktop";
+import LandingMobilePortrait from "../Pages/LandingPage/indexMobilePortrait";
+import LandingMobileLandscape from "../Pages/LandingPage/indexMobileLandscape";
+import LandingDesktop from "../Pages/LandingPage/indexDesktop";
 
 import "../Styles/styles.css";
 

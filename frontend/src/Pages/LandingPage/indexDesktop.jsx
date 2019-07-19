@@ -2,8 +2,8 @@
 import React, { Component } from "react";
 
 import { Link, withRouter } from "react-router-dom";
-import { withFirebase } from "../Firebase";
-import { axios } from "../Axios";
+import { withFirebase } from "../../Components/Firebase";
+import { axios } from "../../Components/Axios";
 import moment from "moment";
 import Modal from "react-modal";
 
