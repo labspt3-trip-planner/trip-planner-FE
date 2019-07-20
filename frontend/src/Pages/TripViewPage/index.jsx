@@ -2,29 +2,29 @@ import React, { Component } from "react";
 
 import MediaQuery from "react-responsive";
 
-// import LandingMobilePortrait from "./styles_MobilePortrait";
-// import LandingMobileLandscape from "./styles_MobileLandscape";
-import LandingDesktop from "./layout_Desktop";
+// import TripViewMobilePortrait from "./styles_MobilePortrait";
+// import TripViewMobileLandscape from "./styles_MobileLandscape";
+import TripViewDesktop from "./layout_Desktop";
 
 // import "../Styles/styles.css";
 
-class Landing extends Component {
+class TripView extends Component {
 	render() {
 		return (
 			<>
 				{/* ---------- DESKTOP LAYOUT ---------- */}
 				<MediaQuery query="(min-device-width: 1025px)">
-					<LandingDesktop />
+					<TripViewDesktop />
 				</MediaQuery>
 				{/* ---------- MOBILE LAYOUT ---------- */}
 				<MediaQuery query="(max-width: 1025px)">
 					{/* ---------- MOBILE - PORTRAIT ---------- */}
 					<MediaQuery query="(orientation: portrait)">
-						{/* <LandingMobilePortrait /> */}
+						{/* <TripViewMobilePortrait /> */}
 					</MediaQuery>
 					{/* ---------- MOBILE - LANDSCAPE ---------- */}
 					<MediaQuery query="(orientation: landscape)">
-						{/* <LandingMobileLandscape /> */}
+						{/* <TripViewMobileLandscape /> */}
 					</MediaQuery>
 				</MediaQuery>
 			</>
@@ -32,4 +32,4 @@ class Landing extends Component {
 	}
 }
 
-export default Landing;
+export default TripView;

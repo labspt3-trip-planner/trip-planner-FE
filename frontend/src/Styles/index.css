@@ -376,6 +376,7 @@ button a:visited {
 }
 
 .modal-login h3 {
+  text-align: right;
   font-size: 2.5rem;
   margin-top: 0;
   margin-right: 0;
@@ -464,6 +465,147 @@ button a:visited {
   color: #666666;
 }
 
+.billing-desktop {
+  display: flex;
+  flex-direction: row;
+}
+
+.billing-content-desktop {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  height: 100vh;
+  min-width: 30vw;
+  background: url("https://is.gd/qRNe7A") center left no-repeat;
+  background: url("https://is.gd/Hpagps") center center no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.billing-content-desktop h1 {
+  text-align: center;
+  font-size: 10vmin;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 3rem;
+  font-weight: bold;
+  color: grey;
+  font-family: "Overpass", sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: bold;
+  color: white;
+  text-shadow: -2px 1px black;
+}
+
+.billing-hero-desktop {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-grow: 1;
+  padding-left: 1.5rem;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  color: white;
+  background-color: #17697b;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 4vmin;
+  text-align: left;
+}
+.billing-hero-desktop .features {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 15px;
+  width: 300px;
+  height: 80vh;
+  border-right: 1px solid grey;
+  font-size: 6rem;
+}
+.billing-hero-desktop .features #features {
+  font-family: "Overpass", sans-serif;
+  font-size: 7vmin;
+  color: #ffa62b;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+.billing-hero-desktop .features li {
+  color: #ffa62b;
+  font-size: 2rem;
+  line-height: 5vmin;
+}
+.billing-hero-desktop #product-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 15px;
+  width: 250px;
+  height: 80vh;
+  text-align: left;
+}
+.billing-hero-desktop #product-description .product-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 15px;
+  width: 250px;
+  height: 80vh;
+  border-right: 1px solid grey;
+  font-size: 6rem;
+}
+.billing-hero-desktop #product-description .billing-choice {
+  font-family: "Overpass", sans-serif;
+  font-size: 5vmin;
+  line-height: 7vmin;
+  color: white;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+.billing-hero-desktop #product-description li {
+  color: #ffa62b;
+  font-size: 2rem;
+  line-height: 5vmin;
+}
+
+.button-container {
+  display: flex;
+}
+
+.billing-mobile {
+  display: flex;
+  flex-direction: column;
+}
+
+.billing-content-mobile {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  height: 40vh;
+  width: 100vw;
+}
+
+.billing-hero-mobile {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  height: 60vh;
+  width: 100vw;
+  background-color: #17697b;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 .welcome-container {
   display: flex;
   flex-direction: row;
@@ -483,15 +625,15 @@ button a:visited {
   width: 100%;
   height: 100vh;
   color: white;
-  background: url("https://is.gd/puLPGX") center center no-repeat;
+  background: url("https://bit.ly/30J0sai") center left no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   font-family: "Roboto Condensed", sans-serif;
   font-weight: bold;
-  opacity: 0.8;
 }
+
 .cover-photo h1 {
   font-size: 10vmin;
   width: 90%;
@@ -499,18 +641,17 @@ button a:visited {
   margin-right: 5%;
   margin-bottom: 3rem;
   font-weight: bold;
-  color: #17697b;
+  color: #545862;
   font-family: "Overpass", sans-serif;
-  text-shadow: -2px 1px black;
 }
+
 .cover-photo h3 {
   width: 90%;
-  color: white;
+  color: #17697b;
   margin-left: 4rem;
   margin-top: -2.5rem;
   font-style: italic;
   font-size: 4vmin;
-  text-shadow: -2px 2px 8px #262626;
 }
 
 .cover-photo p {
@@ -535,7 +676,6 @@ button a:visited {
 
 .login-screen h2 {
   font-size: 5vmax;
-  /* margin: 0 5% 0 5% */
   margin-left: 5%;
   margin-bottom: -0.75%;
   color: #4e4e4e;
@@ -664,6 +804,7 @@ button a:visited {
 }
 
 .modal-login h3 {
+  text-align: right;
   font-size: 2.5rem;
   margin-top: 0;
   margin-right: 0;
@@ -752,214 +893,58 @@ button a:visited {
   color: #666666;
 }
 
-.welcome-container-mobile {
+.billing-mobile {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0 auto;
-  font-family: sans-serif;
-  overflow: hidden;
 }
 
-.cover-photo-mobile {
+.billing-content-mobile {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  flex-grow: 10;
-  min-height: 90vh;
-  height: 90vh;
-  color: white;
-  background: url("https://bit.ly/30J0sai") center left no-repeat;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  font-family: "Roboto Condensed", sans-serif;
-  font-weight: bold;
-}
-
-.cover-photo-mobile h1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 15vw;
-  width: 90%;
-  margin: 0 auto;
-  margin-bottom: 3rem;
-  font-weight: bold;
-  color: #545862;
-  font-family: "Overpass", sans-serif;
-}
-
-.cover-photo-mobile h3 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 95%;
-  color: #0078b3;
-  margin-top: -2.5rem;
-  font-style: italic;
-  text-align: center;
-  font-size: 5vmax;
-}
-
-.login-mobile {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin-top: 7rem;
-  width: 90%;
-}
-.login-mobile p {
-  font-size: 3vmax;
-  line-height: 4.5vmax;
-}
-.login-mobile p a #login {
-  color: #4e4e4e;
-  font-family: sans-serif;
-}
-
-#login:visited {
-  color: #ffa62b;
-}
-
-.legal-blurb-mobile {
-  font-family: "Roboto Condensed", sans-serif;
-  font-size: 2vmax;
-  color: grey;
-  position: fixed;
-  bottom: 12%;
-}
-
-.login-screen-mobile {
-  display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   flex-grow: 1;
+  height: 40vh;
   width: 100vw;
-  height: 10vh;
-  color: #ffa62b;
-  background-color: #ffa62b;
 }
 
-.billing-desktop {
+.billing-hero-mobile {
   display: flex;
   flex-direction: row;
-}
-
-.billing-content-desktop {
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-grow: 1;
-  height: 100vh;
-  min-width: 30vw;
-  background: url("https://is.gd/qRNe7A") center left no-repeat;
-  background: url("https://is.gd/Hpagps") center center no-repeat;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-.billing-content-desktop h1 {
-  text-align: center;
-  font-size: 10vmin;
-  width: 90%;
-  margin-left: 5%;
-  margin-right: 5%;
-  margin-bottom: 3rem;
-  font-weight: bold;
-  color: grey;
-  font-family: "Overpass", sans-serif;
-  font-family: "Roboto Condensed", sans-serif;
-  font-weight: bold;
-  color: white;
-  text-shadow: -2px 1px black;
-}
-
-.billing-hero-desktop {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  flex-grow: 1;
-  padding-left: 1.5rem;
-  display: flex;
-  width: 100%;
-  height: 100vh;
-  color: white;
+  height: 60vh;
+  width: 100vw;
   background-color: #17697b;
-  font-family: "Roboto Condensed", sans-serif;
-  font-size: 4vmin;
-  text-align: left;
-}
-.billing-hero-desktop .features {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  padding-left: 15px;
-  width: 300px;
-  height: 80vh;
-  border-right: 1px solid grey;
-  font-size: 6rem;
-}
-.billing-hero-desktop .features #features {
-  font-family: "Overpass", sans-serif;
-  font-size: 7vmin;
-  color: #ffa62b;
-  text-align: left;
-  margin-bottom: 1rem;
-}
-.billing-hero-desktop .features li {
-  color: #ffa62b;
-  font-size: 2rem;
-  line-height: 5vmin;
-}
-.billing-hero-desktop #product-description {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-left: 15px;
-  width: 250px;
-  height: 80vh;
-  text-align: left;
-}
-.billing-hero-desktop #product-description .product-description {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  padding-left: 15px;
-  width: 250px;
-  height: 80vh;
-  border-right: 1px solid grey;
-  font-size: 6rem;
-}
-.billing-hero-desktop #product-description .billing-choice {
-  font-family: "Overpass", sans-serif;
-  font-size: 5vmin;
-  line-height: 7vmin;
-  color: white;
-  text-align: left;
-  margin-bottom: 1rem;
-}
-.billing-hero-desktop #product-description li {
-  color: #ffa62b;
-  font-size: 2rem;
-  line-height: 5vmin;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.button-container {
+.billing-mobile {
   display: flex;
+  flex-direction: column;
+}
+
+.billing-content-mobile {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  height: 40vh;
+  width: 100vw;
+}
+
+.billing-hero-mobile {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  height: 60vh;
+  width: 100vw;
+  background-color: #17697b;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /*# sourceMappingURL=index.css.map */
