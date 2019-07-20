@@ -11,7 +11,7 @@ function Billing() {
 				<div className="features">
 					<p id="features">Features</p>
 					<ul>
-						<li>Feature 1</li>
+						<li>Create trip plans for any number of trips</li>
 						<li>Feature 2</li>
 						<li>Feature 3</li>
 						<li>Feature 4</li>

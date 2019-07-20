@@ -217,7 +217,7 @@ class LandingDesktopLandscape extends Component {
 										</Link>
 									</button>
 									<button
-										className="btnLogin"
+										className="btnRegister"
 										disabled={isInvalid}
 										onClick={this.signup}
 										type="submit"
@@ -229,7 +229,7 @@ class LandingDesktopLandscape extends Component {
 							<div className="login">
 								<p>
 									Already have a Trip Planner account?{" "}
-									<a href="x" onClick={this.openModal}>
+									<a href="/" onClick={this.openModal}>
 										Login
 									</a>
 								</p>

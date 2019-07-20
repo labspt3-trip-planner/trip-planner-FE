@@ -10,15 +10,17 @@ button
      flex-direction: column
      justify-content: center
      align-items: center
+     align-text: center
      margin-right: 2.5%
      height: 2.5rem
-     width: 7.5rem
+     width: 8rem
      border-radius: 5%
      -moz-border-radius: 5%
      -webkit-border-radius: 5%
      border: none
-     color: white
+     color: $color-white
      transition: all 0.5s
+     font-size: 1.25vmax
    
 button:hover 
      cursor: pointer
@@ -27,24 +29,29 @@ button:hover
 button:focus 
      outline: none
 
-.btnLogin 
-     background: #0078b3
+button a:visited
+     color: #4e4e4e
+     text-decoration: none
+
+.btnRegister 
+     background: $secondary-color
 
 .btnLogin:hover 
-     color: white
-     background: #5bba6c
+     color: $color-white
+     color: $dark-grey
+     background: #489fb6
      font: bold
 
-.btnLearn 
-     color: black
+.btnLearn
+     color: $dark-grey
 
 .btnLearn:hover 
-     color: white
-     background: #ff5a5f
+     color: $color-white
+     // background: #ff5a5f
+     background: #81c0cb
 
 .Link:visited 
      color: green
-
 
 .button-area-mobile
      width: 100%

@@ -4,7 +4,7 @@ import MediaQuery from "react-responsive";
 
 import LandingMobilePortrait from "../Pages/LandingPage/indexMobilePortrait";
 import LandingMobileLandscape from "../Pages/LandingPage/indexMobileLandscape";
-import LandingDesktop from "../Pages/LandingPage/indexDesktop";
+import LandingDesktop from "../Pages/LandingPage/landing_Desktop";
 
 import "../Styles/styles.css";
 
