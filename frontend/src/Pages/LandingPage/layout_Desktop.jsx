@@ -137,14 +137,7 @@ class LandingDesktopLandscape extends Component {
 										value={this.passwordOne}
 										onChange={this.onChange}
 									/>
-									<div className="button-area">
-										<button
-											className="btnLearn"
-											type="button"
-											onClick={this.closeModal}
-										>
-											Close
-										</button>
+									<div id="modal-button-area">
 										<button
 											type="submit"
 											className="btnLogin"
@@ -161,7 +154,7 @@ class LandingDesktopLandscape extends Component {
 							<h1>TripPlanner</h1>
 							<h3>Smarter travel preparation</h3>
 						</div>
-						<div className="login-screen">
+						<div className="register-screen">
 							<h2>Register</h2>
 							<form onSubmit={this.register}>
 								<input
@@ -227,7 +220,7 @@ class LandingDesktopLandscape extends Component {
 								</div>
 							</form>
 							<div className="login">
-								<p>
+								<p id="login">
 									Already have a Trip Planner account?{" "}
 									<a href="/" onClick={this.openModal}>
 										Login

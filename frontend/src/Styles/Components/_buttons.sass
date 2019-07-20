@@ -10,7 +10,6 @@ button
      flex-direction: column
      justify-content: center
      align-items: center
-     align-text: center
      margin-right: 2.5%
      height: 2.5rem
      width: 8rem
@@ -18,7 +17,7 @@ button
      -moz-border-radius: 5%
      -webkit-border-radius: 5%
      border: none
-     color: $color-white
+     color: $white
      transition: all 0.5s
      font-size: 1.25vmax
    
@@ -30,28 +29,44 @@ button:focus
      outline: none
 
 button a:visited
-     color: #4e4e4e
+     color: $dark-grey
      text-decoration: none
 
 .btnRegister 
-     background: $secondary-color
+     background: $aqua-dark
+
+.btnRegister:hover 
+     background: $aqua-medium
+     color: $dark-grey
+     font-weight: bold    
+
+.btnLogin
+     background-color: $yellow
+     color: $dark-grey
+     font-size: 1.5vmax
 
 .btnLogin:hover 
-     color: $color-white
+     color: $white
      color: $dark-grey
-     background: #489fb6
+     background: $aqua-medium
      font: bold
+
+#modal-button-area
+     display: flex
+     justify-content: flex-end
+     margin: 5% 5% 0 0
 
 .btnLearn
      color: $dark-grey
 
 .btnLearn:hover 
-     color: $color-white
-     // background: #ff5a5f
-     background: #81c0cb
+     color: $white
+     background: $aqua-medium
 
 .Link:visited 
-     color: green
+     color: $aqua-dark
+
+
 
 .button-area-mobile
      width: 100%
@@ -66,15 +81,14 @@ button a:visited
           width: 35%
           height: 5vh
           background-color: transparent
-          // border: 2px solid $color-grey-dark-2
-          color: black
+          color: $dark-grey
           font-size: 2.5vmax
 
      .learnMore
-          color: $color-grey-dark-2
+          color: $dark-grey
      
      .registerNow
-          color: $secondary-color
+          color: $yellow
 
      .signIn
           color: gray
