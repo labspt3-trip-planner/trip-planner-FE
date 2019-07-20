@@ -65,7 +65,7 @@ function About() {
       <div className="feature"> 
       <img src={Melvin} className="team-img" alt="Team member" />
         <h3>Melvin Merlos</h3>
-        <p>Deserunt sunt consectetur adipisicing do minim aute labore nulla aute ipsum dolor tempor. Ut culpa deserunt dolore dolor occaecat ut exercitation. Nostrud do duis fugiat voluptate. Dolor laboris exercitation occaecat ex eiusmod duis adipisicing adipisicing mollit sit consectetur officia. Culpa quis sint enim tempor ut eu eu duis. Ex ad commodo adipisicing tempor adipisicing ex ad.</p>
+        <p>By day, I am a HR, Training Specialist for a non-profit helping internal employees better their skills, increase awareness of their rights and agency policies. By night, I am a Web Developer/Software Engineer as a part-time student in the Web Development & Computer Science program at Lambda School.</p>
         <ul className="team-social">
             <li>
               <a href="http://www.facebook.com">
@@ -78,7 +78,7 @@ function About() {
               </a>
             </li>
             <li>
-              <a href="http://www.linkedin.com">
+              <a href="https://www.linkedin.com/in/melvin-merlos-49079a73/">
               <FontAwesomeIcon icon={faLinkedin} />
               </a>
             </li>
