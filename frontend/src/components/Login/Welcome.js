@@ -160,7 +160,7 @@ class Welcome extends Component {
               </div>
             </form>
           </div>
-          <div className="modal-hero">Hero Image</div>
+          <div className="modal-hero"></div>
         </Modal>
 
         <div className="cover-photo sliding-background">
