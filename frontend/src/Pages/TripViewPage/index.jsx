@@ -2,11 +2,9 @@ import React, { Component } from "react";
 
 import MediaQuery from "react-responsive";
 
-// import TripViewMobilePortrait from "./styles_MobilePortrait";
-// import TripViewMobileLandscape from "./styles_MobileLandscape";
+// import TripViewMobilePortrait from "./layout_MobilePortrait";
+// import TripViewMobileLandscape from "./layout_MobileLandscape";
 import TripViewDesktop from "./layout_Desktop";
-
-// import "../Styles/styles.css";
 
 class TripView extends Component {
 	render() {

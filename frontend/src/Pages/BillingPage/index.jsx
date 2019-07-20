@@ -2,11 +2,9 @@ import React, { Component } from "react";
 
 import MediaQuery from "react-responsive";
 
-// import BillingMobilePortrait from "./styles_MobilePortrait";
-// import BillingMobileLandscape from "./styles_MobileLandscape";
+// import BillingMobilePortrait from "./laout_MobilePortrait";
+// import BillingMobileLandscape from "./layout_MobileLandscape";
 import BillingDesktop from "./layout_Desktop";
-
-// import "../Styles/styles.css";
 
 class Billing extends Component {
 	render() {

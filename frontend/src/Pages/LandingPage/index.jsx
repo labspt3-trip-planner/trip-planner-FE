@@ -2,11 +2,9 @@ import React, { Component } from "react";
 
 import MediaQuery from "react-responsive";
 
-// import LandingMobilePortrait from "./styles_MobilePortrait";
-// import LandingMobileLandscape from "./styles_MobileLandscape";
+import LandingMobilePortrait from "./layout_MobilePortrait";
+// import LandingMobileLandscape from "./layout_MobileLandscape";
 import LandingDesktop from "./layout_Desktop";
-
-// import "../Styles/styles.css";
 
 class Landing extends Component {
 	render() {
@@ -20,7 +18,7 @@ class Landing extends Component {
 				<MediaQuery query="(max-width: 1025px)">
 					{/* ---------- MOBILE - PORTRAIT ---------- */}
 					<MediaQuery query="(orientation: portrait)">
-						{/* <LandingMobilePortrait /> */}
+						<LandingMobilePortrait />
 					</MediaQuery>
 					{/* ---------- MOBILE - LANDSCAPE ---------- */}
 					<MediaQuery query="(orientation: landscape)">

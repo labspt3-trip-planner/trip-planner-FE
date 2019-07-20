@@ -2,11 +2,9 @@ import React, { Component } from "react";
 
 import MediaQuery from "react-responsive";
 
-// import AboutMobilePortrait from "./styles_MobilePortrait";
-// import AboutMobileLandscape from "./styles_MobileLandscape";
+// import AboutMobilePortrait from "./layout_MobilePortrait";
+// import AboutMobileLandscape from "./layout_MobileLandscape";
 import AboutDesktop from "./layout_Desktop";
-
-// import "../Styles/styles.css";
 
 class About extends Component {
 	render() {

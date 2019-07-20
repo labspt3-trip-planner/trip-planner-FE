@@ -2,11 +2,9 @@ import React, { Component } from "react";
 
 import MediaQuery from "react-responsive";
 
-// import TripsMobilePortrait from "./styles_MobilePortrait";
-// import TripsMobileLandscape from "./styles_MobileLandscape";
+// import TripsMobilePortrait from "./layout_MobilePortrait";
+// import TripsMobileLandscape from "./layout_MobileLandscape";
 import TripsDesktop from "./layout_Desktop";
-
-// import "../Styles/styles.css";
 
 class Trips extends Component {
 	render() {
