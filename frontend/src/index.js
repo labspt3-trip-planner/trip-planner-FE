@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./App";
+import App from "./Pages/App";
 import { BrowserRouter as Router } from "react-router-dom";
 import Firebase, { FirebaseContext } from "./Components/Firebase";
 import { MuiPickersUtilsProvider } from "@material-ui/pickers";
@@ -14,7 +14,13 @@ import "./Styles/index.css";
 
 require("dotenv").config();
 
-const store = createStore(rootReducer, applyMiddleware(thunk));
+const store = createStore(
+	rootReducer,
+	applyMiddleware(
+		thunk
+		// , logger
+	)
+);
 
 ReactDOM.render(
 	<FirebaseContext.Provider value={new Firebase()}>

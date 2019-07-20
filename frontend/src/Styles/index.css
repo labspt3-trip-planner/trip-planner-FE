@@ -186,6 +186,7 @@ button a:visited {
   height: 100vh;
   margin: 0 auto;
   font-family: sans-serif;
+  overflow: hidden;
 }
 
 .cover-photo {

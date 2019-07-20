@@ -24,7 +24,7 @@ export default class Modal extends Component {
 						id="modal-button"
 						onClick={e => this.onClose(e)}
 					>
-						Close
+						✖
 					</a>
 				</div>
 			</div>

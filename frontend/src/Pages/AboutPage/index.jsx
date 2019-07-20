@@ -7,7 +7,7 @@ import BillingDesktop from "./BillingPage/billingDesktop";
 
 import "../Styles/styles.css";
 
-function Billing() {
+function Team() {
 	return (
 		<>
 			{/* ---------- DESKTOP LAYOUT ---------- */}
@@ -29,4 +29,4 @@ function Billing() {
 	);
 }
 
-export default Billing;
+export default Team;

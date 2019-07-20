@@ -24,7 +24,6 @@ class Firebase {
     this.auth.onAuthStateChanged(function(user) {
       if (user) {
         // User is signed in.
-        console.log("User!: ", user);
         return user;
       } else {
         // No user is signed in.
@@ -44,7 +43,6 @@ class Firebase {
       .then(function(idToken) {
         localStorage.setItem("user", idToken);
         // Send token to your backend via HTTPS
-        console.log(idToken);
         // ...
       })
       .catch(function(error) {

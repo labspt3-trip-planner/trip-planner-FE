@@ -9,7 +9,7 @@
     align-items: center;
     text-align: center;
     background: #0078b3;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: Overpass;
     overflow-y: auto;
     height: 100vh;
 }
@@ -68,13 +68,13 @@
 
 .trips-title {
   padding-top: 30px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: Overpass;
 }
 
 .header-wrapper {
   display: flex;
   flex-direction: row;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: Overpass;
   width: 100%;
 }
 
@@ -83,6 +83,7 @@
   position: absolute;
   width: 100%;
   background: white;
+  border-bottom: 1px solid rgba(133, 133, 133, 0.476)
 
 }
 
@@ -100,14 +101,13 @@
 .navbar-start {
   display: flex;
   flex-direction: row;
-  width: 75%;
+  width: 50%;
   justify-content: flex-start;
 
 }
 
 @media (max-width: 600px) {
     .navbar-start {
-        width: 75%;
         min-width: 0;
         flex-direction: row;
       
@@ -118,14 +118,13 @@
 .navbar-end {
   display: flex;
   flex-direction: row;
-  width: 25%;
+  width: 50%;
   text-align: center;
   justify-content: flex-end;
 }
 
 @media (max-width: 600px) {
     .navbar-end {
-        width: 25%;
         text-align: center;
         justify-content: center;
         flex-direction: row;
@@ -142,20 +141,45 @@
     }
 }
 
-#header-buttons, #modal-button, #signout-buttons {
+#header-buttons, #modal-button, #navbar-end-buttons, .modalButton {
     display: flex;
     text-decoration: none;
     color: rgba(0, 0, 0, 0.673);
     border-right: 1px solid rgba(133, 133, 133, 0.476); 
     background: #fff;
+    font-family: Overpass;
+    transition: background 1s ease-in-out;
     padding: 10px 40px;
-    max-height: 20px;
     overflow: hidden;
     white-space: nowrap;
+}
+
+.gmap-actions {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+    width: 100%;
+}
+
+.modalButton {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+    border: 1px solid rgba(133, 133, 133, 0.476); 
+    width: 170px;
 
 }
 
-#signout-buttons {
+#navbar-end-buttons {
+    border: none;
     border-left: 1px solid rgba(133, 133, 133, 0.476);
 } 
 
@@ -168,11 +192,12 @@
 
 .actions {
     display: flex;
+    margin-top: 30px;
     flex-direction: row;
 }
 
 @media (max-width: 600px) {
-    #header-buttons, #signout-buttons {
+    #header-buttons, #navbar-end-buttons {
         flex-direction: row;
         text-align: center;
         justify-content: center;
@@ -199,7 +224,7 @@
     }
 }
 
-#header-buttons:hover, #modal-button:hover, #signout-buttons:hover {
+#header-buttons:hover, #modal-button:hover, #navbar-end-buttons:hover, .modalButton:hover {
     background: #f7b94c;
     transition: background 0.5s ease-in-out;
     color: white;
@@ -228,6 +253,7 @@ a:active {
   background: #fff;
   border-radius: 4px;
   padding: 5px 30px;
+  margin-top: 55px;
   width: 200px;
 }
 
@@ -265,6 +291,7 @@ a:active {
 .plan-details-description {
     display: flex;
     flex-direction: row;
+    
     width: 100%;
     height: auto;
     border-bottom: 1px solid rgba(133, 133, 133, 0.476);
@@ -286,20 +313,21 @@ a:active {
 @media (max-width: 600px) {
     .plan-details-description-left {
         width: 100%;
-        height: auto;
+        height: 100%;
     }
 }
 
 .plan-details-description-right {
     text-align: left;
-    padding: 15px 15px 0 15px;
+    padding: 15px;
+    flex-wrap: wrap;
     width: 66%;
 }
 
 @media (max-width: 600px) {
     .plan-details-description-right {
-        width: 100%;
-        height: auto;
+        width: 92%;
+        height: 350px;
     }
 }
 
@@ -311,16 +339,14 @@ a:active {
 
 
 .space {
-  margin: 52px 0 40px 0;
-  background: #fff;
+  margin-top: 85px;
   border-radius: 4px;
   padding: 5px 30px;
 }
 
 @media (max-width: 600px) {
     .space {
-        margin: 10% 0 0.07%;
-        background: #fff;
+        margin: 17% 0 0.07%;
         border-radius: 4px;
         padding: 1% 2%;
       }
@@ -352,7 +378,7 @@ a:active {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: Overpass;
   background: #0078b3;
   height: 80vh;
   padding: 70px;
@@ -382,4 +408,30 @@ a:active {
   max-width: 900px;
   width: 95%;
   height: 400px;
+  margin-bottom: 20px;
+}
+
+.favorites-container {
+    margin: 65px 0 35px 0;
+    padding: 0;
+    color: black;
+    border: 2px solid red;
+}
+
+
+.product {
+  background-image: url("http://clipart-library.com/data_images/46219.jpg");
+  pointer-events: none;
+  -webkit-background-size: contain;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  -webkit-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  opacity: 1;
+  height: 300px;
+  width: 500px;
 }

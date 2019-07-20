@@ -27,8 +27,8 @@ export const DELETE_ERROR = "DELETE_ERROR";
 
 export const getTripsByUser = () => dispatch => {
 	dispatch({ type: FETCH_TRIPS });
-	axios
-		.get("/triplist")
+	return axios
+		.get("/users/alltrips")
 		.then(res => {
 			dispatch({ type: TRIPS, payload: res.data });
 		})

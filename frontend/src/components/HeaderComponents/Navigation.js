@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { withFirebase } from "../Firebase";
 import { withRouter } from "react-router-dom";
-// import { datePickerDefaultProps } from "@material-ui/pickers/constants/prop-types";
 
 const Navigation = props => {
 	const signOut = e => {
@@ -14,25 +13,25 @@ const Navigation = props => {
 		<div className="navbar">
 			<div className="navbar-start">
 				<Link to="/triplist">
-					<a href="/" id="header-buttons">
+					<a href="/triplist" id="header-buttons">
 						My Trips
 					</a>
 				</Link>
-				<Link to="/trip">
-					<a href="/" id="header-buttons">
-						New Trip
-					</a>
-				</Link>
 				<Link to="/billing">
-					<a href="/" id="header-buttons">
+					<a href="/billing" id="header-buttons">
 						Billing
 					</a>
 				</Link>
 			</div>
 			<div className="navbar-end">
-				<button onClick={signOut} id="signout-buttons">
+				<Link to="/about">
+					<a href="/about" id="navbar-end-buttons">
+						Meet The Team
+					</a>
+				</Link>
+				<a href="/" onClick={signOut} id="navbar-end-buttons">
 					Signout
-				</button>
+				</a>
 			</div>
 		</div>
 	);
