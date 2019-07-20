@@ -14,17 +14,17 @@ const Navigation = props => {
     <div className="navbar">
       <div className="navbar-start">
         <Link to="/triplist">
-          <a id="header-buttons">My Trips</a>
+          <a href="/" id="header-buttons">My Trips</a>
         </Link>
         <Link to="/billing">
-          <a id="header-buttons">Billing</a>
+          <a href= "/" id="header-buttons">Billing</a>
         </Link>
       </div>
       <div className="navbar-end">
         <Link to="/about">
-          <a id="navbar-end-buttons">Meet The Team</a>
+          <a href="/" id="navbar-end-buttons">Meet The Team</a>
         </Link>
-        <a onClick={signOut} id="navbar-end-buttons">
+        <a href="/" onClick={signOut} id="navbar-end-buttons">
           Signout
         </a>
       </div>
