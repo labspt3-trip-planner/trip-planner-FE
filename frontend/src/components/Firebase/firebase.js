@@ -43,7 +43,6 @@ class Firebase {
       .then(function(idToken) {
         localStorage.setItem("user", idToken);
         // Send token to your backend via HTTPS
-        console.log(idToken);
         // ...
       })
       .catch(function(error) {
