@@ -6,7 +6,7 @@ export default class Checkout extends React.Component {
   
 onToken = (token) => {
   const headersObject = {headers: {Accept: 'application/json', 'Content-Type': 'application/json'}, data: {stripeToken: token.id}, email:'test@testing.com' };
-  axios.post('http://localhost:9090/payments/checkout', headersObject)
+  axios.post('https://labspt3-trip-planner.herokuapp.com/payments/checkout', headersObject)
   .then(response => {
     console.log(response);
   }).catch(err => {
