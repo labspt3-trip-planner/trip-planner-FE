@@ -15,7 +15,7 @@ function Billing() {
 						<li>Feature 2</li>
 						<li>Feature 3</li>
 						<li>Feature 4</li>
-						<li>Feature 5</li>
+						<li>Support ongoing development</li>
 					</ul>
 				</div>
 				<div id="product-description">
@@ -27,6 +27,13 @@ function Billing() {
 						<li>No</li>
 						<li>No</li>
 					</ul>
+					<div id="button-area">
+						<button className="btnLearn">
+							<Link to="/" className="link">
+								Start Planning
+							</Link>
+						</button>
+					</div>
 				</div>
 				<div id="product-description">
 					<p className="billing-choice">Premium</p>
@@ -37,18 +44,13 @@ function Billing() {
 						<li>Yes</li>
 						<li>Yes</li>
 					</ul>
-				</div>
-				<div className="button-container">
-					<button className="btnLearn">
-						<Link to="/" className="link">
-							Learn More
-						</Link>
-					</button>
-					<button className="btnLearn">
-						<Link to="x" className="link">
-							Upgrade Now
-						</Link>
-					</button>
+					<div id="button-area">
+						<button className="btnLearn">
+							<Link to="x" className="link">
+								Upgrade Now
+							</Link>
+						</button>
+					</div>
 				</div>
 			</div>
 		</div>

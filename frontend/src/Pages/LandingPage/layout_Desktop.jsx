@@ -120,6 +120,7 @@ class LandingDesktopLandscape extends Component {
 								<h3>Welcome back!</h3>
 								<form onSubmit={this.logIn}>
 									<input
+										id="login-modal"
 										className="input"
 										type="text"
 										name="emailAddress"
@@ -129,6 +130,7 @@ class LandingDesktopLandscape extends Component {
 										onChange={this.onChange}
 									/>
 									<input
+										id="login-modal"
 										className="input"
 										type="password"
 										name="password"
