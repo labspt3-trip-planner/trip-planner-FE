@@ -82,7 +82,7 @@ class NewTripModal extends Component {
   render() {
     return (
       <div className="new-modal">
-        <a href="/" id="modal-button" onClick={e => this.showModal(e)}>
+        <a id="modal-button" onClick={e => this.showModal(e)}>
           Add New Trip
         </a>
 
