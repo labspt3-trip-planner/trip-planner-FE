@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 
 import HeaderContainer from "../../Components/HeaderComponents/HeaderContainer";
-import TripHeader from "../../Components/TripComponents/TripHeader";
+// import TripHeader from "../../Components/TripComponents/TripHeader";
 import TripTable from "../../Components/TripComponents/TripTable";
 
 import { getTripsByUser } from "../../Store/actions/tripActions";
@@ -19,11 +19,13 @@ class TripsPage extends Component {
 				<div className="trips-page-info">
 					<div className="my-trip-page">
 						<HeaderContainer />
-						<TripHeader />
+						{/* <TripHeader /> */}
 					</div>
 					<TripTable />
 				</div>
-				<div className="hero-image" />
+				<div className="hero-image">
+					<h1>My Trips</h1>
+				</div>
 			</div>
 			// =======================================
 		);
