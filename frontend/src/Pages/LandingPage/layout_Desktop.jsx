@@ -229,7 +229,7 @@ class LandingDesktopLandscape extends Component {
 									</a>
 								</p>
 							</div>
-							<p className="legal-blurb">
+							<p id="legal-blurb">
 								Copyright © {year} TripPlanner, LLC. All rights
 								reserved.
 							</p>

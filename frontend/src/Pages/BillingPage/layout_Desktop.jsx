@@ -11,24 +11,39 @@ function Billing() {
 				<div className="features">
 					<p id="features">Features</p>
 					<ul>
-						<li>Create trip plans for any number of trips</li>
-						<li>Feature 2</li>
-						<li>Feature 3</li>
-						<li>Feature 4</li>
-						<li>Support ongoing development</li>
+						<li id="border">
+							Save Time
+							{/* Combine data from multiple sources into one travel
+							tool */}
+						</li>
+						<li id="border">
+							Save Money
+							{/* Access your travel plans from any internet connected
+							device */}
+						</li>
+						<li id="border">Peace of Mind</li>
+						<li id="border">Limitless Trips</li>
+						<li>Support great software</li>
 					</ul>
+					<div id="button-area">
+						<button className="voidButton">
+							<Link to="/" className="link" />
+						</button>
+					</div>
 				</div>
 				<div id="product-description">
-					<p className="billing-choice">Standard</p>
+					<p className="billing-choice">
+						Standard <br /> <span className="price">free</span>
+					</p>
 					<ul>
 						<li>Yes</li>
 						<li>Yes</li>
 						<li>Yes</li>
-						<li>No</li>
-						<li>No</li>
+						<li id="no">No</li>
+						<li id="no">No</li>
 					</ul>
 					<div id="button-area">
-						<button className="btnLearn">
+						<button className="btnLearn billingButton">
 							<Link to="/" className="link">
 								Start Planning
 							</Link>
@@ -36,7 +51,9 @@ function Billing() {
 					</div>
 				</div>
 				<div id="product-description">
-					<p className="billing-choice">Premium</p>
+					<p className="billing-choice">
+						Premium <br /> <span className="price">$6.99/year</span>
+					</p>
 					<ul>
 						<li>Yes</li>
 						<li>Yes</li>
@@ -45,8 +62,8 @@ function Billing() {
 						<li>Yes</li>
 					</ul>
 					<div id="button-area">
-						<button className="btnLearn">
-							<Link to="x" className="link">
+						<button id="upgrade" className="billingButton">
+							<Link to="/billing" className="link">
 								Upgrade Now
 							</Link>
 						</button>

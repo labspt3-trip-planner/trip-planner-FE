@@ -153,7 +153,7 @@ button a:visited {
 #modal-button-area {
   display: flex;
   justify-content: flex-end;
-  margin: 5% 5% 0 0;
+  margin: 5% 0 0 0;
 }
 
 .btnLearn {
@@ -193,6 +193,32 @@ button a:visited {
 }
 .button-area-mobile .signIn {
   color: gray;
+}
+
+.voidButton {
+  color: none;
+  background-color: #17697b;
+  cursor: none;
+}
+
+.voidButton:hover {
+  color: none;
+  background-color: #17697b;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+
+#button-area #upgrade {
+  background-color: #ffa62b;
+}
+
+#button-area #upgrade:hover {
+  color: white;
+  background-color: #81c0cb;
+}
+
+.billingButton {
+  width: 10rem;
 }
 
 .welcome-container {
@@ -402,12 +428,23 @@ form {
   margin-right: 1rem;
 }
 
+#legal-blurb {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 1.25vmax;
+  color: #4e4e4e;
+  position: fixed;
+  bottom: 25px;
+  left: 47%;
+  width: 90%;
+}
+
 .login {
   display: flex;
   align-items: center;
   margin: -2.5rem 0 -0.5rem 0;
 }
 .login p {
+  font-size: 1.5vmax;
   font-family: Overpass;
   color: #4e4e4e;
 }
@@ -423,16 +460,6 @@ form {
   text-decoration: none;
 }
 
-.login-screen .legal-blurb {
-  font-family: "Roboto Condensed", sans-serif;
-  font-size: 0.75rem;
-  color: #4e4e4e;
-  position: fixed;
-  bottom: 0.25rem;
-  left: 47%;
-  width: 90%;
-}
-
 .overlay {
   background-color: #cfcfcf;
   position: fixed;
@@ -440,10 +467,6 @@ form {
   left: 0;
   right: 0;
   bottom: 0;
-}
-
-#login {
-  color: #4e4e4e;
 }
 
 .modal-hero {
@@ -467,12 +490,6 @@ form {
 .modal-input .input:focus {
   outline: none;
   border-bottom: 2.5px solid orange;
-}
-
-.modal-button-area {
-  display: flex;
-  justify-content: flex-end;
-  margin-right: 5%;
 }
 
 .ReactModal__Overlay {
@@ -521,12 +538,9 @@ form {
   margin-right: 5%;
   margin-bottom: 3rem;
   font-weight: bold;
-  color: grey;
-  font-family: "Overpass", sans-serif;
   font-family: "Roboto Condensed", sans-serif;
   font-weight: bold;
-  color: white;
-  text-shadow: -2px 1px black;
+  color: #ece7e2;
 }
 
 .billing-hero-desktop {
@@ -552,21 +566,43 @@ form {
   align-items: flex-start;
   padding-left: 15px;
   width: 300px;
+  width: 35%;
   height: 80vh;
   border-right: 1px solid grey;
   font-size: 6rem;
+  text-align: right;
 }
 .billing-hero-desktop .features #features {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 7.5rem;
   font-family: "Overpass", sans-serif;
   font-size: 7vmin;
   color: #ffa62b;
   text-align: left;
   margin-bottom: 1rem;
 }
+.billing-hero-desktop .features ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 90%;
+}
 .billing-hero-desktop .features li {
-  color: #ffa62b;
-  font-size: 2rem;
-  line-height: 5vmin;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #ece7e2;
+  font-size: 1.5rem;
+  height: 4rem;
+  text-align: right;
+  padding-top: 1rem;
+  font-style: italic;
+}
+.billing-hero-desktop .features #border {
+  border-bottom: 1px solid #8E8E8E;
 }
 .billing-hero-desktop #product-description {
   display: flex;
@@ -590,17 +626,31 @@ form {
   font-size: 6rem;
 }
 .billing-hero-desktop #product-description .billing-choice {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   font-family: "Overpass", sans-serif;
   font-size: 5vmin;
   line-height: 7vmin;
-  color: white;
+  color: #ece7e2;
   text-align: left;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+.billing-hero-desktop #product-description .billing-choice .price {
+  font-size: 4vmin;
+  color: #8E8E8E;
+  margin-top: -1rem;
 }
 .billing-hero-desktop #product-description li {
   color: #ffa62b;
   font-size: 2rem;
   line-height: 5vmin;
+  height: 5rem;
+}
+.billing-hero-desktop #product-description #no {
+  font-style: italic;
+  opacity: 0.7;
 }
 
 .button-container {
@@ -608,7 +658,7 @@ form {
 }
 
 #button-area {
-  margin-top: 5rem;
+  margin-top: 6rem;
 }
 
 .billing-mobile {

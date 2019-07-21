@@ -27,12 +27,10 @@
         margin-right: 5%
         margin-bottom: 3rem
         font-weight: bold
-        color: grey
-        font-family: $header-font
         font-family: $body-font
         font-weight: bold
-        color: white
-        text-shadow: -2px 1px black
+        color: $white
+        // text-shadow: -2px 1px black
 
 
 .billing-hero-desktop 
@@ -58,21 +56,45 @@
         align-items: flex-start
         padding-left: 15px
         width: 300px
+        width: 35%
         height: 80vh
         border-right: 1px solid grey
         font-size: 6rem
+        text-align: right
 
         #features
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            height: 7.5rem
+            // border: 1px dotted black
             font-family: $header-font
             font-size: 7vmin
             color: $yellow
             text-align: left
             margin-bottom: 1rem
 
+        ul
+            display: flex
+            flex-direction: column
+            justify-content: center
+            width: 90%
+
         li
-            color: $yellow
-            font-size: 2rem
-            line-height: 5vmin
+            display: flex
+            flex-direction: column
+            justify-content: center
+            color: $white
+            font-size: 1.5rem
+            height: 4rem
+            text-align: right
+            padding-top: 1rem
+            font-style: italic
+            //border: 1px dotted black
+
+        #border
+            border-bottom: 1px solid $light-grey
      
     #product-description
         display: flex
@@ -96,20 +118,35 @@
             font-size: 6rem
 
         .billing-choice
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
             font-family: $header-font
             font-size: 5vmin
             line-height: 7vmin
-            color: white
+            color: $white
             text-align: left
-            margin-bottom: 1rem
+            margin-bottom: 2rem
+            // font-style: italic
+
+            .price
+                font-size: 4vmin
+                color: $light-grey
+                margin-top: -1rem
 
         li
             color: $yellow
             font-size: 2rem
             line-height: 5vmin
+            height: 5rem
+
+        #no
+            font-style: italic
+            opacity: 0.7
                     
 .button-container
      display: flex
 
 #button-area
-    margin-top: 5rem
+    margin-top: 6rem
