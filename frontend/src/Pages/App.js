@@ -1,6 +1,6 @@
 import React from "react";
 import Landing from "./LandingPage";
-import TripContainer from "../Components/TripComponents/TripContainer";
+import TripsPage from "./TripsPage";
 import TripInfoContainer from "../Components/TripInfoComponents/TripInfoContainer";
 import Billing from "./BillingPage";
 import { BrowserRouter as Switch, Route } from "react-router-dom";
@@ -10,7 +10,7 @@ function App() {
 	return (
 		<Switch>
 			<Route exact path="/" component={Landing} />
-			<Route path="/triplist" component={TripContainer} />
+			<Route path="/triplist" component={TripsPage} />
 			<Route path="/trip/:tripId" component={TripInfoContainer} />
 			<Route path="/billing" component={Billing} />
 			<Route
