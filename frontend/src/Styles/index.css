@@ -660,6 +660,28 @@ form {
 #button-area {
   margin-top: 6rem;
 }
+#button-area button {
+  width: 10rem;
+  font-size: 1.5vmax;
+}
+
+.logo {
+  color: #4e4e4e;
+  position: fixed;
+  top: 0;
+  padding-top: 2.5rem;
+  right: 0;
+  padding-right: 4rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-grow: 1;
+  height: 2rem;
+  font-size: 4vmin;
+  width: 70vw;
+  font-weight: bold;
+  font-family: "Overpass", sans-serif;
+}
 
 .billing-mobile {
   display: flex;
@@ -740,7 +762,7 @@ form {
   align-items: center;
   flex-grow: 1;
   height: 2rem;
-  font-size: 5vmin;
+  font-size: 4vmin;
   width: 70vw;
   font-weight: bold;
   font-family: "Overpass", sans-serif;
