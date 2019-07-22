@@ -10,29 +10,13 @@ const Navigation = props => {
 	};
 
 	return (
-		<div className="navbar">
-			<div className="navbar-start">
-				<Link to="/triplist">
-					<a href="/triplist" id="header-buttons">
-						My Trips
-					</a>
-				</Link>
-				<Link to="/billing">
-					<a href="/billing" id="header-buttons">
-						Billing
-					</a>
-				</Link>
-			</div>
-			<div className="navbar-end">
-				<Link to="/about">
-					<a href="/about" id="navbar-end-buttons">
-						Meet The Team
-					</a>
-				</Link>
-				<a href="/" onClick={signOut} id="navbar-end-buttons">
-					Signout
-				</a>
-			</div>
+		<div id="billing" className="button-area">
+			<button id="billing" className="btnRegister">
+				<Link to="/billing">Billing</Link>
+			</button>
+			<button id="billing" className="btnLogin" onClick={signOut}>
+				Log Out
+			</button>
 		</div>
 	);
 };

@@ -5,7 +5,10 @@
 .trips-page-desktop
     display: flex
     flex-direction: row
-    background-color: $aqua-medium
+    background-color: $dark-grey
+    width: 100vw
+    height: 100vh
+    overflow: none
 
     .hero-image
         display: flex
@@ -29,9 +32,9 @@
             margin-right: 5%
             margin-bottom: 3rem
             font-weight: bold
-            font-family: $body-font
+            font-family: $header-font
             font-weight: bold
-            color: $aqua-medium
+            color: $aqua-light
 
     .trips-page-info
         display: flex
@@ -39,40 +42,132 @@
         justify-content: flex-start
         align-items: center
         flex-grow: 1
-        padding-left: 1.5rem
         display: flex
-        width: 100%
+        width: 70vw
         height: 100vh
         color: white
-        background-color: $aqua-medium
+        background-color: $dark-grey
         font-family: $body-font
-        font-size: 4vmin
+        // font-size: 3vmax
         text-align: left
+
+        h3
+            margin-top: 1.5rem
+            font-family: $header-font
+            color: $white
+            font-size: 5vmin
+            width: 70vw
+            font-weight: bold
+            font-family: $header-font
+            text-align: left
+            padding-left: 3rem
+
+        .my-trip-page
+            width: 100%
+            margin: 0 auto
 
 //  ==============================
         NAVIGATION COMPONENT
     ============================== //
 
+.header-wrapper
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    width: 100%
+    height: 100%
+
 .navbar
     display: flex
     flex-direction: row
-    justify-content: space-evenly
+    justify-content: space-between
     align-items: center
-    background-color: $aqua-medium
-    height: 4rem
+    background-color: $white
+    color: $dark-grey
+    height: 5rem
+    width: 100%
+
+    #header-buttons
+        width: 100px
+
+    a
+        display: flex
+        flex-direction: row
+        justify-content: center
+        align-items: center
+        color: $dark-grey
+        text-decoration: none
+        margin: 0 5% 0 5%
+        width: 15rem
+
+    a:hover
+        color: $aqua-light
 
     .trips-header-wrapper
-        background-color: $aqua-medium
+        background-color: $dark-grey
 
         .trips-title
-            background-color: $aqua-medium
+            background-color: $dark-grey
 
             .title
-                background-color: $aqua-medium
+                background-color: $dark-grey
 
 .react-table
-    margin-top: 4rem
-    width: 90%
-    text-align: center
-    background-color: $aqua-medium
-    color: $dark-grey
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    width: 60vw
+    width: 100%
+
+    .ReactTable
+        margin-top: 4rem
+        width: 92.5%
+        flex-grow: 1
+        text-align: center
+        background-color: $dark-grey
+        color: $white
+        // font-family: $body-font
+
+        .rt-thead -header
+            font-family: sans-serif
+            font-size: 2.5vmax
+
+        .rt-resizable-header-content
+            font-size: 2.5vmax
+
+        .rt-tbody
+            font-size: 1.75vmax
+            // font-size: 2vmax
+
+        .rt-resizable-header-content
+            color: $aqua-light
+            font-family: $header-font
+
+        .rt-tr
+            border-bottom: 0.5px solid grey
+
+
+    .rt-td
+        text-transform: capitalize
+        line-height: 3rem
+
+
+    button
+        width: 15rem
+        height: 3rem
+        font-size: 1.5vmax
+        margin-top: 4rem
+        background-color: $aqua-light
+        color: $dark-grey
+        text-decoration: none
+        font-size: 2vmax
+    
+    .ReactTable .button:hover
+        background-color: $white
+        color: $dark-grey
+
+.rt-noData
+    font-family: $body-font
+    text-transform: capitalize

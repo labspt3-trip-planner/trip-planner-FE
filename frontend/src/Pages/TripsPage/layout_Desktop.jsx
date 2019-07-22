@@ -1,11 +1,10 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 
-import HeaderContainer from "../../Components/HeaderComponents/HeaderContainer";
-// import TripHeader from "../../Components/TripComponents/TripHeader";
 import TripTable from "../../Components/TripComponents/TripTable";
 
 import { getTripsByUser } from "../../Store/actions/tripActions";
+import Navigation from "../../Components/HeaderComponents/Navigation";
 
 class TripsPage extends Component {
 	componentDidMount() {
@@ -17,11 +16,10 @@ class TripsPage extends Component {
 			// =========================================
 			<div className="trips-page-desktop">
 				<div className="trips-page-info">
-					<div className="my-trip-page">
-						<HeaderContainer />
-						{/* <TripHeader /> */}
-					</div>
+					<h3>TripPlanner</h3>
+					<div className="my-trip-page" />
 					<TripTable />
+					<Navigation />
 				</div>
 				<div className="hero-image">
 					<h1>My Trips</h1>

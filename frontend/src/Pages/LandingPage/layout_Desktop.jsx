@@ -40,6 +40,7 @@ class LandingDesktopLandscape extends Component {
 		if (localStorage.getItem("user")) {
 			this.props.history.push("/triplist");
 		}
+		Modal.setAppElement("body");
 	}
 
 	logIn = async event => {

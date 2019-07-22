@@ -5,7 +5,6 @@ import DateInput from "../ModalComponents/DateInput";
 import GMap from "../Map/GMap";
 import { withFirebase } from "../Firebase";
 import { axios } from "../Axios";
-import "./Page.css";
 
 class NewTripModal extends Component {
 	constructor(props) {
@@ -16,7 +15,7 @@ class NewTripModal extends Component {
 			destinations: [],
 			startDate: "",
 			endDate: "",
-			//planner: this.props.firebase.auth.currentUser.uid,
+			// planner: this.props.firebase.auth.currentUser.uid,
 			planner: "",
 			participants: []
 		};
@@ -31,6 +30,7 @@ class NewTripModal extends Component {
 		// const u = this.props.firebase.auth;
 		// console.log("u: ", u);
 		// console.log("uid: ", this.props.firebase.auth.currentUser);
+		// Modal.setAppElement("body");
 	}
 
 	getUser = async () => {
@@ -84,9 +84,13 @@ class NewTripModal extends Component {
 	render() {
 		return (
 			<div className="new-modal">
-				<a href="/" id="modal-button" onClick={e => this.showModal(e)}>
-					Add New Trip
-				</a>
+				<button
+					className="billing-button"
+					id="modal-button"
+					onClick={e => this.showModal(e)}
+				>
+					Create New Trip
+				</button>
 
 				<Modal
 					onClose={this.showModal}

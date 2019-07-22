@@ -455,6 +455,9 @@ form {
   text-decoration: none;
   cursor: pointer;
 }
+.login a:hover {
+  color: #489fb6;
+}
 
 .link {
   text-decoration: none;
@@ -538,7 +541,7 @@ form {
   margin-right: 5%;
   margin-bottom: 3rem;
   font-weight: bold;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Overpass", sans-serif;
   font-weight: bold;
   color: #ece7e2;
 }
@@ -691,7 +694,10 @@ form {
 .trips-page-desktop {
   display: flex;
   flex-direction: row;
-  background-color: #489fb6;
+  background-color: #4e4e4e;
+  width: 100vw;
+  height: 100vh;
+  overflow: none;
 }
 .trips-page-desktop .hero-image {
   display: flex;
@@ -715,9 +721,9 @@ form {
   margin-right: 5%;
   margin-bottom: 3rem;
   font-weight: bold;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Overpass", sans-serif;
   font-weight: bold;
-  color: #489fb6;
+  color: #81c0cb;
 }
 .trips-page-desktop .trips-page-info {
   display: flex;
@@ -725,41 +731,130 @@ form {
   justify-content: flex-start;
   align-items: center;
   flex-grow: 1;
-  padding-left: 1.5rem;
   display: flex;
-  width: 100%;
+  width: 70vw;
   height: 100vh;
   color: white;
-  background-color: #489fb6;
+  background-color: #4e4e4e;
   font-family: "Roboto Condensed", sans-serif;
-  font-size: 4vmin;
   text-align: left;
+}
+.trips-page-desktop .trips-page-info h3 {
+  margin-top: 1.5rem;
+  font-family: "Overpass", sans-serif;
+  color: #ece7e2;
+  font-size: 5vmin;
+  width: 70vw;
+  font-weight: bold;
+  font-family: "Overpass", sans-serif;
+  text-align: left;
+  padding-left: 3rem;
+}
+.trips-page-desktop .trips-page-info .my-trip-page {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.header-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
 .navbar {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
-  background-color: #489fb6;
-  height: 4rem;
+  background-color: #ece7e2;
+  color: #4e4e4e;
+  height: 5rem;
+  width: 100%;
+}
+.navbar #header-buttons {
+  width: 100px;
+}
+.navbar a {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #4e4e4e;
+  text-decoration: none;
+  margin: 0 5% 0 5%;
+  width: 15rem;
+}
+.navbar a:hover {
+  color: #81c0cb;
 }
 .navbar .trips-header-wrapper {
-  background-color: #489fb6;
+  background-color: #4e4e4e;
 }
 .navbar .trips-header-wrapper .trips-title {
-  background-color: #489fb6;
+  background-color: #4e4e4e;
 }
 .navbar .trips-header-wrapper .trips-title .title {
-  background-color: #489fb6;
+  background-color: #4e4e4e;
 }
 
 .react-table {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60vw;
+  width: 100%;
+}
+.react-table .ReactTable {
   margin-top: 4rem;
-  width: 90%;
+  width: 92.5%;
+  flex-grow: 1;
   text-align: center;
-  background-color: #489fb6;
+  background-color: #4e4e4e;
+  color: #ece7e2;
+}
+.react-table .ReactTable .rt-thead -header {
+  font-family: sans-serif;
+  font-size: 2.5vmax;
+}
+.react-table .ReactTable .rt-resizable-header-content {
+  font-size: 2.5vmax;
+}
+.react-table .ReactTable .rt-tbody {
+  font-size: 1.75vmax;
+}
+.react-table .ReactTable .rt-resizable-header-content {
+  color: #81c0cb;
+  font-family: "Overpass", sans-serif;
+}
+.react-table .ReactTable .rt-tr {
+  border-bottom: 0.5px solid grey;
+}
+.react-table .rt-td {
+  text-transform: capitalize;
+  line-height: 3rem;
+}
+.react-table button {
+  width: 15rem;
+  height: 3rem;
+  font-size: 1.5vmax;
+  margin-top: 4rem;
+  background-color: #81c0cb;
   color: #4e4e4e;
+  text-decoration: none;
+  font-size: 2vmax;
+}
+.react-table .ReactTable .button:hover {
+  background-color: #ece7e2;
+  color: #4e4e4e;
+}
+
+.rt-noData {
+  font-family: "Roboto Condensed", sans-serif;
+  text-transform: capitalize;
 }
 
 /*# sourceMappingURL=index.css.map */

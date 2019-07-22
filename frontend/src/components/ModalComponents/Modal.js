@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-// import { Link } from "react-router-dom";
 import "./modal.css";
 import "../TripComponents/Page.css";
 import PropTypes from "prop-types";
