@@ -1,5 +1,4 @@
 import React from "react";
-import HeaderContainer from "../HeaderComponents/HeaderContainer";
 import "../TripComponents/Page.css";
 import CheckListContainer from "./CheckListComponents/CheckListContainer";
 // import FaveList from "../Favorites/FaveList";
@@ -58,7 +57,6 @@ class TripInfoContainer extends React.Component {
 	render() {
 		return (
 			<div className="page-container">
-				<HeaderContainer />
 				<Title className="trip-title" tripName={this.state.tripName} />
 				<br />
 				<CheckListContainer />

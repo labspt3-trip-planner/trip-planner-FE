@@ -585,8 +585,7 @@ form {
   font-size: 7vmin;
   color: #ffa62b;
   text-align: left;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
+  margin-bottom: 1rem;
 }
 .billing-hero-desktop .features ul {
   display: flex;
@@ -602,7 +601,8 @@ form {
   font-size: 1.5rem;
   height: 4rem;
   text-align: right;
-  padding-top: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   font-style: italic;
 }
 .billing-hero-desktop .features #border {
@@ -741,6 +741,10 @@ form {
   text-align: left;
 }
 .trips-page-desktop .trips-page-info h3 {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  border: 1px dotted pink;
   margin-top: 1.5rem;
   font-family: "Overpass", sans-serif;
   color: #ece7e2;
@@ -752,6 +756,9 @@ form {
   padding-left: 3rem;
 }
 .trips-page-desktop .trips-page-info .my-trip-page {
+  display: flex;
+  align-items: center;
+  flex-grow: 2;
   width: 100%;
   margin: 0 auto;
 }

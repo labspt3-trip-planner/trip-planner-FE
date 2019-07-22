@@ -25,14 +25,6 @@ class NewTripModal extends Component {
 		this.props.firebase.getUser();
 	}
 
-	componentDidMount() {
-		// console.log("FB props: ", this.props.firebase);
-		// const u = this.props.firebase.auth;
-		// console.log("u: ", u);
-		// console.log("uid: ", this.props.firebase.auth.currentUser);
-		// Modal.setAppElement("body");
-	}
-
 	getUser = async () => {
 		await this.props.firebase.getUser();
 	};

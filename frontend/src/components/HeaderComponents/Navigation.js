@@ -10,7 +10,7 @@ const Navigation = props => {
 	};
 
 	return (
-		<div id="billing" className="button-area">
+		<div className="nav-button-area">
 			<button id="billing" className="btnRegister">
 				<Link to="/billing">Billing</Link>
 			</button>
