@@ -54,8 +54,6 @@
             display: flex
             align-items: center
             flex-grow: 1
-            border: 1px dotted pink
-            margin-top: 1.5rem
             font-family: $header-font
             color: $white
             font-size: 5vmin
@@ -64,11 +62,12 @@
             font-family: $header-font
             text-align: left
             padding-left: 3rem
+            color: $yellow
 
         .my-trip-page
             display: flex
+            justify-content: center
             align-items: center
-            flex-grow: 2
             width: 100%
             margin: 0 auto
 
@@ -76,51 +75,16 @@
         NAVIGATION COMPONENT
     ============================== //
 
-.header-wrapper
+.nav-button-area
     display: flex
-    flex-direction: row
-    justify-content: center
     align-items: center
-    width: 100%
-    height: 100%
-
-.navbar
-    display: flex
-    flex-direction: row
-    justify-content: space-between
-    align-items: center
-    background-color: $white
-    color: $dark-grey
-    height: 5rem
-    width: 100%
-
-    #header-buttons
-        width: 100px
-
-    a
-        display: flex
-        flex-direction: row
-        justify-content: center
-        align-items: center
-        color: $dark-grey
-        text-decoration: none
-        margin: 0 5% 0 5%
-        width: 15rem
-
-    a:hover
-        color: $aqua-light
-
-    .trips-header-wrapper
-        background-color: $dark-grey
-
-        .trips-title
-            background-color: $dark-grey
-
-            .title
-                background-color: $dark-grey
+    flex-grow: 1
+    width: 70vw
+    padding-left: 3rem
 
 .react-table
     display: flex
+    flex-grow: 2
     flex-direction: column
     justify-content: center
     align-items: center
@@ -128,9 +92,8 @@
     width: 100%
 
     .ReactTable
-        margin-top: 4rem
         width: 92.5%
-        flex-grow: 1
+        flex-grow: 2
         text-align: center
         background-color: $dark-grey
         color: $white

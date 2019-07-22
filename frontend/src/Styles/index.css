@@ -744,8 +744,6 @@ form {
   display: flex;
   align-items: center;
   flex-grow: 1;
-  border: 1px dotted pink;
-  margin-top: 1.5rem;
   font-family: "Overpass", sans-serif;
   color: #ece7e2;
   font-size: 5vmin;
@@ -754,62 +752,27 @@ form {
   font-family: "Overpass", sans-serif;
   text-align: left;
   padding-left: 3rem;
+  color: #ffa62b;
 }
 .trips-page-desktop .trips-page-info .my-trip-page {
   display: flex;
+  justify-content: center;
   align-items: center;
-  flex-grow: 2;
   width: 100%;
   margin: 0 auto;
 }
 
-.header-wrapper {
+.nav-button-area {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100%;
-}
-
-.navbar {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #ece7e2;
-  color: #4e4e4e;
-  height: 5rem;
-  width: 100%;
-}
-.navbar #header-buttons {
-  width: 100px;
-}
-.navbar a {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  color: #4e4e4e;
-  text-decoration: none;
-  margin: 0 5% 0 5%;
-  width: 15rem;
-}
-.navbar a:hover {
-  color: #81c0cb;
-}
-.navbar .trips-header-wrapper {
-  background-color: #4e4e4e;
-}
-.navbar .trips-header-wrapper .trips-title {
-  background-color: #4e4e4e;
-}
-.navbar .trips-header-wrapper .trips-title .title {
-  background-color: #4e4e4e;
+  flex-grow: 1;
+  width: 70vw;
+  padding-left: 3rem;
 }
 
 .react-table {
   display: flex;
+  flex-grow: 2;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -817,9 +780,8 @@ form {
   width: 100%;
 }
 .react-table .ReactTable {
-  margin-top: 4rem;
   width: 92.5%;
-  flex-grow: 1;
+  flex-grow: 2;
   text-align: center;
   background-color: #4e4e4e;
   color: #ece7e2;
