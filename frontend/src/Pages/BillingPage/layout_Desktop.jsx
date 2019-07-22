@@ -12,18 +12,16 @@ function Billing() {
 					<p id="features">Features</p>
 					<ul>
 						<li id="border">
-							Save Time
-							{/* Combine data from multiple sources into one travel
-							tool */}
+							Combine data from multiple web sources into one tool
 						</li>
 						<li id="border">
-							Save Money
-							{/* Access your travel plans from any internet connected
-							device */}
+							Access your travel plans from any web browser
 						</li>
-						<li id="border">Peace of Mind</li>
-						<li id="border">Limitless Trips</li>
-						<li>Support great software</li>
+						<li id="border">
+							Visualize your entire trip with map view
+						</li>
+						<li id="border">Create and store more than 5 trips</li>
+						<li>Support ongoing development</li>
 					</ul>
 					<div id="button-area">
 						<button className="voidButton">

@@ -585,7 +585,8 @@ form {
   font-size: 7vmin;
   color: #ffa62b;
   text-align: left;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
 }
 .billing-hero-desktop .features ul {
   display: flex;
