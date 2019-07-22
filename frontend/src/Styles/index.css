@@ -666,7 +666,7 @@ form {
 }
 
 .logo {
-  color: #4e4e4e;
+  color: #81c0cb;
   position: fixed;
   top: 0;
   padding-top: 2.5rem;
@@ -854,6 +854,10 @@ form {
 .rt-noData {
   font-family: "Roboto Condensed", sans-serif;
   text-transform: capitalize;
+}
+
+.modal-container {
+  display: flex;
 }
 
 /*# sourceMappingURL=index.css.map */
