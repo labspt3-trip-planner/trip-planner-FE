@@ -15,7 +15,6 @@ class NewTripModal extends Component {
 			destinations: [],
 			startDate: "",
 			endDate: "",
-			// planner: this.props.firebase.auth.currentUser.uid,
 			planner: "",
 			participants: []
 		};
@@ -37,7 +36,6 @@ class NewTripModal extends Component {
 		} else
 			this.setState({
 				show: !this.state.show
-				// planner: this.props.firebase.auth.currentUser.uid
 			});
 	};
 

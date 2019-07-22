@@ -15,16 +15,12 @@ export default class Modal extends Component {
 			<div className="modal-container">
 				<div className="content">{this.props.children}</div>
 				<div className="actions">
-					<a href="/" id="modal-button" onClick={this.props.addTrip}>
+					<button id="modal-button" onClick={this.props.addTrip}>
 						Add Trip
-					</a>
-					<a
-						href="/"
-						id="modal-button"
-						onClick={e => this.onClose(e)}
-					>
-						✖
-					</a>
+					</button>
+					<button id="modal-button" onClick={e => this.onClose(e)}>
+						Close
+					</button>
 				</div>
 			</div>
 		);

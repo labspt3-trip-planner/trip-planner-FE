@@ -7,6 +7,8 @@ import { axios } from "../../Components/Axios";
 import moment from "moment";
 import Modal from "react-modal";
 
+Modal.setAppElement("body");
+
 // COMPONENT VARIABLES
 const year = moment().format("YYYY");
 

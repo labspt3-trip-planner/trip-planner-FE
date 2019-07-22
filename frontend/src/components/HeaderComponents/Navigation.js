@@ -11,10 +11,10 @@ const Navigation = props => {
 
 	return (
 		<div className="nav-button-area">
-			<button id="billing" className="btnRegister">
-				<Link to="/billing">Billing</Link>
+			<button id="billing" className="upgrade">
+				<Link to="/billing">Upgrade To Premium</Link>
 			</button>
-			<button id="billing" className="btnLogin" onClick={signOut}>
+			<button id="billing" className="logout" onClick={signOut}>
 				Log Out
 			</button>
 		</div>
