@@ -65,7 +65,8 @@ class Map extends Component {
 				className="map"
 				ref={this.mapRef}
 				{...viewport}
-				mapStyle={"mapbox://styles/mapbox/light-v10"}
+				// mapStyle={"mapbox://styles/mapbox/light-v10"}
+				mapStyle={"mapbox://styles/mapbox/streets-v11"}
 				onViewportChange={this.handleViewportChange}
 				mapboxApiAccessToken={MAPBOX_TOKEN}
 			>

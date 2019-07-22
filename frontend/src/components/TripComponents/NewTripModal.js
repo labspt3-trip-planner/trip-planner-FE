@@ -5,6 +5,7 @@ import DateInput from "../ModalComponents/DateInput";
 import GMap from "../Map/GMap";
 import { withFirebase } from "../Firebase";
 import { axios } from "../Axios";
+// import Modal from "react-modal";
 
 class NewTripModal extends Component {
 	constructor(props) {
@@ -81,12 +82,21 @@ class NewTripModal extends Component {
 				>
 					Create New Trip
 				</button>
-
 				<Modal
 					onClose={this.showModal}
 					show={this.state.show}
 					addTrip={this.addTrip}
+					className="modal"
+					overlayClassName="overlay"
 				>
+					<GMap
+						id="gMap"
+						addDest={this.addDest}
+						defaultCenter={{
+							lat: 37.7577961,
+							lng: -122.38807209999999
+						}}
+					/>
 					<TextInput
 						nameHandler={this.changeHandler}
 						nameValue={this.state.tripName}
@@ -101,6 +111,14 @@ class NewTripModal extends Component {
 						startHandler={this.startHandler}
 						endHandler={this.endHandler}
 					/>
+				</Modal>
+				{/* <Modal
+					onClose={this.showModal}
+					show={this.state.show}
+					addTrip={this.addTrip}
+					className="modal"
+					overlayClassName="overlay"
+				>
 					<GMap
 						id="gMap"
 						addDest={this.addDest}
@@ -109,7 +127,21 @@ class NewTripModal extends Component {
 							lng: -122.38807209999999
 						}}
 					/>
-				</Modal>
+					<TextInput
+						nameHandler={this.changeHandler}
+						nameValue={this.state.tripName}
+					/>
+					<ul>
+						{this.state.destinations.map(dest => (
+							<li key={dest.place_id}>{dest.name}</li>
+						))}
+					</ul>
+					<DateInput
+						className="datePicker"
+						startHandler={this.startHandler}
+						endHandler={this.endHandler}
+					/>
+				</Modal> */}
 			</div>
 		);
 	}
