@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import TripTable from "../../Components/TripComponents/TripTable";
 
 import { getTripsByUser } from "../../Store/actions/tripActions";
-import Navigation from "../../Components/HeaderComponents/Navigation";
+import Navigation from "../../Components/ModalComponents/Navigation";
 
 class TripsPage extends Component {
 	componentDidMount() {

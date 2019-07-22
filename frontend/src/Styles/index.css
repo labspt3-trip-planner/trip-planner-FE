@@ -217,8 +217,8 @@ button a:visited {
   background-color: #81c0cb;
 }
 
-#billing .upgrade {
-  background-color: #ffa62b;
+button .MuiButtonBase-root MuiIconButton-root {
+  with: 1rem;
 }
 
 .welcome-container {
@@ -792,14 +792,14 @@ form {
 .nav-button-area #billing {
   color: #4e4e4e;
   background-color: #8E8E8E;
-  width: 10rem;
+  width: 12rem;
 }
 .nav-button-area #billing .logout:hover {
   color: #ece7e2;
 }
 .nav-button-area #billing a {
   text-decoration: none;
-  color: #81c0cb;
+  color: #ffa62b;
 }
 .nav-button-area #billing a:hover {
   color: #ffa62b;
@@ -812,6 +812,12 @@ form {
   justify-content: center;
   align-items: center;
   width: 100%;
+}
+.react-table .react-table button {
+  width: 1rem;
+}
+.react-table .react-table button .MuiIconButton-root {
+  border-radius: 5px;
 }
 .react-table .ReactTable {
   width: 92.5%;
