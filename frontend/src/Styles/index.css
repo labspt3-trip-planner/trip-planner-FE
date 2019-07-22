@@ -732,7 +732,6 @@ form {
   justify-content: flex-start;
   align-items: center;
   flex-grow: 1;
-  display: flex;
   width: 70vw;
   height: 100vh;
   color: white;
@@ -744,8 +743,7 @@ form {
   display: flex;
   align-items: center;
   flex-grow: 1;
-  font-family: "Overpass", sans-serif;
-  color: #ece7e2;
+  height: 2rem;
   font-size: 5vmin;
   width: 70vw;
   font-weight: bold;
@@ -776,12 +774,10 @@ form {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 60vw;
   width: 100%;
 }
 .react-table .ReactTable {
   width: 92.5%;
-  flex-grow: 2;
   text-align: center;
   background-color: #4e4e4e;
   color: #ece7e2;
