@@ -87,7 +87,7 @@ function About() {
       <div className="feature"> 
       <img src={Erin} className="team-img" alt="Team member" />
         <h3>Erin Scriber</h3>
-        <p>Deserunt sunt consectetur adipisicing do minim aute labore nulla aute ipsum dolor tempor. Ut culpa deserunt dolore dolor occaecat ut exercitation. Nostrud do duis fugiat voluptate. Dolor laboris exercitation occaecat ex eiusmod duis adipisicing adipisicing mollit sit consectetur officia. Culpa quis sint enim tempor ut eu eu duis. Ex ad commodo adipisicing tempor adipisicing ex ad.</p>
+        <p>Erin is an Information Technology Specialist for a suburban Pennsylvania school district. In this capacity, she oversees the inventory and functionality for 2,000 plus devices as well as handling the concerns of students, faculty and administration. She is also currently a Full Stack Web Development student at Lambda School, with a growing admiration for backend technologies. She speaks English and Spanish fluently and has limited working proficiency of French and Arabic.</p>
         <ul className="team-social">
             <li>
               <a href="http://www.facebook.com" target="_blank">
@@ -109,7 +109,7 @@ function About() {
       <div className="feature"> 
       <img src={Jesse} className="team-img" alt="Team member" />
         <h3>Jesse Theisen</h3>
-        <p>Deserunt sunt consectetur adipisicing do minim aute labore nulla aute ipsum dolor tempor. Ut culpa deserunt dolore dolor occaecat ut exercitation. Nostrud do duis fugiat voluptate. Dolor laboris exercitation occaecat ex eiusmod duis adipisicing adipisicing mollit sit consectetur officia. Culpa quis sint enim tempor ut eu eu duis. Ex ad commodo adipisicing tempor adipisicing ex ad.</p>
+        <p>Hi, I’m Jesse. My background was in computer hardware, but I slowly started getting into software. My main contributions to this app are on the backend, but I also did some frontend things with Stripe as well.</p>
         <ul className="team-social">
             <li>
               <a href="http://www.facebook.com" target="_blank">
