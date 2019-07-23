@@ -24,17 +24,17 @@ function About() {
           <p>Oliver is a bilingual customer service representative with experience making clients feel valued and helped. His experience in a variety of sectors, including technology, government and legal, uniquely informs his creative approach to meeting customer needs and exceeding expectations.</p>
           <ul className="team-social">
             <li>
-              <a href="http://www.facebook.com">
+              <a href="http://www.facebook.com" target="_blank">
               <FontAwesomeIcon icon={faFacebookSquare} size={28}/>
               </a>
             </li>
             <li>
-              <a href="http://www.twitter.com">
+              <a href="http://www.twitter.com" target="_blank">
               <FontAwesomeIcon icon={faTwitterSquare} />
               </a>
             </li>
             <li>
-              <a href="http://www.linkedin.com">
+              <a href="https://www.linkedin.com/in/oliver-abreu-6105a2186/" target="_blank">
               <FontAwesomeIcon icon={faLinkedin} />
               </a>
             </li>
@@ -46,17 +46,17 @@ function About() {
         <p>Deserunt sunt consectetur adipisicing do minim aute labore nulla aute ipsum dolor tempor. Ut culpa deserunt dolore dolor occaecat ut exercitation. Nostrud do duis fugiat voluptate. Dolor laboris exercitation occaecat ex eiusmod duis adipisicing adipisicing mollit sit consectetur officia. Culpa quis sint enim tempor ut eu eu duis. Ex ad commodo adipisicing tempor adipisicing ex ad.</p>
         <ul className="team-social">
             <li>
-              <a href="http://www.facebook.com">
+              <a href="http://www.facebook.com" target="_blank">
               <FontAwesomeIcon icon={faFacebookSquare} />
               </a>
             </li>
             <li>
-              <a href="http://www.twitter.com">
+              <a href="http://www.twitter.com" target="_blank">
               <FontAwesomeIcon icon={faTwitterSquare} />
               </a>
             </li>
             <li>
-              <a href="http://www.linkedin.com">
+              <a href="https://www.linkedin.com/in/jonathan-dorety-252948185/" target="_blank">
               <FontAwesomeIcon icon={faLinkedin} />
               </a>
             </li>
@@ -68,17 +68,17 @@ function About() {
         <p>Deserunt sunt consectetur adipisicing do minim aute labore nulla aute ipsum dolor tempor. Ut culpa deserunt dolore dolor occaecat ut exercitation. Nostrud do duis fugiat voluptate. Dolor laboris exercitation occaecat ex eiusmod duis adipisicing adipisicing mollit sit consectetur officia. Culpa quis sint enim tempor ut eu eu duis. Ex ad commodo adipisicing tempor adipisicing ex ad.</p>
         <ul className="team-social">
             <li>
-              <a href="http://www.facebook.com">
+              <a href="http://www.facebook.com" target="_blank">
               <FontAwesomeIcon icon={faFacebookSquare} />
               </a>
             </li>
             <li>
-              <a href="http://www.twitter.com">
+              <a href="http://www.twitter.com" target="_blank">
               <FontAwesomeIcon icon={faTwitterSquare} />
               </a>
             </li>
             <li>
-              <a href="http://www.linkedin.com">
+              <a href="https://www.linkedin.com/in/melvin-merlos-49079a73/" target="_blank">
               <FontAwesomeIcon icon={faLinkedin} />
               </a>
             </li>
@@ -90,17 +90,17 @@ function About() {
         <p>Deserunt sunt consectetur adipisicing do minim aute labore nulla aute ipsum dolor tempor. Ut culpa deserunt dolore dolor occaecat ut exercitation. Nostrud do duis fugiat voluptate. Dolor laboris exercitation occaecat ex eiusmod duis adipisicing adipisicing mollit sit consectetur officia. Culpa quis sint enim tempor ut eu eu duis. Ex ad commodo adipisicing tempor adipisicing ex ad.</p>
         <ul className="team-social">
             <li>
-              <a href="http://www.facebook.com">
+              <a href="http://www.facebook.com" target="_blank">
               <FontAwesomeIcon icon={faFacebookSquare} />
               </a>
             </li>
             <li>
-              <a href="http://www.twitter.com">
+              <a href="http://www.twitter.com" target="_blank">
               <FontAwesomeIcon icon={faTwitterSquare} />
               </a>
             </li>
             <li>
-              <a href="http://www.linkedin.com">
+              <a href="https://www.linkedin.com/in/erin-scriber/" target="_blank">
               <FontAwesomeIcon icon={faLinkedin} />
               </a>
             </li>
@@ -112,17 +112,17 @@ function About() {
         <p>Deserunt sunt consectetur adipisicing do minim aute labore nulla aute ipsum dolor tempor. Ut culpa deserunt dolore dolor occaecat ut exercitation. Nostrud do duis fugiat voluptate. Dolor laboris exercitation occaecat ex eiusmod duis adipisicing adipisicing mollit sit consectetur officia. Culpa quis sint enim tempor ut eu eu duis. Ex ad commodo adipisicing tempor adipisicing ex ad.</p>
         <ul className="team-social">
             <li>
-              <a href="http://www.facebook.com">
+              <a href="http://www.facebook.com" target="_blank">
               <FontAwesomeIcon icon={faFacebookSquare} />
               </a>
             </li>
             <li>
-              <a href="http://www.twitter.com">
+              <a href="http://www.twitter.com" target="_blank">
               <FontAwesomeIcon icon={faTwitterSquare} />
               </a>
             </li>
             <li>
-              <a href="http://www.linkedin.com">
+              <a href="https://www.linkedin.com/in/jesse-theisen/" target="_blank">
               <FontAwesomeIcon icon={faLinkedin} />
               </a>
             </li>
