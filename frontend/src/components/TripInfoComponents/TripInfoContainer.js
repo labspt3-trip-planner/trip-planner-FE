@@ -59,7 +59,7 @@ class TripInfoContainer extends React.Component {
     return (
       <div className="page-container">
         <HeaderContainer />
-        <Title tripName={this.state.tripName} />
+        <Title className="trip-title" tripName={this.state.tripName} />
         <br />
         <CheckListContainer />
         <div className="map-container">
@@ -69,8 +69,11 @@ class TripInfoContainer extends React.Component {
             defaultCenter={this.state.currentDestination.geometry.location}
             favorites={this.state.favorites}
           />
+          <div className="space"></div>
         </div>
-        <FaveList favorites={this.state.favorites} />
+        {/* <div className="favorites-container">
+          <FaveList favorites={this.state.favorites} />
+        </div> */}
       </div>
     );
   }

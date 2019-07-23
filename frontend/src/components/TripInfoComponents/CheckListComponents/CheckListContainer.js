@@ -14,47 +14,51 @@ const Checklists = () => {
 
     return (
         <div className="lists-wrapper">
-            <div className="list-wrapper">
-                <Typography component="h4" variant="h5">
-                    Packing List
-                </Typography>
+            <p className="list-label">Pre-Trip</p>
+            <div className="lists-section">
+                <div className="list-wrapper">
+                    <Typography component="h4" variant="h5">
+                        Packing List
+                    </Typography>
 
-                <CheckListForm 
-                    saveList={listText => {
-                        const trimmedText = listText.trim();
+                    <CheckListForm 
+                        saveList={listText => {
+                            const trimmedText = listText.trim();
 
-                        if(trimmedText.length > 0) {
-                            addList(trimmedText);
-                        }
-                    }}
-                />
+                            if(trimmedText.length > 0) {
+                                addList(trimmedText);
+                            }
+                        }}
+                    />
 
-                <Checklist 
-                    lists={lists}
-                    deleteList={deleteList}
-                />
-            </div>
-            <div className="list-wrapper">
-                <Typography component="h4" variant="h5">
-                    To Do List
-                </Typography>
+                    <Checklist 
+                        lists={lists}
+                        deleteList={deleteList}
+                    />
+                </div>
+                <div className="list-wrapper">
+                    <Typography component="h4" variant="h5">
+                        To Do List
+                    </Typography>
 
-                <TodoListForm 
-                    saveTodo={todoText => {
-                        const trimmedTodoText = todoText.trim();
+                    <TodoListForm 
+                        saveTodo={todoText => {
+                            const trimmedTodoText = todoText.trim();
 
-                        if(trimmedTodoText.length > 0) {
-                            addTodo(trimmedTodoText);
-                        }
-                    }}
-                />
+                            if(trimmedTodoText.length > 0) {
+                                addTodo(trimmedTodoText);
+                            }
+                        }}
+                    />
 
-                <TodoList 
-                    todos={todos}
-                    deleteTodo={deleteTodo}
-                />
+                    <TodoList 
+                        todos={todos}
+                        deleteTodo={deleteTodo}
+                    />
+                </div>
             </div>
         </div>
+            
     );
 };
 

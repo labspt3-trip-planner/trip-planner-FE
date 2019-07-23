@@ -7,7 +7,7 @@ import Billing from "./components/Billing/Billing";
 import TripInfoContainer from "./components/TripInfoComponents/TripInfoContainer";
 import { BrowserRouter as Switch, Route } from "react-router-dom";
 
-function App() {
+function App(props) {
   return (
     <Switch>
       <Route exact path="/" component={Welcome} />

@@ -1,6 +1,6 @@
 import React, { Fragment, useState, useEffect } from "react";
 import { KeyboardDatePicker } from "@material-ui/pickers";
-import { componentDidUpdate } from "react-google-maps/lib/utils/MapChildHelper";
+// import { componentDidUpdate } from "react-google-maps/lib/utils/MapChildHelper"; // Not in use, can uncomment when needed. Just cleaning errors
 
 function KeyboardDatePickerExample(props) {
   const [startDate, handleStartChange] = useState(new Date());
