@@ -843,7 +843,7 @@ form {
   font-size: 6rem;
   text-align: right;
 }
-.billing-hero-mobileP .features-mobileP #features-mobileP {
+.billing-hero-mobileP #features-mobileP {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -855,13 +855,13 @@ form {
   text-align: left;
   margin-bottom: 1rem;
 }
-.billing-hero-mobileP .features-mobileP ul {
+.billing-hero-mobileP ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 90%;
 }
-.billing-hero-mobileP .features-mobileP li {
+.billing-hero-mobileP li {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -873,7 +873,7 @@ form {
   padding-bottom: 0.5rem;
   font-style: italic;
 }
-.billing-hero-mobileP .features-mobileP #border {
+.billing-hero-mobileP li #border {
   border-bottom: 1px solid #8E8E8E;
 }
 .billing-hero-mobileP #product-description-mobileP {
@@ -886,7 +886,7 @@ form {
   height: 80vh;
   text-align: left;
 }
-.billing-hero-mobileP #product-description-mobileP .product-description-mobileP {
+.billing-hero-mobileP .product-description-mobileP {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -897,7 +897,7 @@ form {
   border-right: 1px solid grey;
   font-size: 6rem;
 }
-.billing-hero-mobileP #product-description-mobileP .billing-choice-mobileP {
+.billing-hero-mobileP .product-description-mobileP .billing-choice-mobileP {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -909,18 +909,18 @@ form {
   text-align: left;
   margin-bottom: 2rem;
 }
-.billing-hero-mobileP #product-description-mobileP .billing-choice-mobileP .price {
+.billing-hero-mobileP .product-description-mobileP .price {
   font-size: 4vmin;
   color: #8E8E8E;
   margin-top: -1rem;
 }
-.billing-hero-mobileP #product-description-mobileP li {
+.billing-hero-mobileP li {
   color: #ffa62b;
   font-size: 2rem;
   line-height: 5vmin;
   height: 5rem;
 }
-.billing-hero-mobileP #product-description-mobileP #no {
+.billing-hero-mobileP #no {
   font-style: italic;
   opacity: 0.7;
 }
