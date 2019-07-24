@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 import MediaQuery from "react-responsive";
 
-// import TripViewMobilePortrait from "./layout_MobilePortrait";
+import TripViewMobilePortrait from "./layout_MobilePortrait";
 // import TripViewMobileLandscape from "./layout_MobileLandscape";
 import TripViewDesktop from "./layout_Desktop";
 
@@ -18,7 +18,7 @@ class TripView extends Component {
 				<MediaQuery query="(max-width: 1025px)">
 					{/* ---------- MOBILE - PORTRAIT ---------- */}
 					<MediaQuery query="(orientation: portrait)">
-						{/* <TripViewMobilePortrait /> */}
+						<TripViewMobilePortrait />
 					</MediaQuery>
 					{/* ---------- MOBILE - LANDSCAPE ---------- */}
 					<MediaQuery query="(orientation: landscape)">

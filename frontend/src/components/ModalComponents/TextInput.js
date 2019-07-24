@@ -19,7 +19,7 @@ function OutlinedTextFields(props) {
 	return (
 		<form className={classes.container} noValidate autoComplete="off">
 			<input
-				id="login-modal"
+				// id="login-modal"
 				className="input"
 				type="text"
 				name="tripName"

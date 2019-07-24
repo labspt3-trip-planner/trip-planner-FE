@@ -1,58 +1,82 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import "../TripComponents/Page.css";
+import CheckListContainer from "./CheckListComponents/CheckListContainer";
+// import FaveList from "../Favorites/FaveList";
+import Title from "./TripName";
+import GMap from "../Map/GMap";
+import { axios } from "../Axios";
 
-function Billing() {
-	return (
-		<div className="billing-desktop">
-			<div className="billing-content-desktop">
-				<h1>Pricing</h1>
+class TripViewPage extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			tripName: "",
+			destinations: [],
+			currentDestination: {
+				geometry: {
+					location: {
+						lat: 0.0,
+						lng: 0.0
+					}
+				}
+			},
+			tripId: this.props.match.params.tripId,
+			favorites: [],
+			participants: [],
+			flight_info: ""
+		};
+	}
+
+	addFavorites = async favorite => {
+		try {
+			await axios.post(`/favorites/${this.state.tripId}`, favorite);
+			this.getTrip();
+		} catch (err) {
+			console.log(err);
+		}
+	};
+
+	getTrip = () => {
+		axios
+			.get(`/trip/${this.props.match.params.tripId}`)
+			.then(res => {
+				console.log(res);
+				this.setState({
+					...res.data,
+					currentDestination: res.data.destinations[0]
+				});
+			})
+			.catch(err => console.log(err));
+	};
+
+	componentDidMount() {
+		this.setState({ tripId: this.props.match.params.tripId });
+		this.getTrip();
+	}
+
+	render() {
+		return (
+			<div className="page-container">
+				<Title className="trip-title" tripName={this.state.tripName} />
+				<br />
+				<CheckListContainer />
+				<div className="map-container">
+					<GMap
+						isMarkerShown
+						addFavorite={this.addFavorites}
+						defaultCenter={
+							this.state.currentDestination.geometry.location
+						}
+						favorites={this.state.favorites}
+					/>
+					<div className="space" />
+				</div>
+				{/* <div className="favorites-container">
+          <FaveList favorites={this.state.favorites} />
+        </div> */}
 			</div>
-			<div className="billing-hero-desktop">
-				<div className="features">
-					<p id="features">Features</p>
-					<ul>
-						<li>Create trip plans for any number of trips</li>
-						<li>Feature 2</li>
-						<li>Feature 3</li>
-						<li>Feature 4</li>
-						<li>Feature 5</li>
-					</ul>
-				</div>
-				<div id="product-description">
-					<p className="billing-choice">Standard</p>
-					<ul>
-						<li>Yes</li>
-						<li>Yes</li>
-						<li>Yes</li>
-						<li>No</li>
-						<li>No</li>
-					</ul>
-				</div>
-				<div id="product-description">
-					<p className="billing-choice">Premium</p>
-					<ul>
-						<li>Yes</li>
-						<li>Yes</li>
-						<li>Yes</li>
-						<li>Yes</li>
-						<li>Yes</li>
-					</ul>
-				</div>
-				<div className="button-container">
-					<button className="btnLearn">
-						<Link to="/" className="link">
-							Learn More
-						</Link>
-					</button>
-					<button className="btnLearn">
-						<Link to="x" className="link">
-							Upgrade Now
-						</Link>
-					</button>
-				</div>
-			</div>
-		</div>
-	);
+		);
+	}
 }
 
-export default Billing;
+export default TripViewPage;
