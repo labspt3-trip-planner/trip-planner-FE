@@ -783,31 +783,176 @@ form {
   font-family: "Overpass", sans-serif;
 }
 
-.billing-mobile {
+.billing-mobileP {
   display: flex;
   flex-direction: column;
 }
 
-.billing-content-mobile {
+.billing-content-mobileP {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-grow: 1;
-  height: 40vh;
-  width: 100vw;
+  width: 100vh;
+  height: 30vw;
+  background: url("https://is.gd/q8lj3e") center center no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.billing-content-mobileP h1 {
+  text-align: center;
+  font-size: 10vmin;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 3rem;
+  font-weight: bold;
+  font-family: "Overpass", sans-serif;
+  font-weight: bold;
+  color: #ece7e2;
 }
 
-.billing-hero-mobile {
+.billing-hero-mobileP {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-grow: 1;
-  height: 60vh;
-  width: 100vw;
-  background-color: #ffa62b;
-  font-family: Arial, Helvetica, sans-serif;
+  padding-left: 1.5rem;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  color: white;
+  background-color: #17697b;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 2.5vmax;
+  text-align: left;
+}
+.billing-hero-mobileP .features-mobileP {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 15px;
+  width: 35%;
+  height: 80vh;
+  border-right: 1px solid grey;
+  font-size: 6rem;
+  text-align: right;
+}
+.billing-hero-mobileP .features-mobileP #features {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 7.5rem;
+  font-family: "Overpass", sans-serif;
+  font-size: 7vmin;
+  color: #ffa62b;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+.billing-hero-mobileP .features-mobileP ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 90%;
+}
+.billing-hero-mobileP .features-mobileP li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #ece7e2;
+  font-size: 1.5rem;
+  height: 4rem;
+  text-align: right;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-style: italic;
+}
+.billing-hero-mobileP .features-mobileP #border {
+  border-bottom: 1px solid #8E8E8E;
+}
+.billing-hero-mobileP #product-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 15px;
+  width: 250px;
+  height: 80vh;
+  text-align: left;
+}
+.billing-hero-mobileP #product-description .product-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 15px;
+  width: 250px;
+  height: 80vh;
+  border-right: 1px solid grey;
+  font-size: 6rem;
+}
+.billing-hero-mobileP #product-description .billing-choice {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Overpass", sans-serif;
+  font-size: 5vmin;
+  line-height: 7vmin;
+  color: #ece7e2;
+  text-align: left;
+  margin-bottom: 2rem;
+}
+.billing-hero-mobileP #product-description .billing-choice .price {
+  font-size: 4vmin;
+  color: #8E8E8E;
+  margin-top: -1rem;
+}
+.billing-hero-mobileP #product-description li {
+  color: #ffa62b;
+  font-size: 2rem;
+  line-height: 5vmin;
+  height: 5rem;
+}
+.billing-hero-mobileP #product-description #no {
+  font-style: italic;
+  opacity: 0.7;
+}
+
+.button-container {
+  display: flex;
+}
+
+#button-area {
+  margin-top: 6rem;
+}
+#button-area button {
+  width: 10rem;
+  font-size: 1.5vmax;
+}
+
+.logo {
+  color: #81c0cb;
+  position: fixed;
+  top: 0;
+  padding-top: 2.5rem;
+  right: 0;
+  padding-right: 4rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-grow: 1;
+  height: 2rem;
+  font-size: 4vmin;
+  width: 70vw;
+  font-weight: bold;
+  font-family: "Overpass", sans-serif;
 }
 
 .trips-page-desktop {
