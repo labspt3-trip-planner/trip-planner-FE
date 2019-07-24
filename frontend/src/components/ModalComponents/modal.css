@@ -1,7 +1,7 @@
 .content {
 	width: 100%;
 }
-
+/* 
 @media (max-width: 600px) {
 	.modal-container {
 		top: 50px;
@@ -10,9 +10,20 @@
 		right: 17%;
 		left: 8%;
 	}
-}
+} */
 
 .datePicker {
 	display: flex;
 	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.Overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: grey;
 }

@@ -514,6 +514,102 @@ form {
   color: #666666;
 }
 
+.welcome-container-mobile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0 auto;
+  font-family: sans-serif;
+  overflow: hidden;
+}
+
+.cover-photo-mobile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-grow: 10;
+  min-height: 90vh;
+  height: 90vh;
+  color: white;
+  background: url("https://bit.ly/30J0sai") center left no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: bold;
+}
+
+.cover-photo-mobile h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15vw;
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+  font-weight: bold;
+  color: #4e4e4e;
+  font-family: "Overpass", sans-serif;
+}
+
+.cover-photo-mobile h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+  color: #0078b3;
+  margin-top: -2.5rem;
+  font-style: italic;
+  text-align: center;
+  font-size: 5vmax;
+}
+
+.login-mobile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 7rem;
+  width: 90%;
+}
+.login-mobile p {
+  font-size: 3vmax;
+  line-height: 4.5vmax;
+}
+.login-mobile p a #login {
+  color: #ffa62b;
+  font-family: sans-serif;
+}
+
+#login:visited {
+  color: #ffa62b;
+}
+
+.legal-blurb-mobile {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 2vmax;
+  color: grey;
+  position: fixed;
+  bottom: 12%;
+}
+
+.login-screen-mobile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  width: 100vw;
+  height: 10vh;
+  color: #ffa62b;
+  background-color: #ffa62b;
+}
+
 .billing-desktop {
   display: flex;
   flex-direction: row;
@@ -834,6 +930,11 @@ form {
 }
 .react-table .ReactTable .rt-tbody {
   font-size: 1.75vmax;
+}
+.react-table .ReactTable .rt-tbody .rt-tr-group:hover {
+  background: #81c0cb;
+  cursor: pointer;
+  color: #4e4e4e;
 }
 .react-table .ReactTable .rt-resizable-header-content {
   color: #81c0cb;
