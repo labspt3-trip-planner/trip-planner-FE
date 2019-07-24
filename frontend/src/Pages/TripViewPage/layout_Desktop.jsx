@@ -2,7 +2,7 @@ import React from "react";
 import "../TripComponents/Page.css";
 import CheckListContainer from "./CheckListComponents/CheckListContainer";
 // import FaveList from "../Favorites/FaveList";
-import Title from "./TripName";
+import Title from "./CheckListComponents/TripName";
 import GMap from "../Map/GMap";
 import { axios } from "../Axios";
 
@@ -58,7 +58,6 @@ class TripViewPage extends React.Component {
 		return (
 			<div className="page-container">
 				<Title className="trip-title" tripName={this.state.tripName} />
-				<br />
 				<CheckListContainer />
 				<div className="map-container">
 					<GMap
@@ -69,7 +68,7 @@ class TripViewPage extends React.Component {
 						}
 						favorites={this.state.favorites}
 					/>
-					<div className="space" />
+					{/* <div className="space" /> */}
 				</div>
 				{/* <div className="favorites-container">
           <FaveList favorites={this.state.favorites} />

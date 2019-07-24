@@ -24,7 +24,6 @@ const store = createStore(
 
 ReactDOM.render(
 	<FirebaseContext.Provider value={new Firebase()}>
-		{/* Provides a Firebase instance to the entire app*/}
 		<Provider store={store}>
 			<Router>
 				<MuiPickersUtilsProvider utils={DateFnsUtils}>

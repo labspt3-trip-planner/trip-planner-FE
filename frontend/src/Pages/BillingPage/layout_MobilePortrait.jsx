@@ -11,18 +11,16 @@ function Billing() {
 				<div className="features-mobileP">
 					<p id="features-mobileP">Features</p>
 					<ul>
-						<li id="border-mobileP-mobileP">
+						<li id="border">
 							Combine data from multiple web sources into one tool
 						</li>
-						<li id="border-mobileP">
+						<li id="border">
 							Access your travel plans from any web browser
 						</li>
-						<li id="border-mobileP">
+						<li id="border">
 							Visualize your entire trip with map view
 						</li>
-						<li id="border-mobileP">
-							Create and store more than 5 trips
-						</li>
+						<li id="border">Create and store more than 5 trips</li>
 						<li>Support ongoing development</li>
 					</ul>
 					<div id="button-area-mobileP">
