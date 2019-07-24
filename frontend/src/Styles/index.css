@@ -794,7 +794,7 @@ form {
   justify-content: center;
   align-items: center;
   flex-grow: 1;
-  width: 100vh;
+  width: auto;
   height: 30vw;
   background: url("https://is.gd/q8lj3e") center center no-repeat;
   -webkit-background-size: cover;
@@ -843,7 +843,7 @@ form {
   font-size: 6rem;
   text-align: right;
 }
-.billing-hero-mobileP .features-mobileP #features {
+.billing-hero-mobileP .features-mobileP #features-mobileP {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -876,7 +876,7 @@ form {
 .billing-hero-mobileP .features-mobileP #border {
   border-bottom: 1px solid #8E8E8E;
 }
-.billing-hero-mobileP #product-description {
+.billing-hero-mobileP #product-description-mobileP {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -886,7 +886,7 @@ form {
   height: 80vh;
   text-align: left;
 }
-.billing-hero-mobileP #product-description .product-description {
+.billing-hero-mobileP #product-description-mobileP .product-description-mobileP {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -897,7 +897,7 @@ form {
   border-right: 1px solid grey;
   font-size: 6rem;
 }
-.billing-hero-mobileP #product-description .billing-choice {
+.billing-hero-mobileP #product-description-mobileP .billing-choice-mobileP {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -909,35 +909,35 @@ form {
   text-align: left;
   margin-bottom: 2rem;
 }
-.billing-hero-mobileP #product-description .billing-choice .price {
+.billing-hero-mobileP #product-description-mobileP .billing-choice-mobileP .price {
   font-size: 4vmin;
   color: #8E8E8E;
   margin-top: -1rem;
 }
-.billing-hero-mobileP #product-description li {
+.billing-hero-mobileP #product-description-mobileP li {
   color: #ffa62b;
   font-size: 2rem;
   line-height: 5vmin;
   height: 5rem;
 }
-.billing-hero-mobileP #product-description #no {
+.billing-hero-mobileP #product-description-mobileP #no {
   font-style: italic;
   opacity: 0.7;
 }
 
-.button-container {
+.button-container-mobileP {
   display: flex;
 }
 
-#button-area {
+#button-area-mobileP {
   margin-top: 6rem;
 }
-#button-area button {
+#button-area-mobileP button {
   width: 10rem;
   font-size: 1.5vmax;
 }
 
-.logo {
+.logo-mobileP {
   color: #81c0cb;
   position: fixed;
   top: 0;
