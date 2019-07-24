@@ -1332,31 +1332,33 @@ form {
   font-family: "Roboto Condensed", sans-serif;
   color: #4e4e4e;
 }
-.page-container .trip-list-top {
+
+.trip-list-top {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 10rem;
-  border: 1px solid green;
 }
-.page-container .trip-list-top h1 {
+.trip-list-top h1 {
   color: #4e4e4e;
   font-family: "Overpass", sans-serif;
   text-transform: capitalize;
   font-size: 10vmin;
 }
-.page-container .lists-wrapper {
+
+.lists-wrapper {
   display: flex;
   flex-direction: column;
   background: #ece7e2;
+  color: #8E8E8E;
 }
-.page-container .lists-wrapper .list-label {
+.lists-wrapper .list-label {
   color: purple;
 }
-.page-container .lists-wrapper .list-label .list-section {
+.lists-wrapper .list-label .list-section {
   color: blue;
 }
-.page-container .lists-wrapper .list-label .list-section .list-wrapper {
+.lists-wrapper .list-label .list-section .list-wrapper {
   color: red;
 }
 
@@ -1372,7 +1374,8 @@ form {
   border-bottom: 1px solid #4e4e4e;
   width: 80%;
 }
-.input .map-container {
+
+.map-container {
   border: 10px solid red;
 }
 
