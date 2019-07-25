@@ -29,7 +29,9 @@ export const getTripsByUser = () => dispatch => {
   dispatch({ type: FETCH_TRIPS });
   return axios({
     method: "get",
-    url: "http://localhost:9090/users/alltrips",
+    url:
+      `${process.env.REACT_APP_DEVELOPMENT}/users/alltrips` ||
+      "http://localhost:9090/users/alltrips",
     headers: { Authorization: localStorage.getItem("user") }
   })
     .then(res => {
