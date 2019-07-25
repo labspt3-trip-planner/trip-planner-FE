@@ -1,10 +1,7 @@
 import React, { Component } from "react";
-import { connect } from "react-redux";
 import { Link, withRouter } from "react-router-dom";
 import { withFirebase } from "../Firebase";
-import { axios } from "../Axios";
-
-import { getTripsByUser } from "../../store/actions/tripActions";
+import { axiosConfig } from "../Axios";
 
 import "./Welcome.css";
 import Modal from "react-modal";
@@ -41,7 +38,16 @@ class Welcome extends Component {
     this.initialize();
   }
 
-  initialize = async event => {};
+  initialize = event => {
+    if (this.props.firebase.auth.currentUser)
+      this.props.firebase
+        .getUserToken()
+        .then(token => {
+          localStorage.setItem("user", token);
+          return token;
+        })
+        .catch(err => console.log(err));
+  };
 
   loginListener = e => {
     e.persist();
@@ -83,7 +89,7 @@ class Welcome extends Component {
           .then(token => {
             console.log("Login process token", token);
             localStorage.setItem("user", token);
-            this.props.getTrips().then(this.props.history.push("/triplist"));
+            this.props.history.push("/triplist");
           })
           .catch(err => console.log(err));
       })
@@ -92,7 +98,7 @@ class Welcome extends Component {
 
   register = e => {
     e.preventDefault();
-    axios
+    axiosConfig
       .post(`/auth/register`, {
         email: this.state.emailAddress,
         password: this.state.passwordOne,
@@ -276,7 +282,4 @@ class Welcome extends Component {
   }
 }
 
-export default connect(
-  null,
-  { getTrips: getTripsByUser }
-)(withRouter(withFirebase(Welcome)));
+export default withRouter(withFirebase(Welcome));

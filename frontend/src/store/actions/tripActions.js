@@ -1,5 +1,5 @@
-import { axios } from "../../components/Axios";
-
+import { axiosConfig } from "../../components/Axios";
+import axios from "axios";
 // GET TRIPS
 export const FETCH_TRIPS = "FETCH_TRIPS";
 export const TRIPS = "TRIPS";
@@ -27,8 +27,11 @@ export const DELETE_ERROR = "DELETE_ERROR";
 
 export const getTripsByUser = () => dispatch => {
   dispatch({ type: FETCH_TRIPS });
-  return axios
-    .get("/users/alltrips")
+  return axios({
+    method: "get",
+    url: "http://localhost:9090/users/alltrips",
+    headers: { Authorization: localStorage.getItem("user") }
+  })
     .then(res => {
       dispatch({ type: TRIPS, payload: res.data });
     })
