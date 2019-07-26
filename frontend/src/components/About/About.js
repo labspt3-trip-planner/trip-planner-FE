@@ -43,7 +43,7 @@ function About() {
       <div className="feature"> 
         <img src={Jonathan} className="team-img" alt="Team member" />
         <h3>Jonathan Dorety</h3>
-        <p>Deserunt sunt consectetur adipisicing do minim aute labore nulla aute ipsum dolor tempor. Ut culpa deserunt dolore dolor occaecat ut exercitation. Nostrud do duis fugiat voluptate. Dolor laboris exercitation occaecat ex eiusmod duis adipisicing adipisicing mollit sit consectetur officia. Culpa quis sint enim tempor ut eu eu duis. Ex ad commodo adipisicing tempor adipisicing ex ad.</p>
+        <p>Jonathan is a former line cook and current stay-at-home dad looking to take his career to exciting new places!  Currently attending Lambda School's Web Development & Computer Science program, he is learning the skills necessary to become a top-notch software engineer.</p>
         <ul className="team-social">
             <li>
               <a href="http://www.facebook.com" target="_blank">
