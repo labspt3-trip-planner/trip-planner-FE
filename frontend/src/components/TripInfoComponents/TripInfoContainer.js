@@ -5,7 +5,7 @@ import CheckListContainer from "./CheckListComponents/CheckListContainer";
 import FaveList from "../Favorites/FaveList";
 import Title from "./TripName";
 import GMap from "../Map/GMap";
-import { axios } from "../Axios";
+import { axiosConfig } from "../Axios";
 
 class TripInfoContainer extends React.Component {
   constructor(props) {
@@ -30,7 +30,7 @@ class TripInfoContainer extends React.Component {
 
   addFavorites = async favorite => {
     try {
-      await axios.post(`/favorites/${this.state.tripId}`, favorite);
+      await axiosConfig.post(`/favorites/${this.state.tripId}`, favorite);
       this.getTrip();
     } catch (err) {
       console.log(err);
@@ -38,7 +38,7 @@ class TripInfoContainer extends React.Component {
   };
 
   getTrip = () => {
-    axios
+    axiosConfig
       .get(`/trip/${this.props.match.params.tripId}`)
       .then(res => {
         console.log(res);
@@ -69,7 +69,7 @@ class TripInfoContainer extends React.Component {
             defaultCenter={this.state.currentDestination.geometry.location}
             favorites={this.state.favorites}
           />
-          <div className="space"></div>
+          <div className="space" />
         </div>
         {/* <div className="favorites-container">
           <FaveList favorites={this.state.favorites} />
