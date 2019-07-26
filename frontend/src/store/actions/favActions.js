@@ -1,4 +1,4 @@
-import { axios } from '../../components/Axios';
+import { axiosConfig } from '../../components/Axios';
 
 // GET FAVES
 export const FETCH_FAVES = 'FETCH_FAVE';
@@ -18,7 +18,7 @@ export const DELETE_ERROR = 'DELETE_ERROR';
 
 export const getFaves = () => (dispatch) => {
     dispatch({ type: FETCH_FAVES });
-    axios
+    axiosConfig
         .get('/favorites')
         .then((res) => {
             dispatch({ type: FAVES, payload: res.data });
@@ -31,7 +31,7 @@ export const getFaves = () => (dispatch) => {
 export const addFaveToTrip = newFave => (dispatch) => {
     dispatch({ type: CREATE_FAVE });
     return (
-        axios
+        axiosConfig
             .post('/favorites', newFave)
             .then((res) => {
                 dispatch({ type: FAVE_CREATED, payload: res.data });
@@ -45,7 +45,7 @@ export const addFaveToTrip = newFave => (dispatch) => {
 export const delFaveFromTrip = tripID => (dispatch) => {
     dispatch({ type: DELETE_FAVE });
     return (
-        axios
+        axiosConfig
             .delete('/favorites/' + tripID)
             .then((res) => {
                 dispatch({ type: FAVE_DELETED, payload: res.data });

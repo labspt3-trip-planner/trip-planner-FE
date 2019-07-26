@@ -1,3 +1,4 @@
-import { axiosConfig as axios } from "./axiosConfig";
+import { axiosConfig } from "./axiosConfig";
+import axios from "axios";
 
-export { axios };
+export { axiosConfig, axios };

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link, withRouter } from "react-router-dom";
 import { withFirebase } from "../Firebase";
-import { axios } from "../Axios";
+import { axiosConfig } from "../Axios";
 
 import "./Welcome.css";
 import Modal from "react-modal";
@@ -38,29 +38,67 @@ class Welcome extends Component {
     this.initialize();
   }
 
-  initialize = async event => {};
+  initialize = event => {
+    if (this.props.firebase.auth.currentUser)
+      this.props.firebase
+        .getUserToken()
+        .then(token => {
+          localStorage.setItem("user", token);
+          return token;
+        })
+        .catch(err => console.log(err));
+  };
 
   loginListener = e => {
     e.persist();
     this.props.firebase.getUser();
   };
 
-  logIn = async event => {
-    event.preventDefault();
-    await this.props.firebase.doSignInWithEmailAndPassword(
-      this.state.emailAddress,
-      this.state.password
-    );
-    await this.props.firebase.getUserToken();
-    const tokenCheck = localStorage.getItem("user");
-    if (tokenCheck) {
-      this.props.history.push("/triplist");
-    } else return;
+  // logIn = async event => {
+  //   event.preventDefault();
+  //   await this.props.firebase.doSignInWithEmailAndPassword(
+  //     this.state.emailAddress,
+  //     this.state.password
+  //   );
+  //   this.props.firebase
+  //     .getUserToken()
+  //     .then(token => {
+  //       axios
+  //         .post("/auth/login", token)
+  //         .then(res => console.log(res))
+  //         .catch(err => console.log(err));
+  //     })
+  //     .catch(err => console.log(err));
+  //   const tokenCheck = localStorage.getItem("user");
+  //   if (tokenCheck) {
+  //     this.props.history.push("/triplist");
+  //   } else return;
+  // };
+
+  logIn = e => {
+    e.preventDefault();
+    this.props.firebase
+      .doSignInWithEmailAndPassword(
+        this.state.emailAddress,
+        this.state.password
+      )
+      .then(res => {
+        console.log(res);
+        this.props.firebase
+          .getUserToken()
+          .then(token => {
+            console.log("Login process token", token);
+            localStorage.setItem("user", token);
+            this.props.history.push("/triplist");
+          })
+          .catch(err => console.log(err));
+      })
+      .catch(err => console.log(err));
   };
 
   register = e => {
     e.preventDefault();
-    axios
+    axiosConfig
       .post(`/auth/register`, {
         email: this.state.emailAddress,
         password: this.state.passwordOne,
@@ -75,7 +113,7 @@ class Welcome extends Component {
 
   onChange = event => {
     this.setState({ [event.target.name]: event.target.value });
-    console.log(event);
+    // console.log(event);
   };
 
   handleSubmit = event => {
@@ -160,7 +198,7 @@ class Welcome extends Component {
               </div>
             </form>
           </div>
-          <div className="modal-hero"></div>
+          <div className="modal-hero" />
         </Modal>
 
         <div className="cover-photo sliding-background">

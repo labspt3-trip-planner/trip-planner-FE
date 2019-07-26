@@ -41,8 +41,7 @@ class Firebase {
     this.auth.currentUser
       .getIdToken(/* forceRefresh */ true)
       .then(function(idToken) {
-        localStorage.setItem("user", idToken);
-        // Send token to your backend via HTTPS
+        return idToken; // Send token to your backend via HTTPS
         // ...
       })
       .catch(function(error) {
