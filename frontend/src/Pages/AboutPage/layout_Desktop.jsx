@@ -95,12 +95,12 @@ function About() {
 					<img src={Melvin} className="team-img" alt="Team member" />
 					<h3>Melvin Merlos</h3>
 					<p>
-						By day, I am a HR, Training Specialist for a non-profit
-						helping internal employees better their skills, increase
-						awareness of their rights and agency policies. By night,
-						I am a Web Developer/Software Engineer as a part-time
-						student in the Web Development & Computer Science
-						program at Lambda School.
+						By day, Melvin is an HR Training Specialist for a
+						non-profit company that helps employees better their
+						skills, increase awareness of their rights and agency
+						policies; by night, I am a Web Developer/Software
+						Engineer as a part-time student in the Web Development &
+						Computer Science program at Lambda School.
 					</p>
 					<ul className="team-social">
 						<li>

@@ -17,7 +17,6 @@ class TripsPageMobilePortrait extends Component {
 			<div className="trips-page-mobileP">
 				<div className="hero-image-mobileP">
 					<h1>My Trips</h1>
-					{/* <h3>TripPlanner</h3> */}
 				</div>
 				<div className="trips-page-info-mobileP">
 					<div className="my-trip-page-mobileP" />
