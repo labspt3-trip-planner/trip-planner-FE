@@ -1,4 +1,7 @@
-import { axios } from "../../Components/Axios";
+// import { axiosConfig } from "../../components/Axios";
+import axios from "axios";
+
+let url = "https://labspt3-trip-planner.herokuapp.com";
 
 // GET TRIPS
 export const FETCH_TRIPS = "FETCH_TRIPS";
@@ -27,8 +30,13 @@ export const DELETE_ERROR = "DELETE_ERROR";
 
 export const getTripsByUser = () => dispatch => {
 	dispatch({ type: FETCH_TRIPS });
-	return axios
-		.get("/users/alltrips")
+	return axios({
+		method: "get",
+		url:
+			// `${process.env.REACT_APP_DEVELOPMENT}/users/alltrips` ||
+			`${url}/users/alltrips`,
+		headers: { Authorization: localStorage.getItem("user") }
+	})
 		.then(res => {
 			dispatch({ type: TRIPS, payload: res.data });
 		})

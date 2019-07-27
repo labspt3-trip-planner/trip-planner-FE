@@ -1,10 +1,10 @@
 import React from "react";
 import Landing from "./LandingPage";
 import TripContainer from "./TripsPage";
-import TripInfoContainer from "../Components/TripInfoComponents/TripInfoContainer";
+import TripInfoContainer from "../components/TripInfoComponents/TripInfoContainer";
 import Billing from "./BillingPage";
 import { BrowserRouter as Switch, Route } from "react-router-dom";
-import GMap from "../Components/Map/GMap";
+import GMap from "../components/Map/GMap";
 
 function App() {
 	return (

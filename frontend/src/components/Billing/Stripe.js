@@ -14,7 +14,7 @@ export default class Checkout extends React.Component {
 		};
 		axios
 			.post(
-				"https://labspt3-tri-planner-herokuapp.com/payments/checkout",
+				"https://labspt3-trip-planner.herokuapp.com/payments/checkout",
 				headersObject
 			)
 			.then(response => {
@@ -32,8 +32,8 @@ export default class Checkout extends React.Component {
 				description="Premium plan"
 				image="http://clipart-library.com/data_images/46219.jpg"
 				locale="auto"
-				name="TripPlanner"
-				stripeKey={process.env.STRIPE_PUBLISHABLE_KEY}
+				name="Trip Planner"
+				stripeKey={process.env.REACT_APP_STRIPE_KEY}
 				token={this.onToken}
 				zipCode
 			/>

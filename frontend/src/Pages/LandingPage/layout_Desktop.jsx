@@ -1,16 +1,14 @@
-// IMPORTS
 import React, { Component } from "react";
-
 import { Link, withRouter } from "react-router-dom";
-import { withFirebase } from "../../Components/Firebase";
-import { axios } from "../../Components/Axios";
-import moment from "moment";
+import { withFirebase } from "../../components/Firebase";
+import { axiosConfig } from "../../components/Axios";
+
+// import "./Welcome.css";
 import Modal from "react-modal";
 
-Modal.setAppElement("body");
+let date = require("moment");
 
-// COMPONENT VARIABLES
-const year = moment().format("YYYY");
+const year = date().format("YYYY");
 
 const INITIAL_STATE = {
 	username: "",
@@ -20,7 +18,6 @@ const INITIAL_STATE = {
 	error: null
 };
 
-// COMPONENT
 class LandingDesktopLandscape extends Component {
 	constructor(props) {
 		super(props);
@@ -37,30 +34,50 @@ class LandingDesktopLandscape extends Component {
 		this.closeModal = this.closeModal.bind(this);
 		this.logIn = this.logIn.bind(this);
 	}
-
 	componentDidMount() {
-		if (localStorage.getItem("user")) {
-			this.props.history.push("/triplist");
-		}
-		Modal.setAppElement("body");
+		this.initialize();
 	}
 
-	logIn = async event => {
-		event.preventDefault();
-		await this.props.firebase.doSignInWithEmailAndPassword(
-			this.state.emailAddress,
-			this.state.password
-		);
-		await this.props.firebase.getUserToken();
-		const tokenCheck = localStorage.getItem("user");
-		if (tokenCheck) {
-			this.props.history.push("/triplist");
-		} else return;
+	initialize = event => {
+		if (this.props.firebase.auth.currentUser)
+			this.props.firebase
+				.getUserToken()
+				.then(token => {
+					localStorage.setItem("user", token);
+					return token;
+				})
+				.catch(err => console.log(err));
+	};
+
+	loginListener = e => {
+		e.persist();
+		this.props.firebase.getUser();
+	};
+
+	logIn = e => {
+		e.preventDefault();
+		this.props.firebase
+			.doSignInWithEmailAndPassword(
+				this.state.emailAddress,
+				this.state.password
+			)
+			.then(res => {
+				console.log(res);
+				this.props.firebase
+					.getUserToken()
+					.then(token => {
+						console.log("Login process token", token);
+						localStorage.setItem("user", token);
+						this.props.history.push("/triplist");
+					})
+					.catch(err => console.log(err));
+			})
+			.catch(err => console.log(err));
 	};
 
 	register = e => {
 		e.preventDefault();
-		axios
+		axiosConfig
 			.post(`/auth/register`, {
 				email: this.state.emailAddress,
 				password: this.state.passwordOne,
@@ -75,7 +92,7 @@ class LandingDesktopLandscape extends Component {
 
 	onChange = event => {
 		this.setState({ [event.target.name]: event.target.value });
-		console.log(event);
+		// console.log(event);
 	};
 
 	handleSubmit = event => {

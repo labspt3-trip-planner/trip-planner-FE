@@ -1,249 +1,197 @@
-// IMPORTS
-import React, { Component } from "react";
+import React from "react";
+import "./About.css";
+import Jesse from "./imgs/Jesse.jpeg";
+import Oliver from "./imgs/Oliver.JPG";
+import Jonathan from "./imgs/Jonathan.jpeg";
+import Melvin from "./imgs/Melvin.jpeg";
+import Erin from "./imgs/Erin.jpeg";
+import { FontAwesomeIcon } from "@fontawesome/react-fontawesome";
+import {
+	faFacebookSquare,
+	faTwitterSquare,
+	faLinkedin
+} from "@fontawesome/free-brands-svg-icons";
+import Header from "../HeaderComponents/HeaderContainer";
 
-import { Link, withRouter } from "react-router-dom";
-import { withFirebase } from "../../Components/Firebase";
-import { axios } from "../../Components/Axios";
-import moment from "moment";
-import Modal from "react-modal";
-
-// COMPONENT VARIABLES
-const year = moment().format("YYYY");
-
-const INITIAL_STATE = {
-	username: "",
-	emailAddress: "",
-	passwordOne: "",
-	passwordTwo: "",
-	error: null
-};
-
-// COMPONENT
-class LandingDesktopLandscape extends Component {
-	constructor(props) {
-		super(props);
-
-		this.state = {
-			modalIsOpen: false,
-			...INITIAL_STATE
-		};
-
-		this.onChange = this.onChange.bind(this);
-		this.handleSubmit = this.handleSubmit.bind(this);
-		this.openModal = this.openModal.bind(this);
-		this.afterOpenModal = this.afterOpenModal.bind(this);
-		this.closeModal = this.closeModal.bind(this);
-		this.logIn = this.logIn.bind(this);
-	}
-
-	componentDidMount() {
-		if (localStorage.getItem("user")) {
-			this.props.history.push("/triplist");
-		}
-	}
-
-	logIn = async event => {
-		event.preventDefault();
-		await this.props.firebase.doSignInWithEmailAndPassword(
-			this.state.emailAddress,
-			this.state.password
-		);
-		await this.props.firebase.getUserToken();
-		const tokenCheck = localStorage.getItem("user");
-		if (tokenCheck) {
-			this.props.history.push("/triplist");
-		} else return;
-	};
-
-	register = e => {
-		e.preventDefault();
-		axios
-			.post(`/auth/register`, {
-				email: this.state.emailAddress,
-				password: this.state.passwordOne,
-				displayName: this.state.username
-			})
-			.then(async res => {
-				this.setState({ password: this.state.passwordOne });
-				await this.logIn(e);
-			})
-			.catch(err => console.log(err));
-	};
-
-	onChange = event => {
-		this.setState({ [event.target.name]: event.target.value });
-		console.log(event);
-	};
-
-	handleSubmit = event => {
-		event.preventDefault();
-		// const { emailAddress, passwordOne } = this.state;
-	};
-
-	afterOpenModal() {
-		this.subtitle.style.color = "#f00";
-	}
-
-	openModal = event => {
-		event.preventDefault();
-		this.setState({
-			modalIsOpen: true
-		});
-	};
-
-	closeModal = () => {
-		this.setState({
-			modalIsOpen: false
-		});
-	};
-
-	render() {
-		const { username, emailAddress, passwordOne, passwordTwo } = this.state;
-
-		const isInvalid =
-			passwordOne !== passwordTwo ||
-			passwordOne === "" ||
-			emailAddress === "" ||
-			username === "";
-		return (
-			<>
-				<div className="landing-desktop-landscape">
-					<div className="welcome-container">
-						<Modal
-							isOpen={this.state.modalIsOpen}
-							onRequestClose={this.closeModal}
-							className="modal"
-							overlayClassName="overlay"
-						>
-							<div className="modal-login">
-								<h2>Log In</h2>
-								<h3>Welcome back!</h3>
-								<form onSubmit={this.logIn}>
-									<input
-										className="input"
-										type="text"
-										name="emailAddress"
-										maxLength="35"
-										placeholder="Email Address"
-										value={this.state.emailAddress}
-										onChange={this.onChange}
-									/>
-									<input
-										className="input"
-										type="password"
-										name="password"
-										maxLength="35"
-										placeholder="Password"
-										value={this.passwordOne}
-										onChange={this.onChange}
-									/>
-									<div className="button-area">
-										<button
-											className="btnLearn"
-											type="button"
-											onClick={this.closeModal}
-										>
-											Close
-										</button>
-										<button
-											type="submit"
-											className="btnLogin"
-										>
-											Login
-										</button>
-									</div>
-								</form>
-							</div>
-							<div className="modal-hero" />
-						</Modal>
-
-						<div className="cover-photo sliding-background">
-							<h1>TripPlanner</h1>
-							<h3>Smarter travel preparation</h3>
-						</div>
-						<div className="login-screen">
-							<h2>Register</h2>
-							<form onSubmit={this.register}>
-								<input
-									className="input"
-									type="text"
-									name="username"
-									value={this.username}
-									maxLength="35"
-									placeholder="User name"
-									onChange={this.onChange}
+function About() {
+	return (
+		<div className="about-container">
+			<Header />
+			<div className="about-header-wrapper">
+				<h2>Meet the Team</h2>
+			</div>
+			<div className="team-container-wrapper">
+				<div className="feature">
+					<img src={Oliver} className="team-img" alt="Team member" />
+					<h3>Oliver Abreu</h3>
+					<p>
+						Oliver is a bilingual customer service representative
+						with experience making clients feel valued and helped.
+						His experience in a variety of sectors, including
+						technology, government and legal, uniquely informs his
+						creative approach to meeting customer needs and
+						exceeding expectations.
+					</p>
+					<ul className="team-social">
+						<li>
+							<a href="http://www.facebook.com" target="_blank">
+								<FontAwesomeIcon
+									icon={faFacebookSquare}
+									size={28}
 								/>
-								<input
-									className="input"
-									type="text"
-									name="emailAddress"
-									value={this.emailAddress}
-									maxLength="35"
-									placeholder="Email Address"
-									onChange={this.onChange}
-								/>
-								<input
-									className="input"
-									type="password"
-									name="passwordOne"
-									value={this.passwordOne}
-									maxLength="35"
-									placeholder="Password"
-									onChange={this.onChange}
-								/>
-								<input
-									className="input"
-									type="password"
-									name="passwordTwo"
-									value={this.passwordTwo}
-									maxLength="35"
-									placeholder="confirm Password"
-									onChange={this.onChange}
-								/>
-								<div className="policy">
-									<input
-										type="checkbox"
-										className="selector"
-									/>
-									<p>
-										I accept the terms and conditions and
-										privacy policy
-									</p>
-								</div>
-								<div className="button-area">
-									<button className="btnLearn">
-										<Link to="/billing" className="link">
-											Learn More
-										</Link>
-									</button>
-									<button
-										className="btnRegister"
-										disabled={isInvalid}
-										onClick={this.signup}
-										type="submit"
-									>
-										Submit
-									</button>
-								</div>
-							</form>
-							<div className="login">
-								<p>
-									Already have a Trip Planner account?{" "}
-									<a href="/" onClick={this.openModal}>
-										Login
-									</a>
-								</p>
-							</div>
-							<p className="legal-blurb">
-								Copyright © {year} TripPlanner, LLC. All rights
-								reserved.
-							</p>
-						</div>
-					</div>
+							</a>
+						</li>
+						<li>
+							<a href="http://www.twitter.com" target="_blank">
+								<FontAwesomeIcon icon={faTwitterSquare} />
+							</a>
+						</li>
+						<li>
+							<a
+								href="https://www.linkedin.com/in/oliver-abreu-6105a2186/"
+								target="_blank"
+							>
+								<FontAwesomeIcon icon={faLinkedin} />
+							</a>
+						</li>
+					</ul>
 				</div>
-			</>
-		);
-	}
+				<div className="feature">
+					<img
+						src={Jonathan}
+						className="team-img"
+						alt="Team member"
+					/>
+					<h3>Jonathan Dorety</h3>
+					<p>
+						Jonathan is a former line cook and current stay-at-home
+						dad looking to take his career to exciting new places!
+						Currently attending Lambda School's Web Development &
+						Computer Science program, he is learning the skills
+						necessary to become a top-notch software engineer.
+					</p>
+					<ul className="team-social">
+						<li>
+							<a href="http://www.facebook.com" target="_blank">
+								<FontAwesomeIcon icon={faFacebookSquare} />
+							</a>
+						</li>
+						<li>
+							<a href="http://www.twitter.com" target="_blank">
+								<FontAwesomeIcon icon={faTwitterSquare} />
+							</a>
+						</li>
+						<li>
+							<a
+								href="https://www.linkedin.com/in/jonathan-dorety-252948185/"
+								target="_blank"
+							>
+								<FontAwesomeIcon icon={faLinkedin} />
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div className="feature">
+					<img src={Melvin} className="team-img" alt="Team member" />
+					<h3>Melvin Merlos</h3>
+					<p>
+						By day, I am a HR, Training Specialist for a non-profit
+						helping internal employees better their skills, increase
+						awareness of their rights and agency policies. By night,
+						I am a Web Developer/Software Engineer as a part-time
+						student in the Web Development & Computer Science
+						program at Lambda School.
+					</p>
+					<ul className="team-social">
+						<li>
+							<a href="http://www.facebook.com" target="_blank">
+								<FontAwesomeIcon icon={faFacebookSquare} />
+							</a>
+						</li>
+						<li>
+							<a href="http://www.twitter.com" target="_blank">
+								<FontAwesomeIcon icon={faTwitterSquare} />
+							</a>
+						</li>
+						<li>
+							<a
+								href="https://www.linkedin.com/in/melvin-merlos-49079a73/"
+								target="_blank"
+							>
+								<FontAwesomeIcon icon={faLinkedin} />
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div className="feature">
+					<img src={Erin} className="team-img" alt="Team member" />
+					<h3>Erin Scriber</h3>
+					<p>
+						Erin is an Information Technology Specialist for a
+						suburban Pennsylvania school district. In this capacity,
+						she oversees the inventory and functionality for 2,000
+						plus devices as well as handling the concerns of
+						students, faculty and administration. She is also
+						currently a Full Stack Web Development student at Lambda
+						School, with a growing admiration for backend
+						technologies. She speaks English and Spanish fluently
+						and has limited working proficiency of French and
+						Arabic.
+					</p>
+					<ul className="team-social">
+						<li>
+							<a href="http://www.facebook.com" target="_blank">
+								<FontAwesomeIcon icon={faFacebookSquare} />
+							</a>
+						</li>
+						<li>
+							<a href="http://www.twitter.com" target="_blank">
+								<FontAwesomeIcon icon={faTwitterSquare} />
+							</a>
+						</li>
+						<li>
+							<a
+								href="https://www.linkedin.com/in/erin-scriber/"
+								target="_blank"
+							>
+								<FontAwesomeIcon icon={faLinkedin} />
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div className="feature">
+					<img src={Jesse} className="team-img" alt="Team member" />
+					<h3>Jesse Theisen</h3>
+					<p>
+						Hi, I’m Jesse. My background was in computer hardware,
+						but I slowly started getting into software. My main
+						contributions to this app are on the backend, but I also
+						did some frontend things with Stripe as well.
+					</p>
+					<ul className="team-social">
+						<li>
+							<a href="http://www.facebook.com" target="_blank">
+								<FontAwesomeIcon icon={faFacebookSquare} />
+							</a>
+						</li>
+						<li>
+							<a href="http://www.twitter.com" target="_blank">
+								<FontAwesomeIcon icon={faTwitterSquare} />
+							</a>
+						</li>
+						<li>
+							<a
+								href="https://www.linkedin.com/in/jesse-theisen/"
+								target="_blank"
+							>
+								<FontAwesomeIcon icon={faLinkedin} />
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	);
 }
 
-export default withRouter(withFirebase(LandingDesktopLandscape));
+export default About;

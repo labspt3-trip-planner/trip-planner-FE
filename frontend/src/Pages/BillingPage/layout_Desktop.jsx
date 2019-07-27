@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import StripeCheckout from "../../components/Billing/Stripe.js";
 
 function Billing() {
 	return (
@@ -61,9 +62,7 @@ function Billing() {
 					</ul>
 					<div id="button-area">
 						<button id="upgrade" className="billingButton">
-							<Link to="/billing" className="link">
-								Upgrade Now
-							</Link>
+							<StripeCheckout />
 						</button>
 					</div>
 					<h3 className="logo">TripPlanner</h3>

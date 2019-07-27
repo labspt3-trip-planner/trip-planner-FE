@@ -6,7 +6,8 @@ let axiosConfig = axios.create({
   baseURL:
     process.env.REACT_APP_DEVELOPMENT ||
     "https://labspt3-trip-planner.herokuapp.com/",
-  headers: { authorization: token }
+  headers: { Authorization: token }
+  // auth: token
 });
 
 export { axiosConfig };

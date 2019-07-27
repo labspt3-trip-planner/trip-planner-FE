@@ -1,4 +1,4 @@
-import { axios } from "../../Components/Axios";
+import { axiosConfig, axios } from "../../components/Axios";
 
 // GET LIST
 export const FETCH_LISTS = "FETCH_LISTS";
@@ -43,7 +43,7 @@ export const getList = () => dispatch => {
 //ADD NEW LIST
 export const addList = newList => dispatch => {
 	dispatch({ type: CREATE_LIST });
-	return axios
+	return axiosConfig
 		.post("/:tripId/lists", newList)
 		.then(res => {
 			dispatch({ type: LIST_CREATED, payload: res.data });
@@ -56,7 +56,7 @@ export const addList = newList => dispatch => {
 //UPDATE LIST
 export const updateList = list => dispatch => {
 	dispatch({ type: EDIT_LIST });
-	return axios
+	return axiosConfig
 		.put("tripId/lists/:itemId", list)
 		.then(res => {
 			dispatch({ type: LIST_EDITED, payload: res.data });
@@ -69,7 +69,7 @@ export const updateList = list => dispatch => {
 //DELETE LIST
 export const deleteList = tripId => dispatch => {
 	dispatch({ type: DELETE_LIST });
-	return axios
+	return axiosConfig
 		.delete("/:tripId/lists/:itemId" + tripId, {})
 		.then(res => {
 			dispatch({ type: LIST_DELETED, payload: res.data });
@@ -78,5 +78,3 @@ export const deleteList = tripId => dispatch => {
 			dispatch({ type: DELETE_ERROR, payload: err });
 		});
 };
-
-//can't test until reducers are done

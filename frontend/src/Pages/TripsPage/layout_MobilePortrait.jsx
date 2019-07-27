@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 
-import TripTable from "../../Components/TripComponents/TripTable";
+import TripTable from "../../components/TripComponents/TripTable";
 
 import { getTripsByUser } from "../../Store/actions/tripActions";
-import NavigationMobile from "../../Components/ModalComponents/NavigationMobile.jsx";
+import NavigationMobile from "../../components/ModalComponents/NavigationMobile.jsx";
 
 class TripsPageMobilePortrait extends Component {
 	componentDidMount() {
