@@ -62,6 +62,9 @@ function Billing() {
 					</ul>
 					<div id="button-area">
 						<button id="upgrade" className="billingButton">
+							{/* <Link to="/billing" className="link">
+								Upgrade Now
+							</Link> */}
 							<StripeCheckout />
 						</button>
 					</div>

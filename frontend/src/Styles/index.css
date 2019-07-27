@@ -760,6 +760,21 @@ form {
 #button-area {
   margin-top: 6rem;
 }
+#button-area .StripeCheckout {
+  background: none !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+#button-area .StripeCheckout span {
+  width: 100% !important;
+  background-image: none !important;
+  font-family: "Roboto Condensed", sans-serif !important;
+  font-size: 1.5vmax !important;
+  color: #4e4e4e !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
 #button-area button {
   width: 10rem;
   font-size: 1.5vmax;

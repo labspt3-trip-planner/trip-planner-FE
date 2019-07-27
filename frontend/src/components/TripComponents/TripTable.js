@@ -9,7 +9,7 @@ import moment from "moment";
 
 const TableTest = props => {
 	const goToTrip = tripId => {
-		console.log("Trip id: ", tripId);
+		// console.log("Trip id: ", tripId);
 		props.history.push(`/trip/${tripId}`);
 	};
 

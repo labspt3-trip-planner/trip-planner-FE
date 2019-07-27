@@ -27,12 +27,13 @@ export default class Checkout extends React.Component {
 	render() {
 		return (
 			<StripeCheckout
-				amount={999}
+				amount={699}
 				billingAddress
-				description="Premium plan"
-				image="http://clipart-library.com/data_images/46219.jpg"
+				description="TripPlanner Premium"
+				image="https://img.icons8.com/windows/32/000000/glasses.png"
 				locale="auto"
-				name="Trip Planner"
+				name="TripPlanner"
+				label="Upgrade Now"
 				stripeKey={process.env.REACT_APP_STRIPE_KEY}
 				token={this.onToken}
 				zipCode
