@@ -1,7 +1,7 @@
 import React from "react";
-import "../TripComponents/Page.css";
+// import "../TripComponents/Page.css";
 import CheckListContainer from "./CheckListComponents/CheckListContainer";
-// import FaveList from "../Favorites/FaveList";
+import FaveList from "../Favorites/FaveList";
 import Title from "./TripName";
 import GMap from "../Map/GMap";
 import { axiosConfig } from "../Axios";
@@ -71,9 +71,9 @@ class TripInfoContainer extends React.Component {
 					/>
 					{/* <div className="space" /> */}
 				</div>
-				{/* <div className="favorites-container">
-          <FaveList favorites={this.state.favorites} />
-        </div> */}
+				<div className="favorites-container">
+					<FaveList favorites={this.state.favorites} />
+				</div>
 			</div>
 		);
 	}
