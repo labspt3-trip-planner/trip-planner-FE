@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/styles";
-// import TextField from "@material-ui/core/TextField";
+import { TextField } from "@material-ui/core";
 
 const useStyles = makeStyles(theme => ({
 	container: {
@@ -18,30 +18,26 @@ function OutlinedTextFields(props) {
 
 	return (
 		<form className={classes.container} noValidate autoComplete="off">
-			<input
+			<TextField
 				// id="login-modal"
 				className="input"
 				type="text"
-				name="tripName"
 				maxLength="35"
 				placeholder="Trip Name"
 				value={props.nameValue}
-				onChange={props.nameValue}
-				label="New Trip"
-
-				// name="tripName"
-				// value={props.nameValue}
+				// onChange={props.nameValue}
+				name="tripName"
 				// id="outlined-full-width"
-				// onChange={props.nameHandler}
-				// label="New Trip"
-				// style={{ margin: 8 }}
+				onChange={props.nameHandler}
+				label="New Trip"
+				style={{ margin: 8 }}
 				// placeholder="Trip Name..."
-				// fullWidth
-				// margin="normal"
-				// variant="outlined"
-				// InputLabelProps={{
-				// 	shrink: true
-				// }}
+				fullWidth
+				margin="normal"
+				variant="outlined"
+				InputLabelProps={{
+					shrink: true
+				}}
 			/>
 		</form>
 	);

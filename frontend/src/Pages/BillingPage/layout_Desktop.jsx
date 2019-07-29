@@ -61,9 +61,9 @@ function Billing() {
 						<li>Yes</li>
 					</ul>
 					<div id="button-area">
-						<button id="upgrade" className="billingButton">
+						<span id="upgrade" className="billingButton">
 							<StripeCheckout />
-						</button>
+						</span>
 					</div>
 					<h3 className="logo">TripPlanner</h3>
 				</div>
