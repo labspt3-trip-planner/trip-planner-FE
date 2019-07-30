@@ -46,6 +46,10 @@ h3 {
     margin-left: 50px;
 }
 
-a:hover {
+.icons {
+    padding: 2px;
+}
+
+.icons:hover {
     background-color: #f7b94c;
 }
