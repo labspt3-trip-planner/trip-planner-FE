@@ -38,11 +38,13 @@ h3 {
     padding: 15px;
     border: 1px solid black;
     border-radius: 1%;
+    transition: opacity 0.25s ease-in-out;
     margin: 10px;
     opacity: 0.8;
 }
 
 .feature:hover {
+    transition: opacity 0.25s ease-in-out;
     opacity: 1;
 }
 
