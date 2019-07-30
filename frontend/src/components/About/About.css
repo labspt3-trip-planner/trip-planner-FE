@@ -19,6 +19,13 @@
     margin-top: 50px;
 }
 
+@media (max-width: 600px) {
+    .team-container-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 h3 {
     font-size: 2rem;
     font-style: italic;
@@ -27,12 +34,29 @@ h3 {
 .feature {
     width: 18%;
     padding: 0 1%;
+    background: white;
+    padding: 15px;
+    border: 1px solid black;
+    border-radius: 1%;
+    margin: 10px;
+    opacity: 0.8;
+}
+
+.feature:hover {
+    opacity: 1;
+}
+
+@media (max-width: 600px) {
+    .feature {
+        width: 80%;
+    }
 }
 
 .team-img {
     width: 200px;
     height: 200px;
     border-radius: 50%;
+    padding: 5px;
 }
 
 .team-social {
@@ -44,6 +68,8 @@ h3 {
     justify-content: space-between;
     width: 100px;
     margin-left: 50px;
+    padding: 10px;
+
 }
 
 .icons {
