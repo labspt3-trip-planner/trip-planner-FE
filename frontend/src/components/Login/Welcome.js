@@ -250,7 +250,7 @@ class Welcome extends Component {
             </div>
             <div className="button-area">
               <button className="btnLearn landingPageButton">
-                <Link to="/billing" className="link">
+                <Link to="/billing" /*className="link"*/>
                   Learn More
                 </Link>
               </button>
