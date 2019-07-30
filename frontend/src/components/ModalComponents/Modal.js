@@ -19,7 +19,7 @@ export default class Modal extends Component {
           <a href="/" id="modal-button" onClick={this.props.addTrip}>
             Add Trip
           </a>
-          <a href="/" id="modal-button" onClick={e => this.onClose(e)}>
+          <a id="modal-button" onClick={e => this.onClose(e)}>
           ✖
           </a>
         </div>
