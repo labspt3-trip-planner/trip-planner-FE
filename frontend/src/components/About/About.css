@@ -74,7 +74,10 @@ a {
     padding: 2px;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1024px) {
+    .navbar {
+        display: none;
+    }
     .about-container {
         display: grid;
         font-family: "Roboto Condensed", sans-serif;
@@ -90,7 +93,7 @@ a {
         align-content: center;
         justify-content: center;
         background-color: #ffa62b;
-        margin-top: 60px;
+        margin-top: 99px;
     }
     
     .team-container-wrapper {
@@ -99,53 +102,52 @@ a {
         flex-direction: column;
 
     }
-    
-    h3 {
-        margin-block-end: unset;
-        margin-inline-end: unset;
-        margin-inline-end: unset;
-        background-color: #81c0cb;
-        padding: 50px;
-        font-size: 3.5rem;
-        font-style: italic;
-        text-align: center;
-    }
                 
     .feature {
-        width: 83%;
-        padding: 10%;
+        width: 75%;
+        padding: 5%;
+        margin: 37px auto;
     }
     
     .team-img {
         width: 59%;
-        height: 533px;
+        height: 59%;
         border-radius: 50%;
         margin-left: 19.5%;
     }
+
+    h3 {
+        margin-block-end: unset;
+        margin-inline-end: unset;
+        background-color: #81c0cb;
+        padding: 25px;
+        font-size: 3.5rem;
+        font-style: italic;
+        text-align: center;
+    }
     
+    p {
+        font-size: 2.8rem;
+        margin-block-start: unset;
+        margin-block-end: unset;
+        padding: 25px;
+        text-align: center;
+        background-color: #81c0cb;
+    }
+
     .team-social {
         margin-block-start: unset;
         list-style: none;
         display: flex;
-        justify-content: space-between;
-        padding: 50px;
+        justify-content: space-evenly;
         background-color: #81c0cb;
-    }
-    
-    a:hover {
-        background-color: #ffa62b;
     }
     
     a {
         font-size: 5rem;
     }
 
-    p {
-        font-size: 2.8rem;
-        margin-block-start: unset;
-        margin-block-end: unset;
-        padding: 50px;
-        background-color: #81c0cb;
+    a:hover {
+        background-color: #ffa62b;
     }
-    
 }
