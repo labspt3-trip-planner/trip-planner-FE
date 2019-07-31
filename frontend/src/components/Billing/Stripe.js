@@ -22,6 +22,7 @@ onToken = (token) => {
         image="http://clipart-library.com/data_images/46219.jpg"
         locale="auto"
         name="Trip Planner"
+        label="Upgrade Now"
         stripeKey={process.env.REACT_APP_STRIPE_KEY}
         token={this.onToken}
         zipCode
