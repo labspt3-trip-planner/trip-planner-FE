@@ -1068,6 +1068,7 @@ form {
   justify-content: center;
   align-items: center;
   width: 100%;
+  overflow: auto;
 }
 .react-table .react-table button {
   width: 1rem;
@@ -1130,15 +1131,51 @@ form {
 .new-modal .modal-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #8E8E8E;
+  width: 90vw;
+  height: 90vh;
 }
-.new-modal .modal-container .modal-map-area {
+.new-modal .modal-container .content {
+  height: 50vh;
+}
+.new-modal .modal-container .content .MuiInputBase-root {
+  color: white;
+}
+.new-modal .modal-container .content .MuiFormControl-fullWidth {
+  margin-top: 1rem;
+  width: 80%;
+  margin: 0 auto;
+  background-color: purple;
+}
+.new-modal .modal-container .content .modal-map-area {
   display: flex;
   width: 100%;
+  height: 100%;
+}
+.new-modal .modal-container .content .destination {
+  display: flex;
+  justify-content: center;
+  boxSizing: border-box;
+  border: 1px solid transparent;
+  width: 40%;
+  height: 2.5rem;
+  margin-top: 10px;
+  padding: 0 12px;
+  borderRadius: 3px;
+  box-shadow: 0 2px 6px #4e4e4e;
+  font-size: 2vmax;
+  outline: none;
+  textOverflow: ellipses;
+  background-color: #ffa62b;
+}
+.new-modal .modal-container .actions {
+  display: flex;
+  margin-top: 5rem;
 }
 
 .overlay {
-  background-color: rgba(207, 207, 207, 0.8);
   position: fixed;
   top: 0;
   left: 0;
@@ -1383,7 +1420,7 @@ form {
 }
 
 .map-container {
-  border: 10px solid red;
+  height: 30vh;
 }
 
 /*# sourceMappingURL=index.css.map */

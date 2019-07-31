@@ -1,8 +1,6 @@
 // import { axiosConfig } from "../../components/Axios";
 import axios from "axios";
 
-let url = "https://labspt3-trip-planner.herokuapp.com";
-
 // GET TRIPS
 export const FETCH_TRIPS = "FETCH_TRIPS";
 export const TRIPS = "TRIPS";
@@ -33,8 +31,8 @@ export const getTripsByUser = () => dispatch => {
 	return axios({
 		method: "get",
 		url:
-			// `${process.env.REACT_APP_DEVELOPMENT}/users/alltrips` ||
-			`${url}/users/alltrips`,
+			`${process.env.REACT_APP_DEVELOPMENT}/users/alltrips` ||
+			"https://labspt3-trip-planner.herokuapp.com/",
 		headers: { Authorization: localStorage.getItem("user") }
 	})
 		.then(res => {

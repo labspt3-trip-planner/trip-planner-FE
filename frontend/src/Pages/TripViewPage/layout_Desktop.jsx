@@ -1,12 +1,12 @@
 import React from "react";
-import "../TripComponents/Page.css";
-import CheckListContainer from "./CheckListComponents/CheckListContainer";
-// import FaveList from "../Favorites/FaveList";
-import Title from "./CheckListComponents/TripName";
-import GMap from "../Map/GMap";
-import { axios } from "../Axios";
+// import "../TripComponents/Page.css";
+import CheckListContainer from "../../components/TripInfoComponents/CheckListComponents/CheckListContainer";
+// import FaveList from "../../Favorites/FaveList";
+import Title from "../../components/TripInfoComponents/TripName";
+import GMap from "../../components/Map/GMap";
+import { axiosConfig } from "../../components/Axios";
 
-class TripViewPage extends React.Component {
+class TripInfoContainer extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -29,7 +29,7 @@ class TripViewPage extends React.Component {
 
 	addFavorites = async favorite => {
 		try {
-			await axios.post(`/favorites/${this.state.tripId}`, favorite);
+			await axiosConfig.post(`/favorites/${this.state.tripId}`, favorite);
 			this.getTrip();
 		} catch (err) {
 			console.log(err);
@@ -37,7 +37,7 @@ class TripViewPage extends React.Component {
 	};
 
 	getTrip = () => {
-		axios
+		axiosConfig
 			.get(`/trip/${this.props.match.params.tripId}`)
 			.then(res => {
 				console.log(res);
@@ -50,6 +50,7 @@ class TripViewPage extends React.Component {
 	};
 
 	componentDidMount() {
+		console.log("props:", this.props);
 		this.setState({ tripId: this.props.match.params.tripId });
 		this.getTrip();
 	}
@@ -57,8 +58,6 @@ class TripViewPage extends React.Component {
 	render() {
 		return (
 			<div className="page-container">
-				<Title className="trip-title" tripName={this.state.tripName} />
-				<CheckListContainer />
 				<div className="map-container">
 					<GMap
 						isMarkerShown
@@ -68,8 +67,13 @@ class TripViewPage extends React.Component {
 						}
 						favorites={this.state.favorites}
 					/>
-					{/* <div className="space" /> */}
+					<div className="space" />
 				</div>
+				{/* <HeaderContainer /> */}
+				<Title className="trip-title" tripName={this.state.tripName} />
+				<br />
+				<CheckListContainer />
+
 				{/* <div className="favorites-container">
           <FaveList favorites={this.state.favorites} />
         </div> */}
@@ -78,4 +82,4 @@ class TripViewPage extends React.Component {
 	}
 }
 
-export default TripViewPage;
+export default TripInfoContainer;
