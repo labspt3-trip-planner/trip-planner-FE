@@ -29,7 +29,7 @@ import {
   
   const ListReducer = (state = initialState, action) => {
     switch (action.type) {
-      case FETCH_PACKING_LISTS:
+      case FETCH_PACKING_LIST:
         return {
           ...state,
           isFetchingList: true,
