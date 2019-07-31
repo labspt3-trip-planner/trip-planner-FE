@@ -65,11 +65,11 @@ h3 {
     
 }
 
-a:hover {
+.icons:hover {
     background-color: #ffa62b;
 }
 
-a {
+.icons {
     font-size: 28px;
     padding: 2px;
 }
@@ -143,11 +143,90 @@ a {
         background-color: #81c0cb;
     }
     
-    a {
+    .icons {
         font-size: 5rem;
     }
 
-    a:hover {
+    .icons:hover {
+        background-color: #ffa62b;
+    }
+}
+
+@media (max-width: 500px) {
+    .navbar {
+        display: none;
+    }
+    
+    .about-container {
+        display: grid;
+        font-family: "Roboto Condensed", sans-serif;
+        background-color: #17697b;
+        height: 100%;
+        
+    }
+    
+    .about-header-wrapper {
+        display: block;
+        font-size: 1.9rem;
+        text-align: center;
+        align-content: center;
+        justify-content: center;
+        background-color: #ffa62b;
+        margin-top: 50px;
+    }
+    
+    .team-container-wrapper {
+        display: flex;
+        margin-top: 31px;
+        flex-direction: column;
+
+    }
+                
+    .feature {
+        width: 75%;
+        padding: 5%;
+        margin: 17px auto;
+    }
+    
+    .team-img {
+        width: 59%;
+        height: 59%;
+        border-radius: 50%;
+        margin-left: 19.5%;
+    }
+
+    h3 {
+        margin-block-end: unset;
+        margin-inline-end: unset;
+        background-color: #81c0cb;
+        padding: 25px;
+        font-size: 3.5rem;
+        font-style: italic;
+        text-align: center;
+    }
+    
+    p {
+        font-size: 2.8rem;
+        margin-block-start: unset;
+        margin-block-end: unset;
+        padding: 25px;
+        text-align: center;
+        background-color: #81c0cb;
+    }
+
+    .team-social {
+        margin-block-start: unset;
+        list-style: none;
+        display: flex;
+        justify-content: space-evenly;
+        background-color: #81c0cb;
+    }
+    
+    .icons {
+        font-size: 5rem;
+    }
+
+    .icons:hover {
         background-color: #ffa62b;
     }
 }
