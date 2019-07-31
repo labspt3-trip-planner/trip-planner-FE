@@ -83,7 +83,9 @@
   position: absolute;
   width: 100%;
   background: white;
-  border-bottom: 1px solid rgba(133, 133, 133, 0.476)
+  border-bottom: 1px solid rgba(133, 133, 133, 0.476);
+  border-top: 1px solid rgba(133, 133, 133, 0.476);
+
 
 }
 
@@ -226,7 +228,7 @@
 
 #header-buttons:hover, #modal-button:hover, #navbar-end-buttons:hover, .modalButton:hover {
     background: #f7b94c;
-    transition: background 0.5s ease-in-out;
+    transition: background 1s ease-in-out;
     color: white;
 }
 

@@ -31,7 +31,7 @@ export const getTripsByUser = () => dispatch => {
     method: "get",
     url:
       `${process.env.REACT_APP_DEVELOPMENT}/users/alltrips` ||
-      "http://localhost:9090/users/alltrips",
+      "https://labspt3-trip-planner.herokuapp.com/users/alltrips",
     headers: { Authorization: localStorage.getItem("user") }
   })
     .then(res => {
