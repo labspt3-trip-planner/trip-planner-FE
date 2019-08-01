@@ -1,4 +1,5 @@
 import React from "react";
+import { connect } from "react-redux";
 import Typography from "@material-ui/core/Typography";
 import CheckListForm from "./CheckListForm";
 import Checklist from "./Checklist";
@@ -6,13 +7,11 @@ import TodoListForm from "./TodoListForm";
 import TodoList from "./TodoList";
 import useChecklistState from "./useChecklistState";
 import useTodoState from "./useTodoState";
-import { connect } from "react-redux";
-import { updateList } from "../../../store/actions/listActions";
 import "./trip-page.css";
 
 const Checklists = props => {
-  const { lists, addList, deleteList } = useChecklistState([]);
-  const { todos, addTodo, deleteTodo } = useTodoState([]);
+  const { lists, addList, deleteList } = useChecklistState(props.packing);
+  const { todos, addTodo, deleteTodo } = useTodoState(props.todos);
 
   return (
     <div className="lists-wrapper">
@@ -57,7 +56,12 @@ const Checklists = props => {
   );
 };
 
+const mstp = state => ({
+  packing: state.trips.singleTrip.packing,
+  todos: state.trips.singleTrip.todos
+});
+
 export default connect(
-  null,
-  { updateList }
+  mstp,
+  null
 )(Checklists);
