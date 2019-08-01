@@ -72,7 +72,6 @@
 @media (max-width: 1024px) {
     .about-header-wrapper {
         display: block;
-        font-size: 3.9rem;
         text-align: center;
         align-content: center;
         justify-content: center;
@@ -80,6 +79,12 @@
         margin-top: 99px;
     }
     
+    .about-header-wrapper h2 {
+        font-size: 3rem;
+        margin-block-start: unset;
+        margin-block-end: unset;
+    }
+
     .team-container-wrapper {
         display: flex;
         margin-top: 62px;
@@ -133,9 +138,30 @@
     .icons:hover {
         background-color: #ffa62b;
     }
+
+    .about-menu {
+        width: 100%;
+        background-color: #ffa62b;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        bottom: 0;
+        height: 40px;
+    }
+
+    .menu-item {
+        display: inline-flex;
+        justify-content: center;
+        width: 33.3%;
+        padding-top: 4px;
+    }
+
+    #about-button {
+        font-size: 1.8rem;
+    }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
     .about-header-wrapper {
         display: block;
         text-align: center;
@@ -205,5 +231,26 @@
 
     .icons:hover {
         background-color: #ffa62b;
+    }
+
+    .about-menu {
+        width: 100%;
+        background-color: #ffa62b;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        bottom: 0;
+        height: 40px;
+    }
+
+    .menu-item {
+        display: inline-flex;
+        text-align: center;
+        width: 33.3%;
+        padding-top: 4px;
+    }
+
+    #about-button {
+        font-size: 1.8rem;
     }
 }
