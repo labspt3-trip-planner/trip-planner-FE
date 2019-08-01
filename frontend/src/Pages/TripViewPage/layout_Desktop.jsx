@@ -5,6 +5,7 @@ import CheckListContainer from "../../components/TripInfoComponents/CheckListCom
 import Title from "../../components/TripInfoComponents/TripName";
 import GMap from "../../components/Map/GMap";
 import { axiosConfig } from "../../components/Axios";
+import Navigation from "../../components/ModalComponents/Navigation";
 
 class TripInfoContainer extends React.Component {
 	constructor(props) {
@@ -69,11 +70,10 @@ class TripInfoContainer extends React.Component {
 					/>
 					<div className="space" />
 				</div>
-				{/* <HeaderContainer /> */}
 				<Title className="trip-title" tripName={this.state.tripName} />
 				<br />
 				<CheckListContainer />
-
+				<Navigation />
 				{/* <div className="favorites-container">
           <FaveList favorites={this.state.favorites} />
         </div> */}

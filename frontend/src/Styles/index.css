@@ -1214,8 +1214,10 @@ form {
   line-height: 5rem;
 }
 .actions .props-area .date-input-area .MuiFormControl-root {
-  text-color: #ece7e2 !important;
   width: 45%;
+}
+.actions .props-area .date-input-area .MuiFormControl-root .MuiInputBase-input {
+  color: #ece7e2 !important;
 }
 .actions .props-area .date-input-area button {
   background: none;
