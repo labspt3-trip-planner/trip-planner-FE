@@ -117,11 +117,9 @@
 
     .ReactTable
         width: 92.5%
-        // flex-grow: 2
         text-align: center
         background-color: $dark-grey
         color: $white
-        // font-family: $body-font
 
         .rt-thead -header
             font-family: sans-serif
@@ -132,7 +130,6 @@
 
         .rt-tbody
             font-size: 1.75vmax
-            // font-size: 2vmax
 
             .rt-tr-group:hover
                 background: $aqua-light
@@ -178,61 +175,101 @@
 
 .new-modal .modal-container
     display: flex
-    flex-direction: column
+    flex-direction: row
     justify-content: flex-start
     align-items: center
     background-color: $light-grey
-    // width: 70vw
-    // height: 100vh
-    // position: absolute
-    // left: 35%
-    // right: 65%
     width: 90vw
     height: 90vh
 
     .content
-        height: 50vh
+        width: 55vw
+        height: 100%
+        flex-grow: 1
 
-        .MuiInputBase-root
-            color: white
+
+// ===== DATE INPUT AREA ===== // 
+.MuiInputBase-root
+    color: white
+
+.MuiFormControl-fullWidth
+    margin-top: 1rem
+    width: 80%
+    color: $white
+    margin: 0 auto
+
+    .MuiButtonBase-root
+        width: 5rem
+        background-color: $white
 
 
-        // .MuiFormControl-root MuiTextField-root input
-        .MuiFormControl-fullWidth
-            margin-top: 1rem
-            width: 80%
-            margin: 0 auto
-            background-color: purple
+// ===== MODAL MAP AREA ===== // 
+.modal-map-area
+    display: flex
+    width: 100%
+    height: 100%
 
-        .modal-map-area
-            display: flex
-            width: 100%
-            height: 100%
-
-        .destination
-            display: flex
-            justify-content: center
-            boxSizing: border-box
-            border: 1px solid transparent
-            width: 40%
-            height: 2.5rem
-            margin-top: 10px
-            padding: 0 12px
-            borderRadius: 3px
-            box-shadow: 0 2px 6px $dark-grey
-            font-size: 2vmax
-            outline: none
-            textOverflow: ellipses
-            background-color: $yellow
+.destination
+    display: flex
+    justify-content: center
+    boxSizing: border-box
+    border: 1px solid transparent
+    width: 40%
+    height: 2.5rem
+    margin-top: 10px
+    padding: 0 12px
+    borderRadius: 3px
+    box-shadow: 0 2px 6px $dark-grey
+    font-size: 1.5vmax
+    outline: none
+    textOverflow: ellipses
+    background-color: $white
     
-    .actions
+// ===== ACTIONS ===== //     
+.actions
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    width: 45vw
+    height: 80vh
+    flex-grow: 1
+    padding: 2rem 2rem 2rem 2rem
+
+    .actions-h2
+        font-size: 5vmin
+
+    .props-area
         display: flex
-        margin-top: 5rem
-    
-.overlay 
-    // background-color: rgba(207 207 207 0.8)
-    position: fixed
-    top: 0
-    left: 0
-    right: 0
-    bottom: 0
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        height: 60%
+        // margin-top: 10%
+        flex-grow: 2
+        width: 100%
+        // border: 2px solid pink
+
+        .input-box
+            width: 100%
+            margin: 0 auto
+
+        form
+            width: 100%
+
+        .date-input-area
+            display: flex
+            
+            flex-direction: column
+
+    .modal-button-area
+        display: flex
+        justify-content: center
+        height: 20%
+        width: 100%
+        flex-grow: 1
+        // border: 2px solid blue
+
+        #modal-button
+            background-color: $white
+
