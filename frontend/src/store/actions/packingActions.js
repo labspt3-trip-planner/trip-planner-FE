@@ -7,28 +7,28 @@ export const PACKING_ERROR = 'PACKING_ERROR';
 
 // CREATE FAVES
 export const CREATE_PACKING_LIST = 'CREATE_PACKING_LIST';
-export const PACKING_LIST_CREATED = 'FAVE_CREATED';
-export const PACKING_LIST_ERROR = 'FAVE_ERROR';
+export const PACKING_LIST_CREATED = 'PACKING_LIST_CREATED';
+export const PACKING_LIST_ERROR = 'PACKING_LIST_ERROR';
 
 // DELETE TRIPS
-export const DELETE_FAVE = 'DELETE_FAVE';
-export const FAVE_DELETED = 'FAVE_DELETED';
-export const DELETE_ERROR = 'DELETE_ERROR';
+export const DELETE_FAVE = 'DELETE_PACKING_LIST';
+export const FAVE_DELETED = 'PACKING_LIST_DELETED';
+export const DELETE_ERROR = 'DELETE_PACKING_ERROR';
 
 
-export const getFaves = () => (dispatch) => {
-    dispatch({ type: FETCH_FAVES });
+export const getPacking = () => (dispatch) => {
+    dispatch({ type: FETCH_PACKING });
     axiosConfig
         .get('/favorites')
         .then((res) => {
-            dispatch({ type: FAVES, payload: res.data });
+            dispatch({ type: PACKING, payload: res.data });
         })
         .catch((err) => {
-            dispatch({ type: FAVES_ERROR, payload: err });
+            dispatch({ type: PACKING_ERROR, payload: err });
         })
 };
 
-export const addFaveToTrip = newFave => (dispatch) => {
+export const addPackingToTrip = newFave => (dispatch) => {
     dispatch({ type: CREATE_FAVE });
     return (
         axiosConfig
