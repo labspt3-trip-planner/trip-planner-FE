@@ -17,7 +17,7 @@ export const DELETE_ERROR = 'DELETE_PACKING_ERROR';
 
 
 export const getPacking = () => (dispatch) => {
-    dispatch({ type: FETCH_PACKING });
+    dispatch({ type: FETCH_PACKING_LIST });
     axiosConfig
         .get('/favorites')
         .then((res) => {
