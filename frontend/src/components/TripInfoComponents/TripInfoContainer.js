@@ -5,7 +5,9 @@ import CheckListContainer from "./CheckListComponents/CheckListContainer";
 import FaveList from "../Favorites/FaveList";
 import Title from "./TripName";
 import GMap from "../Map/GMap";
+import { connect } from "react-redux";
 import { axiosConfig } from "../Axios";
+import { getTripById } from "../../store/actions/tripActions";
 
 class TripInfoContainer extends React.Component {
   constructor(props) {
@@ -24,7 +26,9 @@ class TripInfoContainer extends React.Component {
       tripId: this.props.match.params.tripId,
       favorites: [],
       participants: [],
-      flight_info: ""
+      flight_info: "",
+      todos: [],
+      packing: []
     };
   }
 
@@ -52,6 +56,7 @@ class TripInfoContainer extends React.Component {
 
   componentDidMount() {
     this.setState({ tripId: this.props.match.params.tripId });
+    this.props.getTripById(this.props.match.params.tripId);
     this.getTrip();
   }
 
@@ -79,4 +84,13 @@ class TripInfoContainer extends React.Component {
   }
 }
 
-export default TripInfoContainer;
+const mstp = state => {
+  return {
+    trip: state.trips.singleTrip
+  };
+};
+
+export default connect(
+  mstp,
+  { getTripById }
+)(TripInfoContainer);
