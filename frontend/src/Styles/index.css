@@ -217,10 +217,6 @@ button a:visited {
   background-color: #81c0cb;
 }
 
-button .MuiButtonBase-root MuiIconButton-root {
-  width: 1rem;
-}
-
 .welcome-container {
   display: flex;
   flex-direction: row;
@@ -1146,16 +1142,15 @@ form {
 .MuiInputBase-root {
   color: white;
 }
-
-.MuiFormControl-fullWidth {
+.MuiInputBase-root .MuiFormControl-root {
   margin-top: 1rem;
   width: 80%;
   color: #ece7e2;
   margin: 0 auto;
 }
-.MuiFormControl-fullWidth .MuiButtonBase-root {
-  width: 5rem;
-  background-color: #ece7e2;
+.MuiInputBase-root .MuiFormControl-root .MuiButtonBase-root {
+  width: 1.5rem;
+  background: #ece7e2;
 }
 
 .modal-map-area {
@@ -1190,6 +1185,7 @@ form {
   height: 80vh;
   flex-grow: 1;
   padding: 2rem 2rem 2rem 2rem;
+  color: #ece7e2 !important;
 }
 .actions .actions-h2 {
   font-size: 5vmin;
@@ -1212,7 +1208,20 @@ form {
 }
 .actions .props-area .date-input-area {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  line-height: 5rem;
+}
+.actions .props-area .date-input-area .MuiFormControl-root {
+  text-color: #ece7e2 !important;
+  width: 45%;
+}
+.actions .props-area .date-input-area button {
+  background: none;
+  background-color: none;
+  width: 3rem;
+  margin-bottom: 4rem;
 }
 .actions .modal-button-area {
   display: flex;
@@ -1446,6 +1455,10 @@ form {
 }
 .lists-wrapper .list-label .list-section .list-wrapper {
   color: red;
+}
+.lists-wrapper .lists-section {
+  display: flex;
+  flex-direction: row;
 }
 
 .input {

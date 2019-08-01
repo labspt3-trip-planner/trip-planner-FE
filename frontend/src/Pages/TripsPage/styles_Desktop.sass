@@ -189,18 +189,20 @@
 
 
 // ===== DATE INPUT AREA ===== // 
+date-input-area
+
 .MuiInputBase-root
     color: white
 
-.MuiFormControl-fullWidth
-    margin-top: 1rem
-    width: 80%
-    color: $white
-    margin: 0 auto
+    .MuiFormControl-root
+        margin-top: 1rem
+        width: 80%
+        color: $white
+        margin: 0 auto
 
-    .MuiButtonBase-root
-        width: 5rem
-        background-color: $white
+        .MuiButtonBase-root
+            width: 1.5rem
+            background: $white
 
 
 // ===== MODAL MAP AREA ===== // 
@@ -235,6 +237,7 @@
     height: 80vh
     flex-grow: 1
     padding: 2rem 2rem 2rem 2rem
+    color: $white !important
 
     .actions-h2
         font-size: 5vmin
@@ -245,10 +248,8 @@
         justify-content: center
         align-items: center
         height: 60%
-        // margin-top: 10%
         flex-grow: 2
         width: 100%
-        // border: 2px solid pink
 
         .input-box
             width: 100%
@@ -259,8 +260,29 @@
 
         .date-input-area
             display: flex
+            flex-direction: row
+            justify-content: space-around
+            width: 100%
+            line-height: 5rem
+            // border: 5px solid green
+
+            .MuiFormControl-root
+                width: 45%
+
+                .MuiInputBase-input
+                    color: $white !important
+
+
+            button
+                background: none
+                background-color: none
+                width: 3rem
+                margin-bottom: 4rem
             
-            flex-direction: column
+            
+
+
+
 
     .modal-button-area
         display: flex
