@@ -78,14 +78,7 @@ h3 {
     .navbar {
         display: none;
     }
-    .about-container {
-        display: grid;
-        font-family: "Roboto Condensed", sans-serif;
-        background-color: #17697b;
-        height: 100%;
-        
-    }
-    
+ 
     .about-header-wrapper {
         display: block;
         font-size: 3.9rem;
@@ -100,7 +93,6 @@ h3 {
         display: flex;
         margin-top: 62px;
         flex-direction: column;
-
     }
                 
     .feature {
@@ -156,18 +148,9 @@ h3 {
     .navbar {
         display: none;
     }
-    
-    .about-container {
-        display: grid;
-        font-family: "Roboto Condensed", sans-serif;
-        background-color: #17697b;
-        height: 100%;
-        
-    }
-    
+
     .about-header-wrapper {
         display: block;
-        font-size: 1.9rem;
         text-align: center;
         align-content: center;
         justify-content: center;
@@ -175,11 +158,16 @@ h3 {
         margin-top: 50px;
     }
     
+    .about-header-wrapper h2 {
+        font-size: 2rem;
+        margin-block-start: unset;
+        margin-block-end: unset;
+    }
+
     .team-container-wrapper {
         display: flex;
-        margin-top: 31px;
         flex-direction: column;
-
+        margin-top: 33px;
     }
                 
     .feature {
@@ -199,17 +187,18 @@ h3 {
         margin-block-end: unset;
         margin-inline-end: unset;
         background-color: #81c0cb;
-        padding: 25px;
-        font-size: 3.5rem;
+        padding: 10px;
+        font-size: 2rem;
         font-style: italic;
         text-align: center;
+        margin: 0;
     }
     
     p {
-        font-size: 2.8rem;
+        font-size: 1.25rem;
         margin-block-start: unset;
         margin-block-end: unset;
-        padding: 25px;
+        padding: 1px;
         text-align: center;
         background-color: #81c0cb;
     }
@@ -220,10 +209,11 @@ h3 {
         display: flex;
         justify-content: space-evenly;
         background-color: #81c0cb;
+        margin-top: 10px;
     }
     
     .icons {
-        font-size: 5rem;
+        font-size: 2rem;
     }
 
     .icons:hover {
