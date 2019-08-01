@@ -86,7 +86,7 @@ function About() {
       </div>
       <div className="feature"> 
       <img src={Erin} className="team-img" alt="Team member" />
-        <h3>Erin Scriber</h3>
+        <h3>Erin-Ronae' Scriber</h3>
         <p>Erin is an Information Technology Specialist for a suburban Pennsylvania school district. In this capacity, she oversees the inventory and functionality for 2,000 plus devices as well as handling the concerns of students, faculty and administration. She is also currently a Full Stack Web Development student at Lambda School, with a growing admiration for backend technologies. She speaks English and Spanish fluently and has limited working proficiency of French and Arabic.</p>
         <ul className="team-social">
             <li>
