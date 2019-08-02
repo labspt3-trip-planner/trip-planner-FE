@@ -1,19 +1,19 @@
 import { axiosConfig } from '../../components/Axios';
 
 // GET FAVES
-export const FETCH_PACKING_LIST = 'FETCH_TODO_LIST';
-export const PACKING = 'TODO';
-export const PACKING_ERROR = 'TODO_ERROR';
+export const FETCH_TODO_LIST = 'FETCH_TODO_LIST';
+export const TODO = 'TODO';
+export const TODO_ERROR = 'TODO_ERROR';
 
 // CREATE FAVES
-export const CREATE_PACKING_LIST = 'CREATE_TODO_LIST';
-export const PACKING_LIST_CREATED = 'TODO_LIST_CREATED';
-export const PACKING_LIST_ERROR = 'TODO_LIST_ERROR';
+export const CREATE_TODO_LIST = 'CREATE_TODO_LIST';
+export const TODO_LIST_CREATED = 'TODO_LIST_CREATED';
+export const TODO_LIST_ERROR = 'TODO_LIST_ERROR';
 
 // DELETE TRIPS
-export const DELETE_FAVE = 'DELETE_TODO_LIST';
-export const FAVE_DELETED = 'TODO_LIST_DELETED';
-export const DELETE_ERROR = 'DELETE_TODO_ERROR';
+export const DELETE_TODO_LIST = 'DELETE_TODO_LIST';
+export const TODO_LIST_DELETED = 'TODO_LIST_DELETED';
+export const DELETE_TODO_ERROR = 'DELETE_TODO_ERROR';
 
 
 export const getToDo = () => (dispatch) => {
