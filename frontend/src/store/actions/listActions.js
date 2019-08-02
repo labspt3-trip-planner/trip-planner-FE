@@ -41,10 +41,10 @@ export const getList = () => dispatch => {
 };
 
 //ADD NEW LIST
-export const addList = newList => dispatch => {
+export const addTodo = newList => dispatch => {
   dispatch({ type: CREATE_LIST });
   return axiosConfig
-    .post("/:tripId/lists", newList)
+    .post("/:tripId/lists", { newList })
     .then(res => {
       dispatch({ type: LIST_CREATED, payload: res.data });
     })
@@ -55,6 +55,7 @@ export const addList = newList => dispatch => {
 
 //UPDATE LIST
 export const updateList = list => dispatch => {
+  console.log("Rawr!");
   dispatch({ type: EDIT_LIST });
   return axiosConfig
     .put("tripId/lists/:itemId", list)

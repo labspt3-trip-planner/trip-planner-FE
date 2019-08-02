@@ -10,8 +10,8 @@ import useTodoState from "./useTodoState";
 import "./trip-page.css";
 
 const Checklists = props => {
-  const { lists, addList, deleteList } = useChecklistState(props.packing);
-  const { todos, addTodo, deleteTodo } = useTodoState(props.todos);
+  const { lists, addList, deleteList } = useChecklistState([]);
+  const { todos, addTodo, deleteTodo } = useTodoState([]);
 
   return (
     <div className="lists-wrapper">

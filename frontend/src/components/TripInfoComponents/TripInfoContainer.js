@@ -2,7 +2,8 @@ import React from "react";
 import HeaderContainer from "../HeaderComponents/HeaderContainer";
 import "../TripComponents/Page.css";
 import CheckListContainer from "./CheckListComponents/CheckListContainer";
-import FaveList from "../Favorites/FaveList";
+import ListPanel from "./Lists/ListPanel";
+// import FaveList from "../Favorites/FaveList";
 import Title from "./TripName";
 import GMap from "../Map/GMap";
 import { connect } from "react-redux";
@@ -45,7 +46,6 @@ class TripInfoContainer extends React.Component {
     axiosConfig
       .get(`/trip/${this.props.match.params.tripId}`)
       .then(res => {
-        console.log(res);
         this.setState({
           ...res.data,
           currentDestination: res.data.destinations[0]
@@ -53,10 +53,66 @@ class TripInfoContainer extends React.Component {
       })
       .catch(err => console.log(err));
   };
+  //check / uncheck list items
+  togglePacking = item => {
+    const newItem = { item: item.item, done: !item.done };
+    // const newPacking = [...this.state.packing];
+    // newPacking.push({ item: item.item, done: !item.done });
+    // newPacking.splice(index, 1);
+    // this.setState({ packing: newPacking });
+    // this.updateItem(this.state.packing, "packing");
+    console.log("toggle packing!");
+    this.updateItem(newItem, "packing");
+  };
+
+  toggleTodo = item => {
+    const newItem = { item: item.item, done: !item.done };
+    this.updateItem(newItem, "todos");
+  };
+
+  //add list items
+  addPacking = ({ item }) => {
+    // const newList = [...this.state.packing];
+    // newList.push({ item: item.item, done: false });
+    // this.setState({ packing: newList });
+    const newItem = { item, done: false };
+    console.log("newItem: ", newItem);
+    this.addItem(newItem, "packing");
+  };
+
+  addTodo = item => {
+    // const newList = [...this.state.todos];
+    // newList.push({ item: item.item, done: false });
+    // this.setState({ todos: newList });
+    this.addItem(item, "todos");
+  };
+
+  //backend interaction functions
+
+  //add list item
+  addItem = (item, listName) => {
+    const updatedItem = { item: item.item, done: !item.done };
+    console.log(updatedItem);
+    axiosConfig
+      .post(`/trip/${this.state.tripId}/${listName}`, updatedItem)
+      .then(() => this.getTrip())
+      .catch(err => console.log("Additem err: ", err));
+  };
+
+  //update list item
+  updateItem = (item, listName) => {
+    console.log("update", item, listName);
+    axiosConfig
+      .put(`/trip/${this.state.tripId}/${listName}`, item)
+      .then(res => {
+        console.log(res);
+        this.getTrip();
+      })
+      .catch(err => console.log("updateItem err: ", err));
+  };
 
   componentDidMount() {
     this.setState({ tripId: this.props.match.params.tripId });
-    this.props.getTripById(this.props.match.params.tripId);
     this.getTrip();
   }
 
@@ -66,7 +122,15 @@ class TripInfoContainer extends React.Component {
         <HeaderContainer />
         <Title className="trip-title" tripName={this.state.tripName} />
         <br />
-        <CheckListContainer />
+        {/* <CheckListContainer /> */}
+        <ListPanel
+          packingList={this.state.packing}
+          todoList={this.state.todos}
+          togglePacking={this.togglePacking}
+          toggleTodos={this.toggleTodo}
+          addPacking={this.addPacking}
+          addTodo={this.addTodo}
+        />
         <div className="map-container">
           <GMap
             isMarkerShown
