@@ -28,7 +28,7 @@ export const getPacking = () => (dispatch) => {
         })
 };
 
-export const addPackingToTrip = newFave => (dispatch) => {
+export const addPackingToTrip = newPackingList => (dispatch) => {
     dispatch({ type: CREATE_PACKING_LIST });
     return (
         axiosConfig
