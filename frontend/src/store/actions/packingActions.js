@@ -19,7 +19,7 @@ export const DELETE_ERROR = 'DELETE_PACKING_ERROR';
 export const getPacking = () => (dispatch) => {
     dispatch({ type: FETCH_PACKING_LIST });
     axiosConfig
-        .get('/favorites')
+        .get('/packing')
         .then((res) => {
             dispatch({ type: PACKING, payload: res.data });
         })
@@ -32,7 +32,7 @@ export const addPackingToTrip = newPackingList => (dispatch) => {
     dispatch({ type: CREATE_PACKING_LIST });
     return (
         axiosConfig
-            .post('/favorites', newPackingList)
+            .post('/packing', newPackingList)
             .then((res) => {
                 dispatch({ type: PACKING_LIST_CREATED, payload: res.data });
             })
@@ -46,7 +46,7 @@ export const delPackingFromTrip = tripID => (dispatch) => {
     dispatch({ type: DELETE_PACKING_LIST });
     return (
         axiosConfig
-            .delete('/favorites/' + tripID)
+            .delete('/packing/' + tripID)
             .then((res) => {
                 dispatch({ type: PACKING_LIST_DELETED, payload: res.data });
             })
