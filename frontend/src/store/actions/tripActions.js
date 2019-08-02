@@ -42,12 +42,15 @@ export const getTripsByUser = () => dispatch => {
     });
 };
 
-export const getTripById = tripID => dispatch => {
+export const getTripById = tripId => dispatch => {
   dispatch({ type: FETCH_SINGLE });
-  return axios
-    .get("/trip/" + tripID)
+  return axiosConfig
+    .get(`/trip/${tripId}`)
     .then(res => {
-      dispatch({ type: FETCH_SINGLE, payload: res.data });
+      dispatch({
+        type: SINGLE_FETCHED,
+        payload: { ...res.data, currentDestination: res.data.destinations[0] }
+      });
     })
     .catch(err => {
       dispatch({ type: SINGLE_ERROR, payload: err });

@@ -1,27 +1,47 @@
-import React from 'react';
-import TextField from '@material-ui/core/TextField';
-import useInputState from './useInputState';
+import React, { useState } from "react";
+import TextField from "@material-ui/core/TextField";
+import { connect } from "react-redux";
+import { addTodo } from "../../../store/actions/listActions";
 
-const ListForm = ({ saveList }) => {
-    const { value, reset, onChange } = useInputState('');
+const ListForm = props => {
+  const [newItem, setNewItem] = useState("");
 
-    return (
-        <form
-            onSubmit={event => {
-                event.preventDefault();
-                saveList(value);
-                reset();
-            }}
-        >
-            <TextField 
-                variant="outlined"
-                placeholder="Add another..."
-                margin="normal"
-                onChange={onChange}
-                value={value}
-            />
-        </form>
-    );
+  const submitHandler = e => {
+    e.preventDefault();
+    console.log(newItem);
+    props.addTodo(newItem);
+    setNewItem("");
+  };
+
+  const changeHandler = e => {
+    setNewItem(e.target.value);
+    console.log(e.target.value);
+  };
+
+  const InputProps = {
+    onChange: changeHandler
+  };
+
+  return (
+    <form onSubmit={submitHandler}>
+      <TextField
+        variant="outlined"
+        placeholder="Add another..."
+        margin="normal"
+        InputProps={InputProps}
+        value={newItem}
+      />
+    </form>
+  );
 };
 
-export default ListForm;
+const mdtp = () => {
+  return {
+    addTodo
+  };
+};
+
+export default connect(
+  null,
+  mdtp
+)(ListForm);
