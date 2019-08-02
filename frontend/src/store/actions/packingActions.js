@@ -29,29 +29,29 @@ export const getPacking = () => (dispatch) => {
 };
 
 export const addPackingToTrip = newFave => (dispatch) => {
-    dispatch({ type: CREATE_FAVE });
+    dispatch({ type: CREATE_PACKING_LIST });
     return (
         axiosConfig
-            .post('/favorites', newFave)
+            .post('/favorites', newPackingList)
             .then((res) => {
-                dispatch({ type: FAVE_CREATED, payload: res.data });
+                dispatch({ type: PACKING_LIST_CREATED, payload: res.data });
             })
             .catch((err) => {
-                dispatch({ type: CREATE_ERROR, payload: err });
+                dispatch({ type: PACKING_LIST_ERROR, payload: err });
             })
     );
 };
 
-export const delFaveFromTrip = tripID => (dispatch) => {
-    dispatch({ type: DELETE_FAVE });
+export const delPackingFromTrip = tripID => (dispatch) => {
+    dispatch({ type: DELETE_PACKING_LIST });
     return (
         axiosConfig
             .delete('/favorites/' + tripID)
             .then((res) => {
-                dispatch({ type: FAVE_DELETED, payload: res.data });
+                dispatch({ type: PACKING_LIST_DELETED, payload: res.data });
             })
             .catch((err) => {
-                dispatch({ type: DELETE_ERROR, payload: err });
+                dispatch({ type: DELETE_PACKING_ERROR, payload: err });
             })
     );
 };
