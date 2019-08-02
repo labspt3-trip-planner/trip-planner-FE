@@ -1,22 +1,22 @@
 import React from "react";
-import "./About.css";
-import Jesse from "./imgs/Jesse.jpeg";
-import Oliver from "./imgs/Oliver.JPG";
-import Jonathan from "./imgs/Jonathan.jpeg";
-import Melvin from "./imgs/Melvin.jpeg";
-import Erin from "./imgs/Erin.jpeg";
-import { FontAwesomeIcon } from "@fontawesome/react-fontawesome";
-import {
-	faFacebookSquare,
-	faTwitterSquare,
-	faLinkedin
-} from "@fontawesome/free-brands-svg-icons";
-import Header from "../HeaderComponents/HeaderContainer";
+// import "./About.css";
+import Jesse from "./About/imgs/Jesse.jpeg";
+import Oliver from "./About/imgs/Oliver.JPG";
+import Jonathan from "./About/imgs/Jonathan.jpeg";
+import Melvin from "./About/imgs/Melvin.jpeg";
+import Erin from "./About/imgs/Erin.jpeg";
+// import { FontAwesomeIcon } from "@fontawesome/react-fontawesome";
+// import {
+// 	faFacebookSquare,
+// 	faTwitterSquare,
+// 	faLinkedin
+// } from "@fontawesome/free-brands-svg-icons";
+// import Header from "../HeaderComponents/HeaderContainer";
 
 function About() {
 	return (
 		<div className="about-container">
-			<Header />
+			{/* <Header /> */}
 			<div className="about-header-wrapper">
 				<h2>Meet the Team</h2>
 			</div>
@@ -32,7 +32,7 @@ function About() {
 						creative approach to meeting customer needs and
 						exceeding expectations.
 					</p>
-					<ul className="team-social">
+					{/* <ul className="team-social">
 						<li>
 							<a href="http://www.facebook.com" target="_blank">
 								<FontAwesomeIcon
@@ -54,7 +54,7 @@ function About() {
 								<FontAwesomeIcon icon={faLinkedin} />
 							</a>
 						</li>
-					</ul>
+					</ul> */}
 				</div>
 				<div className="feature">
 					<img
@@ -70,7 +70,7 @@ function About() {
 						Computer Science program, he is learning the skills
 						necessary to become a top-notch software engineer.
 					</p>
-					<ul className="team-social">
+					{/* <ul className="team-social">
 						<li>
 							<a href="http://www.facebook.com" target="_blank">
 								<FontAwesomeIcon icon={faFacebookSquare} />
@@ -89,7 +89,7 @@ function About() {
 								<FontAwesomeIcon icon={faLinkedin} />
 							</a>
 						</li>
-					</ul>
+					</ul> */}
 				</div>
 				<div className="feature">
 					<img src={Melvin} className="team-img" alt="Team member" />
@@ -102,7 +102,7 @@ function About() {
 						Engineer as a part-time student in the Web Development &
 						Computer Science program at Lambda School.
 					</p>
-					<ul className="team-social">
+					{/* <ul className="team-social">
 						<li>
 							<a href="http://www.facebook.com" target="_blank">
 								<FontAwesomeIcon icon={faFacebookSquare} />
@@ -121,7 +121,7 @@ function About() {
 								<FontAwesomeIcon icon={faLinkedin} />
 							</a>
 						</li>
-					</ul>
+					</ul> */}
 				</div>
 				<div className="feature">
 					<img src={Erin} className="team-img" alt="Team member" />
@@ -138,7 +138,7 @@ function About() {
 						and has limited working proficiency of French and
 						Arabic.
 					</p>
-					<ul className="team-social">
+					{/* <ul className="team-social">
 						<li>
 							<a href="http://www.facebook.com" target="_blank">
 								<FontAwesomeIcon icon={faFacebookSquare} />
@@ -157,7 +157,7 @@ function About() {
 								<FontAwesomeIcon icon={faLinkedin} />
 							</a>
 						</li>
-					</ul>
+					</ul> */}
 				</div>
 				<div className="feature">
 					<img src={Jesse} className="team-img" alt="Team member" />
@@ -168,7 +168,7 @@ function About() {
 						contributions to this app are on the backend, but I also
 						did some frontend things with Stripe as well.
 					</p>
-					<ul className="team-social">
+					{/* <ul className="team-social">
 						<li>
 							<a href="http://www.facebook.com" target="_blank">
 								<FontAwesomeIcon icon={faFacebookSquare} />
@@ -187,7 +187,7 @@ function About() {
 								<FontAwesomeIcon icon={faLinkedin} />
 							</a>
 						</li>
-					</ul>
+					</ul> */}
 				</div>
 			</div>
 		</div>

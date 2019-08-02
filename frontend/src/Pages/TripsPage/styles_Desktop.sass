@@ -26,7 +26,7 @@
 
         h1 
             text-align: center
-            font-size: 10vmin
+            font-size: 4rem
             width: 90%
             margin-left: 5%
             margin-right: 5%
@@ -255,6 +255,23 @@ date-input-area
             width: 100%
             margin: 0 auto
 
+            .makeStyles-container-1
+                border: none
+                border-color: none
+
+            .MuiTextField-root input
+                border-color: none !important
+                color: $white
+                font-family: $body-font
+                font-size: 2.5vmin
+                padding-bottom: 1rem
+
+                fieldset
+                    display: none
+
+                    legend
+                        display: none
+
         form
             width: 100%
 
@@ -271,6 +288,9 @@ date-input-area
 
                 .MuiInputBase-input
                     color: $white !important
+                    font-family: $body-font
+                    font-size: 2.5vmin
+                    border-bottom: $white !important
 
 
             button
@@ -289,4 +309,10 @@ date-input-area
 
         #modal-button
             background-color: $white
+            width: 10rem
+
+        .add-trip
+            width: 10rem
+            color: $white
+            background-color: $aqua-medium
 

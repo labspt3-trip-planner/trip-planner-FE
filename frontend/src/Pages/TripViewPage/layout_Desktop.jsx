@@ -1,7 +1,7 @@
 import React from "react";
 // import "../TripComponents/Page.css";
 import CheckListContainer from "../../components/TripInfoComponents/CheckListComponents/CheckListContainer";
-// import FaveList from "../../Favorites/FaveList";
+import FaveList from "../../components/Favorites/FaveList";
 import Title from "../../components/TripInfoComponents/TripName";
 import GMap from "../../components/Map/GMap";
 import { axiosConfig } from "../../components/Axios";
@@ -41,7 +41,7 @@ class TripInfoContainer extends React.Component {
 		axiosConfig
 			.get(`/trip/${this.props.match.params.tripId}`)
 			.then(res => {
-				console.log(res);
+				console.log("data", res);
 				this.setState({
 					...res.data,
 					currentDestination: res.data.destinations[0]
@@ -59,6 +59,19 @@ class TripInfoContainer extends React.Component {
 	render() {
 		return (
 			<div className="page-container">
+				<div className="trip-content-area">
+					<Title
+						className="trip-title"
+						tripName={this.state.tripName}
+					/>
+					{/* <h2>Destination: {this.currentDestination}</h2> */}
+					<CheckListContainer />
+					<div className="favorites-container">
+						<h3>My Saved Places</h3>
+						<FaveList favorites={this.state.favorites} />
+					</div>
+					<Navigation />
+				</div>
 				<div className="map-container">
 					<GMap
 						isMarkerShown
@@ -68,15 +81,7 @@ class TripInfoContainer extends React.Component {
 						}
 						favorites={this.state.favorites}
 					/>
-					<div className="space" />
 				</div>
-				<Title className="trip-title" tripName={this.state.tripName} />
-				<br />
-				<CheckListContainer />
-				<Navigation />
-				{/* <div className="favorites-container">
-          <FaveList favorites={this.state.favorites} />
-        </div> */}
 			</div>
 		);
 	}

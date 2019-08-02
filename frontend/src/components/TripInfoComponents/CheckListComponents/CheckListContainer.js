@@ -16,7 +16,7 @@ const Checklists = () => {
 		<div className="lists-wrapper">
 			<p className="list-label">Pre-Trip</p>
 			<div className="lists-section">
-				<div className="list-wrapper">
+				<div className="list-wrapper packing">
 					<Typography component="h4" variant="h5">
 						Packing List
 					</Typography>
@@ -33,7 +33,7 @@ const Checklists = () => {
 
 					<Checklist lists={lists} deleteList={deleteList} />
 				</div>
-				<div className="list-wrapper">
+				<div className="list-wrapper todo">
 					<Typography component="h4" variant="h5">
 						To Do List
 					</Typography>

@@ -33,7 +33,11 @@ export default class Modal extends Component {
 						>
 							Close
 						</button>
-						<button id="modal-button" onClick={this.props.addTrip}>
+						<button
+							id="modal-button "
+							className="add-trip"
+							onClick={this.props.addTrip}
+						>
 							Add Trip
 						</button>
 					</div>

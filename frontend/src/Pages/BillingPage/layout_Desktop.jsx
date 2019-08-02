@@ -66,6 +66,7 @@ function Billing() {
 						</span>
 					</div>
 					<h3 className="logo">TripPlanner</h3>
+					<p>View </p>
 				</div>
 			</div>
 		</div>

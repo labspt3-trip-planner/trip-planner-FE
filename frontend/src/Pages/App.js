@@ -5,6 +5,7 @@ import Landing from "./LandingPage";
 import TripsList from "./TripsPage";
 import TripInfoContainer from "./TripViewPage";
 import Billing from "./BillingPage";
+import About from "./AboutPage";
 import GMap from "../components/Map/GMap";
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
 			<Route path="/triplist" component={TripsList} />
 			<Route path="/trip/:tripId" component={TripInfoContainer} />
 			<Route path="/billing" component={Billing} />
+			<Route path="/about" component={About} />
 			<Route
 				path="/map"
 				render={props => <GMap isMarkerShown {...props} />}

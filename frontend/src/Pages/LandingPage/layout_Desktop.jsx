@@ -141,7 +141,7 @@ class LandingDesktopLandscape extends Component {
 								<form onSubmit={this.logIn}>
 									<input
 										id="login-modal"
-										className="input"
+										className="input login-input"
 										type="text"
 										name="emailAddress"
 										maxLength="35"
@@ -151,7 +151,7 @@ class LandingDesktopLandscape extends Component {
 									/>
 									<input
 										id="login-modal"
-										className="input"
+										className="input login-input"
 										type="password"
 										name="password"
 										maxLength="35"
