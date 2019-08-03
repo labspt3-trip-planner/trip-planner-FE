@@ -44,7 +44,7 @@ const TripReducer = (state = initialState, action) => {
       return {
         ...state,
         isFetchingTrip: false,
-        tripError: action.payload
+        tripError: action.payload.response.statusText
       };
     case CREATE_TRIP:
       return {
