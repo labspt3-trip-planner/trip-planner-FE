@@ -41,23 +41,28 @@ const TableTest = props => {
       Cell: props => <span className="number">{props.value}</span>
     }
   ];
+  {
+    console.log("Props", props);
+  }
 
   return (
     <div className="react-table">
-      <ReactTable
-        getTrProps={(state, rowInfo) => {
-          return {
-            onClick: () => {
-              goToTrip(rowInfo.row._original.id);
-            }
-          };
-        }}
-        className="table"
-        data={data}
-        columns={columns}
-        showPagination={false}
-        defaultPageSize={5}
-      />
+      {props.trips.length ? (
+        <ReactTable
+          getTrProps={(state, rowInfo) => {
+            return {
+              onClick: () => {
+                goToTrip(rowInfo.row._original.id);
+              }
+            };
+          }}
+          className="table"
+          data={data}
+          columns={columns}
+          showPagination={false}
+          defaultPageSize={5}
+        />
+      ) : <div>...Loading</div>}
       <NewTripModal />
     </div>
   );
