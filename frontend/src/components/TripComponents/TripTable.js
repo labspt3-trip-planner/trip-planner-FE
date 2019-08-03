@@ -11,15 +11,15 @@ const TableTest = props => {
     props.history.push(`/trip/${tripId}`);
   };
 
-  const data = props.trips.map(trip => {
-    return {
-      name: trip.tripName,
-      destination: trip.destinations[0].name,
-      start: trip.startDate,
-      end: trip.endDate,
-      id: trip.tripId
-    };
-  });
+  // const data = props.trips.map(trip => {
+  //   return {
+  //     name: trip.tripName,
+  //     destination: trip.destinations[0].name,
+  //     start: trip.startDate,
+  //     end: trip.endDate,
+  //     id: trip.tripId
+  //   };
+  // });
 
   const columns = [
     {
@@ -57,7 +57,15 @@ const TableTest = props => {
             };
           }}
           className="table"
-          data={data}
+          data={props.trips.map(trip => {
+            return {
+              name: trip.tripName,
+              destination: trip.destinations[0].name,
+              start: trip.startDate,
+              end: trip.endDate,
+              id: trip.tripId
+            };
+          })}
           columns={columns}
           showPagination={false}
           defaultPageSize={5}
