@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, withRouter } from "react-router-dom";
 import { withFirebase } from "../Firebase"; //HOC to provide Firebase to component
 import "./Welcome.css";
-//import authenticate from '../auth/authenticate';
+
 
 const LoginBase = props => {
   const [email, setEmail] = useState("");
