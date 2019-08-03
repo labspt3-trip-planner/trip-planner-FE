@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
 import Typography from "@material-ui/core/Typography";
-import DeleteIcon from '@material-ui/icons/Delete';
-
+import DeleteIcon from "@material-ui/icons/Delete";
 
 const List = props => {
   const [inputValue, setInputValue] = useState("");
@@ -36,14 +35,17 @@ const List = props => {
       <ul>
         {props.list.map((item, index) => {
           return (
-            <li
-              className={item.done ? "complete" : "incomplete"}
-              key={index}
-              onClick={() => props.toggleDone(item)}
-            >
-              <p>{item.item}</p>
-              <button><DeleteIcon /></button>
-            </li>
+            <div className="list-item-container" key={index}>
+              <li
+                className={item.done ? "complete" : "incomplete"}
+                onClick={() => props.toggleDone(item)}
+              >
+                <p>{item.item}</p>
+              </li>
+              <button onClick={() => props.deleteItem(item)}>
+                <DeleteIcon />
+              </button>
+            </div>
           );
         })}
       </ul>

@@ -80,18 +80,28 @@ class TripInfoContainer extends React.Component {
     this.addItem(newItem, "packing");
   };
 
-  addTodo = item => {
+  addTodo = ({ item }) => {
     // const newList = [...this.state.todos];
     // newList.push({ item: item.item, done: false });
     // this.setState({ todos: newList });
-    this.addItem(item, "todos");
+    const newItem = { item, done: false };
+    this.addItem(newItem, "todos");
   };
+
+  //delete list items
+
+  deletePacking = ({ item, done }) => {
+    const deleteItem = { item, done };
+    this.deleteItem(deleteItem, "packing");
+  };
+
+  deleteTodo = item => this.deleteItem(item, "todos");
 
   //backend interaction functions
 
   //add list item
   addItem = (item, listName) => {
-    const updatedItem = { item: item.item, done: !item.done };
+    const updatedItem = { item: item.item, done: item.done };
     console.log(updatedItem);
     axiosConfig
       .post(`/trip/${this.state.tripId}/${listName}`, updatedItem)
@@ -109,6 +119,14 @@ class TripInfoContainer extends React.Component {
         this.getTrip();
       })
       .catch(err => console.log("updateItem err: ", err));
+  };
+
+  //delete list item
+  deleteItem = (item, listName) => {
+    axiosConfig
+      .delete(`/trip/${this.state.tripId}/${listName}`, item)
+      .then(() => this.getTrip())
+      .catch(err => console.log("Delete item err: ", err));
   };
 
   componentDidMount() {
@@ -130,6 +148,8 @@ class TripInfoContainer extends React.Component {
           toggleTodos={this.toggleTodo}
           addPacking={this.addPacking}
           addTodo={this.addTodo}
+          deletePacking={this.deletePacking}
+          deleteTodo={this.deleteTodo}
         />
         <div className="map-container">
           <GMap

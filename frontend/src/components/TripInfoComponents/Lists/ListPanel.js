@@ -13,6 +13,7 @@ const ListPanel = props => {
           type="packing"
           toggleDone={props.togglePacking}
           addItem={props.addPacking}
+          deleteItem={props.deletePacking}
         />
         <List
           listName="To Do List"
@@ -20,6 +21,7 @@ const ListPanel = props => {
           type="todos"
           toggleDone={props.toggleTodos}
           addItem={props.addTodo}
+          deleteItem={props.deleteTodo}
         />
       </div>
     </div>
