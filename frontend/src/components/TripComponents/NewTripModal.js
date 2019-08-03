@@ -63,11 +63,11 @@ class NewTripModal extends Component {
     };
     axiosConfig
       .post("/trip", trip)
-      .then(res => console.log(res))
+      .then(res => {
+        this.showModal();
+        this.props.getTripsByUser();
+      })
       .catch(err => console.log(err));
-
-    this.showModal();
-    this.props.getTripsByUser();
   };
 
   changeHandler = e => {
