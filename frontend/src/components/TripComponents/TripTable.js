@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import ReactTable from "react-table";
@@ -10,7 +10,6 @@ const TableTest = props => {
     console.log("Trip id: ", tripId);
     props.history.push(`/trip/${tripId}`);
   };
-
   // const data = props.trips.map(trip => {
   //   return {
   //     name: trip.tripName,
@@ -47,7 +46,9 @@ const TableTest = props => {
 
   return (
     <div className="react-table">
-      {props.trips.length ? (
+      {props.tripError ? (
+        <div>No trips</div>
+      ) : (
         <ReactTable
           getTrProps={(state, rowInfo) => {
             return {
@@ -70,7 +71,7 @@ const TableTest = props => {
           showPagination={false}
           defaultPageSize={5}
         />
-      ) : <div>...Loading</div>}
+      )}
       <NewTripModal />
     </div>
   );
@@ -78,7 +79,8 @@ const TableTest = props => {
 
 const mapStateToProps = state => {
   return {
-    trips: state.trips.trips
+    trips: state.trips.trips,
+    tripError: state.trips.tripError
   };
 };
 

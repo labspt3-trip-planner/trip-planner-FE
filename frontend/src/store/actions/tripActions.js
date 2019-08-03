@@ -59,7 +59,7 @@ export const getTripById = tripId => dispatch => {
 
 export const addTrip = newTrip => dispatch => {
   dispatch({ type: CREATE_TRIP });
-  return axios
+  return axiosConfig
     .post("/trip", newTrip)
     .then(res => {
       dispatch({ type: TRIP_CREATED, payload: res.data });
@@ -71,7 +71,7 @@ export const addTrip = newTrip => dispatch => {
 
 export const updateTrip = tripID => dispatch => {
   dispatch({ type: EDIT_TRIP });
-  return axios
+  return axiosConfig
     .put("/trip" + tripID)
     .then(res => {
       dispatch({ type: TRIP_EDITED, payload: res.data });
@@ -83,7 +83,7 @@ export const updateTrip = tripID => dispatch => {
 
 export const removeTrip = tripID => dispatch => {
   dispatch({ type: DELETE_TRIP });
-  return axios
+  return axiosConfig
     .delete("/trip/" + tripID)
     .then(res => {
       dispatch({ type: TRIP_DELETED, payload: res.data });
