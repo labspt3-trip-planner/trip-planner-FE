@@ -1,18 +1,46 @@
 .about-container {
     display: grid;
     font-family: "Roboto Condensed", sans-serif;
-    background-color: #17697b;
+    background-color: #8E8E8E;
     height: 100%;
     width: auto;
+}
+
+.about-menu {
+    width: 100%;
+    background-color: #ece7e2;
+    position: fixed;
+    z-index: 1000;
+    height: 40px;
+}
+
+.menu-item {
+    display: inline-flex;
+    justify-content: center;
+    width: 33.3%;
+    padding-top: 4px;
+}
+
+#about-button {
+    font-size: 1.8rem;
+    color: #4e4e4e;
 }
 
 .about-header-wrapper {
     display: block;
     margin-top: 60px;
-    padding: 25px;
     font-size: 3.9rem;
     text-align: center;
     background-color: #ffa62b;
+}
+
+.about-header-wrapper h2 {
+    margin-block-start: .5em;
+    margin-block-end: .5em;
+    font-size: 1.25em;
+    margin-inline-start: unset;
+    margin-inline-end: unset;
+    color: #4e4e4e;
 }
 
 .team-container-wrapper {
@@ -24,14 +52,18 @@
     font-size: 1.5rem;
     font-style: italic;
     text-align: center;
+    color: #4e4e4e;
 }
-            
+  
+.feature p {
+    color: #4e4e4e;
+}
+
 .feature {
     width: 18%;
-    padding: 0 1%;
     background-color: #81c0cb;
     padding: 15px;
-    border: 1px solid black;
+    border: 1px solid #4e4e4e;
     border-radius: .8%;
     transition: opacity 0.25s ease-in-out;
     margin: 10px;
@@ -57,16 +89,16 @@
     display: flex;
     justify-content: space-around;
     width: 100%;
-    
 }
 
 .icons:hover {
-    background-color: #ffa62b;
+    background-color: #ece7e2;
 }
 
 .icons {
     font-size: 28px;
     padding: 2px;
+    color: #4e4e4e;
 }
 
 @media (max-width: 1024px) {
@@ -76,7 +108,6 @@
         align-content: center;
         justify-content: center;
         background-color: #ffa62b;
-        
     }
     
     .about-header-wrapper h2 {
@@ -149,10 +180,6 @@
         justify-content: center;
         width: 33.3%;
         padding-top: 4px;
-    }
-
-    #about-button {
-        font-size: 1.8rem;
     }
 }
 
@@ -240,14 +267,5 @@
         width: 33.3%;
         padding-top: 4px;
     }
-
-    #about-button {
-        font-size: 1.8rem;
-    }
 }
 
-@media (min-width: 1024px) {
-    .menu-item {
-        display: none;
-    }
-}
