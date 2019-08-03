@@ -76,7 +76,7 @@
         align-content: center;
         justify-content: center;
         background-color: #ffa62b;
-        margin-top: 99px;
+        
     }
     
     .about-header-wrapper h2 {
@@ -87,14 +87,13 @@
 
     .team-container-wrapper {
         display: flex;
-        margin-top: 62px;
         flex-direction: column;
     }
                 
     .feature {
         width: 75%;
         padding: 5%;
-        margin: 37px auto;
+        margin: 18.5px auto;
     }
     
     .team-img {
@@ -107,32 +106,28 @@
     .feature h3 {
         margin-block-end: unset;
         margin-inline-end: unset;
+        margin-inline-start: unset;
+        margin-block-start: .5em;
         background-color: #81c0cb;
-        padding: 25px;
-        font-size: 3.5rem;
+        font-size: 2rem;
         font-style: italic;
         text-align: center;
     }
     
     .feature p {
-        font-size: 2.8rem;
-        margin-block-start: unset;
+        font-size: 1.3rem;
+        margin-block-start: .5em;
         margin-block-end: unset;
-        padding: 25px;
         text-align: center;
-        background-color: #81c0cb;
+        background-color: #81c0cb
     }
 
     .team-social {
-        margin-block-start: unset;
+        margin-block-start: .5em;
         list-style: none;
         display: flex;
         justify-content: space-evenly;
         background-color: #81c0cb;
-    }
-    
-    .icons {
-        font-size: 5rem;
     }
 
     .icons:hover {
@@ -172,7 +167,7 @@
     }
     
     .about-header-wrapper h2 {
-        font-size: 2rem;
+        font-size: 3rem;
         margin-block-start: unset;
         margin-block-end: unset;
     }
@@ -224,11 +219,7 @@
         background-color: #81c0cb;
         margin-top: 10px;
     }
-    
-    .icons {
-        font-size: 2rem;
-    }
-
+   
     .icons:hover {
         background-color: #ffa62b;
     }
@@ -252,5 +243,11 @@
 
     #about-button {
         font-size: 1.8rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .menu-item {
+        display: none;
     }
 }
