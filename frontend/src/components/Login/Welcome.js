@@ -93,7 +93,7 @@ class Welcome extends Component {
           })
           .catch(err => console.log(err));
       })
-      .catch(err => console.log(err));
+      .catch(err => alert("Email and/or password invalid"));
   };
 
   register = e => {

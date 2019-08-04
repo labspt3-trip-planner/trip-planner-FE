@@ -3,8 +3,10 @@ import Modal from "../ModalComponents/Modal";
 import TextInput from "../ModalComponents/TextInput";
 import DateInput from "../ModalComponents/DateInput";
 import GMap from "../Map/GMap";
+import { connect } from "react-redux";
 import { withFirebase } from "../Firebase";
-import { axios } from "../Axios";
+import { axiosConfig } from "../Axios";
+import { getTripsByUser } from "../../store/actions/tripActions";
 import "./Page.css";
 
 class NewTripModal extends Component {
@@ -44,8 +46,8 @@ class NewTripModal extends Component {
       });
     } else
       this.setState({
-        show: !this.state.show,
-       // planner: this.props.firebase.auth.currentUser.uid
+        show: !this.state.show
+        // planner: this.props.firebase.auth.currentUser.uid
       });
   };
 
@@ -59,12 +61,13 @@ class NewTripModal extends Component {
       participants: this.state.participants,
       favorites: []
     };
-    axios
+    axiosConfig
       .post("/trip", trip)
-      .then(res => console.log(res))
+      .then(res => {
+        this.showModal();
+        this.props.getTripsByUser();
+      })
       .catch(err => console.log(err));
-
-    this.showModal();
   };
 
   changeHandler = e => {
@@ -116,4 +119,7 @@ class NewTripModal extends Component {
   }
 }
 
-export default withFirebase(NewTripModal);
+export default connect(
+  null,
+  { getTripsByUser }
+)(withFirebase(NewTripModal));

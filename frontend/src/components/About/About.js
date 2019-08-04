@@ -7,13 +7,12 @@ import Melvin from './imgs/Melvin.jpeg'
 import Erin from './imgs/Erin.jpeg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebookSquare, faTwitterSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons'
-import Header from '../HeaderComponents/HeaderContainer'
+import AboutNav from './AboutNav';
 
 
 function About() {
   return (
     <div className="about-container" >
-      <Header />
       <div className="about-header-wrapper">
         <h2>Meet the Team</h2>
       </div>
@@ -86,7 +85,7 @@ function About() {
       </div>
       <div className="feature"> 
       <img src={Erin} className="team-img" alt="Team member" />
-        <h3>Erin Scriber</h3>
+        <h3>Erin-Ronae' Scriber</h3>
         <p>Erin is an Information Technology Specialist for a suburban Pennsylvania school district. In this capacity, she oversees the inventory and functionality for 2,000 plus devices as well as handling the concerns of students, faculty and administration. She is also currently a Full Stack Web Development student at Lambda School, with a growing admiration for backend technologies. She speaks English and Spanish fluently and has limited working proficiency of French and Arabic.</p>
         <ul className="team-social">
             <li>
@@ -129,6 +128,7 @@ function About() {
           </ul>
       </div>
       </div> 
+      <AboutNav />
     </div>
   )
 }

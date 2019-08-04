@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import ReactTable from "react-table";
@@ -10,16 +10,15 @@ const TableTest = props => {
     console.log("Trip id: ", tripId);
     props.history.push(`/trip/${tripId}`);
   };
-
-  const data = props.trips.map(trip => {
-    return {
-      name: trip.tripName,
-      destination: trip.destinations[0].name,
-      start: trip.startDate,
-      end: trip.endDate,
-      id: trip.tripId
-    };
-  });
+  // const data = props.trips.map(trip => {
+  //   return {
+  //     name: trip.tripName,
+  //     destination: trip.destinations[0].name,
+  //     start: trip.startDate,
+  //     end: trip.endDate,
+  //     id: trip.tripId
+  //   };
+  // });
 
   const columns = [
     {
@@ -41,23 +40,38 @@ const TableTest = props => {
       Cell: props => <span className="number">{props.value}</span>
     }
   ];
+  {
+    console.log("Props", props);
+  }
 
   return (
     <div className="react-table">
-      <ReactTable
-        getTrProps={(state, rowInfo) => {
-          return {
-            onClick: () => {
-              goToTrip(rowInfo.row._original.id);
-            }
-          };
-        }}
-        className="table"
-        data={data}
-        columns={columns}
-        showPagination={false}
-        defaultPageSize={5}
-      />
+      {props.tripError ? (
+        <div>No trips</div>
+      ) : (
+        <ReactTable
+          getTrProps={(state, rowInfo) => {
+            return {
+              onClick: () => {
+                goToTrip(rowInfo.row._original.id);
+              }
+            };
+          }}
+          className="table"
+          data={props.trips.map(trip => {
+            return {
+              name: trip.tripName,
+              destination: trip.destinations[0].name,
+              start: trip.startDate,
+              end: trip.endDate,
+              id: trip.tripId
+            };
+          })}
+          columns={columns}
+          showPagination={false}
+          defaultPageSize={5}
+        />
+      )}
       <NewTripModal />
     </div>
   );
@@ -65,7 +79,8 @@ const TableTest = props => {
 
 const mapStateToProps = state => {
   return {
-    trips: state.trips.trips
+    trips: state.trips.trips,
+    tripError: state.trips.tripError
   };
 };
 

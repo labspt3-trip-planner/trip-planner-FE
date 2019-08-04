@@ -42,12 +42,15 @@ export const getTripsByUser = () => dispatch => {
     });
 };
 
-export const getTripById = tripID => dispatch => {
+export const getTripById = tripId => dispatch => {
   dispatch({ type: FETCH_SINGLE });
-  return axios
-    .get("/trip/" + tripID)
+  return axiosConfig
+    .get(`/trip/${tripId}`)
     .then(res => {
-      dispatch({ type: FETCH_SINGLE, payload: res.data });
+      dispatch({
+        type: SINGLE_FETCHED,
+        payload: { ...res.data, currentDestination: res.data.destinations[0] }
+      });
     })
     .catch(err => {
       dispatch({ type: SINGLE_ERROR, payload: err });
@@ -56,7 +59,7 @@ export const getTripById = tripID => dispatch => {
 
 export const addTrip = newTrip => dispatch => {
   dispatch({ type: CREATE_TRIP });
-  return axios
+  return axiosConfig
     .post("/trip", newTrip)
     .then(res => {
       dispatch({ type: TRIP_CREATED, payload: res.data });
@@ -68,7 +71,7 @@ export const addTrip = newTrip => dispatch => {
 
 export const updateTrip = tripID => dispatch => {
   dispatch({ type: EDIT_TRIP });
-  return axios
+  return axiosConfig
     .put("/trip" + tripID)
     .then(res => {
       dispatch({ type: TRIP_EDITED, payload: res.data });
@@ -80,7 +83,7 @@ export const updateTrip = tripID => dispatch => {
 
 export const removeTrip = tripID => dispatch => {
   dispatch({ type: DELETE_TRIP });
-  return axios
+  return axiosConfig
     .delete("/trip/" + tripID)
     .then(res => {
       dispatch({ type: TRIP_DELETED, payload: res.data });
