@@ -13,13 +13,6 @@ const ListForm = ({ saveList }) => {
 				reset();
 			}}
 		>
-			{/* <TextField
-				variant="outlined"
-				placeholder="Add another..."
-				margin="normal"
-				onChange={onChange}
-				value={value}
-			/> */}
 			<input
 				className="input"
 				variant="outlined"

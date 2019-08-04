@@ -1,90 +1,191 @@
-// ------- MOBILE STYLING ------- //
+//  ==============================
+            MAIN CONTAINER
+    ============================== //
 
-.welcome-container-mobile
-     display: flex
-     flex-direction: column
-     justify-content: center
-     align-items: center
-     height: 100vh
-     margin: 0 auto
-     font-family: sans-serif
-     overflow: hidden
+.welcome-container-mobileP
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    height: 100vh
+    margin: 0 auto
+    font-family: sans-serif
+    overflow: hidden
 
-.cover-photo-mobile
-     display: flex
-     flex-direction: column
-     justify-content: center 
-     align-items: center
-     width: 100%
-     flex-grow: 10
-     min-height: 90vh
-     height: 90vh
-     color: white
-     background: url("https://bit.ly/30J0sai") center left no-repeat
-     -webkit-background-size: cover
-     -moz-background-size: cover
-     -o-background-size: cover
-     background-size: cover
-     font-family: $body-font
-     font-weight: bold
+//  ==============================
+            COVER PHOTO
+    ============================== //
 
-.cover-photo-mobile h1 
-     display: flex
-     justify-content: center
-     align-items: center
-     font-size: 15vw
-     width: 90%
-     margin: 0 auto
-     margin-bottom: 3rem
-     font-weight: bold
-     color: $dark-grey
-     font-family: $header-font
+.cover-photo-mobileP
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    flex-grow: 1
+    width: 100%
+    height: 30vh
+    color: white
+    background: url("https://bit.ly/30J0sai") center left no-repeat
+    -webkit-background-size: cover
+    -moz-background-size: cover
+    -o-background-size: cover
+    background-size: cover
+    font-family: $body-font
+    font-weight: bold
 
-.cover-photo-mobile h3
-     display: flex
-     justify-content: center
-     align-items: center
-     width: 95%
-     color: #0078b3
-     margin-top: -2.5rem
-     font-style: italic
-     text-align: center
-     font-size: 5vmax
+.cover-photo-mobileP
+    h1 
+        font-size: 10vmin
+        width: 90%
+        margin: 0 auto
+        margin-bottom: 3rem
+        font-weight: bold
+        color: $dark-grey
+        font-family: $header-font
 
-.login-mobile
-     display: flex
-     justify-content: center
-     align-items: center
-     text-align: center
-     margin-top: 7rem
-     width: 90%
+.cover-photo-mobileP
+    h3 
+        width: 90%
+        color: $aqua-dark
+        margin-left: 4rem
+        margin-top: -2.5rem
+        font-style: italic
+        font-size: 4vmin
 
-     p
-          font-size: 3vmax
-          line-height: 4.5vmax
+.cover-photo-mobileP p 
+    // width: 90%
+    color: $dark-grey
+    margin-left: 6%
+    margin-top: -1.5rem
+    font-size: 3vmin
 
-          a
-               #login
-                    color: $yellow
-                    font-family: sans-serif
+//  ==============================
+            REGISTER
+    ============================== //
 
-#login:visited
-     color: $yellow
-    
-.legal-blurb-mobile
-     font-family: "Roboto Condensed", sans-serif
-     font-size: 2vmax
-     color: grey
-     position: fixed
-     bottom: 12%
+.register-screen-mobileP 
+    display: flex
+    flex-direction: column
+    justify-content: center
+    flex-grow: 1
+    display: flex
+    width: 100%
+    height: 100vh
+    color: $dark-grey
+    background-color: $yellow
 
-.login-screen-mobile
-     display: flex
-     flex-direction: column
-     justify-content: center
-     align-items: center
-     flex-grow: 1
-     width: 100vw
-     height: 10vh
-     color: $yellow
-     background-color: $yellow
+    h2 
+        font-size: 5vmax
+        margin-left: 5%
+        margin-bottom: -0.75%
+        color: $dark-grey
+        font-weight: 900
+        font-family: Overpass
+
+    p 
+        font-size: 1rem
+        margin: 1rem 5% 5% 5%
+        margin-bottom: 1.5rem
+        color: $dark-grey
+        font-weight: 900
+
+    .input-mobileP
+        color: $aqua-dark
+        margin-left: 2rem
+        border: none
+        height: 4rem
+        background: none
+        font-family: $body-font
+        font-size: 2rem
+        margin: 0 5% 0 5%
+        border-bottom: 1px solid $dark-grey
+        width: 80%
+
+    .input::placeholder 
+        color: $dark-grey
+        opacity: 0.7
+        text-transform: lowercase
+
+    .input:focus 
+        outline: none
+        border-bottom: 2.5px solid $aqua-dark
+
+
+//  ==============================
+                LOGIN
+    ============================== //
+
+.login-mobileP
+    display: flex
+    align-items: center
+    margin: -2.5rem 0 -0.5rem 0
+
+    p
+        font-size: 1.5vmax 
+        font-family: Overpass
+        color: $dark-grey
+
+    a 
+        color: $aqua-dark
+        font-weight: bold
+        font-family: sans-serif
+        text-decoration: none
+        cursor: pointer
+
+    a:hover
+        color: $aqua-medium
+
+.link 
+    text-decoration: none
+
+.overlay 
+    background-color: rgb(207, 207, 207)
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+
+.modal-hero-mobileP
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    flex-grow: 1
+    width: 100%
+    height: 100%
+    color: white
+    background: url("https://is.gd/3kOghD") center center no-repeat
+    -webkit-background-size: cover
+    -moz-background-size: cover
+    -o-background-size: cover
+    background-size: cover
+    font-family: "Overpass", sans-serif
+    font-weight: bold
+
+
+.modal-input .input:focus 
+  outline: none
+  border-bottom: 2.5px solid orange
+
+// #modal-button-area 
+    // display: flex
+    // justify-content: flex-end
+    // margin-right: 5%
+
+.ReactModal__Overlay 
+  opacity: 0
+  transition: opacity 500ms ease-in-out
+
+
+.ReactModal__Overlay--after-open 
+  opacity: 1
+
+
+.ReactModal__Overlay--before-close 
+  opacity: 0
+
+.disabled 
+  border: 1px solid #999999
+  background-color: #cccccc
+  color: #666666

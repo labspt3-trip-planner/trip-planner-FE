@@ -78,11 +78,22 @@
 }
 
 .navbar {
+<<<<<<< HEAD
 	display: flex;
 	position: absolute;
 	width: 100%;
 	background: white;
 	border-bottom: 1px solid rgba(133, 133, 133, 0.476);
+=======
+  display: flex;
+  position: absolute;
+  width: 100%;
+  background: white;
+  border-bottom: 1px solid rgba(133, 133, 133, 0.476);
+  border-top: 1px solid rgba(133, 133, 133, 0.476);
+
+
+>>>>>>> 750ac45a0e4e8e196aab3ddc9eef88f53b104617
 }
 
 @media (max-width: 600px) {
@@ -192,6 +203,7 @@
 }
 
 @media (max-width: 600px) {
+<<<<<<< HEAD
 	#header-buttons,
 	#navbar-end-buttons {
 		flex-direction: row;
@@ -227,6 +239,39 @@
 	background: #f7b94c;
 	transition: background 0.5s ease-in-out;
 	color: white;
+=======
+    #header-buttons, #navbar-end-buttons {
+        flex-direction: row;
+        text-align: center;
+        justify-content: center;
+        flex-direction: row;
+        justify-content: center;
+        align-self: center;
+        text-align: center;  
+        border-left: 1px solid rgba(133, 133, 133, 0.476);
+        border-right: 1px solid rgba(133, 133, 133, 0.476);
+        margin: 0;
+        padding: 10px 0;
+        border-radius: 0;
+        width: 100%;
+    }
+    #modal-button {
+        text-align: center;
+        justify-content: center;
+        flex-direction: row;
+        justify-content: center;
+        align-self: center;
+        text-align: center;  
+        padding: 10px 0;
+        width: 100px;
+    }
+}
+
+#header-buttons:hover, #modal-button:hover, #navbar-end-buttons:hover, .modalButton:hover {
+    background: #f7b94c;
+    transition: background 1s ease-in-out;
+    color: white;
+>>>>>>> 750ac45a0e4e8e196aab3ddc9eef88f53b104617
 }
 
 #modal-button {

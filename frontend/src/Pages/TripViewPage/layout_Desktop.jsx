@@ -6,11 +6,14 @@ import Title from "../../components/TripInfoComponents/TripName";
 import GMap from "../../components/Map/GMap";
 import { axiosConfig } from "../../components/Axios";
 import Navigation from "../../components/ModalComponents/Navigation";
+// import ListPanel from "../../components/TripInfoComponents/Lists/ListPanel";
 
 class TripInfoContainer extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
+			packing: [],
+			todos: [],
 			tripName: "",
 			destinations: [],
 			currentDestination: {
@@ -64,7 +67,10 @@ class TripInfoContainer extends React.Component {
 						className="trip-title"
 						tripName={this.state.tripName}
 					/>
-					{/* <h2>Destination: {this.currentDestination}</h2> */}
+					<p className="destination">
+						{/* {this.state.currentDestination.name} */}
+						{this.state.currentDestination.formatted_address}
+					</p>
 					<CheckListContainer />
 					<div className="favorites-container">
 						<h3>My Saved Places</h3>
