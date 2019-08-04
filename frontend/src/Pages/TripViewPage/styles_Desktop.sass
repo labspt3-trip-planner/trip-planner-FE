@@ -16,6 +16,25 @@
     height: 100vh
     flex-grow: 1
 
+    .trip-destination
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        background: none
+        background-color: none
+        font-size: 3rem
+        width: 100%
+        line-height: 5rem
+        text-align: center
+
+        p
+            background: none
+            background-color: none
+            font-size: 3rem
+            color: $white
+
+
 //  ==============================
             TITLE COMPONENT
     ============================== //
@@ -24,7 +43,9 @@
     display: flex
     align-items: center
     justify-content: center
-    height: 8rem
+    min-height: 7rem
+    max-height: 14rem
+    line-height: 7.5rem
     text-align: center
     width: 100%
     background-color: $white
@@ -45,37 +66,78 @@
     flex-direction: column
     justify-content: center
     align-items: center
-    background: $aqua-medium
+    background: none
     color: $dark-grey
-    
-    .list-label
-        color: $dark-grey
-
-        .list-section
-            color: $white
-
-            .list-wrapper
-                color: red
+    max-height: 60%
+    width: 100%
+    flex-grow: 1
 
     .lists-section
         display: flex
         flex-direction: row
+        width: 100%
+        justify-content: center
+        flex-grow: 1
+
+        .list-wrapper
+            overflow: scroll
+            width: 90%
+            margin-left: 5%
+            margin-right: 5%
+            height: 250px
+
+            h4
+                font-size: 2.5rem
+                font-family: $body-font
+
 
 //  ==============================
        CHECKLIST FORM COMPONENT
     ============================== //
 
-.input 
-    color: $aqua-dark
-    margin-left: 2rem
+form
     border: none
-    height: 4rem
-    background: none
-    font-family: $body-font
-    font-size: 2rem
-    margin: 0 5% 0 5%
-    border-bottom: 1px solid $dark-grey
-    width: 80%
+    padding: none
+
+//  ==============================
+        MY SAVED PLACES
+    ============================== //
+
+.favorites-container
+    overflow: scroll
+    height: 25%
+    width: 90%
+    flex-grow: 1
+    max-height: 45%
+    height: 20%
+
+    .saved-places
+        font-size: 2.5rem
+        text-align: center
+        border-bottom: 1px solid $dark-grey
+        z-index: 15
+        position: -webkit-sticky
+        position: sticky
+        flex-grow: 1
+
+    #favorites-list
+        font: $header-font
+        font-size: 1.5rem
+        color: $white
+        flex-grow: 1
+
+        .fave-header
+            margin-top: 1rem
+        
+        .address-wrapper a
+            color: $dark-grey
+            text-decoration: none
+            font-style: italic
+
+        .address-wrapper a:visited
+            color: $dark-grey
+            text-decoration: none
+
 
 //  ==============================
             MAP COMPONENT
@@ -86,8 +148,3 @@
     width: 45vh
     height: 100vh
     flex-grow: 1
-
-
-.nav-button-area
-    width: 100%
-    text-decoration: none

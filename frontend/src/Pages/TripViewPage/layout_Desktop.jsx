@@ -67,13 +67,13 @@ class TripInfoContainer extends React.Component {
 						className="trip-title"
 						tripName={this.state.tripName}
 					/>
-					<p className="destination">
+					<p className="trip-destination">
 						{/* {this.state.currentDestination.name} */}
 						{this.state.currentDestination.formatted_address}
 					</p>
-					<CheckListContainer />
+					<CheckListContainer class="checklist-container" />
 					<div className="favorites-container">
-						<h3>My Saved Places</h3>
+						<h3 className="saved-places">My Saved Places</h3>
 						<FaveList favorites={this.state.favorites} />
 					</div>
 					<Navigation />
