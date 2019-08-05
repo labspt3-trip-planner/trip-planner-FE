@@ -1,5 +1,5 @@
 import React from "react";
-import Typography from "@material-ui/core/Typography";
+// import h4 from "@material-ui/core/h4";
 import CheckListForm from "./CheckListForm";
 import Checklist from "./Checklist";
 import TodoListForm from "./TodoListForm";
@@ -16,10 +16,10 @@ const Checklists = () => {
 		<div className="lists-wrapper">
 			<p className="list-label">Pre-Trip</p>
 			<div className="lists-section">
-				<div className="list-wrapper packing">
-					<Typography component="h4" variant="h5">
+				<div className="list-wrapper">
+					<h4 component="h4" variant="h5">
 						Packing List
-					</Typography>
+					</h4>
 
 					<CheckListForm
 						saveList={listText => {
@@ -33,10 +33,10 @@ const Checklists = () => {
 
 					<Checklist lists={lists} deleteList={deleteList} />
 				</div>
-				<div className="list-wrapper todo">
-					<Typography component="h4" variant="h5">
+				<div className="list-wrapper ">
+					<h4 component="h4" variant="h5">
 						To Do List
-					</Typography>
+					</h4>
 
 					<TodoListForm
 						saveTodo={todoText => {

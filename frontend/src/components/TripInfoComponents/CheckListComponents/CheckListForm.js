@@ -7,6 +7,7 @@ const ListForm = ({ saveList }) => {
 
 	return (
 		<form
+			className="trip-view-page-lists"
 			onSubmit={event => {
 				event.preventDefault();
 				saveList(value);
@@ -15,9 +16,9 @@ const ListForm = ({ saveList }) => {
 		>
 			<input
 				className="input"
-				variant="outlined"
-				placeholder="Add another..."
-				margin="normal"
+				// variant="outlined"
+				placeholder="Add checklist item..."
+				// margin="normal"
 				onChange={onChange}
 				value={value}
 			/>
