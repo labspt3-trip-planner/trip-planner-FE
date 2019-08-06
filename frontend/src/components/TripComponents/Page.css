@@ -150,7 +150,7 @@
     border-right: 1px solid rgba(133, 133, 133, 0.476); 
     background: #fff;
     font-family: Overpass;
-    transition: background 1s ease-in-out;
+    transition: background 0.5s ease-in-out;
     padding: 10px 40px;
     overflow: hidden;
     white-space: nowrap;
@@ -228,7 +228,7 @@
 
 #header-buttons:hover, #modal-button:hover, #navbar-end-buttons:hover, .modalButton:hover {
     background: #f7b94c;
-    transition: background 1s ease-in-out;
+    transition: background 0s ease-in-out;
     color: white;
 }
 

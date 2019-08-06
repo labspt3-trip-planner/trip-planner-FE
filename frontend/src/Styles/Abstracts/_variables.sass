@@ -1,0 +1,32 @@
+html,
+body 
+  margin: 0
+  padding: 0
+  height: 100%
+  width: 100%
+  overflow: hidden
+
+.App 
+  font-family: sans-serif
+  text-align: left
+  display: flex
+  flex-direction: row
+  justify-content: flex-start
+  align-content: center
+  width: 100vw
+  margin: 0 auto
+
+* 
+  font-family: $body-font
+
+p 
+  font-size: 3.5vmin
+
+.fade-enter 
+  opacity: 0
+  z-index: 1
+  transition: opacity 250ms ease-in-out
+
+.fade-enter.fade-enter-active 
+  // opacity: 1
+  transition: opacity 250ms ease-in-out

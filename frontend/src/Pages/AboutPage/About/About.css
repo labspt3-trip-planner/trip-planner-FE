@@ -1,0 +1,55 @@
+.about-container {
+    display: grid;
+    font-family: "Roboto Condensed", sans-serif;
+    background-color: #0078b3;
+    
+}
+
+.about-header-wrapper {
+    display: block;
+    margin: auto 0;
+    padding: 25px;
+    font-size: 3.9rem;
+    text-align: center;
+    background-color: #f7b94c;
+}
+
+.team-container-wrapper {
+    display: flex;
+    margin-top: 50px;
+}
+
+h3 {
+    font-size: 2rem;
+    font-style: italic;
+}
+            
+.feature {
+    width: 18%;
+    padding: 0 1%;
+}
+
+.team-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.team-social {
+    margin-block-start: unset;
+    list-style: none;
+    margin-block-end: unset;
+    padding-inline-start: unset;
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+    margin-left: 50px;
+}
+
+a:hover {
+    background-color: #f7b94c;
+}
+
+a {
+    font-size: 28px;
+}

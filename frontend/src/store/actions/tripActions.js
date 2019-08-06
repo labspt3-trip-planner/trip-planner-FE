@@ -1,4 +1,4 @@
-import { axiosConfig } from "../../components/Axios";
+import { axiosConfig } from "../../Components/Axios";
 import axios from "axios";
 // GET TRIPS
 export const FETCH_TRIPS = "FETCH_TRIPS";
