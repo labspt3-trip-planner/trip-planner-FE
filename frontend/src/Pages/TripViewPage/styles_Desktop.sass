@@ -1,0 +1,92 @@
+.page-container
+    display: flex
+    flex-direction: row
+    background: $aqua-medium
+    height: 100vh
+    width: 100vw
+    font-family: $body-font
+    color: $dark-grey
+
+.trip-content-area
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    width: 55vh
+    height: 100vh
+    flex-grow: 1
+
+//  ==============================
+            TITLE COMPONENT
+    ============================== //
+    
+.trip-list-top
+    display: flex
+    align-items: center
+    justify-content: center
+    height: 8rem
+
+    h1
+        color: $dark-grey
+        font-family: $header-font
+        text-transform: capitalize
+        font-size: 4rem
+        padding-bottom: 1rem
+        width: 100%
+        border-bottom: 1px solid $dark-grey
+
+//  ==============================
+    CHECKLIST CONTAINER COMPONENT
+    ============================== //
+
+.lists-wrapper
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    background: $aqua-medium
+    color: $dark-grey
+    
+    .list-label
+        color: $dark-grey
+
+        .list-section
+            color: $white
+
+            .list-wrapper
+                color: red
+
+    .lists-section
+        display: flex
+        flex-direction: row
+
+//  ==============================
+       CHECKLIST FORM COMPONENT
+    ============================== //
+
+.input 
+    color: $aqua-dark
+    margin-left: 2rem
+    border: none
+    height: 4rem
+    background: none
+    font-family: $body-font
+    font-size: 2rem
+    margin: 0 5% 0 5%
+    border-bottom: 1px solid $dark-grey
+    width: 80%
+
+//  ==============================
+            MAP COMPONENT
+    ============================== //
+
+.map-container
+    // border: 10px solid red
+    width: 45vh
+    height: 100vh
+    flex-grow: 1
+
+
+.nav-button-area
+    width: 100%
+    text-decoration: none

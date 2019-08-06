@@ -1,4 +1,4 @@
-import { axios } from '../../components/Axios';
+import { axios } from '../../Components/Axios';
 
 // LOGGING IN
 export const LOGGING_IN = 'LOGGING_IN';

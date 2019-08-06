@@ -1,10 +1,10 @@
 import React from "react";
-import Welcome from "./components/Login/Welcome";
-import TripContainer from "./components/TripComponents/TripContainer";
-import About from "./components/About/About";
-import Signup from "./components/Login/Signup";
-import Billing from "./components/Billing/Billing";
-import TripInfoContainer from "./components/TripInfoComponents/TripInfoContainer";
+import Welcome from "./Components/Login/Welcome";
+import TripContainer from "./Components/TripComponents/TripContainer";
+import About from "./Components/About/About";
+import Signup from "./Components/Login/Signup";
+import Billing from "./Components/Billing/Billing";
+import TripInfoContainer from "./Components/TripInfoComponents/TripInfoContainer";
 import { BrowserRouter as Switch, Route } from "react-router-dom";
 
 function App(props) {

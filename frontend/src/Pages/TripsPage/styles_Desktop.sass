@@ -1,0 +1,318 @@
+//  ==============================
+            BACKGROUND
+    ============================== //
+
+.trips-page-desktop
+    display: flex
+    flex-direction: row
+    background-color: $dark-grey
+    width: 100vw
+    height: 100vh
+    overflow: none
+
+    .hero-image
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        flex-grow: 1
+        height: 100vh
+        min-width: 30vw
+        background: url("https://is.gd/5I0FGn") center center no-repeat
+        -webkit-background-size: cover
+        -moz-background-size: cover
+        -o-background-size: cover
+        background-size: cover
+
+        h1 
+            text-align: center
+            font-size: 4rem
+            width: 90%
+            margin-left: 5%
+            margin-right: 5%
+            margin-bottom: 15rem
+            font-weight: bold
+            font-family: $header-font
+            font-weight: bold
+            color: $aqua-light
+
+    .trips-page-info
+        display: flex
+        flex-direction: column
+        justify-content: flex-start
+        align-items: center
+        flex-grow: 1
+        width: 70vw
+        height: 100vh
+        color: white
+        background-color: $dark-grey
+        font-family: $body-font
+        text-align: left
+
+        h3
+            display: flex
+            align-items: center
+            flex-grow: 1
+            height: 2rem
+            font-size: 4vmin
+            width: 70vw
+            font-weight: bold
+            font-family: $header-font
+            text-align: left
+            padding-left: 5rem
+            color: $yellow
+
+        .my-trip-page
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 100%
+            margin: 0 auto
+
+//  ==============================
+        NAVIGATION COMPONENT
+    ============================== //
+
+.nav-button-area
+    display: flex
+    align-items: center
+    flex-grow: 1
+    width: 70vw
+    padding-left: 5rem
+
+    #billing
+        color: $dark-grey
+        background-color: $light-grey
+        width: 12rem
+
+        .logout:hover
+            color: $white
+
+
+        a
+            text-decoration: none
+            color: $yellow
+
+        a:hover
+            color: $yellow
+ 
+//  ==============================
+            REACT TABLE
+    ============================== //
+
+.react-table
+    display: flex
+    flex-grow: 2
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    width: 100%
+    overflow: auto
+
+    .react-table button
+        width: 1rem
+
+        .MuiIconButton-root
+            border-radius: 5px
+
+    .ReactTable
+        width: 92.5%
+        text-align: center
+        background-color: $dark-grey
+        color: $white
+
+        .rt-thead -header
+            font-family: sans-serif
+            font-size: 2.5vmax
+
+        .rt-resizable-header-content
+            font-size: 2.5vmax
+
+        .rt-tbody
+            font-size: 1.75vmax
+
+            .rt-tr-group:hover
+                background: $aqua-light
+                cursor: pointer
+                color: $dark-grey
+
+
+        .rt-resizable-header-content
+            color: $aqua-light
+            font-family: $header-font
+
+        .rt-tr
+            border-bottom: 0.5px solid grey
+
+
+    .rt-td
+        text-transform: capitalize
+        line-height: 3rem
+
+
+    button
+        width: 15rem
+        height: 3rem
+        font-size: 1.5vmax
+        margin-top: 4rem
+        background-color: $aqua-light
+        color: $dark-grey
+        text-decoration: none
+        font-size: 2vmax
+    
+    .ReactTable .button:hover
+        background-color: $white
+        color: $dark-grey
+
+.rt-noData
+    font-family: $body-font
+    text-transform: capitalize
+
+
+//  ==============================
+                MODAL
+    ============================== //
+
+.new-modal .modal-container
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: center
+    background-color: $light-grey
+    width: 90vw
+    height: 90vh
+
+    .content
+        width: 55vw
+        height: 100%
+        flex-grow: 1
+
+
+// ===== DATE INPUT AREA ===== // 
+date-input-area
+
+.MuiInputBase-root
+    color: white
+
+    .MuiFormControl-root
+        margin-top: 1rem
+        width: 80%
+        color: $white
+        margin: 0 auto
+
+        .MuiButtonBase-root
+            width: 1.5rem
+            background: $white
+
+
+// ===== MODAL MAP AREA ===== // 
+.modal-map-area
+    display: flex
+    width: 100%
+    height: 100%
+
+.destination
+    display: flex
+    justify-content: center
+    boxSizing: border-box
+    border: 1px solid transparent
+    width: 40%
+    height: 2.5rem
+    margin-top: 10px
+    padding: 0 12px
+    borderRadius: 3px
+    box-shadow: 0 2px 6px $dark-grey
+    font-size: 1.5vmax
+    outline: none
+    textOverflow: ellipses
+    background-color: $white
+    
+// ===== ACTIONS ===== //     
+.actions
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    width: 45vw
+    height: 80vh
+    flex-grow: 1
+    padding: 2rem 2rem 2rem 2rem
+    color: $white !important
+
+    .actions-h2
+        font-size: 5vmin
+
+    .props-area
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        height: 60%
+        flex-grow: 2
+        width: 100%
+
+        .input-box
+            width: 100%
+            margin: 0 auto
+
+            .makeStyles-container-1
+                border: none
+                border-color: none
+
+            .MuiTextField-root input
+                border-color: none !important
+                color: $white
+                font-family: $body-font
+                font-size: 2.5vmin
+                padding-bottom: 1rem
+
+                fieldset
+                    display: none
+
+                    legend
+                        display: none
+
+        form
+            width: 100%
+
+        .date-input-area
+            display: flex
+            flex-direction: row
+            justify-content: space-around
+            width: 100%
+            line-height: 5rem
+            // border: 5px solid green
+
+            .MuiFormControl-root
+                width: 45%
+
+                .MuiInputBase-input
+                    color: $white !important
+                    font-family: $body-font
+                    font-size: 2.5vmin
+                    border-bottom: $white !important
+
+
+            button
+                background: none
+                background-color: none
+                width: 3rem
+                margin-bottom: 4rem
+
+    .modal-button-area
+        display: flex
+        justify-content: center
+        height: 20%
+        width: 100%
+        flex-grow: 1
+        // border: 2px solid blue
+
+        #modal-button
+            background-color: $white
+            width: 10rem
+
+        .add-trip
+            width: 10rem
+            color: $white
+            background-color: $aqua-medium
+

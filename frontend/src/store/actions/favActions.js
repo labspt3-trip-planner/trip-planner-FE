@@ -1,4 +1,4 @@
-import { axiosConfig } from '../../components/Axios';
+import { axiosConfig } from '../../Components/Axios';
 
 // GET FAVES
 export const FETCH_FAVES = 'FETCH_FAVE';

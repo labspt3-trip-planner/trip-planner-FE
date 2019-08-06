@@ -1,4 +1,4 @@
-import { axiosConfig, axios } from "../../components/Axios";
+import { axiosConfig, axios } from "../../Components/Axios";
 
 // GET LIST
 export const FETCH_LISTS = "FETCH_LISTS";
