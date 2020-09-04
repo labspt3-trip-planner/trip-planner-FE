@@ -1061,17 +1061,10 @@
   resolved "https://registry.yarnpkg.com/@firebase/database-types/-/database-types-0.4.2.tgz#7bb2e605b914ad5cca7b1f4f5d8e7940fa37a708"
   integrity sha512-rBF/Sp4S4zzVg+a6h0iEiXR2GdNRrvx2BR6IcvGHnSPF7XVpj9UuUWtZMJyO+vWP3zlIGDvlNRJ4qF01Y6KxGg==
 
-<<<<<<< HEAD
-"@firebase/database@0.4.9":
-  version "0.4.9"
-  resolved "https://registry.yarnpkg.com/@firebase/database/-/database-0.4.9.tgz#17bec6fa13ea6f2a096bed3b5bd7b4010de39ac4"
-  integrity sha512-RhV6ID+n8fdC6bUkfYeYwYI8LvG5bfrp+BTiiBXdh/r7wbnZLcrGAIjdbp666KQhfd5ZLIzRLPpDP4DLEFC0sQ==
-=======
 "@firebase/database@0.4.10":
   version "0.4.10"
   resolved "https://registry.yarnpkg.com/@firebase/database/-/database-0.4.10.tgz#d4e90da68c53b8e0b567b714d3366436a4bac72e"
   integrity sha512-cn5kg0nx6v4vapAs0HZl683w5fLbRZO8sKkhARwgMaLMBnTWnMQT2rXX2UyhNGBASNA8PLBk8y5P8du0tJHLWw==
->>>>>>> 92c4b217934b78a74643a30dce193c66d9be0949
   dependencies:
     "@firebase/database-types" "0.4.2"
     "@firebase/logger" "0.1.20"
@@ -1084,17 +1077,10 @@
   resolved "https://registry.yarnpkg.com/@firebase/firestore-types/-/firestore-types-1.4.4.tgz#3051a9c163b4b76ae04544629ff5e0777e452548"
   integrity sha512-kFpmzkUKfzrXkcMad+TQlMs55dWNY0q1UxGICW82EneX3Yg6HN3Nx36kYfqH+SLBFUN1ZTikN07alMp0MA9p9g==
 
-<<<<<<< HEAD
-"@firebase/firestore@1.4.6":
-  version "1.4.6"
-  resolved "https://registry.yarnpkg.com/@firebase/firestore/-/firestore-1.4.6.tgz#96f06018ef7b7d1feb0b8bb5062b21b0bc397569"
-  integrity sha512-aU/NbgUF9w1yPnjlHgQbt4Jxr6SFiq/bjWt34TLlDeOT3MpaXkjIVoxtZCmpLlklj8AR93WJO+kPXizAvyINzQ==
-=======
 "@firebase/firestore@1.4.7":
   version "1.4.7"
   resolved "https://registry.yarnpkg.com/@firebase/firestore/-/firestore-1.4.7.tgz#d72910ff3a272967ebed8c64d54dacdc65cb3f93"
   integrity sha512-iuUO639N6+UU7Y1hc6VDr+kQaocmRg8Cbgs7x1pFHM5pFGGDyIIEoJrKxaqXsTlp5lOCVIpe6xr7wEDbeJdcVA==
->>>>>>> 92c4b217934b78a74643a30dce193c66d9be0949
   dependencies:
     "@firebase/firestore-types" "1.4.4"
     "@firebase/logger" "0.1.20"
@@ -1209,6 +1195,11 @@
   resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-common-types/-/fontawesome-common-types-0.2.20.tgz#b5450b07400aea96d87d24e98e22d4a3d8d59305"
   integrity sha512-5wo0pMNS4gWTkplFAPSfNq4poXwLcgj8+khZs9/zbWMxC0hi6qnehXOrX7i7+Y7XyTQForja2WpR7Nz6LY2BtQ==
 
+"@fortawesome/fontawesome-common-types@^0.2.30":
+  version "0.2.30"
+  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-common-types/-/fontawesome-common-types-0.2.30.tgz#2f1cc5b46bd76723be41d0013a8450c9ba92b777"
+  integrity sha512-TsRwpTuKwFNiPhk1UfKgw7zNPeV5RhNp2Uw3pws+9gDAkPGKrtjR1y2lI3SYn7+YzyfuNknflpBA1LRKjt7hMg==
+
 "@fortawesome/fontawesome-svg-core@^1.2.19":
   version "1.2.20"
   resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-svg-core/-/fontawesome-svg-core-1.2.20.tgz#2b562dd73df08c835e1f42c04061029ee77b90b5"
@@ -1222,6 +1213,13 @@
   integrity sha512-Wj4MSV4J4DL8+HgnRTt2mk3pE2n3RZojDAlcN2G+2yzsdkI5TbXODY9bnfxs7Ik02GMqdhTdeHj/orxJYcYGLA==
   dependencies:
     "@fortawesome/fontawesome-common-types" "^0.2.20"
+
+"@fortawesome/free-solid-svg-icons@^5.10.0":
+  version "5.14.0"
+  resolved "https://registry.yarnpkg.com/@fortawesome/free-solid-svg-icons/-/free-solid-svg-icons-5.14.0.tgz#970453f5e8c4915ad57856c3a0252ac63f6fec18"
+  integrity sha512-M933RDM8cecaKMWDSk3FRYdnzWGW7kBBlGNGfvqLVwcwhUPNj9gcw+xZMrqBdRqxnSXdl3zWzTCNNGEtFUq67Q==
+  dependencies:
+    "@fortawesome/fontawesome-common-types" "^0.2.30"
 
 "@fortawesome/react-fontawesome@^0.1.4":
   version "0.1.4"
@@ -3336,7 +3334,7 @@ combined-stream@^1.0.6, combined-stream@~1.0.6:
   dependencies:
     delayed-stream "~1.0.0"
 
-commander@2, commander@^2.11.0, commander@^2.19.0, commander@^2.20.0, commander@~2.20.0:
+commander@2, commander@^2.11.0, commander@^2.19.0, commander@^2.20.0:
   version "2.20.0"
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.20.0.tgz#d58bb2b5c1ee8f87b0d340027e9e94e222c5a422"
   integrity sha512-7j2y+40w61zy6YC2iRNpUe/NwhNyoXrYpHMrSunaMG64nRnaf96zO/KMQR4OyN/UnE5KLyEBnKHd4aG3rskjpQ==
@@ -4611,11 +4609,6 @@ etag@~1.8.1:
   resolved "https://registry.yarnpkg.com/etag/-/etag-1.8.1.tgz#41ae2eeb65efa62268aebfea83ac7d79299b0887"
   integrity sha1-Qa4u62XvpiJorr/qg6x9eSmbCIc=
 
-eventemitter3@^1.1.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/eventemitter3/-/eventemitter3-1.2.0.tgz#1c86991d816ad1e504750e73874224ecf3bec508"
-  integrity sha1-HIaZHYFq0eUEdQ5zh0Ik7PO+xQg=
-
 eventemitter3@^3.0.0, eventemitter3@^3.1.0:
   version "3.1.2"
   resolved "https://registry.yarnpkg.com/eventemitter3/-/eventemitter3-3.1.2.tgz#2d3d48f9c346698fce83a85d7d664e98535df6e7"
@@ -4940,26 +4933,15 @@ find-up@^2.0.0, find-up@^2.1.0:
     locate-path "^2.0.0"
 
 firebase@^6.0.4:
-<<<<<<< HEAD
-  version "6.3.2"
-  resolved "https://registry.yarnpkg.com/firebase/-/firebase-6.3.2.tgz#697462016e3480e219b319f0e552a28a5e7471e9"
-  integrity sha512-dVQHkxhVVzu2GRewsittBOOGS7TQmEF3zz6dhbGAOzB+YHZIAHh4Yah2KTO05PWUptfb/2h/0wzmT/60VtL3ww==
-=======
   version "6.3.3"
   resolved "https://registry.yarnpkg.com/firebase/-/firebase-6.3.3.tgz#6086b417eb0adf3a3f89baf0965e166496160285"
   integrity sha512-EzF3T3um0v2yCCMr26Rg8VnNsJMeO9Wh1eVbV2J8rrKX/weOci48h2GH0sfvokxLQSjBlKjn8K+cW9/CARyuVQ==
->>>>>>> 92c4b217934b78a74643a30dce193c66d9be0949
   dependencies:
     "@firebase/app" "0.4.12"
     "@firebase/app-types" "0.4.2"
     "@firebase/auth" "0.11.6"
-<<<<<<< HEAD
-    "@firebase/database" "0.4.9"
-    "@firebase/firestore" "1.4.6"
-=======
     "@firebase/database" "0.4.10"
     "@firebase/firestore" "1.4.7"
->>>>>>> 92c4b217934b78a74643a30dce193c66d9be0949
     "@firebase/functions" "0.4.13"
     "@firebase/installations" "0.2.2"
     "@firebase/messaging" "0.4.6"
@@ -5282,15 +5264,6 @@ globby@^6.1.0:
     pify "^2.0.0"
     pinkie-promise "^2.0.0"
 
-google-map-react@^1.1.4:
-  version "1.1.4"
-  resolved "https://registry.yarnpkg.com/google-map-react/-/google-map-react-1.1.4.tgz#ebf649b3cb985c645a0b7a05eb4e1c3f80482c80"
-  integrity sha512-+XcOu7QrRrlDa7Bk25oVV4FSsvMorAupuBrnDjA28Zz+HE+wEz79igqn+0KCHbemjgEHz51sHk0wm+IodvLoMg==
-  dependencies:
-    "@mapbox/point-geometry" "^0.1.0"
-    eventemitter3 "^1.1.0"
-    scriptjs "^2.5.7"
-
 google-maps-infobox@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/google-maps-infobox/-/google-maps-infobox-2.0.0.tgz#1ea6de93c0cdf4138c2d586331835c83dcc59dc2"
@@ -5374,13 +5347,14 @@ handle-thing@^2.0.0:
   integrity sha512-d4sze1JNC454Wdo2fkuyzCr6aHcbL6PGGuFAz0Li/NcOm1tCHGnWDRmJP85dh9IhQErTc2svWFEX5xHIOo//kQ==
 
 handlebars@^4.1.2:
-  version "4.1.2"
-  resolved "https://registry.yarnpkg.com/handlebars/-/handlebars-4.1.2.tgz#b6b37c1ced0306b221e094fc7aca3ec23b131b67"
-  integrity sha512-nvfrjqvt9xQ8Z/w0ijewdD/vvWDTOweBUm96NTr66Wfvo1mJenBLwcYmPs3TIBP5ruzYGD7Hx/DaM9RmhroGPw==
+  version "4.7.6"
+  resolved "https://registry.yarnpkg.com/handlebars/-/handlebars-4.7.6.tgz#d4c05c1baf90e9945f77aa68a7a219aa4a7df74e"
+  integrity sha512-1f2BACcBfiwAfStCKZNrUCgqNZkGsAT7UM3kkYtXuLo0KnaVfjKOyf7PRzB6++aK9STyT1Pd2ZCPe3EGOXleXA==
   dependencies:
+    minimist "^1.2.5"
     neo-async "^2.6.0"
-    optimist "^0.6.1"
     source-map "^0.6.1"
+    wordwrap "^1.0.0"
   optionalDependencies:
     uglify-js "^3.1.4"
 
@@ -7546,15 +7520,15 @@ minimist@0.0.8:
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-0.0.8.tgz#857fcabfc3397d2625b8228262e86aa7a011b05d"
   integrity sha1-hX/Kv8M5fSYluCKCYuhqp6ARsF0=
 
-minimist@1.2.0, minimist@^1.1.1, minimist@^1.2.0:
+minimist@1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.0.tgz#a35008b20f41383eec1fb914f4cd5df79a264284"
   integrity sha1-o1AIsg9BOD7sH7kU9M1d95omQoQ=
 
-minimist@~0.0.1:
-  version "0.0.10"
-  resolved "https://registry.yarnpkg.com/minimist/-/minimist-0.0.10.tgz#de3f98543dbf96082be48ad1a0c7cda836301dcf"
-  integrity sha1-3j+YVD2/lggr5IrRoMfNqDYwHc8=
+minimist@^1.1.1, minimist@^1.2.0, minimist@^1.2.5:
+  version "1.2.5"
+  resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.5.tgz#67d66014b66a6a8aaa0c083c5fd58df4e4e97602"
+  integrity sha512-FM9nNUYrRBAELZQT3xeZQ7fmMOBg6nWNmJKTcgsJeaLstP/UODVpGsr5OhXhhXg6f+qtJ8uiZ+PUxkDWcgIXLw==
 
 minipass@^2.2.1, minipass@^2.3.5:
   version "2.3.5"
@@ -7720,9 +7694,9 @@ negotiator@0.6.2:
   integrity sha512-hZXc7K2e+PgeI1eDBe/10Ard4ekbfrrqG8Ep+8Jmf4JID2bNg7NvCPOZN+kfF574pFQI7mum2AUqDidoKqcTOw==
 
 neo-async@^2.5.0, neo-async@^2.6.0:
-  version "2.6.1"
-  resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.1.tgz#ac27ada66167fa8849a6addd837f6b189ad2081c"
-  integrity sha512-iyam8fBuCUpWeKPGpaNMetEocMt364qkCsfL9JuhjXX6dRnguRVOfk2GZaDpPjcOKiiXCPINZC1GczQ7iTq3Zw==
+  version "2.6.2"
+  resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.2.tgz#b4aafb93e3aeb2d8174ca53cf163ab7d7308305f"
+  integrity sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==
 
 nice-try@^1.0.4:
   version "1.0.5"
@@ -8069,14 +8043,6 @@ opn@^5.1.0:
   integrity sha512-PqHpggC9bLV0VeWcdKhkpxY+3JTzetLSqTCWL/z/tFIbI6G8JCjondXklT1JinczLz2Xib62sSp0T/gKT4KksA==
   dependencies:
     is-wsl "^1.1.0"
-
-optimist@^0.6.1:
-  version "0.6.1"
-  resolved "https://registry.yarnpkg.com/optimist/-/optimist-0.6.1.tgz#da3ea74686fa21a19a111c326e90eb15a0196686"
-  integrity sha1-2j6nRob6IaGaERwybpDrFaAZZoY=
-  dependencies:
-    minimist "~0.0.1"
-    wordwrap "~0.0.2"
 
 optimize-css-assets-webpack-plugin@5.0.1:
   version "5.0.1"
@@ -10299,7 +10265,7 @@ schema-utils@^1.0.0:
     ajv-errors "^1.0.0"
     ajv-keywords "^3.1.0"
 
-scriptjs@^2.5.7, scriptjs@^2.5.8:
+scriptjs@^2.5.8:
   version "2.5.9"
   resolved "https://registry.yarnpkg.com/scriptjs/-/scriptjs-2.5.9.tgz#343915cd2ec2ed9bfdde2b9875cd28f59394b35f"
   integrity sha512-qGVDoreyYiP1pkQnbnFAUIS5AjenNwwQBdl7zeos9etl+hYKWahjRTfzAZZYBv5xNHx7vNKCmaLDQZ6Fr2AEXg==
@@ -11268,12 +11234,9 @@ uglify-js@3.4.x:
     source-map "~0.6.1"
 
 uglify-js@^3.1.4:
-  version "3.6.0"
-  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.6.0.tgz#704681345c53a8b2079fb6cec294b05ead242ff5"
-  integrity sha512-W+jrUHJr3DXKhrsS7NUVxn3zqMOFn0hL/Ei6v0anCIMoKC93TjcflTagwIHLW7SfMFfiQuktQyFVCFHGUE0+yg==
-  dependencies:
-    commander "~2.20.0"
-    source-map "~0.6.1"
+  version "3.10.3"
+  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.10.3.tgz#f0d2f99736c14de46d2d24649ba328be3e71c3bf"
+  integrity sha512-Lh00i69Uf6G74mvYpHCI9KVVXLcHW/xu79YTvH7Mkc9zyKUeSPz0owW0dguj0Scavns3ZOh3wY63J0Zb97Za2g==
 
 unicode-canonical-property-names-ecmascript@^1.0.4:
   version "1.0.4"
@@ -11757,12 +11720,7 @@ window-size@^0.1.4:
   resolved "https://registry.yarnpkg.com/window-size/-/window-size-0.1.4.tgz#f8e1aa1ee5a53ec5bf151ffa09742a6ad7697876"
   integrity sha1-+OGqHuWlPsW/FR/6CXQqatdpeHY=
 
-wordwrap@~0.0.2:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/wordwrap/-/wordwrap-0.0.3.tgz#a3d5da6cd5c0bc0008d37234bbaf1bed63059107"
-  integrity sha1-o9XabNXAvAAI03I0u68b7WMFkQc=
-
-wordwrap@~1.0.0:
+wordwrap@^1.0.0, wordwrap@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/wordwrap/-/wordwrap-1.0.0.tgz#27584810891456a4171c8d0226441ade90cbcaeb"
   integrity sha1-J1hIEIkUVqQXHI0CJkQa3pDLyus=
